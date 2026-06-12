@@ -1,7 +1,10 @@
 /* =========================================================================
    Premium Bringa — készletadat (egy helyen, minden oldal ezt használja)
    Új bringa: másold egy meglévő objektum mintáját. Az `id` egyedi (URL-slug).
-   kep / kepek: ha üres, textúrás placeholder; ha URL, lazy-load fotó.
+   KÉP: alapból automatikus — a weboldal az `assets/kepek/<id>.jpg` fájlt tölti be.
+        Elég a fotót ezzel a névvel az assets/kepek/ mappába tenni (lásd az ottani README-t).
+        A `kep` mező csak akkor kell, ha más a kiterjesztés/útvonal (felülírja az automatikust).
+        Ha nincs fájl, marad a textúrás placeholder.
    kiemelt: a főoldali hero showcase ezt a darabot mutatja (csak az első számít).
    ========================================================================= */
 const KESZLET = [

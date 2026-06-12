@@ -10,6 +10,14 @@
   const huFt = n => Number(n).toLocaleString("hu-HU");
   const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
   const condClass = a => a && a.toLowerCase() === "újszerű" ? "cond o" : "cond";
+
+  /* Élő képösszeköttetés: ha a `kep` mező ki van töltve, azt használjuk; különben
+     az id alapján automatikusan az assets/kepek/<id>.jpg fájlt próbáljuk betölteni.
+     Ha a fájl még nincs meg, az <img> eltűnik és marad a textúrás placeholder. */
+  const KEPDIR = "assets/kepek";
+  const bikeKep = b => (b.kep && String(b.kep).trim()) ? b.kep : `${KEPDIR}/${b.id}.jpg`;
+  const imgTag = (b, alt) =>
+    `<img src="${esc(bikeKep(b))}" alt="${esc(alt)}" loading="lazy" decoding="async" onerror="this.style.display='none'">`;
   const $ = (sel, root=document) => root.querySelector(sel);
   const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
   const param = key => new URLSearchParams(location.search).get(key);
@@ -17,9 +25,8 @@
 
   /* ---- termékkártya (showroom + készlet) ---- */
   function bikeCard(b){
-    const media = b.kep
-      ? `<img src="${esc(b.kep)}" alt="${esc(b.model)} — ${esc(b.kategoria)}, ${esc(b.allapot)} állapot" loading="lazy" decoding="async">`
-      : `<span class="bk-wheel"></span><span class="bk-wheel two"></span>`;
+    const media = `<span class="bk-wheel"></span><span class="bk-wheel two"></span>`
+      + imgTag(b, `${b.model} — ${b.kategoria}, ${b.allapot} állapot`);
     return `
     <a class="bike reveal" href="bringa.html?id=${encodeURIComponent(b.id)}" data-szegmens="${esc(b.szegmens)}" data-allapot="${esc(b.allapot)}">
       <div class="img">${media}<span class="cat">${esc(b.kategoria)}</span><span class="${condClass(b.allapot)}">${esc(b.allapot)}</span></div>
@@ -62,9 +69,8 @@
     if(!host) return;
     const b = data.find(x => x.kiemelt) || data[0];
     if(!b){ host.remove(); return; }
-    const media = b.kep
-      ? `<img src="${esc(b.kep)}" alt="${esc(b.model)} — kiemelt darab, ${esc(b.allapot)} állapot" loading="lazy" decoding="async">`
-      : `<span class="wheel two"></span><span class="wheel"></span>`;
+    const media = `<span class="wheel two"></span><span class="wheel"></span>`
+      + imgTag(b, `${b.model} — kiemelt darab, ${b.allapot} állapot`);
     host.innerHTML = `
     <a class="feature" href="bringa.html?id=${encodeURIComponent(b.id)}">
       <div class="ph">${media}<span class="tag">★ Kiemelt darab</span><span class="${condClass(b.allapot)}">${esc(b.allapot)}</span></div>
@@ -149,9 +155,8 @@
       return;
     }
     document.title = `${b.model} — Premium Bringa`;
-    const galMain = b.kep
-      ? `<img src="${esc(b.kep)}" alt="${esc(b.model)}" decoding="async">`
-      : `<span class="bk-wheel"></span><span class="bk-wheel two"></span><span class="ghost">${esc(b.marka)}</span>`;
+    const galMain = `<span class="bk-wheel"></span><span class="bk-wheel two"></span><span class="ghost">${esc(b.marka)}</span>`
+      + imgTag(b, b.model);
     const rows = [
       ["Márka", b.marka], ["Kategória", b.kategoria], ["Évjárat", b.ev],
       ["Méret", b.meret], ["Váz", b.vaz], ["Villa", b.villa],
