@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Készlet — Premium Bringa · Debrecen</title>
+<meta name="description" content="Aktuális készletünk: felkészített, garanciás használt német prémium kerékpárok. Szűrj szegmens és állapot szerint, rendezz ár szerint.">
+<meta name="theme-color" content="#1A1B1E">
+<meta property="og:title" content="Készlet — Premium Bringa">
+<meta property="og:description" content="Felkészített, garanciás használt kerékpárok Debrecenből.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231A1B1E'/%3E%3Cg fill='none' stroke='%23D6D4D0' stroke-width='3.4'%3E%3Ccircle cx='20' cy='40' r='12'/%3E%3Ccircle cx='44' cy='40' r='12'/%3E%3C/g%3E%3Cg fill='none' stroke='%23C2895A' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 40 L32 40 L26 22 L40 22 L44 40 M32 40 L40 22'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#keszlet-grid">Ugrás a kerékpárokhoz</a>
+
+<nav class="nav" aria-label="Fő navigáció"><div class="wrap">
+  <a href="index.html" class="logo">Premium<b>Bringa</b></a>
+  <div class="nav-menu" id="menu">
+    <a href="keszlet.html" class="active">Készlet</a><a href="felkeszites.html">Felkészítés</a><a href="rolunk.html">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a>
+  </div>
+  <div class="nav-right">
+    <a href="tel:+36204360307" class="nav-phone">+36 20 436 0307</a>
+    <a href="kapcsolat.html" class="btn btn-1">Kapcsolat</a>
+    <button class="burger" aria-label="Menü" aria-controls="menu" aria-expanded="false"><span></span></button>
+  </div>
+</div></nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="glow"></div>
+  <div class="wrap">
+    <nav class="crumb" aria-label="Útvonal"><a href="index.html">Főoldal</a> <span>/</span> <b>Készlet</b></nav>
+    <span class="kick">Aktuális kínálat</span>
+    <h1>A teljes készlet</h1>
+    <p>Minden gép felkészített, garanciás, és őszinte háromfokozatú állapotleírással szerepel. Szűrj szegmens vagy állapot szerint — a kártyára kattintva megnyílnak a részletek.</p>
+  </div>
+</header>
+
+<!-- KÉSZLET -->
+<section class="showroom"><div class="wrap">
+  <div class="toolbar">
+    <div class="fgroup">
+      <span class="flabel">Szegmens</span>
+      <div class="filters" id="seg-filters" role="group" aria-label="Szűrés szegmens szerint"></div>
+    </div>
+    <div class="sortwrap">
+      <label for="sort">Rendezés</label>
+      <select class="sort" id="sort">
+        <option value="ajanlott">Ajánlott</option>
+        <option value="ar-asc">Ár — növekvő</option>
+        <option value="ar-desc">Ár — csökkenő</option>
+        <option value="ev-desc">Évjárat — legújabb</option>
+      </select>
+    </div>
+  </div>
+  <div class="fgroup" style="margin-top:18px">
+    <span class="flabel">Állapot</span>
+    <div class="filters" id="cond-filters" role="group" aria-label="Szűrés állapot szerint"></div>
+  </div>
+  <p class="count" id="count" aria-live="polite"></p>
+  <div class="grid" id="keszlet-grid"></div>
+</div></section>
+
+<!-- CTA BAND -->
+<div class="band"><div class="wrap">
+  <div><h2>Nem találod, amit keresel?</h2><p>Mondd el, mire van szükséged — gyakran van érkező gép, ami még nincs fent.</p></div>
+  <a href="kapcsolat.html" class="btn btn-dark">Keresési igény jelzése →</a>
+</div></div>
+
+<!-- FOOTER -->
+<footer><div class="wrap">
+  <div class="top">
+    <div><a href="index.html" class="logo">Premium<b>Bringa</b></a><div class="slogan">Minőségi kerékpározás, elérhetőbb áron. Felkészített prémium kerékpárok Debrecenből.</div></div>
+    <div class="col"><h4>Menü</h4><a href="keszlet.html">Készlet</a><a href="felkeszites.html">Felkészítés</a><a href="rolunk.html">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a></div>
+    <div class="col"><h4>Szegmensek</h4><a href="keszlet.html?szegmens=belepo">Belépő XC</a><a href="keszlet.html?szegmens=trekking">Trekking</a><a href="keszlet.html?szegmens=premium">Prémium</a><a href="keszlet.html?szegmens=gravel">Gravel</a></div>
+    <div class="col"><h4>Kapcsolat</h4><span class="li">+36 20 436 0307</span><span class="li">hello@premiumbringa.hu</span><span class="li">Debrecen, HU</span><span class="li">Magyar Posta · utánvét</span></div>
+  </div>
+  <div class="bot"><span>© 2026 Premium Bringa Kft.</span><span>Cube · Trek · Orbea · Specialized — felkészítve</span></div>
+</div></footer>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Helyi eszközök / preview konfiguráció
+.claude/
+
+# Logok
+*.log
