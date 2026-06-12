@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premium Bringa — Márkakönyv</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --carbon:#1A1B1E;--carbon-2:#202124;--graphite:#2A2C30;--steel:#43464C;--fog:#7E8189;
+  --haze:#A8ABB1;--silver:#D6D4D0;--bright:#EDEBE7;--light:#F1F0EC;--light-2:#E7E5E0;
+  --ink:#1E2024;--ink-soft:#54575E;--copper:#C2895A;--copper-deep:#9A6A40;--line:#2E3035;--line-l:#DAD8D2;
+  --disp:"Archivo",system-ui,sans-serif;--body:"Hanken Grotesk",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+  --weave:repeating-linear-gradient(45deg,rgba(214,212,208,.03) 0 1px,transparent 1px 13px),repeating-linear-gradient(-45deg,rgba(214,212,208,.03) 0 1px,transparent 1px 13px);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--carbon);color:var(--silver);font-family:var(--body);line-height:1.62;font-size:16px;-webkit-font-smoothing:antialiased;letter-spacing:-.003em}
+.wrap{max-width:1060px;margin:0 auto;padding:0 32px}
+.k{font-family:var(--mono);font-weight:500;letter-spacing:.18em;text-transform:uppercase;font-size:.62rem;color:var(--fog)}
+.logo{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:118%;letter-spacing:-.012em;color:var(--bright)}
+.logo b{color:var(--copper)}
+.rule{width:60px;height:3px;background:var(--copper)}
+
+.bar{border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;height:54px}
+.bar .k{color:var(--fog)}
+
+.cover{position:relative;min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:64px 0;border-bottom:1px solid var(--line);overflow:hidden;background-image:var(--weave)}
+.cover svg.bike{width:min(360px,72%);height:auto;margin-bottom:30px;filter:drop-shadow(0 16px 36px rgba(0,0,0,.4))}
+.cover .logo{font-size:clamp(2.1rem,7vw,3.8rem)}
+.cover .rule{margin:22px auto 18px}
+.cover .slogan{font-weight:300;font-size:clamp(1rem,2.2vw,1.3rem);color:var(--haze)}
+.cover .meta{margin-top:38px}
+
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+.sh{margin-bottom:40px}
+.sh .k{display:block;margin-bottom:14px;color:var(--copper)}
+.sh h2{font-family:var(--disp);font-weight:800;font-stretch:114%;text-transform:uppercase;font-size:clamp(1.4rem,3.4vw,2rem);letter-spacing:-.012em;margin:0;color:var(--bright);line-height:1.05}
+.sh p{max-width:60ch;color:var(--fog);font-size:.98rem;margin:14px 0 0}
+
+.panel{background:var(--carbon-2);border:1px solid var(--line);border-radius:8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+/* logo lockups */
+.lock{padding:40px 34px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;min-height:200px;position:relative;background-image:var(--weave)}
+.lock .tag{position:absolute;top:13px;left:16px}
+.lock .note{font-family:var(--body);font-size:.82rem;color:var(--fog);text-align:center}
+.lock svg.bike{width:130px;height:auto}
+.lock .stk{text-align:center;line-height:.9}
+.lock .stk .logo{display:block;font-size:1.6rem}
+.lock-main{padding:54px 34px;display:flex;align-items:center;justify-content:center;gap:26px;flex-wrap:wrap;background-image:var(--weave)}
+.lock-main svg.bike{width:120px}
+.lock-main .logo{font-size:clamp(1.6rem,4vw,2.4rem)}
+
+/* symbol panel */
+.sym{padding:44px;display:flex;align-items:center;justify-content:center;background-image:var(--weave)}
+.sym svg{width:min(380px,80%);height:auto}
+
+/* monogram + profile */
+.mono-wrap{padding:34px;display:flex;flex-direction:column;align-items:center;gap:16px;background-image:var(--weave);position:relative}
+.mono-wrap .tag{position:absolute;top:13px;left:16px}
+.texpb{width:170px;display:block}.texpb text{font-family:var(--disp);font-weight:800;font-variation-settings:'wdth' 116;text-transform:uppercase}
+.square{width:230px;height:230px;border:1px solid var(--line);overflow:hidden}
+.profsvg text{font-family:var(--disp);font-weight:800;font-variation-settings:'wdth' 116;text-transform:uppercase}
+.cap{font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fog)}
+
+/* color */
+.brandbar{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:16px}
+.brandbar div{padding:22px;display:flex;flex-direction:column;justify-content:flex-end;min-height:104px;border-right:1px solid var(--line)}
+.brandbar div:last-child{border-right:0}
+.brandbar .n{font-family:var(--mono);font-weight:500;letter-spacing:.06em;text-transform:uppercase;font-size:.58rem}
+.brandbar .h{font-family:var(--mono);font-size:.54rem;opacity:.8;margin-top:3px}
+.sw-grid{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.sw{aspect-ratio:1.1;display:flex;flex-direction:column;justify-content:flex-end;padding:11px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sw .n{font-family:var(--mono);font-weight:500;font-size:.5rem;text-transform:uppercase;letter-spacing:.03em}
+.sw .h{font-family:var(--mono);font-size:.46rem;opacity:.72;margin-top:2px}
+
+/* type */
+.type-stack{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.tc{background:var(--carbon-2);padding:26px 28px}
+.tc .role{font-family:var(--mono);font-weight:500;letter-spacing:.14em;text-transform:uppercase;font-size:.55rem;color:var(--copper)}
+.tc .fam{font-family:var(--mono);font-weight:600;font-size:.88rem;color:var(--fog);margin:6px 0 13px}
+.tc .d{font-family:var(--disp);font-weight:800;font-stretch:114%;text-transform:uppercase;font-size:clamp(1.4rem,3.4vw,2.1rem);color:var(--bright);line-height:1;letter-spacing:-.01em}
+.tc .bd{font-family:var(--body);font-size:1rem;color:var(--haze);max-width:60ch;line-height:1.6}
+.tc .mo{font-family:var(--mono);font-weight:500;font-size:.8rem;color:var(--fog);letter-spacing:.03em}
+.tc .mo .v{color:var(--silver)}.tc .mo .c{color:var(--copper)}
+
+/* texture */
+.tex-show{height:230px;border:1px solid var(--line);border-radius:8px;background:var(--carbon-2);background-image:repeating-linear-gradient(45deg,rgba(214,212,208,.08) 0 1px,transparent 1px 13px),repeating-linear-gradient(-45deg,rgba(214,212,208,.08) 0 1px,transparent 1px 13px),repeating-linear-gradient(45deg,rgba(194,137,90,.12) 0 1px,transparent 1px 117px)}
+
+/* components */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.7rem;padding:13px 20px;border-radius:3px;border:1px solid transparent;text-decoration:none}
+.btn-1{background:var(--copper);color:#15171A}.btn-2{background:transparent;color:var(--bright);border-color:var(--line)}.btn-3{background:var(--ink);color:var(--light)}
+.chip{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);color:var(--haze);padding:8px 13px;border-radius:30px}
+.chip.on{background:var(--copper);color:#15171A;border-color:var(--copper)}
+.cond{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:#15171A;background:var(--copper);padding:4px 9px;border-radius:3px;font-weight:600}
+.cond.o{background:transparent;color:var(--copper);border:1px solid var(--copper)}
+.comp-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding:26px;background:var(--carbon-2);border:1px solid var(--line);border-radius:8px;margin-bottom:14px}
+.comp-row .lbl{font-family:var(--mono);font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--fog);width:100%;margin-bottom:6px}
+
+/* voice */
+.voice{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.voice .do,.voice .dont{padding:26px;border:1px solid var(--line);border-radius:8px;background:var(--carbon-2)}
+.voice h4{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 14px}
+.voice .do h4{color:var(--copper)}.voice .dont h4{color:var(--steel)}
+.voice ul{margin:0;padding-left:18px}.voice li{margin-bottom:9px;font-size:.92rem;color:var(--haze)}
+.voice .dont li{color:var(--fog)}
+.scale{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.scale .s{border:1px solid var(--line);border-radius:8px;padding:20px;background:var(--carbon-2)}
+.scale .s .t{font-family:var(--disp);font-weight:800;text-transform:uppercase;color:var(--copper);font-size:1.05rem;font-stretch:108%}
+.scale .s p{font-size:.86rem;color:var(--fog);margin:8px 0 0}
+
+footer{padding:34px 0 70px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+
+@media(max-width:820px){.grid2,.grid3,.voice,.lock-main{grid-template-columns:1fr}.brandbar{grid-template-columns:1fr 1fr}.sw-grid{grid-template-columns:repeat(3,1fr)}.scale{grid-template-columns:1fr}}
+@media(max-width:520px){.wrap{padding:0 18px}.grid3{grid-template-columns:1fr}.brandbar{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap"><span class="k">Premium Bringa Kft.</span><span class="k">Márkakönyv · v5.0 — weboldal-rendszer</span></div></div>
+
+<header class="cover">
+  <svg class="bike" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#D6D4D0" stroke-width="3" stroke-linecap="round" opacity=".85"><circle cx="158" cy="258" r="78"/><circle cx="478" cy="258" r="78"/></g>
+    <g fill="none" stroke="#C2895A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><line x1="318" y1="258" x2="158" y2="258"/><line x1="352" y1="132" x2="158" y2="258"/><line x1="318" y1="258" x2="352" y2="132"/><line x1="318" y1="258" x2="452" y2="146"/><line x1="352" y1="132" x2="452" y2="146"/><line x1="452" y1="146" x2="478" y2="258"/><path d="M452 146 L470 126"/><path d="M470 126 q22 -4 30 10"/><line x1="330" y1="124" x2="366" y2="124"/><line x1="352" y1="132" x2="350" y2="124"/></g>
+    <g fill="#C2895A"><circle cx="318" cy="258" r="7"/></g>
+    <g fill="none" stroke="#C2895A" stroke-width="3"><circle cx="158" cy="258" r="5"/><circle cx="478" cy="258" r="5"/><path d="M318 258 L300 282 M318 258 L336 234"/></g>
+  </svg>
+  <div class="logo">Premium<b>Bringa</b></div>
+  <div class="rule"></div>
+  <div class="slogan">Minőségi kerékpározás, elérhetőbb áron.</div>
+  <div class="meta k">Márkakönyv · Debrecen · HU</div>
+</header>
+
+<!-- 01 LOGO -->
+<section><div class="wrap">
+  <div class="sh"><span class="k">01</span><h2>Logó & jel</h2>
+    <p>Az elsődleges jel a letisztult vonalrajzos kerékpár, mellette a tömör szóvédjegy. A „Premium" törtfehér, a „Bringa" réz. A grafika sosem kerül a betűkbe — kivéve a sűrített PB monogramot.</p></div>
+  <div class="panel lock-main" style="margin-bottom:20px">
+    <svg class="bike" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#D6D4D0" stroke-width="3" stroke-linecap="round" opacity=".85"><circle cx="158" cy="258" r="78"/><circle cx="478" cy="258" r="78"/></g><g fill="none" stroke="#C2895A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><line x1="318" y1="258" x2="158" y2="258"/><line x1="352" y1="132" x2="158" y2="258"/><line x1="318" y1="258" x2="352" y2="132"/><line x1="318" y1="258" x2="452" y2="146"/><line x1="352" y1="132" x2="452" y2="146"/><line x1="452" y1="146" x2="478" y2="258"/><path d="M452 146 L470 126"/><path d="M470 126 q22 -4 30 10"/><line x1="330" y1="124" x2="366" y2="124"/></g><g fill="#C2895A"><circle cx="318" cy="258" r="7"/></g></svg>
+    <div class="logo">Premium<b>Bringa</b></div>
+  </div>
+  <div class="grid2">
+    <div class="panel lock"><span class="tag k">Vízszintes — elsődleges</span><div class="logo" style="font-size:1.7rem">Premium<b>Bringa</b></div><span class="note">Fejléc, weboldal, számla.</span></div>
+    <div class="panel lock"><span class="tag k">Tördelt</span><div class="stk"><span class="logo">Premium</span><span class="logo"><b>Bringa</b></span></div><span class="note">Négyzetes, kompakt helyek.</span></div>
+  </div>
+</div></section>
+
+<!-- 02 SYMBOL -->
+<section><div class="wrap">
+  <div class="sh"><span class="k">02</span><h2>Szimbólum</h2>
+    <p>A vonalrajzos kerékpár önálló jelként is használható: app-ikon, vízjel, pecsét, hímzés. Ezüst kerekek, réz váz — a kontraszt és a tisztaság a lényeg.</p></div>
+  <div class="panel sym">
+    <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#D6D4D0" stroke-width="3" stroke-linecap="round" opacity=".85"><circle cx="158" cy="258" r="78"/><circle cx="478" cy="258" r="78"/></g><g fill="none" stroke="#C2895A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><line x1="318" y1="258" x2="158" y2="258"/><line x1="352" y1="132" x2="158" y2="258"/><line x1="318" y1="258" x2="352" y2="132"/><line x1="318" y1="258" x2="452" y2="146"/><line x1="352" y1="132" x2="452" y2="146"/><line x1="452" y1="146" x2="478" y2="258"/><path d="M452 146 L470 126"/><path d="M470 126 q22 -4 30 10"/><line x1="330" y1="124" x2="366" y2="124"/><line x1="352" y1="132" x2="350" y2="124"/></g><g fill="#C2895A"><circle cx="318" cy="258" r="7"/></g><g fill="none" stroke="#C2895A" stroke-width="3"><circle cx="158" cy="258" r="5"/><circle cx="478" cy="258" r="5"/><path d="M318 258 L300 282 M318 258 L336 234"/></g></svg>
+  </div>
+</div></section>
+
+<!-- 03 MONOGRAM + PROFILE -->
+<section><div class="wrap">
+  <div class="sh"><span class="k">03</span><h2>Monogram · profilkép</h2>
+    <p>A „PB" monogram az egyetlen, ahol a karbon-szövet a betűbe kerül. A profilkép négyzet, hogy a szöveg mindig teljesen látszódjon.</p></div>
+  <div class="grid2">
+    <div class="panel mono-wrap"><span class="tag k">Monogram — PB</span>
+      <svg class="texpb" viewBox="0 0 600 600">
+        <defs><clipPath id="cpb"><text x="300" y="320" text-anchor="middle" dominant-baseline="central" font-size="400" letter-spacing="-18">PB</text></clipPath></defs>
+        <text x="300" y="320" text-anchor="middle" dominant-baseline="central" font-size="400" letter-spacing="-18" fill="#232528">PB</text>
+        <g clip-path="url(#cpb)" id="pbweave"></g>
+        <text x="300" y="320" text-anchor="middle" dominant-baseline="central" font-size="400" letter-spacing="-18" fill="none" stroke="#EDEBE7" stroke-width="2" opacity=".7">PB</text>
+      </svg><span class="cap">PB · karbon-szövet</span></div>
+    <div class="panel mono-wrap"><span class="tag k">Profilkép — négyzet</span>
+      <span class="square"><svg class="profsvg" viewBox="0 0 600 600" style="width:230px;display:block">
+        <rect width="600" height="600" fill="#1A1B1E"/><g id="profweave"></g>
+        <text x="300" y="262" text-anchor="middle" dominant-baseline="central" font-size="118" letter-spacing="-4" fill="#EDEBE7">PREMIUM</text>
+        <text x="300" y="372" text-anchor="middle" dominant-baseline="central" font-size="118" letter-spacing="-4" fill="#C2895A">BRINGA</text>
+        <text x="300" y="452" text-anchor="middle" font-family="IBM Plex Mono" font-weight="500" font-size="25" letter-spacing="8" fill="#7E8189">.HU</text>
+      </svg></span><span class="cap">1080×1080 · négyzet</span></div>
+  </div>
+</div></section>
+
+<!-- 04 COLOR -->
+<section><div class="wrap">
+  <div class="sh"><span class="k">04</span><h2>Színek</h2>
+    <p>Karbon-fekete felület, törtfehér szöveg, meleg réz akcentus — plusz egy világos „showroom" alapszín a böngészhető szekciókhoz. Réz csak akcentus, sosem nagy felületen.</p></div>
+  <div class="brandbar">
+    <div style="background:#1A1B1E"><span class="n" style="color:#D6D4D0">Karbon — fő háttér</span><span class="h" style="color:#7E8189">#1A1B1E</span></div>
+    <div style="background:#1A1B1E"><span class="n" style="color:#EDEBE7">Fény — szöveg</span><span class="h" style="color:#7E8189">#EDEBE7</span></div>
+    <div style="background:#F1F0EC"><span class="n" style="color:#1E2024">Világos — showroom</span><span class="h" style="color:#54575E">#F1F0EC</span></div>
+    <div style="background:#1A1B1E"><span class="n" style="color:#C2895A">Réz — akcentus</span><span class="h" style="color:#9A6A40">#C2895A</span></div>
+  </div>
+  <div class="sw-grid">
+    <div class="sw" style="background:#1A1B1E;color:#D6D4D0"><span class="n">Karbon</span><span class="h">#1A1B1E</span></div>
+    <div class="sw" style="background:#202124;color:#D6D4D0"><span class="n">Karbon 2</span><span class="h">#202124</span></div>
+    <div class="sw" style="background:#2A2C30;color:#D6D4D0"><span class="n">Grafit</span><span class="h">#2A2C30</span></div>
+    <div class="sw" style="background:#43464C;color:#D6D4D0"><span class="n">Acél</span><span class="h">#43464C</span></div>
+    <div class="sw" style="background:#7E8189;color:#1A1B1E"><span class="n">Köd</span><span class="h">#7E8189</span></div>
+    <div class="sw" style="background:#A8ABB1;color:#1A1B1E"><span class="n">Pára</span><span class="h">#A8ABB1</span></div>
+    <div class="sw" style="background:#D6D4D0;color:#1A1B1E"><span class="n">Ezüst</span><span class="h">#D6D4D0</span></div>
+    <div class="sw" style="background:#EDEBE7;color:#1A1B1E"><span class="n">Fény</span><span class="h">#EDEBE7</span></div>
+    <div class="sw" style="background:#F1F0EC;color:#1A1B1E"><span class="n">Világos</span><span class="h">#F1F0EC</span></div>
+    <div class="sw" style="background:#1E2024;color:#D6D4D0"><span class="n">Tinta</span><span class="h">#1E2024</span></div>
+    <div class="sw" style="background:#C2895A;color:#1A1B1E"><span class="n">Réz</span><span class="h">#C2895A</span></div>
+    <div class="sw" style="background:#9A6A40;color:#EDEBE7"><span class="n">Réz mély</span><span class="h">#9A6A40</span></div>
+  </div>
+</div></section>
+
+<!-- 05 TYPE -->
+<section><div class="wrap">
+  <div class="sh"><span class="k">05</span><h2>Tipográfia</h2>
+    <p>Archivo (szélesített) a display-hez, Hanken Grotesk a folyószöveghez, IBM Plex Mono a címkékhez és specifikációkhoz.</p></div>
+  <div class="type-stack">
+    <div class="tc"><div class="role">Display — Archivo</div><div class="fam">800 · font-stretch 118% · UPPERCASE</div><div class="d">Kiállítótermi állapot, elérhető áron</div></div>
+    <div class="tc"><div class="role">Folyószöveg — Hanken Grotesk</div><div class="fam">300 / 400 / 500</div><div class="bd">Nyugat-európai márkás kerékpárok, teljes körű műhelyfelkészítéssel és garanciával — Debrecenben átvehető.</div></div>
+    <div class="tc"><div class="role">Címke — IBM Plex Mono</div><div class="fam">500 · letter-spacing</div><div class="mo">VÁZ <span class="v">29″ ALU</span> · HAJTÁS <span class="v">DEORE 1×12</span> · ÁLLAPOT <span class="c">KIVÁLÓ</span></div></div>
+  </div>
+</div></section>
+
+<!-- 06 TEXTURE -->
+<section><div class="wrap">
+  <div class="sh"><span class="k">06</span><h2>Textúra</h2>
+    <p>Finom „karbon-szövet" — átlós keresztvonalak, helyenként egy réz szállal. Háttérként a sötét szekciókban és a PB monogramban. Mindig diszkrét, sosem a fő szöveg olvashatóságának rovására.</p></div>
+  <div class="tex-show"></div>
+</div></section>
+
+<!-- 07 COMPONENTS -->
+<section><div class="wrap">
+  <div class="sh"><span class="k">07</span><h2>Komponensek</h2>
+    <p>A weboldal építőelemei — ahogyan élnek a felületen.</p></div>
+  <div class="comp-row"><span class="lbl">Gombok</span>
+    <a class="btn btn-1">Készlet megtekintése →</a><a class="btn btn-2">Hogyan készítjük fel?</a><a class="btn btn-3">Kapcsolatfelvétel →</a></div>
+  <div class="comp-row"><span class="lbl">Szűrő-chipek & állapotjelzők</span>
+    <span class="chip on">Összes</span><span class="chip">Gravel</span><span class="chip">Prémium</span>
+    <span style="width:18px"></span><span class="cond">Kiváló</span><span class="cond o">Újszerű</span></div>
+  <div class="comp-row" style="display:block"><span class="lbl">Termékkártya</span>
+    <div style="max-width:320px;background:#fff;border:1px solid var(--line-l);border-radius:8px;overflow:hidden">
+      <div style="aspect-ratio:4/3;background-color:#171819;background-image:var(--weave),linear-gradient(150deg,#26282C,#171819);position:relative;display:flex;align-items:flex-end;justify-content:space-between;padding:13px">
+        <span style="font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:var(--haze)">MTB · Hardtail</span><span class="cond">Kiváló</span></div>
+      <div style="padding:16px 17px 18px">
+        <div style="font-family:var(--disp);font-weight:800;font-size:1.15rem;color:var(--ink);font-stretch:110%;text-transform:uppercase">Cube Aim SL</div>
+        <div style="font-size:.84rem;color:var(--ink-soft);margin-top:8px">29″ alu · Deore 1×12 · levegős villa.</div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;padding-top:12px;border-top:1px solid var(--line-l)">
+          <span style="font-family:var(--disp);font-weight:800;font-size:1.2rem;color:var(--ink)">219 000 <span style="font-size:.72rem;color:var(--ink-soft)">Ft</span></span>
+          <span style="font-family:var(--mono);font-size:.6rem;color:#9a978f">2022 · L</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 08 VOICE -->
+<section><div class="wrap">
+  <div class="sh"><span class="k">08</span><h2>Hangnem & szöveg</h2>
+    <p>Magabiztos, kulturált, nem tolakodó. A prémiumot tényként kezeljük, nem ünnepeljük. Az állapotleírás őszinte és tárgyilagos.</p></div>
+  <div class="voice">
+    <div class="do"><h4>Így</h4><ul>
+      <li>Tárgyilagos, konkrét: „Shimano Deore 1×12, levegős villa."</li>
+      <li>Őszinte állapot: a kopás természetes, nem mentegetőzünk érte.</li>
+      <li>Univerzális használat: Debrecen, az Alföld — nem csak terep.</li>
+      <li>„Szervizelt és rendberakott" — diszkréten, tényként.</li></ul></div>
+    <div class="dont"><h4>Így ne</h4><ul>
+      <li>Üres jelzők: „a villa elnyeli a döccenőket", „a fék megbízható".</li>
+      <li>Felkiáltójeles, tukmáló hangnem, túlzó ígéretek.</li>
+      <li>Defenzív, mentegetőző állapotleírás, hosszú hibalisták.</li>
+      <li>A prémium hangos ünneplése — elég, ha látszik.</li></ul></div>
+  </div>
+  <div class="scale">
+    <div class="s"><div class="t">Újszerű</div><p>Alig használt, kifogástalan, minimális futás.</p></div>
+    <div class="s"><div class="t">Kiváló</div><p>Karbantartott, rendezett, normál használati nyomokkal.</p></div>
+    <div class="s"><div class="t">Jó</div><p>Látható, de tisztességes kopás — őszintén jelölve.</p></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span class="k">premiumbringa.hu</span>
+  <span class="k">Márkakönyv v5.0 — Archivo · Hanken Grotesk · IBM Plex Mono</span>
+</div></footer>
+
+<script>
+function weave(W,H,seed,op){var s="",x,gap=15,off=(seed*7)%gap;
+  for(x=-H+off;x<W;x+=gap){var c=(Math.round((x+H)/gap)%9===0);s+='<line x1="'+x.toFixed(1)+'" y1="0" x2="'+(x+H).toFixed(1)+'" y2="'+H+'" stroke="'+(c?"#C2895A":"#D6D4D0")+'" stroke-width="'+(c?1.1:1)+'" opacity="'+(c?Math.min(op*4,.55):op)+'"/>';}
+  for(x=off;x<W+H;x+=gap){var c2=(Math.round(x/gap)%11===0);s+='<line x1="'+x.toFixed(1)+'" y1="0" x2="'+(x-H).toFixed(1)+'" y2="'+H+'" stroke="'+(c2?"#C2895A":"#D6D4D0")+'" stroke-width="'+(c2?1.1:1)+'" opacity="'+(c2?Math.min(op*4,.55):op)+'"/>';}
+  return s;}
+document.getElementById('pbweave').innerHTML=weave(600,600,13,0.4);
+document.getElementById('profweave').innerHTML=weave(600,600,9,0.06);
+</script>
+</body>
+</html>

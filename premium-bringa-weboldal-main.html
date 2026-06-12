@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premium Bringa — Felkészített prémium kerékpárok · Debrecen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --carbon:#1A1B1E; --carbon-2:#202124; --graphite:#2A2C30; --steel:#43464C; --fog:#7E8189;
+  --haze:#A8ABB1; --silver:#D6D4D0; --bright:#EDEBE7;
+  --light:#F1F0EC; --light-2:#E7E5E0; --ink:#1E2024; --ink-soft:#54575E;
+  --copper:#C2895A; --copper-d:#A8714400; --copper-deep:#9A6A40; --line:#2E3035; --line-l:#DAD8D2;
+  --disp:"Archivo",system-ui,sans-serif; --body:"Hanken Grotesk",system-ui,sans-serif; --mono:"IBM Plex Mono",monospace;
+  --weave:repeating-linear-gradient(45deg,rgba(214,212,208,.025) 0 1px,transparent 1px 13px),repeating-linear-gradient(-45deg,rgba(214,212,208,.025) 0 1px,transparent 1px 13px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--carbon);color:var(--silver);font-family:var(--body);font-weight:400;line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;letter-spacing:-.003em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 30px}
+.kick{font-family:var(--mono);font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:.66rem;color:var(--copper)}
+h1,h2,h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:114%;letter-spacing:-.018em;margin:0;line-height:1}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.7rem;padding:14px 22px;border-radius:3px;text-decoration:none;cursor:pointer;transition:.2s;border:1px solid transparent}
+.btn-1{background:var(--copper);color:#15171A} .btn-1:hover{background:#D49A6A}
+.btn-2{background:transparent;color:var(--bright);border-color:var(--line)} .btn-2:hover{border-color:var(--copper);color:var(--copper)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(26,27,30,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
+.logo{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:118%;font-size:1.12rem;letter-spacing:-.01em;color:var(--bright);text-decoration:none}
+.logo b{color:var(--copper);font-weight:800}
+.nav-menu{display:flex;gap:28px}
+.nav-menu a{font-family:var(--body);font-weight:500;font-size:.86rem;color:var(--haze);text-decoration:none;transition:.2s}
+.nav-menu a:hover{color:var(--bright)}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-phone{font-family:var(--mono);font-size:.74rem;color:var(--silver);text-decoration:none;letter-spacing:.03em}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:var(--carbon);background-image:var(--weave);border-bottom:1px solid var(--line)}
+.hero-glow{position:absolute;top:-30%;right:-10%;width:60%;height:120%;background:radial-gradient(closest-side,rgba(194,137,90,.10),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:78px 30px 86px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);color:var(--bright);font-stretch:118%}
+.hero h1 em{font-style:normal;color:var(--copper)}
+.hero .lead{font-weight:300;font-size:clamp(1.02rem,2vw,1.22rem);color:var(--haze);margin:22px 0 30px;max-width:42ch}
+.hero .kick{display:block;margin-bottom:20px}
+.hero .cta{display:flex;gap:13px;flex-wrap:wrap}
+.hero .ticks{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px}
+.hero .ticks span{font-family:var(--mono);font-size:.66rem;letter-spacing:.04em;color:var(--fog);text-transform:uppercase}
+.hero .ticks b{color:var(--copper);font-weight:600}
+.hero-art{position:relative}
+.hero-art svg{width:100%;height:auto;display:block;filter:drop-shadow(0 18px 40px rgba(0,0,0,.4))}
+
+/* TRUST STRIP */
+.trust{background:var(--carbon-2);border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:1px}
+.trust .t{padding:26px 22px}
+.trust .t .n{font-family:var(--mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:8px}
+.trust .t .d{font-family:var(--disp);font-weight:700;font-stretch:108%;text-transform:uppercase;font-size:1.02rem;color:var(--bright);line-height:1.1}
+
+/* section base */
+section{padding:90px 0}
+.sec-head{max-width:60ch;margin-bottom:48px}
+.sec-head .kick{display:block;margin-bottom:16px}
+.sec-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);color:var(--bright)}
+.sec-head.on-light h2{color:var(--ink)}
+.sec-head p{color:var(--fog);font-size:1.02rem;margin:16px 0 0}
+.sec-head.on-light p{color:var(--ink-soft)}
+
+/* PROCESS */
+.process{background:var(--carbon);background-image:var(--weave)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.step{border-top:2px solid var(--line);padding-top:22px;position:relative}
+.step .num{font-family:var(--disp);font-weight:800;font-size:2.4rem;color:var(--graphite);line-height:.8;margin-bottom:14px;-webkit-text-stroke:1px var(--steel)}
+.step h3{font-size:1.05rem;color:var(--bright);margin-bottom:10px;font-stretch:108%}
+.step p{font-size:.92rem;color:var(--fog);line-height:1.55}
+.step::before{content:"";position:absolute;top:-2px;left:0;width:42px;height:2px;background:var(--copper)}
+
+/* SHOWROOM (light) */
+.showroom{background:var(--light);color:var(--ink)}
+.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:30px}
+.chip{font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line-l);color:var(--ink-soft);padding:9px 15px;border-radius:30px;cursor:pointer;transition:.2s;background:transparent}
+.chip:hover{border-color:var(--copper);color:var(--copper)}
+.chip.on{background:var(--ink);color:var(--light);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.bike{background:#fff;border:1px solid var(--line-l);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:.25s;cursor:pointer}
+.bike:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(30,32,36,.12);border-color:#cfccc4}
+.bike .img{aspect-ratio:4/3;position:relative;overflow:hidden;background:linear-gradient(150deg,#26282C,#171819);display:flex;align-items:flex-end;justify-content:space-between;padding:14px}
+.bike .img::before{content:"";position:absolute;inset:0;background:var(--weave);opacity:.6}
+.bike .img .bk-wheel{position:absolute;right:-30px;top:50%;transform:translateY(-50%);width:150px;height:150px;border:2px solid rgba(214,212,208,.12);border-radius:50%}
+.bike .img .bk-wheel.two{right:60px;width:150px;height:150px}
+.bike .img .cat,.bike .img .cond{position:relative;font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase}
+.bike .img .cat{color:var(--haze)}
+.bike .img .cond{color:#15171A;background:var(--copper);padding:4px 9px;border-radius:3px;font-weight:600}
+.bike .bd{padding:17px 18px 19px;display:flex;flex-direction:column;flex:1}
+.bike h3{font-size:1.18rem;color:var(--ink);font-stretch:110%}
+.bike .spec{font-size:.84rem;color:var(--ink-soft);margin-top:9px;line-height:1.45;flex:1}
+.bike .foot{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;padding-top:14px;border-top:1px solid var(--line-l)}
+.bike .price{font-family:var(--disp);font-weight:800;font-size:1.22rem;color:var(--ink);font-stretch:106%}
+.bike .price small{font-weight:600;font-size:.74rem;color:var(--ink-soft)}
+.bike .yr{font-family:var(--mono);font-size:.6rem;color:#9a978f;letter-spacing:.05em}
+.showroom .more{text-align:center;margin-top:44px}
+
+/* VALUE (carbon) */
+.value{background:var(--carbon-2)}
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.v{background:var(--carbon-2);padding:34px 32px}
+.v .vn{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin-bottom:12px}
+.v h3{font-size:1.2rem;color:var(--bright);margin-bottom:10px;font-stretch:108%}
+.v p{color:var(--fog);font-size:.95rem;line-height:1.55}
+
+/* STORY */
+.story{background:var(--carbon);background-image:var(--weave);border-top:1px solid var(--line)}
+.story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.story h2{font-size:clamp(1.7rem,3.4vw,2.4rem);color:var(--bright);margin-bottom:20px}
+.story p{color:var(--haze);font-size:1.04rem;line-height:1.7;font-weight:300}
+.story .brands{margin-top:26px;display:flex;gap:18px;flex-wrap:wrap}
+.story .brands span{font-family:var(--disp);font-weight:800;font-size:1.05rem;color:var(--steel);text-transform:uppercase;font-stretch:108%}
+.story-card{border:1px solid var(--line);border-radius:10px;padding:36px;background:linear-gradient(160deg,#212327,#191A1C)}
+.story-card .row{display:flex;justify-content:space-between;padding:18px 0;border-bottom:1px solid var(--line)}
+.story-card .row:last-child{border-bottom:0}
+.story-card .row .k{font-family:var(--body);color:var(--fog);font-size:.92rem}
+.story-card .row .vv{font-family:var(--disp);font-weight:800;color:var(--bright);font-size:1.02rem;text-transform:uppercase;font-stretch:106%}
+.story-card .row .vv em{color:var(--copper);font-style:normal}
+
+/* VISIT */
+.visit{background:var(--light);color:var(--ink)}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.visit h2{color:var(--ink);font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:18px}
+.visit p{color:var(--ink-soft);font-size:1.02rem;margin-bottom:26px;max-width:42ch}
+.visit .det{display:flex;flex-direction:column;gap:1px;background:var(--line-l);border:1px solid var(--line-l);border-radius:8px;overflow:hidden;margin-bottom:26px}
+.visit .det .d{background:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.visit .det .d .l{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:#9a978f}
+.visit .det .d .r{font-weight:600;color:var(--ink);font-size:.96rem}
+.map{border-radius:8px;overflow:hidden;border:1px solid var(--line-l);background:linear-gradient(150deg,#26282C,#171819);position:relative;min-height:340px;display:flex;align-items:center;justify-content:center}
+.map::before{content:"";position:absolute;inset:0;background:var(--weave);opacity:.5}
+.map .pin{position:relative;text-align:center}
+.map .pin .dot{width:16px;height:16px;border-radius:50%;background:var(--copper);margin:0 auto 12px;box-shadow:0 0 0 8px rgba(194,137,90,.18)}
+.map .pin .city{font-family:var(--disp);font-weight:800;color:var(--bright);text-transform:uppercase;font-size:1.4rem;font-stretch:110%}
+.map .pin .sub{font-family:var(--mono);font-size:.6rem;color:var(--haze);letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+
+/* CTA band */
+.band{background:var(--copper);color:#181410}
+.band .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:46px 30px;flex-wrap:wrap}
+.band h2{color:#1B140D;font-size:clamp(1.4rem,3vw,2rem)}
+.band p{color:#3a2c1c;margin:8px 0 0;font-weight:500}
+.band .btn-dark{background:#1A1B1E;color:var(--bright);border:0}
+.band .btn-dark:hover{background:#000}
+
+/* FOOTER */
+footer{background:var(--carbon);border-top:1px solid var(--line);padding:60px 0 40px}
+footer .top{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:30px;padding-bottom:38px;border-bottom:1px solid var(--line)}
+footer .logo{font-size:1.4rem;display:inline-block;margin-bottom:14px}
+footer .slogan{color:var(--fog);font-size:.94rem;max-width:32ch}
+footer .col h4{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin:0 0 16px}
+footer .col a,footer .col .li{display:block;color:var(--haze);text-decoration:none;font-size:.9rem;margin-bottom:11px;transition:.2s}
+footer .col a:hover{color:var(--bright)}
+footer .bot{display:flex;justify-content:space-between;align-items:center;padding-top:26px;flex-wrap:wrap;gap:10px}
+footer .bot span{font-family:var(--mono);font-size:.62rem;color:var(--steel);letter-spacing:.05em}
+
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;padding:54px 30px 60px}.hero-art{order:-1;max-width:440px}
+  .trust .wrap{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}
+  .grid{grid-template-columns:1fr 1fr}.vgrid{grid-template-columns:1fr}
+  .story .wrap,.visit .wrap{grid-template-columns:1fr;gap:34px}
+  .nav-menu{display:none}footer .top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .wrap{padding:0 20px}.trust .wrap,.steps,.grid{grid-template-columns:1fr}
+  footer .top{grid-template-columns:1fr}.nav-phone{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a href="#" class="logo">Premium<b>Bringa</b></a>
+  <div class="nav-menu"><a href="#keszlet">Készlet</a><a href="#felkeszites">Felkészítés</a><a href="#rolunk">Rólunk</a><a href="#kapcsolat">Kapcsolat</a></div>
+  <div class="nav-right"><a href="tel:+36204360307" class="nav-phone">+36 20 436 0307</a><a href="#keszlet" class="btn btn-1">Készlet</a></div>
+</div></nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <div>
+      <span class="kick">Prémium használt kerékpárok · Debrecen</span>
+      <h1>Kiállítótermi állapot, <em>elérhető áron.</em></h1>
+      <p class="lead">Nyugat-európai márkás kerékpárok, teljes körű műhelyfelkészítéssel és garanciával. Te csak felülsz és tekersz — a többit megoldottuk.</p>
+      <div class="cta"><a href="#keszlet" class="btn btn-1">Készlet megtekintése →</a><a href="#felkeszites" class="btn btn-2">Hogyan készítjük fel?</a></div>
+      <div class="ticks"><span><b>✓</b> Garancia</span><span><b>✓</b> ~30 pontos átvizsgálás</span><span><b>✓</b> Országos szállítás</span></div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg" aria-label="Kerékpár">
+        <g fill="none" stroke="#D6D4D0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"><circle cx="158" cy="258" r="78"/><circle cx="478" cy="258" r="78"/></g>
+        <g fill="none" stroke="#C2895A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="318" y1="258" x2="158" y2="258"/><line x1="352" y1="132" x2="158" y2="258"/><line x1="318" y1="258" x2="352" y2="132"/>
+          <line x1="318" y1="258" x2="452" y2="146"/><line x1="352" y1="132" x2="452" y2="146"/><line x1="452" y1="146" x2="478" y2="258"/>
+          <path d="M452 146 L470 126"/><path d="M470 126 q22 -4 30 10"/><line x1="330" y1="124" x2="366" y2="124"/><line x1="352" y1="132" x2="350" y2="124"/></g>
+        <g fill="#C2895A"><circle cx="318" cy="258" r="7"/></g>
+        <g fill="none" stroke="#C2895A" stroke-width="3"><circle cx="158" cy="258" r="5"/><circle cx="478" cy="258" r="5"/><path d="M318 258 L300 282 M318 258 L336 234"/></g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- TRUST -->
+<div class="trust"><div class="wrap">
+  <div class="t"><div class="n">01 — Bizalom</div><div class="d">Garancia minden gépre</div></div>
+  <div class="t"><div class="n">02 — Felkészítés</div><div class="d">Teljes körű szerviz</div></div>
+  <div class="t"><div class="n">03 — Átvétel</div><div class="d">Bemutató Debrecenben</div></div>
+  <div class="t"><div class="n">04 — Szállítás</div><div class="d">Országosan házhoz</div></div>
+</div></div>
+
+<!-- PROCESS -->
+<section class="process" id="felkeszites"><div class="wrap">
+  <div class="sec-head"><span class="kick">Felkészítés</span><h2>Minden gép szervizelt és rendberakott</h2>
+    <p>Nem csak letöröljük. Minden kerékpár teljes folyamaton megy át, mielőtt hozzád kerül — ezért adunk rá garanciát.</p></div>
+  <div class="steps">
+    <div class="step"><div class="num">01</div><h3>Beszerzés</h3><p>Válogatott márkás gépek Németországból és Ausztriából, igazolt eredettel.</p></div>
+    <div class="step"><div class="num">02</div><h3>Szétszerelés</h3><p>Teljes szétszerelés, zsírtalanítás és alapos tisztítás minden alkatrészen.</p></div>
+    <div class="step"><div class="num">03</div><h3>Átvizsgálás</h3><p>Kopó elemek ellenőrzése és cseréje: fék, váltó, csapágyak, gumik.</p></div>
+    <div class="step"><div class="num">04</div><h3>Beállítás</h3><p>Pontos beállítás, próbaút, majd kiállítótermi állapotú átadás.</p></div>
+  </div>
+</div></section>
+
+<!-- SHOWROOM -->
+<section class="showroom" id="keszlet"><div class="wrap">
+  <div class="sec-head on-light"><span class="kick">Készlet</span><h2>Aktuális kínálat</h2>
+    <p>Válogatott, felkészített kerékpárok — őszinte, háromfokozatú állapotleírással. Ami itt van, az kész a következő ezer kilométerre.</p></div>
+  <div class="filters"><span class="chip on">Összes</span><span class="chip">Belépő XC</span><span class="chip">Trekking</span><span class="chip">Prémium</span><span class="chip">Gravel</span></div>
+  <div class="grid">
+    <div class="bike"><div class="img"><span class="bk-wheel"></span><span class="bk-wheel two"></span><span class="cat">MTB · Hardtail</span><span class="cond">Kiváló</span></div>
+      <div class="bd"><h3>Cube Aim SL</h3><div class="spec">29″ alu · Shimano Deore 1×12 · levegős villa · hidraulikus tárcsafék.</div>
+      <div class="foot"><span class="price">219 000 <small>Ft</small></span><span class="yr">2022 · L</span></div></div></div>
+    <div class="bike"><div class="img"><span class="bk-wheel"></span><span class="bk-wheel two"></span><span class="cat">MTB · Hardtail</span><span class="cond">Újszerű</span></div>
+      <div class="bd"><h3>Cube Attention</h3><div class="spec">29″ alu · 1×12 · RockShox villa · belső kábelvezetés.</div>
+      <div class="foot"><span class="price">249 000 <small>Ft</small></span><span class="yr">2021 · M</span></div></div></div>
+    <div class="bike"><div class="img"><span class="bk-wheel"></span><span class="bk-wheel two"></span><span class="cat">Prémium · Karbon</span><span class="cond">Kiváló</span></div>
+      <div class="bd"><h3>Cube Reaction C:62</h3><div class="spec">Karbon váz · Shimano XT 1×12 · levegős villa · 29″.</div>
+      <div class="foot"><span class="price">429 000 <small>Ft</small></span><span class="yr">2021 · L</span></div></div></div>
+    <div class="bike"><div class="img"><span class="bk-wheel"></span><span class="bk-wheel two"></span><span class="cat">Trekking</span><span class="cond">Kiváló</span></div>
+      <div class="bd"><h3>Cube Kathmandu</h3><div class="spec">28″ alu · Deore · agydinamó · sárvédő & csomagtartó.</div>
+      <div class="foot"><span class="price">259 000 <small>Ft</small></span><span class="yr">2021 · 54</span></div></div></div>
+    <div class="bike"><div class="img"><span class="bk-wheel"></span><span class="bk-wheel two"></span><span class="cat">Gravel</span><span class="cond">Újszerű</span></div>
+      <div class="bd"><h3>Cube Nuroad</h3><div class="spec">Alu gravel · Shimano GRX 2×10 · tárcsafék · 700c.</div>
+      <div class="foot"><span class="price">279 000 <small>Ft</small></span><span class="yr">2022 · 56</span></div></div></div>
+    <div class="bike"><div class="img"><span class="bk-wheel"></span><span class="bk-wheel two"></span><span class="cat">Női · XC</span><span class="cond">Jó</span></div>
+      <div class="bd"><h3>Cube Access WS</h3><div class="spec">29″ alu · női geometria · 1×12 · levegős villa.</div>
+      <div class="foot"><span class="price">199 000 <small>Ft</small></span><span class="yr">2021 · S</span></div></div></div>
+  </div>
+  <div class="more"><a href="#kapcsolat" class="btn btn-1" style="background:var(--ink);color:var(--light)">Teljes készlet & érdeklődés →</a></div>
+</div></section>
+
+<!-- VALUE -->
+<section class="value"><div class="wrap">
+  <div class="sec-head"><span class="kick">Miért Premium Bringa</span><h2>Prémium minőség, meglepetések nélkül</h2></div>
+  <div class="vgrid">
+    <div class="v"><div class="vn">Átlátszó</div><h3>Őszinte állapot</h3><p>Háromfokozatú, valós állapotleírás minden gépnél — újszerű, kiváló vagy jó. Amit látsz, azt kapod.</p></div>
+    <div class="v"><div class="vn">Eredet</div><h3>Igazolt múlt</h3><p>Nyugat-európai forrás, ellenőrzött háttér. Tudjuk, honnan jön minden kerékpár.</p></div>
+    <div class="v"><div class="vn">Szakértelem</div><h3>Műhely-precizitás</h3><p>Teljes körű felkészítés saját műhelyben — nem kozmetika, hanem valódi szerviz.</p></div>
+    <div class="v"><div class="vn">Érték</div><h3>Megfizethető prémium</h3><p>Márkás minőség a töredékéért az újnak. A prémium nem kell, hogy elérhetetlen legyen.</p></div>
+  </div>
+</div></section>
+
+<!-- STORY -->
+<section class="story" id="rolunk"><div class="wrap">
+  <div>
+    <span class="kick">Rólunk</span>
+    <h2 style="margin-top:14px">Debrecenből, a teljes Alföldnek</h2>
+    <p>A Premium Bringa azért született, hogy a márkás, minőségi kerékpár ne legyen luxus. Nyugat-Európából hozzuk a gépeket, saját műhelyünkben készítjük fel őket, és Debrecenben adjuk át — kiállítótermi állapotban, garanciával. Hisszük, hogy egy jó bringa évekre szól, ha rendesen felkészítik rá.</p>
+    <div class="brands"><span>Cube</span><span>Trek</span><span>Orbea</span><span>Specialized</span></div>
+  </div>
+  <div class="story-card">
+    <div class="row"><span class="k">Állapot-skála</span><span class="vv">Újszerű · Kiváló · <em>Jó</em></span></div>
+    <div class="row"><span class="k">Forrás</span><span class="vv">Németország · Ausztria</span></div>
+    <div class="row"><span class="k">Átvétel</span><span class="vv">Debrecen <em>+ szállítás</em></span></div>
+    <div class="row"><span class="k">Garancia</span><span class="vv">Minden gépre</span></div>
+  </div>
+</div></section>
+
+<!-- VISIT -->
+<section class="visit" id="kapcsolat"><div class="wrap">
+  <div>
+    <span class="kick" style="color:var(--copper-deep)">Kapcsolat</span>
+    <h2 style="margin-top:14px">Nézd meg élőben Debrecenben</h2>
+    <p>Személyes bemutató és átvétel előzetes egyeztetéssel. Írj vagy hívj — megmutatjuk a gépet, és segítünk a megfelelő méret kiválasztásában.</p>
+    <div class="det">
+      <div class="d"><span class="l">Telefon</span><span class="r">+36 20 436 0307</span></div>
+      <div class="d"><span class="l">Web</span><span class="r">premiumbringa.hu</span></div>
+      <div class="d"><span class="l">Helyszín</span><span class="r">Debrecen · egyeztetéssel</span></div>
+      <div class="d"><span class="l">Szállítás</span><span class="r">Országosan, futárral</span></div>
+    </div>
+    <a href="tel:+36204360307" class="btn btn-1">Hívás & időpont →</a>
+  </div>
+  <div class="map"><div class="pin"><div class="dot"></div><div class="city">Debrecen</div><div class="sub">Prémium Bringa · bemutató</div></div></div>
+</div></section>
+
+<!-- CTA BAND -->
+<div class="band"><div class="wrap">
+  <div><h2>Megtaláltad a tiédet?</h2><p>Foglald le, vagy kérdezz bátran — gyorsan válaszolunk.</p></div>
+  <a href="tel:+36204360307" class="btn btn-dark">Kapcsolatfelvétel →</a>
+</div></div>
+
+<!-- FOOTER -->
+<footer><div class="wrap">
+  <div class="top">
+    <div><a href="#" class="logo">Premium<b>Bringa</b></a><div class="slogan">Minőségi kerékpározás, elérhetőbb áron. Felkészített prémium kerékpárok Debrecenből.</div></div>
+    <div class="col"><h4>Menü</h4><a href="#keszlet">Készlet</a><a href="#felkeszites">Felkészítés</a><a href="#rolunk">Rólunk</a><a href="#kapcsolat">Kapcsolat</a></div>
+    <div class="col"><h4>Szegmensek</h4><span class="li">Belépő XC</span><span class="li">Trekking</span><span class="li">Prémium</span><span class="li">Gravel</span></div>
+    <div class="col"><h4>Kapcsolat</h4><span class="li">+36 20 436 0307</span><span class="li">premiumbringa.hu</span><span class="li">Debrecen, HU</span><span class="li">Országos szállítás</span></div>
+  </div>
+  <div class="bot"><span>© 2026 Premium Bringa Kft.</span><span>Cube · Trek · Orbea · Specialized — felkészítve</span></div>
+</div></footer>
+
+</body>
+</html>
