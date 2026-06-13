@@ -33,6 +33,10 @@ nav.nav{position:sticky;top:0;z-index:50;background:rgba(26,27,30,.82);backdrop-
 nav.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);gap:20px}
 .logo{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:118%;font-size:1.12rem;letter-spacing:-.01em;color:var(--bright);text-decoration:none}
 .logo b{color:var(--copper);font-weight:800}
+/* logó-jelvény (bringa-jel) a fejléc szóvédjegye mellett */
+.nav .logo{display:inline-flex;align-items:center;gap:11px;line-height:1}
+.brand-badge{width:36px;height:36px;flex:none;border-radius:10px;background:var(--carbon);border:1px solid var(--line);padding:4px;display:flex}
+.brand-badge svg{width:100%;height:100%;display:block}
 .nav-menu{display:flex;gap:28px}
 .nav-menu a{font-family:var(--body);font-weight:500;font-size:.86rem;color:var(--haze);text-decoration:none;transition:.2s}
 .nav-menu a:hover{color:var(--bright)}
@@ -64,9 +68,9 @@ nav.nav .wrap{display:flex;align-items:center;justify-content:space-between;heig
 /* kiemelt darab — hero showcase */
 .feature{display:block;text-decoration:none;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:linear-gradient(160deg,#212327,#191A1C);box-shadow:0 24px 60px rgba(0,0,0,.42);transition:transform .25s,box-shadow .25s}
 .feature:hover{transform:translateY(-4px);box-shadow:0 30px 70px rgba(0,0,0,.5)}
-.feature .ph{aspect-ratio:16/10;position:relative;overflow:hidden;background:linear-gradient(150deg,#26282C,#171819);display:flex;align-items:flex-start;justify-content:space-between;padding:16px}
+.feature .ph{aspect-ratio:4/5;position:relative;overflow:hidden;background:linear-gradient(150deg,#26282C,#171819);display:flex;align-items:flex-start;justify-content:space-between;padding:16px}
 .feature .ph::before{content:"";position:absolute;inset:0;background:var(--weave);opacity:.6}
-.feature .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.feature .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:linear-gradient(150deg,#26282C,#171819);z-index:1}
 .feature .ph .wheel{position:absolute;top:50%;transform:translateY(-50%);width:172px;height:172px;border:2px solid rgba(214,212,208,.12);border-radius:50%;right:-44px}
 .feature .ph .wheel.two{right:96px}
 .feature .ph .tag,.feature .ph .cond{position:relative;z-index:2;font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
@@ -135,11 +139,11 @@ section{padding:90px 0}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .bike{background:#fff;border:1px solid var(--line-l);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:.25s;text-decoration:none;color:inherit}
 .bike:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(30,32,36,.12);border-color:#cfccc4}
-.bike .img{aspect-ratio:4/3;position:relative;overflow:hidden;background:linear-gradient(150deg,#26282C,#171819);display:flex;align-items:flex-end;justify-content:space-between;padding:14px}
+.bike .img{aspect-ratio:3/4;position:relative;overflow:hidden;background:linear-gradient(150deg,#26282C,#171819);display:flex;align-items:flex-end;justify-content:space-between;padding:14px}
 .bike .img::before{content:"";position:absolute;inset:0;background:var(--weave);opacity:.6}
 .bike .img .bk-wheel{position:absolute;right:-30px;top:50%;transform:translateY(-50%);width:150px;height:150px;border:2px solid rgba(214,212,208,.12);border-radius:50%}
 .bike .img .bk-wheel.two{right:60px;width:150px;height:150px}
-.bike .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.bike .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:linear-gradient(150deg,#26282C,#171819);z-index:1}
 .bike .img .cat,.bike .img .cond{position:relative;z-index:2;font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase}
 .bike .img .cat{color:var(--haze)}
 .cond{color:#15171A;background:var(--copper);padding:4px 9px;border-radius:3px;font-weight:600;font-family:var(--mono);font-size:.55rem;letter-spacing:.1em;text-transform:uppercase}
@@ -153,6 +157,7 @@ section{padding:90px 0}
 .bike .yr{font-family:var(--mono);font-size:.6rem;color:#9a978f;letter-spacing:.05em}
 .empty{grid-column:1/-1;text-align:center;color:var(--ink-soft);font-size:.95rem;padding:40px 0}
 .empty a{color:var(--copper-deep)}
+.ar-soon{font-family:var(--mono);font-weight:600;font-size:.78rem;letter-spacing:.04em;text-transform:none}
 .showroom .more{text-align:center;margin-top:44px}
 
 /* KÉSZLET eszköztár */
@@ -212,9 +217,13 @@ select.sort{font-family:var(--mono);font-size:.7rem;color:var(--ink);background:
 /* TERMÉK-RÉSZLET */
 .product{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start;margin-top:30px}
 .pgallery{position:sticky;top:calc(var(--nav-h) + 22px)}
-.pmain{aspect-ratio:4/3;position:relative;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:linear-gradient(150deg,#26282C,#171819);display:flex;align-items:center;justify-content:center}
+.pmain{aspect-ratio:3/4;position:relative;overflow:hidden;border:1px solid var(--line);border-radius:12px;background:linear-gradient(150deg,#26282C,#171819);display:flex;align-items:center;justify-content:center}
 .pmain::before{content:"";position:absolute;inset:0;background:var(--weave);opacity:.5}
-.pmain img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+.pmain img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:linear-gradient(150deg,#26282C,#171819);z-index:1}
+.pthumbs{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px}
+.pthumb{aspect-ratio:1;position:relative;overflow:hidden;border:1px solid var(--line);border-radius:6px;background:linear-gradient(150deg,#26282C,#171819);cursor:pointer;padding:0}
+.pthumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pthumb.on{border-color:var(--copper);outline:1px solid var(--copper)}
 .pmain .bk-wheel{position:absolute;top:50%;transform:translateY(-50%);width:230px;height:230px;border:2px solid rgba(214,212,208,.12);border-radius:50%;right:-60px}
 .pmain .bk-wheel.two{right:140px}
 .pmain .ghost{position:relative;z-index:1;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:118%;font-size:2rem;color:rgba(214,212,208,.12)}

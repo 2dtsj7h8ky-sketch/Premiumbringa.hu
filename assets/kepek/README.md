@@ -1,52 +1,44 @@
 # Kerékpár-fotók — `assets/kepek/`
 
-Ide kerülnek a készlet fotói. A weboldal **automatikusan** behúzza őket:
-minden bringa a saját `id`-ja alapján tölti be a képét.
+Minden bringának **egy saját mappája** van itt, benne a fotók **sorrendben számozva**.
+A weboldal automatikusan behúzza őket a `data.js`-ben megadott `mappa` mező alapján.
 
-## Elnevezési szabály
+## Szabály
 
 ```
-assets/kepek/<id>.jpg
+assets/kepek/<mappa>/1.jpg   ← BORÍTÓ (az oldalas, logós, teljes bringa)
+assets/kepek/<mappa>/2.jpg
+...
+assets/kepek/<mappa>/10.jpg
 ```
 
-A fájl neve = a bringa `id`-ja az `assets/data.js`-ben, kiterjesztés `.jpg`.
-Ha a fájl létezik, megjelenik a kártyán; ha még nincs, marad a textúrás placeholder.
-(Nem kell kódot szerkeszteni — elég a fájlt ide bemásolni.)
+- A **borító mindig az `1.jpg`** — ez jelenik meg a kártyán és a kiemelt darabon.
+- A termékoldalon a galéria **1-től sorrendben** mutatja a képeket; a hiányzó számok kimaradnak.
+- Ha még nincs `1.jpg`, a borító átmenetileg a `2.jpg`-re vált, amíg fel nem töltöd.
+- A bringák azonos szögből (sablon) készülnek, ezért a megjelenítés a **teljes bringát, levágás nélkül** mutatja (álló 3:4).
 
-### Aktuális id-k (ezekkel a nevekkel keresi a képet)
+## Aktuális mappák → bringák
 
-| id (fájlnév) | modell |
+| mappa | modell (a `data.js`-ben) |
 |---|---|
-| `cube-reaction-c62.jpg` | Cube Reaction C:62 |
-| `cube-aim-sl.jpg` | Cube Aim SL |
-| `cube-attention.jpg` | Cube Attention |
-| `cube-kathmandu.jpg` | Cube Kathmandu |
-| `cube-nuroad.jpg` | Cube Nuroad |
-| `cube-access-ws.jpg` | Cube Access WS |
-| `trek-marlin-7.jpg` | Trek Marlin 7 |
-| `orbea-avant.jpg` | Orbea Avant H40 |
-| `specialized-sirrus.jpg` | Specialized Sirrus |
+| `CubeReactionTMPro` | Cube Reaction TM Pro |
+| `CubeReactionTM3` | Cube Reaction TM |
+| `CubeCrossSL` | Cube Cross SL |
+| `CubeAimSL4` | Cube Aim SL |
+| `CubeAimPro2` | Cube Aim Pro |
+| `CubeAttentionHpa2` | Cube Attention |
+| `CubeAnalogHpa` | Cube Analog |
+| `CubeAccess2` | Cube Access WS |
+| `KTMUltraFlite2` | KTM Ultra Flite |
+| `TrekRoscoe6.3` | Trek Roscoe 6 |
 
-## Más kiterjesztés / egyedi útvonal
+## Ajánlott
 
-Ha nem `.jpg` a kép (pl. `.png`, `.webp`), vagy máshonnan jön (pl. külső URL),
-add meg pontosan a `data.js`-ben a `kep` mezőben — az felülírja az automatikus keresést:
-
-```js
-{ id:"cube-aim-sl", ..., kep:"assets/kepek/cube-aim-sl.webp" }
-{ id:"cube-nuroad", ..., kep:"https://pelda.hu/kepek/nuroad.jpg" }
-```
-
-## Ajánlott méret
-
-- Kártyákhoz **4:3** arány (pl. 1200×900 px), a kiemelt darabhoz **16:10**.
+- A `1.jpg` legyen az oldalas, logós, teljes bringa (ez a sablon borítókép).
 - JPG, ~150–300 KB/kép a gyors betöltésért.
 
-## Hogyan frissül a készlet idővel
+## Új bringa felvétele
 
-1. **Új bringa:** vegyél fel egy új objektumot az `assets/data.js` `KESZLET` tömbjébe
-   (egyedi `id`-val), és tedd ide a `<id>.jpg` fotót.
-2. **Ár/állapot módosítás:** írd át a `data.js` megfelelő mezőjét.
-3. **Elkelt gép:** töröld a sort a `data.js`-ből (a fotó maradhat, nem zavar).
-
-Minden oldal (főoldal, készlet, termékoldal, kiemelt darab) automatikusan frissül.
+1. Hozz létre egy új mappát ide a fotókkal (`1.jpg` … `N.jpg`).
+2. Vegyél fel egy új sort a `assets/data.js` `KESZLET` tömbjébe `mappa:"<mappanév>"`-vel.
+3. A többi adatot (ár, állapot, specifikáció, leírás) a Marketplace-hirdetésből töltjük.
