@@ -436,7 +436,10 @@ footer .bot span{font-family:var(--mono);font-size:.62rem;color:var(--steel);let
   .visit .map{min-height:240px}
   .vgrid .v,.story-card{padding:28px 24px}
   .nav-right{gap:10px}
-  .nav-right .btn{padding:11px 15px;font-size:.64rem}
+  .nav-right .btn{display:none}
+  .nav .wrap{gap:12px}
+  .nav .logo{font-size:1.02rem;gap:9px}
+  .brand-badge{width:32px;height:32px;border-radius:9px}
   .feature h3{font-size:1.35rem}
   .feature .foot{flex-wrap:wrap}
   .toolbar{flex-direction:column;align-items:stretch}
