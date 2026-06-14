@@ -115,7 +115,7 @@
     const b = data.find(x => x.kiemelt) || data[0];
     if(!b){ host.remove(); return; }
     const media = `<span class="wheel two"></span><span class="wheel"></span>`
-      + imgTag(b, `${b.model} — kiemelt darab`);
+      + `<img src="${esc(bikeKep(b))}" alt="${esc(b.model)} — kiemelt darab" decoding="async" onerror="${coverOnerr(b)}">`;
     const catline = [b.kategoria, b.ev, b.meret].filter(Boolean).join(" · ");
     host.innerHTML = `
     <a class="feature" href="bringa.html?id=${encodeURIComponent(b.id)}">

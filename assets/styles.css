@@ -13,7 +13,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--carbon);color:var(--silver);font-family:var(--body);font-weight:400;line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;letter-spacing:-.003em}
+body{margin:0;background:var(--carbon);color:var(--silver);font-family:var(--body);font-weight:400;line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;letter-spacing:-.003em;overflow-x:hidden}
 img{max-width:100%;display:block}
 .wrap{max-width:1180px;margin:0 auto;padding:0 30px}
 .kick{font-family:var(--mono);font-weight:500;letter-spacing:.2em;text-transform:uppercase;font-size:.66rem;color:var(--copper)}
@@ -284,6 +284,21 @@ select.sort{font-family:var(--mono);font-size:.7rem;color:var(--ink);background:
 @media(max-width:900px){.usegrid{grid-template-columns:1fr 1fr}.exp>.wrap{padding:72px 30px}}
 @media(max-width:760px){.steps3{grid-template-columns:1fr}}
 @media(max-width:520px){.usegrid{grid-template-columns:1fr}}
+
+/* több, változatosabb mozgás */
+@keyframes spin-rev{to{transform:rotate(-360deg)}}
+.spin-rev{animation:spin-rev 24s linear infinite}
+
+/* márka-futószalag (memorabilis, tartalomhoz kötött) */
+.marquee{overflow:hidden;margin-top:28px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.marquee-track{display:inline-flex;align-items:center;white-space:nowrap;animation:marq 26s linear infinite;will-change:transform}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee-track span{font-family:var(--disp);font-weight:800;font-stretch:108%;text-transform:uppercase;font-size:1.3rem;letter-spacing:-.01em;color:var(--steel);padding:0 30px;position:relative}
+.marquee-track span::after{content:"·";position:absolute;right:-3px;color:var(--copper)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+@media(prefers-reduced-motion:reduce){.spin-rev,.marquee-track{animation:none}}
+@media(max-width:720px){.wheel-deco{display:none}}
 
 /* STORY */
 .story{background:var(--carbon);background-image:var(--weave);border-top:1px solid var(--line)}
