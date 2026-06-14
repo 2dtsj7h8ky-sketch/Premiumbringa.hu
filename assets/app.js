@@ -138,6 +138,30 @@
     observeReveals();
   }
 
+  /* ---- MÉRETVÁLASZTÓ: magasság → illő bringák ---- */
+  function initSizer(){
+    const range = $("#sz-range");
+    if(!range) return;
+    const valEl = $("#sz-val"), sizeEl = $("#sz-size"), countEl = $("#sz-count"), results = $("#sz-results"), bike = $("#sz-bike");
+    const MIN = parseInt(range.min, 10), MAX = parseInt(range.max, 10);
+    const frame = h => h <= 163 ? "XS–S" : h <= 171 ? "S–M" : h <= 179 ? "M" : h <= 186 ? "L" : "XL";
+    function update(){
+      const h = parseInt(range.value, 10);
+      valEl.textContent = h + " cm";
+      sizeEl.textContent = "Ajánlott váz: " + frame(h);
+      sizeEl.classList.remove("pop"); void sizeEl.offsetWidth; sizeEl.classList.add("pop");
+      if(bike){ const r = (h - MIN) / (MAX - MIN); bike.style.transform = "scale(" + (0.82 + 0.34 * r).toFixed(3) + ")"; }
+      const m = data.filter(b => Array.isArray(b.magassag) && h >= b.magassag[0] && h <= b.magassag[1]);
+      countEl.textContent = m.length
+        ? `${m.length} bringa illik a magasságodhoz`
+        : "Erre a magasságra most nincs raktáron illő gép — szólj, és keresünk!";
+      results.innerHTML = m.map(bikeCard).join("");
+      results.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
+    }
+    range.addEventListener("input", update);
+    update();
+  }
+
   /* ---- KÉSZLET: teljes, szűrhető + rendezhető ---- */
   function initKeszlet(){
     const grid = $("#keszlet-grid");
@@ -303,6 +327,7 @@
     initBadge();
     initFeature();
     initHomeGrid();
+    initSizer();
     initKeszlet();
     initProduct();
     initCopy();

@@ -233,6 +233,25 @@ select.sort{font-family:var(--mono);font-size:.7rem;color:var(--ink);background:
 @media(prefers-reduced-motion:reduce){.spin-slow,.roadline{animation:none}}
 @media(max-width:760px){.whygrid,.compare{grid-template-columns:1fr}}
 
+/* méretválasztó */
+@keyframes pop{0%{transform:scale(.85)}60%{transform:scale(1.07)}100%{transform:scale(1)}}
+.sizer{background:var(--carbon);background-image:var(--weave);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.sizer>.wrap{position:relative;z-index:1}
+.sizer .panel{background:var(--carbon-2);border:1px solid var(--line);border-radius:14px;padding:28px 30px 32px}
+.sizer-head{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.sizer .szbike{width:120px;height:auto;flex:none;transition:transform .25s ease;transform-origin:center bottom}
+.sizer .szlabel{font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-bottom:6px}
+.sizer .szval{font-family:var(--disp);font-weight:800;font-stretch:110%;color:var(--copper);font-size:clamp(1.8rem,5vw,2.4rem);line-height:1}
+.sizer .szpill{font-family:var(--mono);font-weight:600;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:#15171A;background:var(--copper);padding:9px 15px;border-radius:30px;white-space:nowrap;margin-left:auto}
+.sizer .szpill.pop{animation:pop .3s ease}
+.hrange{-webkit-appearance:none;appearance:none;width:100%;height:4px;border-radius:3px;background:var(--steel);outline:none;margin:26px 0 9px;cursor:pointer}
+.hrange::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--copper);cursor:pointer;border:4px solid var(--carbon-2);box-shadow:0 0 0 1px var(--copper)}
+.hrange::-moz-range-thumb{width:24px;height:24px;border:4px solid var(--carbon-2);border-radius:50%;background:var(--copper);cursor:pointer;box-shadow:0 0 0 1px var(--copper)}
+.sizer .szscale{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.56rem;letter-spacing:.08em;color:var(--fog)}
+.sizer .szcount{margin-top:22px;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--copper)}
+@media(prefers-reduced-motion:reduce){.szpill.pop{animation:none}.sizer .szbike{transition:none}}
+@media(max-width:560px){.sizer .szpill{margin-left:0}}
+
 /* STORY */
 .story{background:var(--carbon);background-image:var(--weave);border-top:1px solid var(--line)}
 .story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
