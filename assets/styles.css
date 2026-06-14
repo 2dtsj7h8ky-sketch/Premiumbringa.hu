@@ -187,6 +187,52 @@ select.sort{font-family:var(--mono);font-size:.7rem;color:var(--ink);background:
 .assure span{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--haze)}
 .assure b{color:var(--copper);font-weight:600}
 
+/* ===== kerékpáros animációk + gazdagabb komponensek ===== */
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes road{to{background-position:-34px 0}}
+.spin-slow{animation:spin 16s linear infinite}
+.roadline{height:3px;border-radius:2px;background:repeating-linear-gradient(90deg,var(--copper) 0 16px,transparent 16px 34px);background-size:34px 100%;animation:road 1.3s linear infinite}
+
+/* dekoratív, lassan forgó kerék a háttérben */
+.value{position:relative;overflow:hidden}
+.value>.wrap{position:relative;z-index:1}
+.wheel-deco{position:absolute;pointer-events:none;opacity:.06;z-index:0}
+
+/* „Miért” — számozott érv-kártyák */
+.whygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.why{position:relative;background:var(--carbon-2);border:1px solid var(--line);border-radius:12px;padding:32px 28px 28px;overflow:hidden;transition:transform .3s ease,border-color .3s ease}
+.why:hover{transform:translateY(-6px);border-color:var(--copper)}
+.why .num{font-family:var(--disp);font-weight:800;font-stretch:114%;font-size:3.2rem;line-height:.8;color:transparent;-webkit-text-stroke:1px var(--steel);transition:-webkit-text-stroke-color .3s ease}
+.why:hover .num{-webkit-text-stroke-color:var(--copper)}
+.why .wt{font-family:var(--disp);font-weight:800;font-stretch:110%;text-transform:uppercase;color:var(--bright);font-size:1.18rem;letter-spacing:-.01em;margin:18px 0 9px}
+.why p{margin:0;color:var(--fog);font-size:.95rem;line-height:1.55}
+.why::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--copper);transition:width .4s ease}
+.why:hover::after{width:100%}
+.why-close{text-align:center;margin:40px auto 0;max-width:32ch;font-family:var(--disp);font-weight:800;font-stretch:108%;text-transform:uppercase;font-size:clamp(1.1rem,2.6vw,1.5rem);line-height:1.18;letter-spacing:-.012em;color:var(--bright)}
+.why-close em{color:var(--copper);font-style:normal}
+
+/* összehasonlítás — három választás */
+.compare{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;align-items:stretch;margin-top:10px}
+.copt{position:relative;background:var(--carbon-2);border:1px solid var(--line);border-radius:12px;padding:28px 24px;display:flex;flex-direction:column;transition:transform .3s ease}
+.copt:hover{transform:translateY(-5px)}
+.copt .clab{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-bottom:11px}
+.copt h3{font-family:var(--disp);font-weight:800;font-stretch:108%;text-transform:uppercase;color:var(--bright);font-size:1.12rem;letter-spacing:-.01em;margin:0 0 16px}
+.cpts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.cpts li{font-size:.9rem;color:var(--haze);display:flex;gap:10px;align-items:flex-start;line-height:1.4}
+.cpts li i{font-style:normal;flex:none;font-weight:800}
+.cpts li.no i{color:var(--steel)}
+.cpts li.yes i{color:var(--copper)}
+.copt.best{border-color:var(--copper);background:linear-gradient(165deg,#251f19,#1b1917);box-shadow:0 22px 55px -28px rgba(194,137,90,.55)}
+.copt.best .clab{color:var(--copper)}
+.copt.best::before{content:"A józan választás";position:absolute;top:-11px;left:24px;background:var(--copper);color:#15171A;font-family:var(--mono);font-weight:600;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;padding:5px 11px;border-radius:30px}
+
+/* lépcsőzött beúszás rácsokban */
+.whygrid .reveal:nth-child(2),.compare .reveal:nth-child(2){transition-delay:.1s}
+.whygrid .reveal:nth-child(3),.compare .reveal:nth-child(3){transition-delay:.2s}
+
+@media(prefers-reduced-motion:reduce){.spin-slow,.roadline{animation:none}}
+@media(max-width:760px){.whygrid,.compare{grid-template-columns:1fr}}
+
 /* STORY */
 .story{background:var(--carbon);background-image:var(--weave);border-top:1px solid var(--line)}
 .story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
