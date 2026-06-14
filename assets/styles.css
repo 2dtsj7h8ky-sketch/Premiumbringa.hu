@@ -297,7 +297,14 @@ select.sort{font-family:var(--mono);font-size:.7rem;color:var(--ink);background:
 .marquee-track span::after{content:"·";position:absolute;right:-3px;color:var(--copper)}
 @keyframes marq{to{transform:translateX(-50%)}}
 
-@media(prefers-reduced-motion:reduce){.spin-rev,.marquee-track{animation:none}}
+/* hero-fény lágy lüktetése (a „szikra") */
+.hero-glow{animation:glow 7s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.6}50%{opacity:1}}
+/* use-case ikon mikrointerakció */
+.usecard .ico{transition:transform .3s ease}
+.usecard:hover .ico{transform:scale(1.12) rotate(-6deg)}
+
+@media(prefers-reduced-motion:reduce){.spin-rev,.marquee-track,.hero-glow{animation:none}}
 @media(max-width:720px){.wheel-deco{display:none}}
 
 /* STORY */
