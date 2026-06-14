@@ -99,3 +99,13 @@ const SZEGMENSEK = [
 ];
 
 const ALLAPOTOK = ["Újszerű", "Kiváló", "Jó"];
+
+/* Méret-sávok a Készlet szűrőhöz — magasság (cm) tartományra képezve */
+const MERETEK = [
+  { kulcs:"mind", nev:"Minden méret" },
+  { kulcs:"xss",  nev:"XS–S", h:[140,163] },
+  { kulcs:"sm",   nev:"S–M",  h:[164,171] },
+  { kulcs:"m",    nev:"M",    h:[172,179] },
+  { kulcs:"l",    nev:"L",    h:[180,186] },
+  { kulcs:"xl",   nev:"XL",   h:[187,205] }
+];

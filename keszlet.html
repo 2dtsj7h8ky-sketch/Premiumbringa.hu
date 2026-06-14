@@ -41,34 +41,6 @@
   </div>
 </header>
 
-<!-- MÉRETVÁLASZTÓ / SEGÍTÜNK VÁLASZTANI -->
-<section class="sizer">
-  <svg class="wheel-deco spin-slow" viewBox="0 0 200 200" aria-hidden="true" style="width:440px;left:-150px;bottom:-130px">
-    <g fill="none" stroke="#D6D4D0" stroke-width="2"><circle cx="100" cy="100" r="94"/><circle cx="100" cy="100" r="78" stroke-width="5"/><circle cx="100" cy="100" r="7"/></g>
-    <g stroke="#D6D4D0" stroke-width="1.4"><line x1="22" y1="100" x2="178" y2="100"/><line x1="100" y1="22" x2="100" y2="178"/><line x1="44.9" y1="44.9" x2="155.1" y2="155.1"/><line x1="155.1" y1="44.9" x2="44.9" y2="155.1"/></g>
-  </svg>
-  <div class="wrap">
-    <div class="sec-head reveal"><span class="kick">Segítünk választani</span><h2>Melyik bringa illik hozzád?</h2>
-      <p>Nem kell kerékpár-szakértőnek lenned. Állítsd be a magasságod, és megmutatjuk, mely gépeink valók hozzád — a méret, a használat és a kipróbálás kérdéseiben pedig személyesen is segítünk.</p></div>
-    <div class="panel reveal">
-      <div class="sizer-head">
-        <svg class="szbike" id="sz-bike" viewBox="0 0 640 360" aria-hidden="true">
-          <g fill="none" stroke="#D6D4D0" stroke-width="10" stroke-linecap="round"><circle cx="158" cy="258" r="78"/><circle cx="478" cy="258" r="78"/></g>
-          <g fill="none" stroke="#C2895A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="318" y1="258" x2="158" y2="258"/><line x1="352" y1="132" x2="158" y2="258"/><line x1="318" y1="258" x2="352" y2="132"/>
-            <line x1="318" y1="258" x2="452" y2="146"/><line x1="352" y1="132" x2="452" y2="146"/><line x1="452" y1="146" x2="478" y2="258"/><line x1="330" y1="124" x2="366" y2="124"/></g>
-        </svg>
-        <div style="min-width:140px"><div class="szlabel">A te magasságod</div><div class="szval" id="sz-val">175 cm</div></div>
-        <span class="szpill" id="sz-size">Ajánlott váz: M</span>
-      </div>
-      <input class="hrange" id="sz-range" type="range" min="155" max="200" value="175" step="1" aria-label="Magasság centiméterben">
-      <div class="szscale"><span>155 cm</span><span>200 cm</span></div>
-      <div class="szcount" id="sz-count" aria-live="polite"></div>
-    </div>
-    <div class="grid" id="sz-results" style="margin-top:24px"></div>
-  </div>
-</section>
-
 <!-- KÉSZLET -->
 <section class="showroom"><div class="wrap">
   <div class="toolbar">
@@ -89,6 +61,11 @@
   <div class="fgroup" style="margin-top:18px">
     <span class="flabel">Állapot</span>
     <div class="filters" id="cond-filters" role="group" aria-label="Szűrés állapot szerint"></div>
+  </div>
+  <div class="fgroup" style="margin-top:18px">
+    <span class="flabel">Méret · magasság</span>
+    <div class="filters" id="size-filters" role="group" aria-label="Szűrés méret szerint"></div>
+    <p style="font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:12px 0 0">Nem tudod a méreted? <a href="kapcsolat.html" style="color:var(--copper-deep)">Segítünk — szólj.</a></p>
   </div>
   <p class="count" id="count" aria-live="polite"></p>
   <div class="grid" id="keszlet-grid"></div>

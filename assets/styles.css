@@ -252,6 +252,38 @@ select.sort{font-family:var(--mono);font-size:.7rem;color:var(--ink);background:
 @media(prefers-reduced-motion:reduce){.szpill.pop{animation:none}.sizer .szbike{transition:none}}
 @media(max-width:560px){.sizer .szpill{margin-left:0}}
 
+/* MIT SZERETNÉL — használati irány-kártyák (világos) */
+.usegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.usecard{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line-l);border-radius:12px;padding:24px 22px;text-decoration:none;color:inherit;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease}
+.usecard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(30,32,36,.12);border-color:#cfccc4}
+.usecard .ico{width:38px;height:38px;color:var(--copper-deep)}
+.usecard h3{font-family:var(--disp);font-weight:800;font-stretch:108%;text-transform:uppercase;color:var(--ink);font-size:1.04rem;letter-spacing:-.01em;margin:16px 0 8px}
+.usecard p{color:var(--ink-soft);font-size:.9rem;line-height:1.5;margin:0 0 16px;flex:1}
+.usecard .go{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--copper-deep);display:inline-flex;gap:6px;transition:gap .25s ease}
+.usecard:hover .go{gap:12px}
+
+/* A KERÉKPÁROZÁS ÉLMÉNYE — levegős blokk */
+.exp{background:var(--carbon);background-image:var(--weave);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.exp>.wrap{position:relative;z-index:1;padding:104px 30px}
+.exp .big{font-family:var(--disp);font-weight:800;font-stretch:112%;text-transform:uppercase;letter-spacing:-.015em;color:var(--bright);font-size:clamp(1.9rem,5.2vw,3.4rem);line-height:1.05;max-width:17ch;margin:18px 0 0}
+.exp .big em{color:var(--copper);font-style:normal}
+.exp p{color:var(--haze);font-size:1.06rem;line-height:1.75;font-weight:300;max-width:52ch;margin:26px 0 0}
+
+/* lépések — 3 oszlop + világos változat */
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step.light{border-top-color:var(--line-l)}
+.step.light .num{color:#e4e1db;-webkit-text-stroke:1px #c9c6bf}
+.step.light h3{color:var(--ink)}
+.step.light p{color:var(--ink-soft)}
+
+/* márkák (Miért éri meg) */
+.brandrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.brandtag{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--haze);border:1px solid var(--line);border-radius:30px;padding:9px 15px}
+
+@media(max-width:900px){.usegrid{grid-template-columns:1fr 1fr}.exp>.wrap{padding:72px 30px}}
+@media(max-width:760px){.steps3{grid-template-columns:1fr}}
+@media(max-width:520px){.usegrid{grid-template-columns:1fr}}
+
 /* STORY */
 .story{background:var(--carbon);background-image:var(--weave);border-top:1px solid var(--line)}
 .story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}

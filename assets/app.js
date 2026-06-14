@@ -138,41 +138,19 @@
     observeReveals();
   }
 
-  /* ---- MÉRETVÁLASZTÓ: magasság → illő bringák ---- */
-  function initSizer(){
-    const range = $("#sz-range");
-    if(!range) return;
-    const valEl = $("#sz-val"), sizeEl = $("#sz-size"), countEl = $("#sz-count"), results = $("#sz-results"), bike = $("#sz-bike");
-    const MIN = parseInt(range.min, 10), MAX = parseInt(range.max, 10);
-    const frame = h => h <= 163 ? "XS–S" : h <= 171 ? "S–M" : h <= 179 ? "M" : h <= 186 ? "L" : "XL";
-    function update(){
-      const h = parseInt(range.value, 10);
-      valEl.textContent = h + " cm";
-      sizeEl.textContent = "Ajánlott váz: " + frame(h);
-      sizeEl.classList.remove("pop"); void sizeEl.offsetWidth; sizeEl.classList.add("pop");
-      if(bike){ const r = (h - MIN) / (MAX - MIN); bike.style.transform = "scale(" + (0.82 + 0.34 * r).toFixed(3) + ")"; }
-      const m = data.filter(b => Array.isArray(b.magassag) && h >= b.magassag[0] && h <= b.magassag[1]);
-      countEl.textContent = m.length
-        ? `${m.length} bringa illik a magasságodhoz`
-        : "Erre a magasságra most nincs raktáron illő gép — szólj, és keresünk!";
-      results.innerHTML = m.map(bikeCard).join("");
-      results.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
-    }
-    range.addEventListener("input", update);
-    update();
-  }
-
   /* ---- KÉSZLET: teljes, szűrhető + rendezhető ---- */
   function initKeszlet(){
     const grid = $("#keszlet-grid");
     if(!grid) return;
     const segBox = $("#seg-filters");
     const condBox = $("#cond-filters");
+    const meretBox = $("#size-filters");
     const sortSel = $("#sort");
     const countEl = $("#count");
 
     let aktivSzeg = param("szegmens") && SZEGMENSEK.some(s => s.kulcs === param("szegmens")) ? param("szegmens") : "mind";
     let aktivAllapot = "mind";
+    let aktivMeret = "mind";
 
     function renderSeg(){
       segBox.innerHTML = SZEGMENSEK.map(s =>
@@ -186,10 +164,20 @@
         `<button class="chip${o.k===aktivAllapot?" on":""}" type="button" data-v="${esc(o.k)}" aria-pressed="${o.k===aktivAllapot}">${esc(o.n)}</button>`
       ).join("");
     }
+    function renderMeret(){
+      if(!meretBox) return;
+      meretBox.innerHTML = MERETEK.map(s =>
+        `<button class="chip${s.kulcs===aktivMeret?" on":""}" type="button" data-v="${s.kulcs}" aria-pressed="${s.kulcs===aktivMeret}">${esc(s.nev)}</button>`
+      ).join("");
+    }
     function current(){
       let list = data.slice();
       if(aktivSzeg !== "mind") list = list.filter(b => b.szegmens === aktivSzeg);
       if(aktivAllapot !== "mind") list = list.filter(b => b.allapot === aktivAllapot);
+      if(aktivMeret !== "mind"){
+        const band = MERETEK.find(s => s.kulcs === aktivMeret);
+        if(band && band.h) list = list.filter(b => Array.isArray(b.magassag) && b.magassag[0] <= band.h[1] && b.magassag[1] >= band.h[0]);
+      }
       const sort = sortSel ? sortSel.value : "ajanlott";
       if(sort === "ar-asc") list.sort((a,b)=>a.ar-b.ar);
       else if(sort === "ar-desc") list.sort((a,b)=>b.ar-a.ar);
@@ -211,8 +199,12 @@
       const c = e.target.closest(".chip"); if(!c) return;
       aktivAllapot = c.dataset.v; renderCond(); render();
     });
+    if(meretBox) meretBox.addEventListener("click", e => {
+      const c = e.target.closest(".chip"); if(!c) return;
+      aktivMeret = c.dataset.v; renderMeret(); render();
+    });
     if(sortSel) sortSel.addEventListener("change", render);
-    renderSeg(); renderCond(); render();
+    renderSeg(); renderCond(); renderMeret(); render();
   }
 
   /* ---- BRINGA: termék-részlet ---- */
@@ -327,7 +319,6 @@
     initBadge();
     initFeature();
     initHomeGrid();
-    initSizer();
     initKeszlet();
     initProduct();
     initCopy();
