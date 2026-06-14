@@ -177,6 +177,16 @@ select.sort{font-family:var(--mono);font-size:.7rem;color:var(--ink);background:
 .v h3{font-size:1.2rem;color:var(--bright);margin-bottom:10px;font-stretch:108%}
 .v p{color:var(--fog);font-size:.95rem;line-height:1.55}
 
+/* 3-oszlopos érv-blokk (újrahasznosítja a .v kártyát) */
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.v.hl{box-shadow:inset 0 3px 0 var(--copper)}
+
+/* bizonyosság-sáv (tömör, egysoros) */
+.assure{background:var(--carbon-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.assure .wrap{display:flex;gap:14px 34px;flex-wrap:wrap;justify-content:center;padding:22px 30px}
+.assure span{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--haze)}
+.assure b{color:var(--copper);font-weight:600}
+
 /* STORY */
 .story{background:var(--carbon);background-image:var(--weave);border-top:1px solid var(--line)}
 .story .wrap{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
@@ -283,7 +293,7 @@ footer .bot span{font-family:var(--mono);font-size:.62rem;color:var(--steel);let
   .trust .wrap{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}
   .trust .t:nth-child(odd){border-left:0}
   .trust .t:nth-child(n+3){border-top:1px solid var(--line)}
-  .grid{grid-template-columns:1fr 1fr}.vgrid{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr 1fr}.vgrid,.cols3{grid-template-columns:1fr}
   .story .wrap,.visit .wrap,.product{grid-template-columns:1fr;gap:34px}
   .pgallery{position:static}
   footer .top{grid-template-columns:1fr 1fr}
