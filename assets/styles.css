@@ -68,7 +68,7 @@ nav.nav .wrap{display:flex;align-items:center;justify-content:space-between;heig
 /* kiemelt darab — hero showcase */
 .feature{display:block;text-decoration:none;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:linear-gradient(160deg,#212327,#191A1C);box-shadow:0 24px 60px rgba(0,0,0,.42);transition:transform .25s,box-shadow .25s}
 .feature:hover{transform:translateY(-4px);box-shadow:0 30px 70px rgba(0,0,0,.5)}
-.feature .ph{aspect-ratio:4/5;position:relative;overflow:hidden;background:linear-gradient(150deg,#26282C,#171819);display:flex;align-items:flex-start;justify-content:space-between;padding:16px}
+.feature .ph{aspect-ratio:3/4;position:relative;overflow:hidden;background:linear-gradient(150deg,#26282C,#171819);display:flex;align-items:flex-start;justify-content:space-between;padding:16px}
 .feature .ph::before{content:"";position:absolute;inset:0;background:var(--weave);opacity:.6}
 .feature .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:linear-gradient(150deg,#26282C,#171819);z-index:1}
 .feature .ph .wheel{position:absolute;top:50%;transform:translateY(-50%);width:172px;height:172px;border:2px solid rgba(214,212,208,.12);border-radius:50%;right:-44px}
@@ -430,7 +430,6 @@ footer .bot span{font-family:var(--mono);font-size:.62rem;color:var(--steel);let
   .vgrid .v,.story-card{padding:28px 24px}
   .nav-right{gap:10px}
   .nav-right .btn{padding:11px 15px;font-size:.64rem}
-  .feature .ph{aspect-ratio:16/11}
   .feature h3{font-size:1.35rem}
   .feature .foot{flex-wrap:wrap}
   .toolbar{flex-direction:column;align-items:stretch}
