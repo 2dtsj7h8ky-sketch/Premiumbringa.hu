@@ -1,5 +1,5 @@
 /* =========================================================================
-   Premium Bringa — közös logika minden oldalhoz.
+   Premium Bringa: közös logika minden oldalhoz.
    A funkciók elemek megléte szerint indulnak, így ugyanez a fájl minden
    oldalon betölthető (data.js után).
    ========================================================================= */
@@ -47,7 +47,7 @@
   /* ---- termékkártya (showroom + készlet) ---- */
   function bikeCard(b){
     const media = `<span class="bk-wheel"></span><span class="bk-wheel two"></span>`
-      + imgTag(b, `${b.model}${b.allapot ? " — "+b.allapot+" állapot" : ""}`);
+      + imgTag(b, `${b.model}${b.allapot ? ", "+b.allapot+" állapot" : ""}`);
     const meta = [b.ev, b.meret].filter(Boolean).join(" · ");
     return `
     <a class="bike reveal" href="bringa.html?id=${encodeURIComponent(b.id)}" data-szegmens="${esc(b.szegmens)}" data-allapot="${esc(b.allapot||"")}">
@@ -115,7 +115,7 @@
     const b = data.find(x => x.kiemelt) || data[0];
     if(!b){ host.remove(); return; }
     const media = `<span class="wheel two"></span><span class="wheel"></span>`
-      + `<img src="${esc(bikeKep(b))}" alt="${esc(b.model)} — kiemelt darab" decoding="async" onerror="${coverOnerr(b)}">`;
+      + `<img src="${esc(bikeKep(b))}" alt="${esc(b.model)} · kiemelt darab" decoding="async" onerror="${coverOnerr(b)}">`;
     const catline = [b.kategoria, b.ev, b.meret].filter(Boolean).join(" · ");
     host.innerHTML = `
     <a class="feature" href="bringa.html?id=${encodeURIComponent(b.id)}">
@@ -216,7 +216,7 @@
       host.innerHTML = `<div class="wrap" style="padding:90px 30px"><p class="empty" style="color:var(--haze)">Ez a kerékpár nem található vagy már elkelt. <a href="keszlet.html">Vissza a készlethez →</a></p></div>`;
       return;
     }
-    document.title = `${b.model} — Premium Bringa`;
+    document.title = `${b.model} · Premium Bringa`;
     const mainImg = `<img id="pmain-img" src="${esc(bikeKep(b))}" alt="${esc(b.model)}" decoding="async" onerror="${coverOnerr(b)}">`;
     const galMain = `<span class="bk-wheel"></span><span class="bk-wheel two"></span><span class="ghost">${esc(b.marka||b.model)}</span>` + mainImg;
     const thumbs = bikeGaleria(b).map((src,i) =>
