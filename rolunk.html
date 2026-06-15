@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rólunk & Bizalom · Premium Bringa · Debrecen</title>
-<meta name="description" content="Azért dolgozunk, hogy a márkás kerékpár ne legyen luxus. Válogatott állapot, igazolt német eredet, őszinte háromfokú állapotleírás és 30 napos garancia. Debrecen.">
+<meta name="description" content="Azért dolgozunk, hogy a minőségi kerékpár ne legyen luxus. Válogatott állapot, gondos felkészítés, őszinte háromfokú állapotleírás és 30 napos garancia. Debrecen.">
 <meta name="theme-color" content="#1A1B1E">
 <link rel="canonical" href="https://premiumbringa.hu/rolunk.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Premium Bringa">
 <meta property="og:locale" content="hu_HU">
 <meta property="og:title" content="Rólunk & Bizalom · Premium Bringa">
-<meta property="og:description" content="Válogatott állapot, igazolt német eredet, őszinte háromfokú állapot és 30 napos garancia, Debrecenből.">
+<meta property="og:description" content="Válogatott állapot, gondos felkészítés, őszinte háromfokú állapot és 30 napos garancia, Debrecenből.">
 <meta property="og:url" content="https://premiumbringa.hu/rolunk.html">
 <meta property="og:image" content="https://premiumbringa.hu/og-premium-bringa.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -21,32 +21,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <style>
-/* ====== Rólunk - oldal-specifikus: kerékpár-anatómia (amit átnézünk) ====== */
-.ba-sec{background:var(--carbon);background-image:var(--weave);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
-.ba-wrap{margin-top:42px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,#1d1f22,#161719);padding:22px;box-shadow:0 40px 80px -50px rgba(0,0,0,.7)}
-.ba-svg{width:100%;height:auto;display:block}
-.ba-wheel{fill:none;stroke:var(--steel);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
-.ba-spoke{fill:none;stroke:var(--line);stroke-width:2}
-.ba-frame{fill:none;stroke:var(--copper);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
-.ba-hub{fill:#161719;stroke:var(--steel);stroke-width:3}
-.ba-lead{stroke:var(--copper-deep);stroke-width:1.4;stroke-dasharray:3 4;fill:none}
-.ba-anchor{fill:var(--copper)}
-.ba-name{fill:var(--bright);font-family:var(--mono);font-size:14px;letter-spacing:.06em;text-transform:uppercase}
-.ba-sub{fill:var(--copper);font-family:var(--mono);font-size:12px;letter-spacing:.02em}
-.ba-call{opacity:0;transform:translateY(7px)}
-.ba-wrap.drawn .ba-call{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}
-.ba-wrap.drawn .ba-call.c1{transition-delay:.7s}
-.ba-wrap.drawn .ba-call.c2{transition-delay:.85s}
-.ba-wrap.drawn .ba-call.c3{transition-delay:1s}
-.ba-wrap.drawn .ba-call.c4{transition-delay:1.15s}
-.ba-wrap.drawn .ba-call.c5{transition-delay:1.3s}
-.ba-wrap.drawn .ba-call.c6{transition-delay:1.45s}
-.ba-legend{margin-top:16px;font-family:var(--mono);font-size:.62rem;letter-spacing:.05em;color:var(--fog);line-height:1.7}
-.ba-legend b{color:var(--copper);font-weight:600}
-/* érték-kártyák hover */
-.rx-values .v{transition:transform .25s ease,border-color .25s ease}
-.rx-values .v:hover{transform:translateY(-4px);border-color:var(--copper)}
-@media(prefers-reduced-motion:reduce){.ba-call{opacity:1;transform:none}}
+/* ====== Rólunk - interaktív MTB (amit átnézünk) ====== */
+.mtb-sec{background:var(--carbon);background-image:var(--weave);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.mtb-stage{margin-top:40px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,#1d1f22,#161719);padding:18px 18px 26px;box-shadow:0 40px 80px -50px rgba(0,0,0,.7)}
+.mtb{display:block;width:100%;max-width:680px;height:auto;margin:0 auto}
+.mtb .comp{cursor:pointer}
+.mtb .ln{fill:none;stroke:#5a5e66;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .35s ease}
+.mtb .fp{fill:#5a5e66;stroke:none;transition:fill .35s ease}
+.mtb .tread{fill:none;stroke:#4c505a;stroke-width:6;stroke-dasharray:2 9;transition:stroke .35s ease}
+.mtb .comp.dim{opacity:.5;transition:opacity .35s ease}
+.mtb .comp.active{opacity:1;transition:opacity .35s ease}
+.mtb .comp.active .ln,.mtb .comp.active .tread{stroke:var(--copper)}
+.mtb .comp.active .fp{fill:var(--copper)}
+.mtb.sel-fork #mtb-front{animation:mtbBob 1.5s ease-in-out infinite}
+@keyframes mtbBob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+.mtb.sel-wheel #mtb-spokes-r,.mtb.sel-wheel #mtb-spokes-f{animation:mtbSpin 3.4s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes mtbSpin{to{transform:rotate(360deg)}}
+.mtb.sel-drive #mtb-chainring{animation:mtbSpin 2.4s linear infinite;transform-box:fill-box;transform-origin:center}
+.mtb.sel-brake .mtb-rotor{animation:mtbPulse 1.2s ease-in-out infinite}
+@keyframes mtbPulse{0%,100%{opacity:1}50%{opacity:.35}}
+.mtb.sel-frame #mtb-frame .ln{animation:mtbGleam 2.1s ease-in-out infinite}
+@keyframes mtbGleam{0%,100%{stroke:var(--copper)}50%{stroke:var(--bright)}}
+.mtb-ctrl{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.mtb-btn{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--haze);background:transparent;border:1px solid var(--line);border-radius:30px;padding:10px 16px;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.mtb-btn:hover{border-color:var(--copper);color:var(--copper)}
+.mtb-btn.on{background:var(--copper);color:#15171a;border-color:var(--copper)}
+.mtb-detail{margin-top:20px;min-height:54px;display:flex;align-items:flex-start;gap:14px;border-top:1px solid var(--line);padding-top:18px}
+.mtb-detail .num{font-family:var(--disp);font-weight:800;font-size:1.6rem;color:var(--copper);line-height:.9;flex:none}
+.mtb-detail p{color:var(--haze);font-size:1rem;line-height:1.6;margin:0}
+.mtb-detail b{color:var(--bright);font-weight:700}
+.mtb-hint{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fog);margin:14px 0 0}
+/* ====== Rólunk - elvek (4 blokk, eltérő a miert-től) ====== */
+.pr-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.pr{border:1px solid var(--line);border-radius:14px;padding:28px 26px;background:linear-gradient(160deg,#212327,#191a1c);position:relative;overflow:hidden;transition:transform .25s ease,border-color .25s ease}
+.pr::before{content:"";position:absolute;top:0;left:26px;right:26px;height:2px;background:linear-gradient(90deg,var(--copper),transparent)}
+.pr:hover{transform:translateY(-4px);border-color:var(--copper)}
+.pr .ico{width:30px;height:30px;color:var(--copper);margin-bottom:18px;display:block}
+.pr .pn{display:block;font-family:var(--mono);font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-deep);margin-bottom:8px}
+.pr h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:108%;font-size:1.12rem;color:var(--bright);margin:0 0 9px}
+.pr p{color:var(--haze);font-size:.95rem;line-height:1.6;margin:0}
+@media(max-width:760px){.pr-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){
+  .mtb.sel-fork #mtb-front,.mtb.sel-wheel #mtb-spokes-r,.mtb.sel-wheel #mtb-spokes-f,.mtb.sel-drive #mtb-chainring,.mtb.sel-brake .mtb-rotor,.mtb.sel-frame #mtb-frame .ln{animation:none}
+}
 </style>
 </head>
 <body>
@@ -73,41 +90,83 @@
     <h1 class="mx-fade d1">Egy tekeréssel közelebb<br><em>a vágyott bringához.</em></h1>
     <p class="mx-fade d2">Azért dolgozunk, hogy a minőségi kerékpár ne legyen luxus, hanem országszerte elérhető, jól megválasztott döntés.</p>
     <div class="mx-stats mx-fade d3" aria-label="A Premium Bringa számokban">
-      <div class="mx-stat"><span class="mx-num" data-count="2" data-suffix=" ország">0 ország</span><span class="mx-lab">igazolt eredet: DE · AT</span></div>
       <div class="mx-stat"><span class="mx-num" data-count="30" data-suffix=" nap">0 nap</span><span class="mx-lab">garancia, írásban</span></div>
       <div class="mx-stat"><span class="mx-num" data-count="3" data-suffix=" fok">0 fok</span><span class="mx-lab">őszinte állapot-skála</span></div>
+      <div class="mx-stat"><span class="mx-num" data-count="5" data-suffix=" terület">0 terület</span><span class="mx-lab">amit átnézünk</span></div>
       <div class="mx-stat"><span class="mx-num" data-count="100" data-suffix="%">0%</span><span class="mx-lab">átnézve, beállítva</span></div>
     </div>
   </div>
 </header>
 
-<!-- AMIT MINDEN KERÉKPÁRON ÁTNÉZÜNK -->
-<section class="ba-sec"><div class="wrap">
+<!-- AMIT MINDEN KERÉKPÁRON ÁTNÉZÜNK - INTERAKTÍV MTB -->
+<section class="mtb-sec"><div class="wrap">
   <div class="sec-head reveal"><span class="kick">A mércénk</span><h2>Amit minden kerékpáron átnézünk</h2>
-    <p>Mielőtt egy kerékpár a készletbe kerül, végigmegyünk a lényegi pontjain: megtisztítjuk, ellenőrizzük és beállítjuk. Csak az kerül a polcra, ami a saját mércénket is megüti.</p></div>
-  <div class="ba-wrap reveal draw-on-scroll" role="img" aria-label="Kerékpár-anatómia: a váz, villa, hajtás, fék, kerék és nyereg átnézett pontjai.">
-    <svg class="ba-svg" viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg">
-      <circle class="ba-wheel" cx="260" cy="250" r="72"/>
-      <circle class="ba-wheel" cx="500" cy="250" r="72"/>
-      <g class="ba-spoke">
-        <circle cx="260" cy="250" r="55"/>
-        <line x1="260" y1="250" x2="315" y2="250"/><line x1="260" y1="250" x2="288" y2="298"/><line x1="260" y1="250" x2="232" y2="298"/><line x1="260" y1="250" x2="205" y2="250"/><line x1="260" y1="250" x2="232" y2="202"/><line x1="260" y1="250" x2="288" y2="202"/>
-        <circle cx="500" cy="250" r="55"/>
-        <line x1="500" y1="250" x2="555" y2="250"/><line x1="500" y1="250" x2="528" y2="298"/><line x1="500" y1="250" x2="472" y2="298"/><line x1="500" y1="250" x2="445" y2="250"/><line x1="500" y1="250" x2="472" y2="202"/><line x1="500" y1="250" x2="528" y2="202"/>
+    <p>Mielőtt egy kerékpár a készletbe kerül, végigmegyünk a lényegi pontjain. Vidd a kurzort a részekre, vagy válassz alább, és megmutatjuk, mit csinálunk.</p></div>
+  <div class="mtb-stage reveal">
+    <svg class="mtb sel-fork" viewBox="0 0 720 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interaktív MTB: teleszkóp, kerék és agy, hajtás, fék és váz átnézett pontjai.">
+      <!-- hátsó kerék -->
+      <g class="comp" data-part="wheel">
+        <circle class="tread" cx="205" cy="295" r="88"/>
+        <circle class="ln" cx="205" cy="295" r="82"/>
+        <circle class="ln" cx="205" cy="295" r="64" style="stroke-width:2.4"/>
+        <g id="mtb-spokes-r" class="ln" style="stroke-width:2.4">
+          <line x1="205" y1="295" x2="269" y2="295"/><line x1="205" y1="295" x2="250" y2="340"/><line x1="205" y1="295" x2="205" y2="359"/><line x1="205" y1="295" x2="160" y2="340"/><line x1="205" y1="295" x2="141" y2="295"/><line x1="205" y1="295" x2="160" y2="250"/><line x1="205" y1="295" x2="205" y2="231"/><line x1="205" y1="295" x2="250" y2="250"/>
+        </g>
+        <circle class="fp" cx="205" cy="295" r="7"/>
       </g>
-      <path class="ba-frame mx-curve" d="M363 264 L332 144 L471 140 L457 178 L363 264 M332 144 L260 250 M363 264 L260 250 M457 178 L500 250 M332 144 L322 120 M471 140 L483 118 M363 264 L385 293 M298 118 L354 111 M457 120 L502 116 M373 298 L399 288"/>
-      <circle class="ba-frame" cx="363" cy="264" r="14"/>
-      <circle class="ba-frame" cx="260" cy="250" r="14"/>
-      <circle class="ba-hub" cx="260" cy="250" r="8"/>
-      <circle class="ba-hub" cx="500" cy="250" r="8"/>
-      <g class="ba-call c1"><line class="ba-lead" x1="400" y1="74" x2="400" y2="139"/><circle class="ba-anchor" cx="400" cy="141" r="3.5"/><text class="ba-name" x="400" y="50" text-anchor="middle">Váz</text><text class="ba-sub" x="400" y="66" text-anchor="middle">megtisztítva ✓</text></g>
-      <g class="ba-call c2"><line class="ba-lead" x1="208" y1="76" x2="322" y2="111"/><circle class="ba-anchor" cx="326" cy="113" r="3.5"/><text class="ba-name" x="70" y="60">Nyereg</text><text class="ba-sub" x="70" y="76">rögzítés ellenőrizve ✓</text></g>
-      <g class="ba-call c4"><line class="ba-lead" x1="634" y1="158" x2="472" y2="197"/><circle class="ba-anchor" cx="468" cy="196" r="3.5"/><text class="ba-name" x="700" y="146" text-anchor="end">Villa</text><text class="ba-sub" x="700" y="162" text-anchor="end">működés ellenőrizve ✓</text></g>
-      <g class="ba-call c3"><line class="ba-lead" x1="648" y1="332" x2="566" y2="293"/><circle class="ba-anchor" cx="562" cy="291" r="3.5"/><text class="ba-name" x="700" y="344" text-anchor="end">Kerék</text><text class="ba-sub" x="700" y="360" text-anchor="end">pörgés ellenőrizve ✓</text></g>
-      <g class="ba-call c5"><line class="ba-lead" x1="150" y1="250" x2="252" y2="250"/><circle class="ba-anchor" cx="260" cy="250" r="3.5"/><text class="ba-name" x="60" y="244">Fék</text><text class="ba-sub" x="60" y="260">beállítva ✓</text></g>
-      <g class="ba-call c6"><line class="ba-lead" x1="363" y1="380" x2="363" y2="290"/><circle class="ba-anchor" cx="363" cy="287" r="3.5"/><text class="ba-name" x="363" y="402" text-anchor="middle">Hajtás</text><text class="ba-sub" x="363" y="418" text-anchor="middle">beállítva ✓</text></g>
+      <!-- hátsó féktárcsa -->
+      <g class="comp mtb-rotor" data-part="brake">
+        <circle class="ln" cx="205" cy="295" r="26" style="stroke-width:2.4"/>
+        <line class="ln" x1="244" y1="270" x2="252" y2="262" style="stroke-width:4"/>
+      </g>
+      <!-- első egység (teleszkóp + első kerék) - rugózik -->
+      <g id="mtb-front">
+        <g class="comp" data-part="wheel">
+          <circle class="tread" cx="515" cy="295" r="88"/>
+          <circle class="ln" cx="515" cy="295" r="82"/>
+          <circle class="ln" cx="515" cy="295" r="64" style="stroke-width:2.4"/>
+          <g id="mtb-spokes-f" class="ln" style="stroke-width:2.4">
+            <line x1="515" y1="295" x2="579" y2="295"/><line x1="515" y1="295" x2="560" y2="340"/><line x1="515" y1="295" x2="515" y2="359"/><line x1="515" y1="295" x2="470" y2="340"/><line x1="515" y1="295" x2="451" y2="295"/><line x1="515" y1="295" x2="470" y2="250"/><line x1="515" y1="295" x2="515" y2="231"/><line x1="515" y1="295" x2="560" y2="250"/>
+          </g>
+          <circle class="fp" cx="515" cy="295" r="7"/>
+        </g>
+        <g class="comp mtb-rotor" data-part="brake">
+          <circle class="ln" cx="515" cy="295" r="26" style="stroke-width:2.4"/>
+          <line class="ln" x1="476" y1="270" x2="468" y2="262" style="stroke-width:4"/>
+        </g>
+        <!-- teleszkópos villa -->
+        <g class="comp" data-part="fork">
+          <line class="ln" x1="462" y1="232" x2="515" y2="295" style="stroke-width:7"/>
+          <line class="ln" x1="473" y1="226" x2="525" y2="288" style="stroke-width:5"/>
+          <line class="ln" x1="456" y1="236" x2="478" y2="226"/>
+          <line class="ln" x1="490" y1="266" x2="500" y2="260" style="stroke-width:3"/>
+        </g>
+      </g>
+      <!-- váz -->
+      <g id="mtb-frame" class="comp" data-part="frame">
+        <path class="ln" d="M338 322 L312 188 L476 196 L462 232 L338 322 M312 188 L205 295 M338 322 L205 295"/>
+        <line class="ln" x1="312" y1="188" x2="300" y2="150"/>
+        <line class="ln" x1="270" y1="150" x2="332" y2="143" style="stroke-width:7"/>
+        <line class="ln" x1="476" y1="196" x2="486" y2="178"/>
+        <path class="ln" d="M462 180 Q486 166 506 172" style="stroke-width:6"/>
+      </g>
+      <!-- hajtás -->
+      <g class="comp" data-part="drive">
+        <circle id="mtb-chainring" class="ln" cx="338" cy="322" r="20"/>
+        <line class="ln" x1="338" y1="322" x2="360" y2="354"/>
+        <line class="ln" x1="354" y1="357" x2="380" y2="347" style="stroke-width:4"/>
+        <circle class="ln" cx="205" cy="295" r="15" style="stroke-width:2.4"/>
+      </g>
     </svg>
-    <div class="ba-legend">Háromfokú állapot: <b>Újszerű · Kiváló · Jó</b>. A használati nyomokat jelöljük, nem rejtjük.</div>
+    <div class="mtb-ctrl" role="group" aria-label="Alkatrész kiválasztása">
+      <button class="mtb-btn" type="button" data-part="fork" aria-pressed="true">Teleszkóp</button>
+      <button class="mtb-btn" type="button" data-part="wheel" aria-pressed="false">Kerék &amp; agy</button>
+      <button class="mtb-btn" type="button" data-part="drive" aria-pressed="false">Hajtás</button>
+      <button class="mtb-btn" type="button" data-part="brake" aria-pressed="false">Fék</button>
+      <button class="mtb-btn" type="button" data-part="frame" aria-pressed="false">Váz</button>
+    </div>
+    <div class="mtb-detail" id="mtb-detail" aria-live="polite"></div>
+    <p class="mtb-hint">Háromfokú állapot: Újszerű · Kiváló · Jó. A használati nyomokat jelöljük, nem rejtjük.</p>
   </div>
 </div></section>
 
@@ -116,26 +175,42 @@
   <div class="reveal">
     <span class="kick">A történet</span>
     <h2 style="margin-top:14px">Egy jó bringa évekre szól</h2>
-    <p>A Premium Bringa egy egyszerű meggyőződésből indult: a márkás, minőségi kerékpár ne legyen luxus. Nyugat-Európából hozzuk a kerékpárokat, egyenként kiválogatva, és Debrecenben adjuk át, őszinte állapotleírással és 30 napos garanciával.</p>
+    <p>A Premium Bringa egy egyszerű meggyőződésből indult: a minőségi kerékpár ne legyen luxus. Gondosan kiválogatott példányokat hozunk, felkészítjük őket, és Debrecenben adjuk át, őszinte állapotleírással és 30 napos garanciával.</p>
     <p>Nem a legolcsóbbat keressük, hanem a legjobbat, amit a pénzedért megkaphatsz. Városban és terepen is azt a kerékpárt akarod, ami évekig kitart.</p>
     <div class="brands"><span>Cube</span><span>Trek</span><span>Orbea</span><span>Specialized</span></div>
   </div>
   <div class="story-card reveal">
-    <div class="row"><span class="k">Honnan</span><span class="vv">Németország · Ausztria</span></div>
+    <div class="row"><span class="k">Forrás</span><span class="vv">Nyugat-Európa</span></div>
     <div class="row"><span class="k">Válogatás</span><span class="vv"><em>Darabonként</em>, kézzel</span></div>
     <div class="row"><span class="k">Átvétel</span><span class="vv">Debrecen <em>+ szállítás</em></span></div>
     <div class="row"><span class="k">Garancia</span><span class="vv">30 nap</span></div>
   </div>
 </div></section>
 
-<!-- ÉRTÉKEK -->
-<section class="value rx-values"><div class="wrap">
-  <div class="sec-head reveal"><span class="kick">Amiben hiszünk</span><h2>Négy dolog, amit tartunk</h2></div>
-  <div class="vgrid">
-    <div class="v reveal"><div class="vn">Válogatás</div><h3>Igényes állapot</h3><p>Csak olyan kerékpárt veszünk át, amely megüti a mércénket. Ami nem felel meg, be sem kerül a készletbe.</p></div>
-    <div class="v reveal"><div class="vn">Eredet</div><h3>Igazolt német háttér</h3><p>Németország és Ausztria: ellenőrzött, átvilágítható forrás. Tudjuk, honnan jön minden kerékpár.</p></div>
-    <div class="v reveal"><div class="vn">Átláthatóság</div><h3>Őszinte állapot</h3><p>Háromfokú skála: Újszerű, Kiváló, Jó. A használati nyomokat jelöljük, nem rejtjük.</p></div>
-    <div class="v reveal"><div class="vn">Érték</div><h3>Elérhető ár</h3><p>Korszerű, márkás modellek reális áron, gyakran az új ár töredékéért.</p></div>
+<!-- ELVEK -->
+<section class="value"><div class="wrap">
+  <div class="sec-head reveal"><span class="kick">Amiben hiszünk</span><h2>Négy elv, amit tartunk</h2></div>
+  <div class="pr-grid">
+    <div class="pr reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+      <span class="pn">01 · Válogatás</span><h3>Igényes állapot</h3>
+      <p>Csak olyan kerékpárt veszünk át, amely megüti a mércénket. Ami nem felel meg, be sem kerül a készletbe.</p>
+    </div>
+    <div class="pr reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4a4 4 0 0 1-5.5 5.5L8 17l-2.5.5L5 20l-2 .5L3.5 18 4 16l7.5-7.5A4 4 0 0 1 17 3z"/></svg>
+      <span class="pn">02 · Felkészítés</span><h3>Átnézve, beállítva</h3>
+      <p>Minden kerékpárt megtisztítunk, ellenőrzünk és beállítunk, mielőtt a polcra kerül. A részleteket fent láthatod.</p>
+    </div>
+    <div class="pr reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+      <span class="pn">03 · Átláthatóság</span><h3>Őszinte állapot</h3>
+      <p>Háromfokú skála: Újszerű, Kiváló, Jó. A használati nyomokat jelöljük, nem rejtjük.</p>
+    </div>
+    <div class="pr reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13l8-8 9 1 1 9-8 8z"/><circle cx="15.5" cy="8.5" r="1.5"/></svg>
+      <span class="pn">04 · Érték</span><h3>Elérhető ár</h3>
+      <p>Korszerű, minőségi modellek reális áron, gyakran az új ár töredékéért.</p>
+    </div>
   </div>
 </div></section>
 
@@ -175,5 +250,48 @@
 
 <script src="assets/data.js"></script>
 <script src="assets/app.js"></script>
+<script>
+(function(){
+  var stage = document.querySelector('.mtb');
+  if(!stage) return;
+  var comps = Array.prototype.slice.call(stage.querySelectorAll('.comp'));
+  var btns = Array.prototype.slice.call(document.querySelectorAll('.mtb-btn'));
+  var detail = document.getElementById('mtb-detail');
+  var DATA = {
+    fork:{n:'01',t:'Teleszkóp',d:'Átnézzük a teleszkópos villát: a működést és a tömítettséget ellenőrizzük.'},
+    wheel:{n:'02',t:'Kerék és agy',d:'Az agyakat zsírtalanítjuk és újrazsírozzuk, a kerekek nyolcasát ellenőrizzük.'},
+    drive:{n:'03',t:'Hajtás',d:'A hajtást megtisztítjuk és pontosan beállítjuk.'},
+    brake:{n:'04',t:'Fék',d:'A fékeket kitisztítjuk, légtelenítjük és beállítjuk.'},
+    frame:{n:'05',t:'Váz',d:'A vázat mélytisztítjuk, majd védőpolírral óvjuk.'}
+  };
+  function select(part){
+    if(!DATA[part]) return;
+    stage.setAttribute('class','mtb sel-'+part);
+    comps.forEach(function(c){
+      var on = c.getAttribute('data-part') === part;
+      c.classList.toggle('active', on);
+      c.classList.toggle('dim', !on);
+    });
+    btns.forEach(function(b){
+      var on = b.getAttribute('data-part') === part;
+      b.classList.toggle('on', on);
+      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+    var x = DATA[part];
+    detail.innerHTML = '<span class="num">'+x.n+'</span><p><b>'+x.t+'.</b> '+x.d+'</p>';
+  }
+  btns.forEach(function(b){
+    var p = b.getAttribute('data-part');
+    b.addEventListener('click', function(){ select(p); });
+    b.addEventListener('mouseenter', function(){ select(p); });
+    b.addEventListener('focus', function(){ select(p); });
+  });
+  comps.forEach(function(c){
+    var p = c.getAttribute('data-part');
+    c.addEventListener('mouseenter', function(){ select(p); });
+  });
+  select('fork');
+})();
+</script>
 </body>
 </html>
