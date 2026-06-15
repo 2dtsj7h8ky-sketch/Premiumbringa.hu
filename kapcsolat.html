@@ -14,11 +14,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <style>
-/* ====== Kapcsolat - oldal-specifikus: radar-pin + élő kártyák ====== */
-.map .pin .dot{position:relative;z-index:2}
-.kx-radar{position:absolute;left:50%;top:8px;width:16px;height:16px;margin:-8px 0 0 -8px;border:2px solid var(--copper);border-radius:50%;opacity:0;animation:kxradar 3s ease-out infinite;pointer-events:none;z-index:1}
+/* ====== Kapcsolat - oldal-specifikus: absztrakt Debrecen-térkép + radar + élő kártyák ====== */
+.kx-map{position:relative;overflow:hidden}
+.kx-map::before{opacity:.12}
+.kx-mapsvg{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+.km-bg{fill:#15171a}
+.km-block{fill:#23262b}
+.km-block.b2{fill:#1d2024}
+.km-road{stroke:#34373e;fill:none;stroke-linecap:round}
+.km-main{stroke:var(--copper-deep);fill:none;stroke-linecap:round;opacity:.85}
+.km-plaza{fill:#2a2d33}
+.kx-chip{position:absolute;top:14px;left:14px;z-index:2;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--silver);background:rgba(21,23,26,.72);border:1px solid var(--line);border-radius:20px;padding:6px 12px;backdrop-filter:blur(4px)}
+.kx-cap{position:absolute;bottom:14px;left:14px;right:14px;z-index:2;font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--haze)}
+.kx-here{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:18px;height:18px}
+.kx-dot{position:absolute;inset:0;border-radius:50%;background:var(--copper);box-shadow:0 0 0 6px rgba(194,137,90,.18),0 2px 8px rgba(0,0,0,.55)}
+.kx-radar{position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border:2px solid var(--copper);border-radius:50%;opacity:0;animation:kxradar 3s ease-out infinite;pointer-events:none}
 .kx-radar.d2{animation-delay:1.5s}
-@keyframes kxradar{0%{transform:scale(1);opacity:.55}80%{opacity:0}100%{transform:scale(5.2);opacity:0}}
+@keyframes kxradar{0%{transform:scale(1);opacity:.55}80%{opacity:0}100%{transform:scale(5.4);opacity:0}}
 .kx-contact .det .d{transition:background .2s ease}
 .kx-contact .det .d:hover{background:#faf9f6}
 .kx-contact .buybox .btn{transition:transform .2s ease}
@@ -73,7 +85,40 @@
     </div>
   </div>
   <div class="reveal" style="display:flex;flex-direction:column;gap:26px">
-    <div class="map" style="flex:1"><div class="pin"><span class="kx-radar"></span><span class="kx-radar d2"></span><div class="dot"></div><div class="city">Debrecen</div><div class="sub">Premium Bringa · kipróbálás & megtekintés</div></div></div>
+    <div class="map kx-map" style="flex:1">
+      <svg class="kx-mapsvg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect class="km-bg" x="0" y="0" width="600" height="400"/>
+        <g>
+          <rect class="km-block" x="30" y="28" width="108" height="62" rx="3"/>
+          <rect class="km-block b2" x="158" y="22" width="86" height="68" rx="3"/>
+          <rect class="km-block" x="360" y="28" width="94" height="56" rx="3"/>
+          <rect class="km-block b2" x="474" y="34" width="98" height="62" rx="3"/>
+          <rect class="km-block b2" x="44" y="120" width="84" height="50" rx="3"/>
+          <rect class="km-block" x="472" y="120" width="94" height="50" rx="3"/>
+          <rect class="km-block b2" x="40" y="250" width="100" height="74" rx="3"/>
+          <rect class="km-block" x="170" y="270" width="82" height="86" rx="3"/>
+          <rect class="km-block" x="360" y="258" width="92" height="70" rx="3"/>
+          <rect class="km-block b2" x="470" y="250" width="102" height="92" rx="3"/>
+        </g>
+        <g class="km-road" stroke-width="3.4">
+          <line x1="150" y1="0" x2="150" y2="400"/>
+          <line x1="450" y1="0" x2="450" y2="400"/>
+          <line x1="0" y1="108" x2="600" y2="108"/>
+          <line x1="0" y1="340" x2="600" y2="340"/>
+          <line x1="300" y1="200" x2="560" y2="36"/>
+          <line x1="300" y1="200" x2="70" y2="366"/>
+          <line x1="300" y1="200" x2="544" y2="356"/>
+          <line x1="300" y1="200" x2="60" y2="60"/>
+        </g>
+        <path class="km-road" stroke-width="3" d="M30 150 Q300 -28 570 150"/>
+        <line class="km-main" x1="300" y1="0" x2="296" y2="400" stroke-width="11"/>
+        <line class="km-main" x1="0" y1="200" x2="600" y2="200" stroke-width="9"/>
+        <rect class="km-plaza" x="258" y="158" width="84" height="84" rx="5"/>
+      </svg>
+      <span class="kx-chip">Debrecen · belváros</span>
+      <div class="kx-here"><span class="kx-radar"></span><span class="kx-radar d2"></span><span class="kx-dot"></span></div>
+      <span class="kx-cap">Premium Bringa · kipróbálás &amp; megtekintés</span>
+    </div>
     <div class="det">
       <div class="d"><span class="l">Nyitvatartás</span><span class="r">Egyeztetés szerint</span></div>
       <div class="d"><span class="l">Bemutató</span><span class="r">Foglalható időpontban</span></div>
@@ -91,7 +136,7 @@
 <!-- FOOTER -->
 <footer><div class="wrap">
   <div class="top">
-    <div><a href="index.html" class="logo">Premium<b>Bringa</b></a><div class="slogan">Rangos német márkák, egy tekerés közelségében. Debrecen.</div></div>
+    <div><a href="index.html" class="logo">Premium<b>Bringa</b></a><div class="slogan">Minőségi német márkák, egy tekerés közelségében. Debrecen.</div></div>
     <div class="col"><h4>Menü</h4><a href="keszlet.html">Készlet</a><a href="miert-eri-meg.html">Miért éri meg</a><a href="rolunk.html">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a><a href="rolunk.html#garancia">Garancia & ÁSZF</a></div>
     <div class="col"><h4>Szegmensek</h4><a href="keszlet.html?szegmens=trail">Trail</a><a href="keszlet.html?szegmens=xc">XC / Túra</a><a href="keszlet.html?szegmens=cross">Cross</a><a href="keszlet.html?szegmens=noi">Női</a></div>
     <div class="col"><h4>Kapcsolat</h4><span class="li">+36 20 436 0307</span><span class="li">info@premiumbringa.hu</span><span class="li">Debrecen, HU</span><span class="li">Magyar Posta · utánvét</span></div>
