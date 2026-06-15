@@ -50,13 +50,22 @@
 .mtb-detail .num{font-family:var(--disp);font-weight:800;font-size:1.6rem;color:var(--copper);line-height:.9;flex:none}
 .mtb-detail p{color:var(--haze);font-size:1rem;line-height:1.6;margin:0}
 .mtb-detail b{color:var(--bright);font-weight:700}
-.mtb-hint{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fog);margin:14px 0 0}
+.mtb-hint{font-family:var(--mono);font-size:.6rem;letter-spacing:.03em;color:var(--fog);line-height:1.8;margin:16px 0 0}
+.mtb-hint b{color:var(--copper);font-weight:600}
+.mtb-detail .col{display:flex;flex-direction:column}
+.mtb-detail .pill{align-self:flex-start;font-family:var(--mono);font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:var(--copper);border:1px solid var(--copper-deep);border-radius:20px;padding:3px 9px;margin-bottom:8px}
+.mtb-shop{stroke:#34373d;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.mtb-shop-fp{fill:#34373d;stroke:none}
+.mtb-floor{stroke:#2d3036;stroke-width:2;stroke-linecap:round}
+.mtb-stand{stroke:#565a62;fill:none;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.mtb-stand-fp{fill:#565a62;stroke:none}
+.mtb-clamp{stroke:var(--steel);fill:#1d1f22;stroke-width:3}
 /* ====== Rólunk - elvek (4 blokk, eltérő a miert-től) ====== */
 .pr-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
 .pr{border:1px solid var(--line);border-radius:14px;padding:28px 26px;background:linear-gradient(160deg,#212327,#191a1c);position:relative;overflow:hidden;transition:transform .25s ease,border-color .25s ease}
 .pr::before{content:"";position:absolute;top:0;left:26px;right:26px;height:2px;background:linear-gradient(90deg,var(--copper),transparent)}
 .pr:hover{transform:translateY(-4px);border-color:var(--copper)}
-.pr .ico{width:30px;height:30px;color:var(--copper);margin-bottom:18px;display:block}
+.pr .ico{width:46px;height:46px;padding:11px;border:1px solid var(--copper-deep);border-radius:50%;color:var(--copper);margin-bottom:18px;display:block;box-sizing:border-box}
 .pr .pn{display:block;font-family:var(--mono);font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-deep);margin-bottom:8px}
 .pr h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:108%;font-size:1.12rem;color:var(--bright);margin:0 0 9px}
 .pr p{color:var(--haze);font-size:.95rem;line-height:1.6;margin:0}
@@ -103,59 +112,93 @@
   <div class="sec-head reveal"><span class="kick">A mércénk</span><h2>Amit minden kerékpáron átnézünk</h2>
     <p>Mielőtt egy kerékpár a készletbe kerül, végigmegyünk a lényegi pontjain. Vidd a kurzort a részekre, vagy válassz alább, és megmutatjuk, mit csinálunk.</p></div>
   <div class="mtb-stage reveal">
-    <svg class="mtb sel-fork" viewBox="0 0 720 440" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interaktív MTB: teleszkóp, kerék és agy, hajtás, fék és váz átnézett pontjai.">
+    <svg class="mtb sel-fork" viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interaktív MTB szervizállványon: teleszkóp, kerék és agy, hajtás, fék és váz átnézett pontjai.">
+      <!-- műhely háttér -->
+      <g opacity=".5">
+        <rect class="mtb-shop" x="498" y="40" width="214" height="116" rx="4"/>
+        <g class="mtb-shop-fp">
+          <circle cx="524" cy="66" r="2"/><circle cx="556" cy="66" r="2"/><circle cx="588" cy="66" r="2"/><circle cx="620" cy="66" r="2"/><circle cx="652" cy="66" r="2"/><circle cx="684" cy="66" r="2"/>
+          <circle cx="524" cy="98" r="2"/><circle cx="556" cy="98" r="2"/><circle cx="588" cy="98" r="2"/><circle cx="620" cy="98" r="2"/><circle cx="652" cy="98" r="2"/><circle cx="684" cy="98" r="2"/>
+          <circle cx="524" cy="130" r="2"/><circle cx="556" cy="130" r="2"/><circle cx="588" cy="130" r="2"/><circle cx="620" cy="130" r="2"/><circle cx="652" cy="130" r="2"/><circle cx="684" cy="130" r="2"/>
+        </g>
+        <path class="mtb-shop" d="M540 58 l0 42 m-9 0 l18 0"/>
+        <circle class="mtb-shop" cx="600" cy="72" r="9"/><path class="mtb-shop" d="M600 81 l0 30"/>
+        <path class="mtb-shop" d="M656 58 l0 30 8 12 8 -12 0 -30"/>
+      </g>
+      <!-- padló -->
+      <line class="mtb-floor" x1="120" y1="478" x2="664" y2="478"/>
+      <line class="mtb-floor" x1="186" y1="500" x2="598" y2="500" opacity=".5"/>
+      <!-- szervizállvány -->
+      <g>
+        <line class="mtb-stand" x1="430" y1="478" x2="388" y2="478"/>
+        <line class="mtb-stand" x1="430" y1="478" x2="472" y2="478"/>
+        <line class="mtb-stand" x1="430" y1="470" x2="410" y2="452"/>
+        <line class="mtb-stand" x1="430" y1="478" x2="430" y2="248"/>
+        <line class="mtb-stand" x1="430" y1="252" x2="360" y2="230"/>
+        <circle class="mtb-stand-fp" cx="442" cy="252" r="5"/>
+      </g>
       <!-- hátsó kerék -->
       <g class="comp" data-part="wheel">
-        <circle class="tread" cx="205" cy="295" r="88"/>
-        <circle class="ln" cx="205" cy="295" r="82"/>
-        <circle class="ln" cx="205" cy="295" r="64" style="stroke-width:2.4"/>
-        <g id="mtb-spokes-r" class="ln" style="stroke-width:2.4">
-          <line x1="205" y1="295" x2="269" y2="295"/><line x1="205" y1="295" x2="250" y2="340"/><line x1="205" y1="295" x2="205" y2="359"/><line x1="205" y1="295" x2="160" y2="340"/><line x1="205" y1="295" x2="141" y2="295"/><line x1="205" y1="295" x2="160" y2="250"/><line x1="205" y1="295" x2="205" y2="231"/><line x1="205" y1="295" x2="250" y2="250"/>
+        <circle class="tread" cx="240" cy="330" r="80"/>
+        <circle class="ln" cx="240" cy="330" r="74"/>
+        <circle class="ln" cx="240" cy="330" r="60" style="stroke-width:2.4"/>
+        <g id="mtb-spokes-r" class="ln" style="stroke-width:2.2">
+          <line x1="240" y1="330" x2="300" y2="330"/><line x1="240" y1="330" x2="282" y2="372"/><line x1="240" y1="330" x2="240" y2="390"/><line x1="240" y1="330" x2="198" y2="372"/><line x1="240" y1="330" x2="180" y2="330"/><line x1="240" y1="330" x2="198" y2="288"/><line x1="240" y1="330" x2="240" y2="270"/><line x1="240" y1="330" x2="282" y2="288"/>
         </g>
-        <circle class="fp" cx="205" cy="295" r="7"/>
+        <circle class="fp" cx="240" cy="330" r="6"/>
       </g>
       <!-- hátsó féktárcsa -->
       <g class="comp mtb-rotor" data-part="brake">
-        <circle class="ln" cx="205" cy="295" r="26" style="stroke-width:2.4"/>
-        <line class="ln" x1="244" y1="270" x2="252" y2="262" style="stroke-width:4"/>
+        <circle class="ln" cx="240" cy="330" r="24" style="stroke-width:2.2"/>
+        <rect class="fp" x="232" y="302" width="10" height="9" rx="2"/>
       </g>
       <!-- első egység (teleszkóp + első kerék) - rugózik -->
       <g id="mtb-front">
         <g class="comp" data-part="wheel">
-          <circle class="tread" cx="515" cy="295" r="88"/>
-          <circle class="ln" cx="515" cy="295" r="82"/>
-          <circle class="ln" cx="515" cy="295" r="64" style="stroke-width:2.4"/>
-          <g id="mtb-spokes-f" class="ln" style="stroke-width:2.4">
-            <line x1="515" y1="295" x2="579" y2="295"/><line x1="515" y1="295" x2="560" y2="340"/><line x1="515" y1="295" x2="515" y2="359"/><line x1="515" y1="295" x2="470" y2="340"/><line x1="515" y1="295" x2="451" y2="295"/><line x1="515" y1="295" x2="470" y2="250"/><line x1="515" y1="295" x2="515" y2="231"/><line x1="515" y1="295" x2="560" y2="250"/>
+          <circle class="tread" cx="540" cy="330" r="80"/>
+          <circle class="ln" cx="540" cy="330" r="74"/>
+          <circle class="ln" cx="540" cy="330" r="60" style="stroke-width:2.4"/>
+          <g id="mtb-spokes-f" class="ln" style="stroke-width:2.2">
+            <line x1="540" y1="330" x2="600" y2="330"/><line x1="540" y1="330" x2="582" y2="372"/><line x1="540" y1="330" x2="540" y2="390"/><line x1="540" y1="330" x2="498" y2="372"/><line x1="540" y1="330" x2="480" y2="330"/><line x1="540" y1="330" x2="498" y2="288"/><line x1="540" y1="330" x2="540" y2="270"/><line x1="540" y1="330" x2="582" y2="288"/>
           </g>
-          <circle class="fp" cx="515" cy="295" r="7"/>
+          <circle class="fp" cx="540" cy="330" r="6"/>
         </g>
         <g class="comp mtb-rotor" data-part="brake">
-          <circle class="ln" cx="515" cy="295" r="26" style="stroke-width:2.4"/>
-          <line class="ln" x1="476" y1="270" x2="468" y2="262" style="stroke-width:4"/>
+          <circle class="ln" cx="540" cy="330" r="24" style="stroke-width:2.2"/>
+          <rect class="fp" x="522" y="302" width="10" height="9" rx="2"/>
         </g>
         <!-- teleszkópos villa -->
         <g class="comp" data-part="fork">
-          <line class="ln" x1="462" y1="232" x2="515" y2="295" style="stroke-width:7"/>
-          <line class="ln" x1="473" y1="226" x2="525" y2="288" style="stroke-width:5"/>
-          <line class="ln" x1="456" y1="236" x2="478" y2="226"/>
-          <line class="ln" x1="490" y1="266" x2="500" y2="260" style="stroke-width:3"/>
+          <line class="ln" x1="488" y1="290" x2="514" y2="309" style="stroke-width:5"/>
+          <line class="ln" x1="514" y1="309" x2="540" y2="330" style="stroke-width:8"/>
+          <line class="ln" x1="480" y1="290" x2="498" y2="285"/>
+          <line class="ln" x1="508" y1="304" x2="520" y2="314" style="stroke-width:3"/>
         </g>
       </g>
       <!-- váz -->
       <g id="mtb-frame" class="comp" data-part="frame">
-        <path class="ln" d="M338 322 L312 188 L476 196 L462 232 L338 322 M312 188 L205 295 M338 322 L205 295"/>
-        <line class="ln" x1="312" y1="188" x2="300" y2="150"/>
-        <line class="ln" x1="270" y1="150" x2="332" y2="143" style="stroke-width:7"/>
-        <line class="ln" x1="476" y1="196" x2="486" y2="178"/>
-        <path class="ln" d="M462 180 Q486 166 506 172" style="stroke-width:6"/>
+        <path class="ln" d="M386 366 L356 244 L500 254 L488 290 L386 366 M356 244 L240 330 M386 366 L240 330"/>
+        <line class="ln" x1="356" y1="244" x2="337" y2="202" style="stroke-width:6"/>
+        <line class="ln" x1="312" y1="199" x2="368" y2="193" style="stroke-width:7"/>
+        <line class="ln" x1="500" y1="254" x2="510" y2="240"/>
+        <path class="ln" d="M488 242 Q510 228 534 233" style="stroke-width:6"/>
       </g>
       <!-- hajtás -->
       <g class="comp" data-part="drive">
-        <circle id="mtb-chainring" class="ln" cx="338" cy="322" r="20"/>
-        <line class="ln" x1="338" y1="322" x2="360" y2="354"/>
-        <line class="ln" x1="354" y1="357" x2="380" y2="347" style="stroke-width:4"/>
-        <circle class="ln" cx="205" cy="295" r="15" style="stroke-width:2.4"/>
+        <line class="ln" x1="372" y1="350" x2="252" y2="320" style="stroke-width:2.4"/>
+        <line class="ln" x1="380" y1="384" x2="250" y2="344" style="stroke-width:2.4"/>
+        <circle id="mtb-chainring" class="ln" cx="386" cy="366" r="18"/>
+        <line class="ln" x1="386" y1="366" x2="408" y2="398"/>
+        <line class="ln" x1="400" y1="401" x2="424" y2="392" style="stroke-width:4"/>
+        <circle class="ln" cx="240" cy="330" r="14" style="stroke-width:2.4"/>
+        <path class="ln" d="M240 344 L250 372" style="stroke-width:2.4"/>
+        <circle class="ln" cx="250" cy="376" r="5" style="stroke-width:2.2"/>
+        <circle class="ln" cx="258" cy="390" r="5" style="stroke-width:2.2"/>
+      </g>
+      <!-- befogó fej a nyeregcsövön -->
+      <g>
+        <circle class="mtb-clamp" cx="350" cy="226" r="12"/>
+        <path class="mtb-stand" d="M340 220 a12 12 0 0 1 20 2" style="stroke-width:3"/>
       </g>
     </svg>
     <div class="mtb-ctrl" role="group" aria-label="Alkatrész kiválasztása">
@@ -166,7 +209,7 @@
       <button class="mtb-btn" type="button" data-part="frame" aria-pressed="false">Váz</button>
     </div>
     <div class="mtb-detail" id="mtb-detail" aria-live="polite"></div>
-    <p class="mtb-hint">Háromfokú állapot: Újszerű · Kiváló · Jó. A használati nyomokat jelöljük, nem rejtjük.</p>
+    <p class="mtb-hint"><b>Esztétikai felújítás:</b> mélytisztítás és ápolás (védőpolír). <b>Mechanikai felkészítés:</b> zsírtalanítás és újrazsírozás, ellenőrzés és beállítás.</p>
   </div>
 </div></section>
 
@@ -258,11 +301,11 @@
   var btns = Array.prototype.slice.call(document.querySelectorAll('.mtb-btn'));
   var detail = document.getElementById('mtb-detail');
   var DATA = {
-    fork:{n:'01',t:'Teleszkóp',d:'Átnézzük a teleszkópos villát: a működést és a tömítettséget ellenőrizzük.'},
-    wheel:{n:'02',t:'Kerék és agy',d:'Az agyakat zsírtalanítjuk és újrazsírozzuk, a kerekek nyolcasát ellenőrizzük.'},
-    drive:{n:'03',t:'Hajtás',d:'A hajtást megtisztítjuk és pontosan beállítjuk.'},
-    brake:{n:'04',t:'Fék',d:'A fékeket kitisztítjuk, légtelenítjük és beállítjuk.'},
-    frame:{n:'05',t:'Váz',d:'A vázat mélytisztítjuk, majd védőpolírral óvjuk.'}
+    fork:{n:'01',pillar:'Mechanikai',t:'Teleszkóp',d:'A teleszkópos villát átnézzük: a működést és a tömítettséget ellenőrizzük.'},
+    wheel:{n:'02',pillar:'Mechanikai',t:'Kerék és agy',d:'Az agyakat zsírtalanítjuk és újrazsírozzuk, a kerekek nyolcasát ellenőrizzük.'},
+    drive:{n:'03',pillar:'Mechanikai',t:'Hajtás',d:'A hajtást zsírtalanítjuk, megtisztítjuk és pontosan beállítjuk.'},
+    brake:{n:'04',pillar:'Mechanikai',t:'Fék',d:'A fékeket kitisztítjuk, légtelenítjük és beállítjuk.'},
+    frame:{n:'05',pillar:'Esztétikai',t:'Váz',d:'A vázat mélytisztítjuk, majd védőpolírral ápoljuk.'}
   };
   function select(part){
     if(!DATA[part]) return;
@@ -278,7 +321,7 @@
       b.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
     var x = DATA[part];
-    detail.innerHTML = '<span class="num">'+x.n+'</span><p><b>'+x.t+'.</b> '+x.d+'</p>';
+    detail.innerHTML = '<span class="num">'+x.n+'</span><div class="col"><span class="pill">'+x.pillar+'</span><p><b>'+x.t+'.</b> '+x.d+'</p></div>';
   }
   btns.forEach(function(b){
     var p = b.getAttribute('data-part');
