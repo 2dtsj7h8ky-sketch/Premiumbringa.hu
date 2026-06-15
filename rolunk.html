@@ -20,6 +20,33 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<style>
+/* ====== Rólunk - oldal-specifikus: a kerékpár útja ====== */
+.rx-origin{background:var(--carbon);background-image:var(--weave);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.rx-mapwrap{margin-top:42px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,#1d1f22,#161719);padding:30px 26px 20px;box-shadow:0 40px 80px -50px rgba(0,0,0,.7)}
+.rx-map{width:100%;height:auto;display:block}
+.rx-route{stroke:var(--copper);stroke-width:3.4;stroke-linecap:round}
+.rx-node{fill:#161719;stroke:var(--steel);stroke-width:3}
+.rx-node.dst{stroke:var(--copper)}
+.rx-dot{fill:var(--copper)}
+.rx-pulse{fill:var(--copper);transform-box:fill-box;transform-origin:center;opacity:0}
+.rx-mapwrap.drawn .rx-pulse{animation:rxpulse 2.6s ease-out 1.5s infinite}
+@keyframes rxpulse{0%{transform:scale(.45);opacity:.55}80%{transform:scale(3);opacity:0}100%{opacity:0}}
+.rx-ship{fill:var(--copper);opacity:0;offset-path:path("M120 95 C300 58,470 108,632 150");offset-distance:0%}
+.rx-mapwrap.drawn .rx-ship{animation:rxtravel 3.4s ease-in-out 1.7s infinite}
+@keyframes rxtravel{0%{offset-distance:0%;opacity:0}12%{opacity:1}88%{opacity:1}100%{offset-distance:100%;opacity:0}}
+.rx-lab{fill:var(--haze);font-family:var(--mono);font-size:13px;letter-spacing:.04em}
+.rx-lab.cop{fill:var(--copper)}
+.rx-sub{fill:var(--fog);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+.rx-legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:16px;font-family:var(--mono);font-size:.6rem;letter-spacing:.07em;text-transform:uppercase;color:var(--fog)}
+.rx-legend span{display:inline-flex;align-items:center;gap:8px}
+.rx-legend i{width:16px;height:3px;border-radius:2px;background:var(--copper)}
+.rx-legend i.n{width:11px;height:11px;border-radius:50%;background:#161719;border:2px solid var(--copper)}
+/* érték-kártyák hover */
+.rx-values .v{transition:transform .25s ease,border-color .25s ease}
+.rx-values .v:hover{transform:translateY(-4px);border-color:var(--copper)}
+@media(prefers-reduced-motion:reduce){.rx-pulse,.rx-ship{animation:none;opacity:0}}
+</style>
 </head>
 <body>
 <a class="skip" href="#tortenet">Ugrás a tartalomhoz</a>
@@ -40,12 +67,46 @@
 <header class="page-hero">
   <div class="glow"></div>
   <div class="wrap">
-    <nav class="crumb" aria-label="Útvonal"><a href="index.html">Főoldal</a> <span>/</span> <b>Rólunk</b></nav>
-    <span class="kick">Rólunk & Bizalom</span>
-    <h1>Egy tekeréssel közelebb<br><em>a vágyott bringához.</em></h1>
-    <p>Azért dolgozunk, hogy a rangos, minőségi kerékpár ne legyen luxus, hanem országszerte elérhető, jól megválasztott döntés.</p>
+    <nav class="crumb mx-fade" aria-label="Útvonal"><a href="index.html">Főoldal</a> <span>/</span> <b>Rólunk</b></nav>
+    <span class="kick mx-fade">Rólunk & Bizalom</span>
+    <h1 class="mx-fade d1">Egy tekeréssel közelebb<br><em>a vágyott bringához.</em></h1>
+    <p class="mx-fade d2">Azért dolgozunk, hogy a rangos, minőségi kerékpár ne legyen luxus, hanem országszerte elérhető, jól megválasztott döntés.</p>
+    <div class="mx-stats mx-fade d3" aria-label="A Premium Bringa számokban">
+      <div class="mx-stat"><span class="mx-num" data-count="2" data-suffix=" ország">0 ország</span><span class="mx-lab">igazolt eredet: DE · AT</span></div>
+      <div class="mx-stat"><span class="mx-num" data-count="30" data-suffix=" nap">0 nap</span><span class="mx-lab">garancia, írásban</span></div>
+      <div class="mx-stat"><span class="mx-num" data-count="3" data-suffix=" fok">0 fok</span><span class="mx-lab">őszinte állapot-skála</span></div>
+      <div class="mx-stat"><span class="mx-num" data-count="100" data-suffix="%">0%</span><span class="mx-lab">átnézve, beállítva</span></div>
+    </div>
   </div>
 </header>
+
+<!-- HONNAN JÖN A KERÉKPÁROD -->
+<section class="rx-origin"><div class="wrap">
+  <div class="sec-head reveal"><span class="kick">Honnan jön a kerékpárod</span><h2>Nyugat-Európából, egyenként</h2>
+    <p>Németországból és Ausztriából hozzuk a kerékpárokat, igazolt, átvilágítható eredettel. Csak olyat veszünk át, amelynek a háttere ellenőrizhető, majd Debrecenben adjuk át, vagy országszerte házhoz szállítjuk.</p></div>
+  <div class="rx-mapwrap reveal draw-on-scroll" role="img" aria-label="A kerékpárok útja: Németországból és Ausztriából Debrecenbe, onnan országos szállítással.">
+    <svg class="rx-map" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg">
+      <path class="rx-route mx-curve" d="M120 95 C300 58,470 108,632 150"/>
+      <path class="rx-route mx-curve" d="M120 205 C320 234,470 196,632 150"/>
+      <circle class="rx-ship" r="5"/>
+      <circle class="rx-node" cx="120" cy="95" r="10"/>
+      <circle class="rx-dot" cx="120" cy="95" r="3.5"/>
+      <circle class="rx-node" cx="120" cy="205" r="10"/>
+      <circle class="rx-dot" cx="120" cy="205" r="3.5"/>
+      <circle class="rx-pulse" cx="632" cy="150" r="12"/>
+      <circle class="rx-node dst" cx="632" cy="150" r="13"/>
+      <circle class="rx-dot" cx="632" cy="150" r="4.5"/>
+      <text class="rx-lab" x="120" y="73" text-anchor="middle">Németország</text>
+      <text class="rx-lab" x="120" y="234" text-anchor="middle">Ausztria</text>
+      <text class="rx-lab cop" x="632" y="118" text-anchor="middle">Debrecen</text>
+      <text class="rx-sub" x="632" y="185" text-anchor="middle">átvétel + szállítás</text>
+    </svg>
+    <div class="rx-legend">
+      <span><i></i> A kiválogatott kerékpár útja</span>
+      <span><i class="n"></i> Igazolt eredet és átvétel</span>
+    </div>
+  </div>
+</div></section>
 
 <!-- TÖRTÉNET -->
 <section class="story" id="tortenet"><div class="wrap">
@@ -65,7 +126,7 @@
 </div></section>
 
 <!-- ÉRTÉKEK -->
-<section class="value"><div class="wrap">
+<section class="value rx-values"><div class="wrap">
   <div class="sec-head reveal"><span class="kick">Amiben hiszünk</span><h2>Négy dolog, amit tartunk</h2></div>
   <div class="vgrid">
     <div class="v reveal"><div class="vn">Válogatás</div><h3>Igényes állapot</h3><p>Csak olyan kerékpárt veszünk át, amely megüti a mércénket. Ami nem felel meg, be sem kerül a készletbe.</p></div>

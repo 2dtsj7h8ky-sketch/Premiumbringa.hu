@@ -86,17 +86,15 @@
   }
 
   /* ---- Logó-jelvény (bringa-jel) a fejléc szóvédjegye mellé ---- */
-  const BRINGA_SVG = `<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-    <g fill="none" stroke="#D6D4D0" stroke-width="3.4" stroke-linecap="round">
-      <circle cx="20" cy="40" r="11.5"/><circle cx="44" cy="40" r="11.5"/>
+  const BRINGA_SVG = `<svg viewBox="85 95 850 850" aria-hidden="true" focusable="false">
+    <g fill="none" stroke="#D6D4D0" stroke-width="34"><circle cx="285" cy="600" r="150"/><circle cx="735" cy="600" r="150"/></g>
+    <g fill="none" stroke="#C2895A" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M285 600 L402 352"/><path d="M402 352 L508 600"/><path d="M508 600 L285 600"/>
+      <path d="M402 352 L636 360"/><path d="M636 360 L508 600"/><path d="M636 360 L735 600"/>
+      <path d="M402 352 L398 322"/><path d="M636 360 L628 306"/>
+      <path d="M338 316 L452 308"/><path d="M560 292 L690 304"/>
     </g>
-    <g fill="none" stroke="#C2895A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M20 40 L24 22 L32 40 L40 22 L44 40"/>
-      <path d="M24 22 L40 22"/>
-      <path d="M18.5 20 L29 20 M24 22 L24 20"/>
-      <path d="M35 20 L45.5 20 M40 22 L40 20"/>
-    </g>
-    <circle cx="32" cy="40" r="2.3" fill="#C2895A"/>
+    <g fill="#C2895A"><circle cx="285" cy="600" r="16"/><circle cx="508" cy="600" r="16"/><circle cx="735" cy="600" r="16"/></g>
   </svg>`;
   function initBadge(){
     const logo = $(".nav .logo");
@@ -313,9 +311,63 @@
     secs.forEach(s => spy.observe(s));
   }
 
+  /* ---- mozgás: progress-sáv, szám-felpörgetés, scrollra rajzolódó görbe ---- */
+  function initMotion(){
+    const rm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if(!rm){
+      const bar = document.createElement("div");
+      bar.className = "site-progress"; bar.setAttribute("aria-hidden","true");
+      document.body.appendChild(bar);
+      const tick = () => {
+        const h = document.documentElement;
+        const max = h.scrollHeight - h.clientHeight;
+        const p = max > 0 ? (h.scrollTop || document.body.scrollTop) / max : 0;
+        bar.style.width = (Math.max(0, Math.min(1, p)) * 100).toFixed(2) + "%";
+      };
+      document.addEventListener("scroll", tick, { passive:true });
+      window.addEventListener("resize", tick);
+      tick();
+    }
+
+    const countUp = el => {
+      if(el.dataset.counted) return; el.dataset.counted = "1";
+      const target = parseInt(el.getAttribute("data-count"), 10) || 0;
+      const pre = el.getAttribute("data-prefix") || "", suf = el.getAttribute("data-suffix") || "";
+      if(rm){ el.textContent = pre + target + suf; return; }
+      const dur = 1150; let start = null;
+      const step = ts => {
+        if(!start) start = ts;
+        const t = Math.min(1, (ts - start) / dur), e = 1 - Math.pow(1 - t, 3);
+        el.textContent = pre + Math.round(e * target) + suf;
+        if(t < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+
+    $$(".mx-curve").forEach(p => { try{ const L = Math.ceil(p.getTotalLength()); p.style.strokeDasharray = L; p.style.strokeDashoffset = rm ? 0 : L; }catch(e){} });
+
+    const draws = $$(".draw-on-scroll"), nums = $$("[data-count]");
+    const fire = t => {
+      if(t.classList.contains("draw-on-scroll")){
+        t.classList.add("drawn");
+        t.querySelectorAll(".mx-curve").forEach(c => { c.style.strokeDashoffset = "0"; });
+      }
+      if(t.hasAttribute("data-count")) countUp(t);
+    };
+    if(!draws.length && !nums.length) return;
+    if(!("IntersectionObserver" in window)){ draws.forEach(fire); nums.forEach(fire); return; }
+    const mio = new IntersectionObserver(es => es.forEach(en => {
+      if(en.isIntersecting){ fire(en.target); mio.unobserve(en.target); }
+    }), { threshold:.3 });
+    draws.forEach(el => mio.observe(el));
+    nums.forEach(el => mio.observe(el));
+  }
+
   /* ---- indítás ---- */
   document.addEventListener("DOMContentLoaded", () => {
     initNav();
+    initMotion();
     initBadge();
     initFeature();
     initHomeGrid();

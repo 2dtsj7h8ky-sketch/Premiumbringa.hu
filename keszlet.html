@@ -14,6 +14,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<style>
+/* ====== Készlet - oldal-specifikus: ragadós szűrő + kártya-belépő + darabszám-pop ====== */
+.filterpanel{position:sticky;top:calc(var(--nav-h) + 14px);z-index:5}
+#keszlet-grid .bike:nth-child(2){transition-delay:.05s}
+#keszlet-grid .bike:nth-child(3){transition-delay:.1s}
+#keszlet-grid .bike:nth-child(4){transition-delay:.13s}
+#keszlet-grid .bike:nth-child(5){transition-delay:.16s}
+#keszlet-grid .bike:nth-child(6){transition-delay:.19s}
+#keszlet-grid .bike:nth-child(7){transition-delay:.22s}
+#keszlet-grid .bike:nth-child(8){transition-delay:.25s}
+#keszlet-grid .bike:nth-child(9){transition-delay:.28s}
+.count.kx-pop{animation:kxpop .45s ease}
+@keyframes kxpop{0%{transform:scale(1)}45%{transform:scale(1.09)}100%{transform:scale(1)}}
+@media(max-width:760px){.filterpanel{position:static}}
+@media(prefers-reduced-motion:reduce){#keszlet-grid .bike{transition-delay:0s!important}.count.kx-pop{animation:none}}
+</style>
 </head>
 <body>
 <a class="skip" href="#keszlet-grid">Ugrás a kerékpárokhoz</a>
@@ -43,29 +59,36 @@
 
 <!-- KÉSZLET -->
 <section class="showroom"><div class="wrap">
-  <div class="toolbar">
-    <div class="fgroup">
-      <span class="flabel">Szegmens</span>
-      <div class="filters" id="seg-filters" role="group" aria-label="Szűrés szegmens szerint"></div>
+  <div class="filterpanel reveal">
+    <div class="toolbar">
+      <div class="fgroup">
+        <span class="flabel">Szegmens</span>
+        <div class="filters" id="seg-filters" role="group" aria-label="Szűrés szegmens szerint"></div>
+      </div>
+      <div class="sortwrap">
+        <label for="sort">Rendezés</label>
+        <div class="selectwrap">
+          <select class="sort" id="sort">
+            <option value="ajanlott">Ajánlott</option>
+            <option value="ar-asc">Ár, növekvő</option>
+            <option value="ar-desc">Ár, csökkenő</option>
+            <option value="ev-desc">Évjárat, legújabb</option>
+          </select>
+        </div>
+      </div>
     </div>
-    <div class="sortwrap">
-      <label for="sort">Rendezés</label>
-      <select class="sort" id="sort">
-        <option value="ajanlott">Ajánlott</option>
-        <option value="ar-asc">Ár, növekvő</option>
-        <option value="ar-desc">Ár, csökkenő</option>
-        <option value="ev-desc">Évjárat, legújabb</option>
-      </select>
+    <div class="fdiv"></div>
+    <div class="frow">
+      <div class="fgroup">
+        <span class="flabel">Állapot</span>
+        <div class="filters" id="cond-filters" role="group" aria-label="Szűrés állapot szerint"></div>
+      </div>
+      <div class="fgroup">
+        <span class="flabel">Méret · magasság</span>
+        <div class="filters" id="size-filters" role="group" aria-label="Szűrés méret szerint"></div>
+      </div>
     </div>
-  </div>
-  <div class="fgroup" style="margin-top:18px">
-    <span class="flabel">Állapot</span>
-    <div class="filters" id="cond-filters" role="group" aria-label="Szűrés állapot szerint"></div>
-  </div>
-  <div class="fgroup" style="margin-top:18px">
-    <span class="flabel">Méret · magasság</span>
-    <div class="filters" id="size-filters" role="group" aria-label="Szűrés méret szerint"></div>
-    <p style="font-family:var(--mono);font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:12px 0 0">Nem tudod a méreted? <a href="kapcsolat.html" style="color:var(--copper-deep)">Segítünk, szólj.</a></p>
+    <p class="sizehint">Nem tudod a méreted? <a href="kapcsolat.html">Segítünk, szólj.</a></p>
   </div>
   <p class="count" id="count" aria-live="polite"></p>
   <div class="grid" id="keszlet-grid"></div>
@@ -90,5 +113,16 @@
 
 <script src="assets/data.js"></script>
 <script src="assets/app.js"></script>
+<script>
+(function(){
+  var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var c = document.getElementById('count');
+  if(c && 'MutationObserver' in window && !rm){
+    new MutationObserver(function(){
+      c.classList.remove('kx-pop'); void c.offsetWidth; c.classList.add('kx-pop');
+    }).observe(c, {childList:true, characterData:true, subtree:true});
+  }
+})();
+</script>
 </body>
 </html>

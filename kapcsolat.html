@@ -13,6 +13,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
+<style>
+/* ====== Kapcsolat - oldal-specifikus: radar-pin + élő kártyák ====== */
+.map .pin .dot{position:relative;z-index:2}
+.kx-radar{position:absolute;left:50%;top:8px;width:16px;height:16px;margin:-8px 0 0 -8px;border:2px solid var(--copper);border-radius:50%;opacity:0;animation:kxradar 3s ease-out infinite;pointer-events:none;z-index:1}
+.kx-radar.d2{animation-delay:1.5s}
+@keyframes kxradar{0%{transform:scale(1);opacity:.55}80%{opacity:0}100%{transform:scale(5.2);opacity:0}}
+.kx-contact .det .d{transition:background .2s ease}
+.kx-contact .det .d:hover{background:#faf9f6}
+.kx-contact .buybox .btn{transition:transform .2s ease}
+.kx-contact .buybox .btn:hover{transform:translateY(-2px)}
+.kx-live{display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.kx-live i{width:9px;height:9px;border-radius:50%;background:var(--copper);box-shadow:0 0 0 0 rgba(194,137,90,.5);animation:kxbeat 2.2s ease-out infinite}
+@keyframes kxbeat{0%{box-shadow:0 0 0 0 rgba(194,137,90,.5)}70%{box-shadow:0 0 0 10px rgba(194,137,90,0)}100%{box-shadow:0 0 0 0 rgba(194,137,90,0)}}
+@media(prefers-reduced-motion:reduce){.kx-radar,.kx-live i{animation:none;opacity:0}.kx-live i{opacity:1;box-shadow:none}}
+</style>
 </head>
 <body>
 <a class="skip" href="#kapcsolat">Ugrás a tartalomhoz</a>
@@ -33,16 +48,17 @@
 <header class="page-hero">
   <div class="glow"></div>
   <div class="wrap">
-    <nav class="crumb" aria-label="Útvonal"><a href="index.html">Főoldal</a> <span>/</span> <b>Kapcsolat</b></nav>
-    <span class="kick">Kapcsolat</span>
-    <h1>Nézd meg élőben<br>Debrecenben.</h1>
-    <p>Foglalható időpont személyes kipróbálásra és megtekintésre. Hívj vagy írj, megmutatjuk a kerékpárt, és segítünk a megfelelő méret kiválasztásában.</p>
+    <nav class="crumb mx-fade" aria-label="Útvonal"><a href="index.html">Főoldal</a> <span>/</span> <b>Kapcsolat</b></nav>
+    <span class="kick mx-fade">Kapcsolat</span>
+    <h1 class="mx-fade d1">Nézd meg élőben<br>Debrecenben.</h1>
+    <p class="mx-fade d2">Foglalható időpont személyes kipróbálásra és megtekintésre. Hívj vagy írj, megmutatjuk a kerékpárt, és segítünk a megfelelő méret kiválasztásában.</p>
   </div>
 </header>
 
 <!-- KAPCSOLAT -->
-<section class="visit" id="kapcsolat"><div class="wrap">
+<section class="visit kx-contact" id="kapcsolat"><div class="wrap">
   <div class="reveal">
+    <span class="kx-live"><i></i> Általában gyorsan válaszolunk</span>
     <h2>Elérhetőség</h2>
     <p class="intro">Az időpont előzetes egyeztetéssel, hogy a kiválasztott bringa felkészítve, kipróbálásra készen várjon.</p>
     <div class="det">
@@ -57,7 +73,7 @@
     </div>
   </div>
   <div class="reveal" style="display:flex;flex-direction:column;gap:26px">
-    <div class="map" style="flex:1"><div class="pin"><div class="dot"></div><div class="city">Debrecen</div><div class="sub">Premium Bringa · kipróbálás & megtekintés</div></div></div>
+    <div class="map" style="flex:1"><div class="pin"><span class="kx-radar"></span><span class="kx-radar d2"></span><div class="dot"></div><div class="city">Debrecen</div><div class="sub">Premium Bringa · kipróbálás & megtekintés</div></div></div>
     <div class="det">
       <div class="d"><span class="l">Nyitvatartás</span><span class="r">Egyeztetés szerint</span></div>
       <div class="d"><span class="l">Bemutató</span><span class="r">Foglalható időpontban</span></div>
