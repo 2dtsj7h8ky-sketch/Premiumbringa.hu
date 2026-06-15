@@ -14,23 +14,21 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <style>
-/* ====== Kapcsolat - oldal-specifikus: absztrakt Debrecen-térkép + radar + élő kártyák ====== */
+/* ====== Kapcsolat - oldal-specifikus: absztrakt Magyarország-térkép + élő kártyák ====== */
 .kx-map{position:relative;overflow:hidden}
-.kx-map::before{opacity:.12}
+.kx-map::before{opacity:.1}
 .kx-mapsvg{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
 .km-bg{fill:#15171a}
-.km-block{fill:#23262b}
-.km-block.b2{fill:#1d2024}
-.km-road{stroke:#34373e;fill:none;stroke-linecap:round}
-.km-main{stroke:var(--copper-deep);fill:none;stroke-linecap:round;opacity:.85}
-.km-plaza{fill:#2a2d33}
+.km-country{fill:#1d2024;stroke:var(--copper-deep);stroke-width:2.4;stroke-linejoin:round}
+.km-route{stroke:var(--copper);stroke-width:1.8;fill:none;stroke-linecap:round;opacity:.7}
+.km-city{fill:var(--steel)}
+.km-citylab{fill:var(--haze);font-family:var(--mono);font-size:12px;letter-spacing:.04em}
+.km-home{fill:var(--copper);stroke:#15171a;stroke-width:2}
+.km-homelab{fill:var(--copper);font-family:var(--mono);font-size:14px;letter-spacing:.05em;font-weight:600}
+.km-pulse{fill:var(--copper);transform-box:fill-box;transform-origin:center;opacity:0;animation:kmpulse 2.6s ease-out infinite}
+@keyframes kmpulse{0%{transform:scale(.5);opacity:.5}80%{transform:scale(3.6);opacity:0}100%{opacity:0}}
 .kx-chip{position:absolute;top:14px;left:14px;z-index:2;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--silver);background:rgba(21,23,26,.72);border:1px solid var(--line);border-radius:20px;padding:6px 12px;backdrop-filter:blur(4px)}
 .kx-cap{position:absolute;bottom:14px;left:14px;right:14px;z-index:2;font-family:var(--mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--haze)}
-.kx-here{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;width:18px;height:18px}
-.kx-dot{position:absolute;inset:0;border-radius:50%;background:var(--copper);box-shadow:0 0 0 6px rgba(194,137,90,.18),0 2px 8px rgba(0,0,0,.55)}
-.kx-radar{position:absolute;left:50%;top:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border:2px solid var(--copper);border-radius:50%;opacity:0;animation:kxradar 3s ease-out infinite;pointer-events:none}
-.kx-radar.d2{animation-delay:1.5s}
-@keyframes kxradar{0%{transform:scale(1);opacity:.55}80%{opacity:0}100%{transform:scale(5.4);opacity:0}}
 .kx-contact .det .d{transition:background .2s ease}
 .kx-contact .det .d:hover{background:#faf9f6}
 .kx-contact .buybox .btn{transition:transform .2s ease}
@@ -38,7 +36,7 @@
 .kx-live{display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
 .kx-live i{width:9px;height:9px;border-radius:50%;background:var(--copper);box-shadow:0 0 0 0 rgba(194,137,90,.5);animation:kxbeat 2.2s ease-out infinite}
 @keyframes kxbeat{0%{box-shadow:0 0 0 0 rgba(194,137,90,.5)}70%{box-shadow:0 0 0 10px rgba(194,137,90,0)}100%{box-shadow:0 0 0 0 rgba(194,137,90,0)}}
-@media(prefers-reduced-motion:reduce){.kx-radar,.kx-live i{animation:none;opacity:0}.kx-live i{opacity:1;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){.km-pulse,.kx-live i{animation:none}.km-pulse{opacity:0}.kx-live i{box-shadow:none}}
 </style>
 </head>
 <body>
@@ -72,7 +70,7 @@
   <div class="reveal">
     <span class="kx-live"><i></i> Általában gyorsan válaszolunk</span>
     <h2>Elérhetőség</h2>
-    <p class="intro">Az időpont előzetes egyeztetéssel, hogy a kiválasztott bringa felkészítve, kipróbálásra készen várjon.</p>
+    <p class="intro">Időpontot előzetes egyeztetéssel adunk, hogy a kiválasztott kerékpár felkészítve, kipróbálásra készen várjon. Ha nem tudsz személyesen jönni, országszerte szállítunk, Debrecenből.</p>
     <div class="det">
       <div class="d"><span class="l">Telefon</span><a href="tel:+36204360307" class="r">+36 20 436 0307</a></div>
       <div class="d"><span class="l">E-mail</span><span class="r copyrow"><a href="mailto:info@premiumbringa.hu" id="email" style="color:inherit;text-decoration:none">info@premiumbringa.hu</a><button class="btn-copy" id="copy" type="button" aria-label="E-mail cím másolása">Másol</button></span></div>
@@ -85,39 +83,37 @@
     </div>
   </div>
   <div class="reveal" style="display:flex;flex-direction:column;gap:26px">
-    <div class="map kx-map" style="flex:1">
-      <svg class="kx-mapsvg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <rect class="km-bg" x="0" y="0" width="600" height="400"/>
+    <div class="map kx-map draw-on-scroll" style="flex:1">
+      <svg class="kx-mapsvg" viewBox="0 0 600 380" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect class="km-bg" x="0" y="0" width="600" height="380"/>
+        <path class="km-country" d="M300 80 L421 82 L493 94 L543 135 L471 199 L354 277 L257 292 L207 308 L154 292 L93 253 L57 213 L93 152 L129 127 Z"/>
         <g>
-          <rect class="km-block" x="30" y="28" width="108" height="62" rx="3"/>
-          <rect class="km-block b2" x="158" y="22" width="86" height="68" rx="3"/>
-          <rect class="km-block" x="360" y="28" width="94" height="56" rx="3"/>
-          <rect class="km-block b2" x="474" y="34" width="98" height="62" rx="3"/>
-          <rect class="km-block b2" x="44" y="120" width="84" height="50" rx="3"/>
-          <rect class="km-block" x="472" y="120" width="94" height="50" rx="3"/>
-          <rect class="km-block b2" x="40" y="250" width="100" height="74" rx="3"/>
-          <rect class="km-block" x="170" y="270" width="82" height="86" rx="3"/>
-          <rect class="km-block" x="360" y="258" width="92" height="70" rx="3"/>
-          <rect class="km-block b2" x="470" y="250" width="102" height="92" rx="3"/>
+          <path class="km-route mx-curve" d="M452 164 Q360 150 267 167"/>
+          <path class="km-route mx-curve" d="M452 164 Q300 120 166 152"/>
+          <path class="km-route mx-curve" d="M452 164 Q435 130 392 118"/>
+          <path class="km-route mx-curve" d="M452 164 Q385 200 314 215"/>
+          <path class="km-route mx-curve" d="M452 164 Q415 230 346 268"/>
+          <path class="km-route mx-curve" d="M452 164 Q330 250 209 282"/>
         </g>
-        <g class="km-road" stroke-width="3.4">
-          <line x1="150" y1="0" x2="150" y2="400"/>
-          <line x1="450" y1="0" x2="450" y2="400"/>
-          <line x1="0" y1="108" x2="600" y2="108"/>
-          <line x1="0" y1="340" x2="600" y2="340"/>
-          <line x1="300" y1="200" x2="560" y2="36"/>
-          <line x1="300" y1="200" x2="70" y2="366"/>
-          <line x1="300" y1="200" x2="544" y2="356"/>
-          <line x1="300" y1="200" x2="60" y2="60"/>
+        <g class="km-city">
+          <circle cx="267" cy="167" r="4"/><circle cx="166" cy="152" r="4"/><circle cx="392" cy="118" r="4"/>
+          <circle cx="314" cy="215" r="4"/><circle cx="346" cy="268" r="4"/><circle cx="209" cy="282" r="4"/>
         </g>
-        <path class="km-road" stroke-width="3" d="M30 150 Q300 -28 570 150"/>
-        <line class="km-main" x1="300" y1="0" x2="296" y2="400" stroke-width="11"/>
-        <line class="km-main" x1="0" y1="200" x2="600" y2="200" stroke-width="9"/>
-        <rect class="km-plaza" x="258" y="158" width="84" height="84" rx="5"/>
+        <g class="km-citylab" text-anchor="middle">
+          <text x="267" y="187">Budapest</text>
+          <text x="166" y="140">Győr</text>
+          <text x="392" y="106">Miskolc</text>
+          <text x="314" y="233">Kecskemét</text>
+          <text x="346" y="287">Szeged</text>
+          <text x="209" y="301">Pécs</text>
+        </g>
+        <circle class="km-pulse" cx="452" cy="164" r="9"/>
+        <circle class="km-pulse" cx="452" cy="164" r="9" style="animation-delay:1.3s"/>
+        <circle class="km-home" cx="452" cy="164" r="7"/>
+        <text class="km-homelab" x="452" y="146" text-anchor="middle">Debrecen</text>
       </svg>
-      <span class="kx-chip">Debrecen · belváros</span>
-      <div class="kx-here"><span class="kx-radar"></span><span class="kx-radar d2"></span><span class="kx-dot"></span></div>
-      <span class="kx-cap">Premium Bringa · kipróbálás &amp; megtekintés</span>
+      <span class="kx-chip">Országos szállítás · Debrecenből</span>
+      <span class="kx-cap">Átvétel Debrecenben · Magyar Posta, utánvét</span>
     </div>
     <div class="det">
       <div class="d"><span class="l">Nyitvatartás</span><span class="r">Egyeztetés szerint</span></div>

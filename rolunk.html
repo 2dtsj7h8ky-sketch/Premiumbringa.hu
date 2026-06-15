@@ -21,31 +21,32 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <style>
-/* ====== Rólunk - oldal-specifikus: a kerékpár útja ====== */
-.rx-origin{background:var(--carbon);background-image:var(--weave);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
-.rx-mapwrap{margin-top:42px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,#1d1f22,#161719);padding:30px 26px 20px;box-shadow:0 40px 80px -50px rgba(0,0,0,.7)}
-.rx-map{width:100%;height:auto;display:block}
-.rx-route{stroke:var(--copper);stroke-width:3.4;stroke-linecap:round}
-.rx-node{fill:#161719;stroke:var(--steel);stroke-width:3}
-.rx-node.dst{stroke:var(--copper)}
-.rx-dot{fill:var(--copper)}
-.rx-pulse{fill:var(--copper);transform-box:fill-box;transform-origin:center;opacity:0}
-.rx-mapwrap.drawn .rx-pulse{animation:rxpulse 2.6s ease-out 1.5s infinite}
-@keyframes rxpulse{0%{transform:scale(.45);opacity:.55}80%{transform:scale(3);opacity:0}100%{opacity:0}}
-.rx-ship{fill:var(--copper);opacity:0;offset-path:path("M120 95 C300 58,470 108,632 150");offset-distance:0%}
-.rx-mapwrap.drawn .rx-ship{animation:rxtravel 3.4s ease-in-out 1.7s infinite}
-@keyframes rxtravel{0%{offset-distance:0%;opacity:0}12%{opacity:1}88%{opacity:1}100%{offset-distance:100%;opacity:0}}
-.rx-lab{fill:var(--haze);font-family:var(--mono);font-size:13px;letter-spacing:.04em}
-.rx-lab.cop{fill:var(--copper)}
-.rx-sub{fill:var(--fog);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.rx-legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:16px;font-family:var(--mono);font-size:.6rem;letter-spacing:.07em;text-transform:uppercase;color:var(--fog)}
-.rx-legend span{display:inline-flex;align-items:center;gap:8px}
-.rx-legend i{width:16px;height:3px;border-radius:2px;background:var(--copper)}
-.rx-legend i.n{width:11px;height:11px;border-radius:50%;background:#161719;border:2px solid var(--copper)}
+/* ====== Rólunk - oldal-specifikus: kerékpár-anatómia (amit átnézünk) ====== */
+.ba-sec{background:var(--carbon);background-image:var(--weave);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.ba-wrap{margin-top:42px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(160deg,#1d1f22,#161719);padding:22px;box-shadow:0 40px 80px -50px rgba(0,0,0,.7)}
+.ba-svg{width:100%;height:auto;display:block}
+.ba-wheel{fill:none;stroke:var(--steel);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.ba-spoke{fill:none;stroke:var(--line);stroke-width:2}
+.ba-frame{fill:none;stroke:var(--copper);stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.ba-hub{fill:#161719;stroke:var(--steel);stroke-width:3}
+.ba-lead{stroke:var(--copper-deep);stroke-width:1.4;stroke-dasharray:3 4;fill:none}
+.ba-anchor{fill:var(--copper)}
+.ba-name{fill:var(--bright);font-family:var(--mono);font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.ba-sub{fill:var(--copper);font-family:var(--mono);font-size:12px;letter-spacing:.02em}
+.ba-call{opacity:0;transform:translateY(7px)}
+.ba-wrap.drawn .ba-call{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}
+.ba-wrap.drawn .ba-call.c1{transition-delay:.7s}
+.ba-wrap.drawn .ba-call.c2{transition-delay:.85s}
+.ba-wrap.drawn .ba-call.c3{transition-delay:1s}
+.ba-wrap.drawn .ba-call.c4{transition-delay:1.15s}
+.ba-wrap.drawn .ba-call.c5{transition-delay:1.3s}
+.ba-wrap.drawn .ba-call.c6{transition-delay:1.45s}
+.ba-legend{margin-top:16px;font-family:var(--mono);font-size:.62rem;letter-spacing:.05em;color:var(--fog);line-height:1.7}
+.ba-legend b{color:var(--copper);font-weight:600}
 /* érték-kártyák hover */
 .rx-values .v{transition:transform .25s ease,border-color .25s ease}
 .rx-values .v:hover{transform:translateY(-4px);border-color:var(--copper)}
-@media(prefers-reduced-motion:reduce){.rx-pulse,.rx-ship{animation:none;opacity:0}}
+@media(prefers-reduced-motion:reduce){.ba-call{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -80,31 +81,33 @@
   </div>
 </header>
 
-<!-- HONNAN JÖN A KERÉKPÁROD -->
-<section class="rx-origin"><div class="wrap">
-  <div class="sec-head reveal"><span class="kick">Honnan jön a kerékpárod</span><h2>Nyugat-Európából, egyenként</h2>
-    <p>Németországból és Ausztriából hozzuk a kerékpárokat, igazolt, átvilágítható eredettel. Csak olyat veszünk át, amelynek a háttere ellenőrizhető, majd Debrecenben adjuk át, vagy országszerte házhoz szállítjuk.</p></div>
-  <div class="rx-mapwrap reveal draw-on-scroll" role="img" aria-label="A kerékpárok útja: Németországból és Ausztriából Debrecenbe, onnan országos szállítással.">
-    <svg class="rx-map" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg">
-      <path class="rx-route mx-curve" d="M120 95 C300 58,470 108,632 150"/>
-      <path class="rx-route mx-curve" d="M120 205 C320 234,470 196,632 150"/>
-      <circle class="rx-ship" r="5"/>
-      <circle class="rx-node" cx="120" cy="95" r="10"/>
-      <circle class="rx-dot" cx="120" cy="95" r="3.5"/>
-      <circle class="rx-node" cx="120" cy="205" r="10"/>
-      <circle class="rx-dot" cx="120" cy="205" r="3.5"/>
-      <circle class="rx-pulse" cx="632" cy="150" r="12"/>
-      <circle class="rx-node dst" cx="632" cy="150" r="13"/>
-      <circle class="rx-dot" cx="632" cy="150" r="4.5"/>
-      <text class="rx-lab" x="120" y="73" text-anchor="middle">Németország</text>
-      <text class="rx-lab" x="120" y="234" text-anchor="middle">Ausztria</text>
-      <text class="rx-lab cop" x="632" y="118" text-anchor="middle">Debrecen</text>
-      <text class="rx-sub" x="632" y="185" text-anchor="middle">átvétel + szállítás</text>
+<!-- AMIT MINDEN KERÉKPÁRON ÁTNÉZÜNK -->
+<section class="ba-sec"><div class="wrap">
+  <div class="sec-head reveal"><span class="kick">A mércénk</span><h2>Amit minden kerékpáron átnézünk</h2>
+    <p>Mielőtt egy kerékpár a készletbe kerül, végigmegyünk a lényegi pontjain: megtisztítjuk, ellenőrizzük és beállítjuk. Csak az kerül a polcra, ami a saját mércénket is megüti.</p></div>
+  <div class="ba-wrap reveal draw-on-scroll" role="img" aria-label="Kerékpár-anatómia: a váz, villa, hajtás, fék, kerék és nyereg átnézett pontjai.">
+    <svg class="ba-svg" viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg">
+      <circle class="ba-wheel" cx="260" cy="250" r="72"/>
+      <circle class="ba-wheel" cx="500" cy="250" r="72"/>
+      <g class="ba-spoke">
+        <circle cx="260" cy="250" r="55"/>
+        <line x1="260" y1="250" x2="315" y2="250"/><line x1="260" y1="250" x2="288" y2="298"/><line x1="260" y1="250" x2="232" y2="298"/><line x1="260" y1="250" x2="205" y2="250"/><line x1="260" y1="250" x2="232" y2="202"/><line x1="260" y1="250" x2="288" y2="202"/>
+        <circle cx="500" cy="250" r="55"/>
+        <line x1="500" y1="250" x2="555" y2="250"/><line x1="500" y1="250" x2="528" y2="298"/><line x1="500" y1="250" x2="472" y2="298"/><line x1="500" y1="250" x2="445" y2="250"/><line x1="500" y1="250" x2="472" y2="202"/><line x1="500" y1="250" x2="528" y2="202"/>
+      </g>
+      <path class="ba-frame mx-curve" d="M363 264 L332 144 L471 140 L457 178 L363 264 M332 144 L260 250 M363 264 L260 250 M457 178 L500 250 M332 144 L322 120 M471 140 L483 118 M363 264 L385 293 M298 118 L354 111 M457 120 L502 116 M373 298 L399 288"/>
+      <circle class="ba-frame" cx="363" cy="264" r="14"/>
+      <circle class="ba-frame" cx="260" cy="250" r="14"/>
+      <circle class="ba-hub" cx="260" cy="250" r="8"/>
+      <circle class="ba-hub" cx="500" cy="250" r="8"/>
+      <g class="ba-call c1"><line class="ba-lead" x1="400" y1="74" x2="400" y2="139"/><circle class="ba-anchor" cx="400" cy="141" r="3.5"/><text class="ba-name" x="400" y="50" text-anchor="middle">Váz</text><text class="ba-sub" x="400" y="66" text-anchor="middle">megtisztítva ✓</text></g>
+      <g class="ba-call c2"><line class="ba-lead" x1="208" y1="76" x2="322" y2="111"/><circle class="ba-anchor" cx="326" cy="113" r="3.5"/><text class="ba-name" x="70" y="60">Nyereg</text><text class="ba-sub" x="70" y="76">rögzítés ellenőrizve ✓</text></g>
+      <g class="ba-call c4"><line class="ba-lead" x1="634" y1="158" x2="472" y2="197"/><circle class="ba-anchor" cx="468" cy="196" r="3.5"/><text class="ba-name" x="700" y="146" text-anchor="end">Villa</text><text class="ba-sub" x="700" y="162" text-anchor="end">működés ellenőrizve ✓</text></g>
+      <g class="ba-call c3"><line class="ba-lead" x1="648" y1="332" x2="566" y2="293"/><circle class="ba-anchor" cx="562" cy="291" r="3.5"/><text class="ba-name" x="700" y="344" text-anchor="end">Kerék</text><text class="ba-sub" x="700" y="360" text-anchor="end">pörgés ellenőrizve ✓</text></g>
+      <g class="ba-call c5"><line class="ba-lead" x1="150" y1="250" x2="252" y2="250"/><circle class="ba-anchor" cx="260" cy="250" r="3.5"/><text class="ba-name" x="60" y="244">Fék</text><text class="ba-sub" x="60" y="260">beállítva ✓</text></g>
+      <g class="ba-call c6"><line class="ba-lead" x1="363" y1="380" x2="363" y2="290"/><circle class="ba-anchor" cx="363" cy="287" r="3.5"/><text class="ba-name" x="363" y="402" text-anchor="middle">Hajtás</text><text class="ba-sub" x="363" y="418" text-anchor="middle">beállítva ✓</text></g>
     </svg>
-    <div class="rx-legend">
-      <span><i></i> A kiválogatott kerékpár útja</span>
-      <span><i class="n"></i> Igazolt eredet és átvétel</span>
-    </div>
+    <div class="ba-legend">Háromfokú állapot: <b>Újszerű · Kiváló · Jó</b>. A használati nyomokat jelöljük, nem rejtjük.</div>
   </div>
 </div></section>
 
