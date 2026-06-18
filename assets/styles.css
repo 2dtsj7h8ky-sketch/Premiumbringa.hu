@@ -392,7 +392,8 @@ select.sort{font-family:var(--mono);font-size:.7rem;color:var(--ink);background:
 /* FOOTER */
 footer{background:var(--carbon);border-top:1px solid var(--line);padding:60px 0 40px}
 footer .top{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:30px;padding-bottom:38px;border-bottom:1px solid var(--line)}
-footer .logo{font-size:1.4rem;display:inline-block;margin-bottom:14px}
+footer .logo{font-size:1.4rem;display:inline-flex;align-items:center;margin-bottom:14px}
+footer .logo .brand-badge{width:42px;height:42px;border-radius:12px;padding:4px}
 footer .slogan{color:var(--fog);font-size:.94rem;max-width:32ch}
 footer .col h4{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin:0 0 16px}
 footer .col a,footer .col .li{display:block;color:var(--haze);text-decoration:none;font-size:.9rem;margin-bottom:11px;transition:.2s}
@@ -431,7 +432,8 @@ footer .bot span{font-family:var(--mono);font-size:.62rem;color:var(--steel);let
   .hero .wrap{padding:40px 20px 48px}
   .hero h1{font-size:clamp(2rem,9vw,2.6rem)}
   .hero .lead{margin:18px 0 26px}
-  .page-hero .wrap{padding:48px 20px 44px}
+  .page-hero .wrap{padding:34px 20px 30px}
+  .page-hero p{margin-top:14px}
   .band .wrap{padding:34px 20px;flex-direction:column;align-items:flex-start;gap:18px}
   .visit .map{min-height:240px}
   .vgrid .v,.story-card{padding:28px 24px}

@@ -97,13 +97,14 @@
     <g fill="#C2895A"><circle cx="285" cy="600" r="16"/><circle cx="508" cy="600" r="16"/><circle cx="735" cy="600" r="16"/></g>
   </svg>`;
   function initBadge(){
-    const logo = $(".nav .logo");
-    if(!logo || logo.querySelector(".brand-badge")) return;
-    const badge = document.createElement("span");
-    badge.className = "brand-badge";
-    badge.setAttribute("aria-hidden", "true");
-    badge.innerHTML = BRINGA_SVG;
-    logo.insertBefore(badge, logo.firstChild);
+    $$(".logo").forEach(logo => {
+      if(logo.querySelector(".brand-badge")) return;
+      const badge = document.createElement("span");
+      badge.className = "brand-badge";
+      badge.setAttribute("aria-hidden", "true");
+      badge.innerHTML = BRINGA_SVG;
+      logo.insertBefore(badge, logo.firstChild);
+    });
   }
 
   /* ---- HOME: kiemelt darab ---- */

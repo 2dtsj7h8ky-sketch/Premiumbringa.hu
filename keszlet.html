@@ -16,7 +16,9 @@
 <link rel="stylesheet" href="assets/styles.css">
 <style>
 /* ====== Készlet - oldal-specifikus: ragadós szűrő + kártya-belépő + darabszám-pop ====== */
-.filterpanel{position:sticky;top:calc(var(--nav-h) + 14px);z-index:5}
+.filterpanel{position:sticky;top:calc(var(--nav-h) + 14px);z-index:20}
+.fp-toggle{display:none}
+.fp-body{display:block}
 #keszlet-grid .bike:nth-child(2){transition-delay:.05s}
 #keszlet-grid .bike:nth-child(3){transition-delay:.1s}
 #keszlet-grid .bike:nth-child(4){transition-delay:.13s}
@@ -27,7 +29,14 @@
 #keszlet-grid .bike:nth-child(9){transition-delay:.28s}
 .count.kx-pop{animation:kxpop .45s ease}
 @keyframes kxpop{0%{transform:scale(1)}45%{transform:scale(1.09)}100%{transform:scale(1)}}
-@media(max-width:760px){.filterpanel{position:static}}
+@media(max-width:760px){
+  .filterpanel{top:calc(var(--nav-h) + 6px);padding:14px 16px}
+  .fp-toggle{display:flex;width:100%;align-items:center;justify-content:space-between;gap:12px;background:transparent;border:0;padding:4px 2px;cursor:pointer;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+  .fp-chevron{width:9px;height:9px;border-right:2px solid var(--ink-soft);border-bottom:2px solid var(--ink-soft);transform:rotate(45deg);transition:transform .2s;flex:none}
+  .filterpanel.open .fp-chevron{transform:rotate(-135deg)}
+  .fp-body{display:none}
+  .filterpanel.open .fp-body{display:block;margin-top:16px}
+}
 @media(prefers-reduced-motion:reduce){#keszlet-grid .bike{transition-delay:0s!important}.count.kx-pop{animation:none}}
 </style>
 </head>
@@ -59,7 +68,12 @@
 
 <!-- KÉSZLET -->
 <section class="showroom"><div class="wrap">
-  <div class="filterpanel reveal">
+  <div class="filterpanel reveal" id="filterpanel">
+    <button class="fp-toggle" type="button" aria-expanded="false" aria-controls="fp-body">
+      <span>Szűrés &amp; rendezés</span>
+      <span class="fp-chevron" aria-hidden="true"></span>
+    </button>
+    <div class="fp-body" id="fp-body">
     <div class="toolbar">
       <div class="fgroup">
         <span class="flabel">Szegmens</span>
@@ -89,6 +103,7 @@
       </div>
     </div>
     <p class="sizehint">Nem tudod a méreted? <a href="kapcsolat.html">Segítünk, szólj.</a></p>
+    </div>
   </div>
   <p class="count" id="count" aria-live="polite"></p>
   <div class="grid" id="keszlet-grid"></div>
@@ -121,6 +136,14 @@
     new MutationObserver(function(){
       c.classList.remove('kx-pop'); void c.offsetWidth; c.classList.add('kx-pop');
     }).observe(c, {childList:true, characterData:true, subtree:true});
+  }
+  var fp = document.getElementById('filterpanel');
+  var tg = fp && fp.querySelector('.fp-toggle');
+  if(tg){
+    tg.addEventListener('click', function(){
+      var o = fp.classList.toggle('open');
+      tg.setAttribute('aria-expanded', o ? 'true' : 'false');
+    });
   }
 })();
 </script>
