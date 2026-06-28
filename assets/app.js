@@ -152,9 +152,11 @@
     let aktivMeret = "mind";
 
     function renderSeg(){
-      segBox.innerHTML = SZEGMENSEK.map(s =>
-        `<button class="chip${s.kulcs===aktivSzeg?" on":""}" type="button" data-v="${s.kulcs}" aria-pressed="${s.kulcs===aktivSzeg}">${esc(s.nev)}</button>`
-      ).join("");
+      const keszleten = new Set(data.map(b => b.szegmens));
+      segBox.innerHTML = SZEGMENSEK
+        .filter(s => s.kulcs === "mind" || keszleten.has(s.kulcs))
+        .map(s => `<button class="chip${s.kulcs===aktivSzeg?" on":""}" type="button" data-v="${s.kulcs}" aria-pressed="${s.kulcs===aktivSzeg}">${esc(s.nev)}</button>`)
+        .join("");
     }
     function renderCond(){
       if(!condBox) return;
@@ -224,11 +226,30 @@
     const rows = [
       ["Márka", b.marka], ["Kategória", b.kategoria], ["Évjárat", b.ev],
       ["Méret", b.meret], ["Váz", b.vaz], ["Villa", b.villa],
-      ["Hajtás", b.hajtas], ["Fék", b.fek], ["Kerék", b.kerek], ["Állapot", b.allapot]
+      ["Hajtás", b.hajtas], ["Fék", b.fek], ["Kerék", b.kerek]
     ].filter(r => r[1]);
     const specTabla = rows.length
-      ? `<table class="spec-table"><tbody>${rows.map(r => `<tr><th>${esc(r[0])}</th><td>${esc(String(r[1]))}</td></tr>`).join("")}</tbody></table>`
-      : `<p class="plead" style="color:var(--fog)">A részletes specifikáció hamarosan, a hirdetés adatai alapján.</p>`;
+      ? `<details class="pspec"><summary>Felszereltség &amp; gyári adatok</summary><table class="spec-table"><tbody>${rows.map(r => `<tr><th>${esc(r[0])}</th><td>${esc(String(r[1]))}</td></tr>`).join("")}</tbody></table></details>`
+      : "";
+
+    /* Állapot-besorolás (grafikus háromfokú skála) */
+    const condDesc = (typeof ALLAPOT_LEIRAS !== "undefined" && b.allapot && ALLAPOT_LEIRAS[b.allapot]) || "";
+    const condBlock = b.allapot ? `
+          <div class="pcond-scale">
+            <span class="pcs-lab">Állapot-besorolás</span>
+            <div class="pcs-track">${ALLAPOTOK.map(a => `<span class="pcs-step${a===b.allapot?" on":""}">${esc(a)}</span>`).join("")}</div>
+            ${condDesc ? `<p class="pcs-desc">${esc(condDesc)}</p>` : ""}
+          </div>` : "";
+
+    /* Gyári méretajánlás + a testalkat-eltérés kiemelése */
+    const sizeRange = Array.isArray(b.magassag) ? `${b.magassag[0]}–${b.magassag[1]} cm` : "";
+    const sizeBlock = (b.meret || sizeRange) ? `
+          <div class="psize">
+            <span class="ps-lab">Gyári méretajánlás</span>
+            <div class="ps-val">${b.meret ? `<em>${esc(b.meret)}</em>` : ""}${sizeRange ? `<span class="ps-range"> · kb. ${esc(sizeRange)} testmagassághoz</span>` : ""}</div>
+            <p class="ps-note">Ez a <b>gyári</b> ajánlás — az ideális méret testalkattól, üléshelyzettől és igénytől függően eltérhet. Kérdezz, és segítünk pontosan kiválasztani, majd a méretedre beállítani.</p>
+          </div>` : "";
+
     host.innerHTML = `
     <div class="wrap">
       <nav class="crumb" aria-label="Útvonal"><a href="index.html">Főoldal</a> <span>/</span> <a href="keszlet.html">Készlet</a> <span>/</span> <b>${esc(b.model)}</b></nav>
@@ -247,8 +268,10 @@
             <a class="btn btn-1" href="tel:+36204360307">Érdeklődöm telefonon →</a>
             <a class="btn btn-2" href="kapcsolat.html">Időpont kipróbálásra</a>
           </div>
+          ${condBlock}
+          ${sizeBlock}
           ${specTabla}
-          <p class="pguar">✓ 30 napos garancia · ✓ Átvizsgálva · ✓ Szállítás Magyar Postával (utánvét)</p>
+          <p class="pguar">✓ 30 napos garancia · ✓ Beállítva, átnézve · ✓ Szállítás Magyar Postával (utánvét)</p>
         </div>
       </div>
     </div>`;

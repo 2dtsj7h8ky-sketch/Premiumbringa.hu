@@ -370,7 +370,25 @@ select.sort{font-family:var(--mono);font-size:.7rem;color:var(--ink);background:
 .spec-table tr:last-child{border-bottom:0}
 .spec-table th{text-align:left;font-family:var(--mono);font-weight:500;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fog);padding:13px 18px;width:38%;vertical-align:top}
 .spec-table td{padding:13px 18px;color:var(--silver);font-size:.92rem}
-.pguar{font-family:var(--mono);font-size:.64rem;letter-spacing:.04em;color:var(--copper);margin-top:20px;text-transform:uppercase}
+.pguar{font-family:var(--mono);font-size:.64rem;letter-spacing:.04em;color:var(--copper);margin-top:24px;text-transform:uppercase}
+/* termékoldal: állapot-besorolás + méretajánlás + felszereltség */
+.pcond-scale,.psize{margin:20px 0 0;border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:var(--carbon-2)}
+.pcs-lab,.ps-lab{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);margin-bottom:14px}
+.pcs-track{display:flex;gap:8px}
+.pcs-step{flex:1;text-align:center;font-family:var(--mono);font-weight:500;font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;color:var(--steel);border:1px solid var(--line);border-radius:30px;padding:9px 6px}
+.pcs-step.on{color:#15171A;background:var(--copper);border-color:var(--copper);font-weight:600}
+.pcs-desc{margin:14px 0 0;color:var(--haze);font-size:.92rem;line-height:1.55}
+.ps-val{font-family:var(--disp);font-weight:800;font-stretch:108%;text-transform:uppercase;color:var(--bright);font-size:1.3rem;letter-spacing:-.01em}
+.ps-val em{color:var(--copper);font-style:normal}
+.ps-val .ps-range{font-family:var(--body);font-weight:400;font-stretch:normal;text-transform:none;color:var(--haze);font-size:.9rem;letter-spacing:0}
+.ps-note{margin:12px 0 0;color:var(--fog);font-size:.86rem;line-height:1.55}
+.ps-note b{color:var(--copper);font-weight:600}
+.pspec{margin:22px 0 0;border-top:1px solid var(--line)}
+.pspec summary{list-style:none;cursor:pointer;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--haze);padding:16px 0 4px;display:flex;justify-content:space-between;align-items:center}
+.pspec summary::-webkit-details-marker{display:none}
+.pspec summary::after{content:"+";color:var(--copper);font-size:1.2rem;line-height:1}
+.pspec[open] summary::after{content:"–"}
+.pspec .spec-table{margin-top:10px}
 
 /* GYIK */
 .faq{max-width:760px}
