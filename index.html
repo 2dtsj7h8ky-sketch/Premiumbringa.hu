@@ -62,6 +62,27 @@
 @media(max-width:900px){.wpx-grid{grid-template-columns:1fr}.wpx-tabs{flex-direction:row;flex-wrap:wrap}.wpx-tab{flex:1 1 210px}}
 @media(max-width:620px){.wpx-stage{grid-template-columns:1fr;padding:20px}.wpx-fig{width:210px;margin:0 auto}}
 @media(prefers-reduced-motion:reduce){.wpx-ring,.wpx-okos,.wpx-badge{animation:none}.wpx-svg.on,.wpx-pane.on{animation:none}}
+
+/* ===== Rider-spektrum (Bárki vagy, van hozzád való) ===== */
+.rs{margin-top:42px;max-width:780px}
+.rs-track{position:relative;height:86px;margin:0 20px}
+.rs-line{position:absolute;left:0;right:0;top:30px;height:4px;border-radius:3px;background:var(--line-l)}
+.rs-fill{position:absolute;left:0;top:30px;height:4px;border-radius:3px;background:linear-gradient(90deg,var(--copper-deep),var(--copper));width:50%;transition:width .45s cubic-bezier(.3,.7,.2,1)}
+.rs-stop{position:absolute;top:30px;transform:translate(-50%,-50%);background:none;border:0;cursor:pointer;padding:0}
+.rs-dot{display:block;width:15px;height:15px;border-radius:50%;background:#fff;border:2px solid var(--haze);transition:border-color .3s,background .3s,transform .3s}
+.rs-stop:hover .rs-dot,.rs-stop.on .rs-dot{border-color:var(--copper);background:var(--copper);transform:scale(1.2)}
+.rs-name{position:absolute;top:18px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--mono);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--steel);transition:color .3s}
+.rs-stop:hover .rs-name,.rs-stop.on .rs-name{color:var(--copper)}
+.rs-you{position:absolute;top:-4px;left:50%;transform:translateX(-50%);transition:left .45s cubic-bezier(.3,.7,.2,1);pointer-events:none}
+.rs-you span{display:block;font-family:var(--mono);font-size:.56rem;font-weight:600;letter-spacing:.14em;color:#15171a;background:var(--copper);padding:5px 11px;border-radius:20px;position:relative;box-shadow:0 8px 18px -8px rgba(194,137,90,.8)}
+.rs-you span::after{content:"";position:absolute;left:50%;bottom:-5px;transform:translateX(-50%);border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--copper)}
+.rs-cap{margin-top:6px;min-height:62px;color:var(--ink);font-size:1.02rem;line-height:1.62}
+.rs-cap b{color:var(--copper-deep)}
+.rs-terr{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:12px;padding-top:18px;border-top:1px solid var(--line-l)}
+.rs-terr-lab{font-family:var(--mono);font-size:.57rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fog);margin-right:2px}
+.rs-tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.04em;text-transform:uppercase;color:var(--steel);border:1px solid var(--line-l);border-radius:20px;padding:6px 13px;background:#fff}
+.rs-cta{margin-top:26px}
+@media(max-width:560px){.rs-track{margin:0 6px}.rs-name{font-size:.5rem;letter-spacing:.04em}.rs-you span{font-size:.5rem}}
 </style>
 </head>
 <body>
@@ -198,23 +219,25 @@
   </div>
 </section>
 
-<!-- 3) MIT SZERETNÉL? -->
+<!-- 3) BÁRKI VAGY, VAN HOZZÁD VALÓ -->
 <section class="showroom"><div class="wrap">
-  <div class="sec-head on-light reveal"><span class="kick">Mihez keresel?</span><h2>Bárhová is vinne</h2>
-    <p>A legtöbb gépünk sokoldalú, ezért a választás könnyebb, mint hinnéd. Kattints arra, ami közel áll hozzád, mi pedig megmutatjuk a hozzád illőket.</p></div>
-  <div class="usegrid">
-    <a class="usecard reveal" href="keszlet.html?szegmens=xc">
-      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="19" r="2"/><circle cx="19" cy="5" r="2"/><path d="M7 19h6a3 3 0 0 0 0-6h-2a3 3 0 0 1 0-6h6"/></svg>
-      <h3>Túra &amp; hétvégi körök</h3><p>Sokoldalú XC- és túra-MTB-k a hosszú körökhöz, földútra, erdei ösvényre.</p><span class="go">Megnézem →</span></a>
-    <a class="usecard reveal" href="keszlet.html?szegmens=trail">
-      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20l6-11 4 6 2-3 6 8z"/><circle cx="9" cy="6" r="1.5"/></svg>
-      <h3>Terep &amp; kaland</h3><p>Trail-hardtail dropperrel és széles gumikkal, a technikásabb ösvényekre.</p><span class="go">Megnézem →</span></a>
-    <a class="usecard reveal" href="keszlet.html">
-      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="7" height="11"/><rect x="13" y="5" width="8" height="15"/><path d="M6 13h1M6 16h1M16 9h2M16 13h2M16 17h2M2 20h20"/></svg>
-      <h3>Városra &amp; mindennapokra</h3><p>Egy jó MTB a városban is fürge és kényelmes. Sokan épp erre veszik, és nem véletlenül.</p><span class="go">Megnézem →</span></a>
-    <a class="usecard reveal" href="keszlet.html">
-      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 7v4M8 7v3M12 7v4M16 7v3M20 7v4M3 7l1-2h16l1 2"/><path d="M12 11v9"/></svg>
-      <h3>Méretre szabva</h3><p>Nem tudod a méreted? A Készleten állítsd be a magasságod, és megmutatjuk, mi illik hozzád.</p><span class="go">Méret-segéd →</span></a>
+  <div class="sec-head on-light reveal"><span class="kick">Neked is</span><h2>Bárki vagy, van hozzád való</h2>
+    <p>Kezdő, haladó vagy a tempó megszállottja — városban, túrán vagy terepen. A szint csak segít elindulni; a választást nem vesszük ki a kezedből.</p></div>
+  <div class="rs reveal">
+    <div class="rs-track" role="tablist" aria-label="Hol tartasz a nyeregben">
+      <div class="rs-line"></div>
+      <div class="rs-fill"></div>
+      <div class="rs-you" id="rs-you"><span>TE</span></div>
+      <button class="rs-stop" type="button" data-r="0" style="left:8%" role="tab" aria-selected="false"><span class="rs-dot"></span><span class="rs-name">Kezdő</span></button>
+      <button class="rs-stop on" type="button" data-r="1" style="left:50%" role="tab" aria-selected="true"><span class="rs-dot"></span><span class="rs-name">Haladó</span></button>
+      <button class="rs-stop" type="button" data-r="2" style="left:92%" role="tab" aria-selected="false"><span class="rs-dot"></span><span class="rs-name">Teljesítmény</span></button>
+    </div>
+    <p class="rs-cap" id="rs-cap" aria-live="polite"></p>
+    <div class="rs-terr">
+      <span class="rs-terr-lab">Bármelyik terepen</span>
+      <span class="rs-tag">Város</span><span class="rs-tag">Túra</span><span class="rs-tag">Terep</span>
+    </div>
+    <div class="rs-cta"><a href="keszlet.html" class="btn btn-1">Nézd meg a teljes készletet →</a></div>
   </div>
 </div></section>
 
@@ -399,6 +422,28 @@
     t.addEventListener('mouseenter',function(){sel(p);});
     t.addEventListener('focus',function(){sel(p);});
   });
+})();
+(function(){
+  var track=document.querySelector('.rs-track'); if(!track) return;
+  var stops=[].slice.call(track.querySelectorAll('.rs-stop'));
+  var you=document.getElementById('rs-you'), fill=track.querySelector('.rs-fill'), cap=document.getElementById('rs-cap');
+  var pos=['8%','50%','92%'];
+  var RS={
+    0:{t:'Kezdő',p:'A magabiztos kezdéshez. Stabil, könnyen kezelhető, megbocsátó gépek — az első igazi bringád is lehet minőség, nem kell egy gyengébbe beletörődnöd.'},
+    1:{t:'Haladó',p:'Már tudod, mit szeretsz. Fürgébb, többre képes vázak, amik tartják a tempót a hétvégi körökön és a technikásabb szakaszokon is.'},
+    2:{t:'Teljesítmény',p:'A tempó a cél. Könnyű, precíz, terepképes gépek felsőbb kategóriás felszereltséggel — hogy ne a bringa szabjon határt.'}
+  };
+  function pick(i){
+    stops.forEach(function(s){var on=+s.getAttribute('data-r')===i;s.classList.toggle('on',on);s.setAttribute('aria-selected',on?'true':'false');});
+    you.style.left=pos[i]; fill.style.width=pos[i];
+    cap.innerHTML='<b>'+RS[i].t+'.</b> '+RS[i].p;
+  }
+  stops.forEach(function(s){var i=+s.getAttribute('data-r');
+    s.addEventListener('click',function(){pick(i);});
+    s.addEventListener('mouseenter',function(){pick(i);});
+    s.addEventListener('focus',function(){pick(i);});
+  });
+  pick(1);
 })();
 </script>
 </body>
