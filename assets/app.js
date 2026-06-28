@@ -223,14 +223,23 @@
     const thumbs = bikeGaleria(b).map((src,i) =>
       `<button class="pthumb${i===0?' on':''}" type="button" data-src="${esc(src)}" aria-label="Fotó ${i+1}"><img src="${esc(src)}" alt="" loading="lazy" onerror="this.closest('.pthumb').remove()"></button>`
     ).join("");
-    const rows = [
-      ["Márka", b.marka], ["Kategória", b.kategoria], ["Évjárat", b.ev],
-      ["Méret", b.meret], ["Váz", b.vaz], ["Villa", b.villa],
-      ["Hajtás", b.hajtas], ["Fék", b.fek], ["Kerék", b.kerek]
-    ].filter(r => r[1]);
-    const specTabla = rows.length
-      ? `<details class="pspec"><summary>Felszereltség &amp; gyári adatok</summary><table class="spec-table"><tbody>${rows.map(r => `<tr><th>${esc(r[0])}</th><td>${esc(String(r[1]))}</td></tr>`).join("")}</tbody></table></details>`
+    /* Kulcs-adatok csík (bolti stílus) */
+    const keys = [["Évjárat", b.ev], ["Vázméret", b.meret], ["Súly", b.suly], ["Kerék", b.kerekmeret]].filter(k => k[1]);
+    const keySpecs = keys.length
+      ? `<div class="pkeys">${keys.map(k => `<div class="pkey"><span class="pk-lab">${esc(k[0])}</span><span class="pk-val">${esc(String(k[1]))}</span></div>`).join("")}</div>`
       : "";
+
+    /* Felszereltség: csoportosított (bolti) vagy egyszerű fallback */
+    let specInner = "";
+    if(Array.isArray(b.reszletek) && b.reszletek.length){
+      specInner = b.reszletek.map(g =>
+        `<div class="pspec-grp"><h4>${esc(g.cs)}</h4><table class="spec-table"><tbody>${g.t.map(r => `<tr><th>${esc(r[0])}</th><td>${esc(String(r[1]))}</td></tr>`).join("")}</tbody></table></div>`
+      ).join("");
+    } else {
+      const rows = [["Váz", b.vaz], ["Villa", b.villa], ["Hajtás", b.hajtas], ["Fék", b.fek], ["Kerék", b.kerek]].filter(r => r[1]);
+      specInner = rows.length ? `<table class="spec-table"><tbody>${rows.map(r => `<tr><th>${esc(r[0])}</th><td>${esc(String(r[1]))}</td></tr>`).join("")}</tbody></table>` : "";
+    }
+    const specTabla = specInner ? `<details class="pspec"><summary>Teljes felszereltség &amp; gyári adatok</summary><div class="pspec-body">${specInner}</div></details>` : "";
 
     /* Állapot-besorolás (grafikus háromfokú skála) */
     const condDesc = (typeof ALLAPOT_LEIRAS !== "undefined" && b.allapot && ALLAPOT_LEIRAS[b.allapot]) || "";
@@ -257,12 +266,14 @@
         <div class="pgallery">
           <div class="pmain">${galMain}${b.allapot ? `<span class="${condClass(b.allapot)} pcond">${esc(b.allapot)}</span>` : ""}</div>
           <div class="pthumbs" id="pthumbs">${thumbs}</div>
+          <p class="preal"><span class="pr-dot"></span>A fotók a <b>tényleges</b> gépet és annak valós állapotát mutatják — a kopásnyomokat is őszintén megmutatjuk.</p>
           <p class="pnote">A bringát személyesen, Debrecenben kipróbálhatod.</p>
         </div>
         <div class="pinfo">
           <span class="kick">${esc(b.kategoria)}</span>
           <h1>${esc(b.model)}</h1>
           <div class="pprice">${arSzoveg(b)}</div>
+          ${keySpecs}
           <p class="plead">${b.leiras ? esc(b.leiras) : "A részletes leírás hamarosan, a hirdetés adatai alapján."}</p>
           <div class="buybox">
             <a class="btn btn-1" href="tel:+36204360307">Érdeklődöm telefonon →</a>
