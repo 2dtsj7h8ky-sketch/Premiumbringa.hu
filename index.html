@@ -63,28 +63,6 @@
 @media(max-width:620px){.wpx-stage{grid-template-columns:1fr;padding:20px}.wpx-fig{width:210px;margin:0 auto}}
 @media(prefers-reduced-motion:reduce){.wpx-ring,.wpx-okos,.wpx-badge{animation:none}.wpx-svg.on,.wpx-pane.on{animation:none}}
 
-/* ===== Rider-spektrum (Bárki vagy, van hozzád való) ===== */
-.rs{margin-top:40px;max-width:800px;background:#fff;border:1px solid var(--line-l);border-radius:18px;padding:34px 32px 28px;box-shadow:0 26px 52px -36px rgba(30,32,36,.26)}
-.rs-track{position:relative;height:84px;margin:0 22px}
-.rs-line{position:absolute;left:0;right:0;top:30px;height:4px;border-radius:3px;background:var(--line-l)}
-.rs-fill{position:absolute;left:0;top:30px;height:4px;border-radius:3px;background:linear-gradient(90deg,var(--copper-deep),var(--copper));width:50%;transition:width .45s cubic-bezier(.3,.7,.2,1)}
-.rs-stop{position:absolute;top:30px;transform:translate(-50%,-50%);background:none;border:0;cursor:pointer;padding:0}
-.rs-dot{display:block;width:15px;height:15px;border-radius:50%;background:#fff;border:2px solid var(--haze);transition:border-color .3s,background .3s,transform .3s}
-.rs-stop:hover .rs-dot,.rs-stop.on .rs-dot{border-color:var(--copper);background:var(--copper);transform:scale(1.2)}
-.rs-name{position:absolute;top:18px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:var(--mono);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;color:var(--steel);transition:color .3s}
-.rs-stop:hover .rs-name,.rs-stop.on .rs-name{color:var(--copper)}
-.rs-you{position:absolute;top:-4px;left:50%;transform:translateX(-50%);transition:left .45s cubic-bezier(.3,.7,.2,1);pointer-events:none}
-.rs-you span{display:block;background:var(--copper);padding:6px 10px;border-radius:18px;position:relative;box-shadow:0 8px 18px -8px rgba(194,137,90,.8)}
-.rs-you span::after{content:"";position:absolute;left:50%;bottom:-5px;transform:translateX(-50%);border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--copper)}
-.rs-bike{width:40px;height:23px;display:block;fill:none;stroke:#15171a;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.rs-cap{margin-top:6px;min-height:62px;color:var(--ink);font-size:1.02rem;line-height:1.62}
-.rs-cap b{color:var(--copper-deep)}
-.rs-terr{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-top:12px;padding-top:18px;border-top:1px solid var(--line-l)}
-.rs-terr-lab{font-family:var(--mono);font-size:.57rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fog);margin-right:2px}
-.rs-tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.04em;text-transform:uppercase;color:var(--steel);border:1px solid var(--line-l);border-radius:20px;padding:6px 13px;background:#fff}
-.rs-cta{margin-top:26px}
-@media(max-width:560px){.rs-track{margin:0 6px}.rs-name{font-size:.5rem;letter-spacing:.04em}.rs-you span{font-size:.5rem}}
-
 /* ===== Tőlünk hozzád: emberi prep-szalag + letisztult átvételi utak ===== */
 .prep{display:grid;grid-template-columns:repeat(4,1fr);margin:38px 0 4px}
 .prep-step{position:relative;padding:0 16px;text-align:center}
@@ -103,18 +81,6 @@
 .path-facts{display:flex;flex-direction:column;gap:9px;margin-top:auto}
 .path-fact{font-family:var(--mono);font-size:.64rem;letter-spacing:.03em;text-transform:uppercase;color:var(--steel);display:flex;align-items:center;gap:10px}
 .path-fact i{color:var(--copper);font-style:normal;font-weight:700}
-
-/* ===== Manifesto: 'A szenvedélyhez nem kell vagyon' ===== */
-.manifest{text-align:center}
-.mf{max-width:780px;margin:0 auto;position:relative;z-index:1}
-.mf-quote{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:112%;font-size:clamp(1.85rem,4.6vw,3.05rem);line-height:1.04;color:var(--bright);margin:16px 0 0;letter-spacing:-.01em}
-.mf-em{display:block;color:var(--copper);margin-top:8px;font-size:.84em}
-.mf-sub{color:var(--haze);font-size:1.05rem;line-height:1.62;margin:20px auto 0;max-width:548px}
-.mf-scene{margin:32px auto 0;max-width:1000px;position:relative;z-index:1}
-.mf-scene svg{width:100%;height:auto;display:block}
-.mf-sun{transform-box:fill-box;transform-origin:center;animation:mfsun 5s ease-in-out infinite}
-@keyframes mfsun{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.92;transform:scale(1.045)}}
-@media(prefers-reduced-motion:reduce){.mf-sun{animation:none}}
 </style>
 </head>
 <body>
@@ -251,106 +217,8 @@
   </div>
 </section>
 
-<!-- 3) BÁRKI VAGY, VAN HOZZÁD VALÓ -->
-<section class="showroom"><div class="wrap">
-  <div class="sec-head on-light reveal"><span class="kick">A hozzád illő gép</span><h2>Hol tartasz a nyeregben?</h2>
-    <p>A szinted meghatározza, mi való neked igazán. Jelöld be, hol tartasz — megmutatjuk, milyen gép passzol hozzá.</p></div>
-  <div class="rs reveal">
-    <div class="rs-track" role="tablist" aria-label="Hol tartasz a nyeregben">
-      <div class="rs-line"></div>
-      <div class="rs-fill"></div>
-      <div class="rs-you" id="rs-you"><span><svg class="rs-bike" viewBox="0 0 40 23" aria-hidden="true"><circle cx="9" cy="16" r="6"/><circle cx="31" cy="16" r="6"/><path d="M9 16 L18 16 L14 7 M18 16 L26 8 M14 7 L26 8 M26 8 L31 16"/><path d="M14 7 L12 4.5 L16 4.5"/><path d="M26 8 L28.5 6"/></svg></span></div>
-      <button class="rs-stop" type="button" data-r="0" style="left:8%" role="tab" aria-selected="false"><span class="rs-dot"></span><span class="rs-name">Kezdő</span></button>
-      <button class="rs-stop on" type="button" data-r="1" style="left:50%" role="tab" aria-selected="true"><span class="rs-dot"></span><span class="rs-name">Haladó</span></button>
-      <button class="rs-stop" type="button" data-r="2" style="left:92%" role="tab" aria-selected="false"><span class="rs-dot"></span><span class="rs-name">Teljesítmény</span></button>
-    </div>
-    <p class="rs-cap" id="rs-cap" aria-live="polite"></p>
-    <div class="rs-terr">
-      <span class="rs-terr-lab">Bármelyik terepen</span>
-      <span class="rs-tag">Város</span><span class="rs-tag">Túra</span><span class="rs-tag">Terep</span>
-    </div>
-    <div class="rs-cta"><a href="keszlet.html" class="btn btn-1">Nézd meg a teljes készletet →</a></div>
-  </div>
-</div></section>
-
-<!-- 4) AKTUÁLIS KÍNÁLAT -->
+<!-- 3) MIRE HOZZÁD ÉR + KÉSZLET -->
 <section class="showroom" id="keszlet"><div class="wrap">
-  <div class="sec-head on-light reveal"><span class="kick">Készlet</span><h2>Aktuális kínálat</h2>
-    <p>Válogatott, igényes állapotú német kerékpárok, őszinte háromfokú állapotleírással.</p></div>
-  <div class="filters reveal" style="margin-bottom:30px">
-    <a class="chip" href="keszlet.html">Összes</a>
-    <a class="chip" href="keszlet.html?szegmens=trail">Trail</a>
-    <a class="chip" href="keszlet.html?szegmens=xc">XC / Túra</a>
-    <a class="chip" href="keszlet.html?szegmens=cross">Cross</a>
-    <a class="chip" href="keszlet.html?szegmens=noi">Női</a>
-  </div>
-  <div class="grid" id="home-grid" data-limit="6"></div>
-  <div class="more reveal"><a href="keszlet.html" class="btn btn-3">Teljes készlet megtekintése →</a></div>
-</div></section>
-
-<!-- 5) MANIFESTO -->
-<section class="exp manifest">
-  <div class="wrap">
-    <div class="mf reveal">
-      <span class="kick">Az élményért</span>
-      <h2 class="mf-quote">A szenvedélyhez nem kell vagyon<span class="mf-em">— csak a megfelelő kerékpár.</span></h2>
-      <p class="mf-sub">Egy jó gép évekre szóló élmény, nem havi teher. Mi pontosan ezt hozzuk elérhető közelségbe.</p>
-    </div>
-    <div class="mf-scene reveal">
-      <svg viewBox="0 0 1000 300" role="img" aria-label="Nyitott út a horizont felé, naplementében, egy kerékpárossal">
-        <defs>
-          <radialGradient id="mf-sun-g" cx="50%" cy="50%" r="50%">
-            <stop offset="0" stop-color="#EBB277"/><stop offset="55%" stop-color="#C2895A"/><stop offset="100%" stop-color="#C2895A" stop-opacity="0"/>
-          </radialGradient>
-          <radialGradient id="mf-glow-g" cx="50%" cy="50%" r="50%">
-            <stop offset="0" stop-color="#C2895A" stop-opacity=".4"/><stop offset="100%" stop-color="#C2895A" stop-opacity="0"/>
-          </radialGradient>
-          <linearGradient id="mf-road-g" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#2b2e34"/><stop offset="1" stop-color="#141619"/>
-          </linearGradient>
-        </defs>
-        <ellipse cx="500" cy="118" rx="300" ry="150" fill="url(#mf-glow-g)"/>
-        <line x1="150" y1="124" x2="850" y2="124" stroke="#3a3d44" stroke-width="1.4" opacity=".55"/>
-        <g class="mf-sun"><circle cx="500" cy="110" r="46" fill="url(#mf-sun-g)"/><circle cx="500" cy="110" r="33" fill="#DF9C5F"/></g>
-        <path d="M308 300 L491 126 L509 126 L692 300 Z" fill="url(#mf-road-g)"/>
-        <line x1="491" y1="126" x2="308" y2="300" stroke="#C2895A" stroke-width="2.4" opacity=".82"/>
-        <line x1="509" y1="126" x2="692" y2="300" stroke="#C2895A" stroke-width="2.4" opacity=".82"/>
-        <g fill="#C2895A" opacity=".72">
-          <rect x="498.5" y="150" width="3" height="8" rx="1"/>
-          <rect x="498" y="180" width="4" height="11" rx="1"/>
-          <rect x="497" y="216" width="6" height="15" rx="1.5"/>
-          <rect x="495.5" y="258" width="9" height="20" rx="2"/>
-        </g>
-        <g class="mf-rider" fill="none" stroke="#EFD3B2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="452" cy="252" r="14"/><circle cx="492" cy="252" r="14"/>
-          <path d="M452 252 L470 252 L463 226 M470 252 L487 230 M463 226 L487 230 M487 230 L492 252"/>
-          <path d="M463 226 L460 219 L470 217"/>
-          <path d="M470 252 L476 235 L466 222"/>
-          <circle cx="479" cy="212" r="5"/>
-          <path d="M476 235 L489 231"/>
-        </g>
-      </svg>
-    </div>
-  </div>
-</section>
-
-<!-- 6) HÁROM ÚT -->
-<section class="value"><div class="wrap">
-  <div class="sec-head reveal"><span class="kick">A megfontolt döntés</span><h2>Három út, egy értelmes választás</h2>
-    <p>Nem a legolcsóbb. A legjobb, amit a pénzedért kaphatsz.</p></div>
-  <div class="compare">
-    <div class="copt reveal"><div class="clab">Új kerékpár</div><h3>Csúcs, de drága</h3>
-      <ul class="cpts"><li class="no"><i>✕</i>Magas ár</li><li class="no"><i>✕</i>Jelentős értékvesztés néhány szezon alatt</li><li class="no"><i>✕</i>Azonos pénzből belépő szint</li></ul></div>
-    <div class="copt reveal"><div class="clab">Piactéri használt</div><h3>Olcsó, de kockázat</h3>
-      <ul class="cpts"><li class="no"><i>✕</i>Nincs garancia</li><li class="no"><i>✕</i>Ismeretlen állapot, eredet</li></ul></div>
-    <div class="copt best reveal"><div class="clab">Premium Bringa</div><h3>Az arany középút</h3>
-      <ul class="cpts"><li class="yes"><i>✓</i>30 napos garancia</li><li class="yes"><i>✓</i>Szakértői segítség a választáshoz</li><li class="yes"><i>✓</i>Őszinte állapot, reális ár</li></ul></div>
-  </div>
-  <div class="reveal" style="margin-top:36px"><a href="miert-eri-meg.html" class="btn btn-2">Miért éri meg? →</a></div>
-</div></section>
-
-<!-- 7) TŐLÜNK HOZZÁD - felkészítés + átvétel -->
-<section class="delivery" id="hogyan"><div class="wrap">
   <div class="sec-head on-light reveal"><span class="kick">Tőlünk hozzád</span><h2>Mire hozzád ér, már a miénk volt</h2>
     <p>Nem egy névtelen készletről beszélünk. Minden gép a kezünkön megy át, mielőtt a tiéd lesz — ez a négy lépés mindegyikre igaz.</p></div>
 
@@ -377,7 +245,51 @@
     </div>
   </div>
 
-  <div class="path-bridge reveal">És ahogy a kezedbe kerül — válaszd, ami kényelmesebb</div>
+  <div class="path-bridge reveal">A készlet — minden darab a fenti négy lépésen átesve, őszinte állapottal</div>
+  <div class="filters reveal" style="margin-bottom:30px">
+    <a class="chip" href="keszlet.html">Összes</a>
+    <a class="chip" href="keszlet.html?szegmens=trail">Trail</a>
+    <a class="chip" href="keszlet.html?szegmens=xc">XC / Túra</a>
+    <a class="chip" href="keszlet.html?szegmens=cross">Cross</a>
+    <a class="chip" href="keszlet.html?szegmens=noi">Női</a>
+  </div>
+  <div class="grid" id="home-grid" data-limit="6"></div>
+  <div class="more reveal"><a href="keszlet.html" class="btn btn-3">Teljes készlet megtekintése →</a></div>
+</div></section>
+
+<!-- 4) A KERÉKPÁROZÁS ÉLMÉNYE -->
+<section class="exp">
+  <svg class="wheel-deco spin-slow" viewBox="0 0 200 200" aria-hidden="true" style="width:520px;right:-170px;bottom:-150px">
+    <g fill="none" stroke="#D6D4D0" stroke-width="2"><circle cx="100" cy="100" r="94"/><circle cx="100" cy="100" r="78" stroke-width="5"/><circle cx="100" cy="100" r="7"/></g>
+    <g stroke="#D6D4D0" stroke-width="1.4"><line x1="22" y1="100" x2="178" y2="100"/><line x1="100" y1="22" x2="100" y2="178"/><line x1="44.9" y1="44.9" x2="155.1" y2="155.1"/><line x1="155.1" y1="44.9" x2="44.9" y2="155.1"/></g>
+  </svg>
+  <div class="wrap">
+    <span class="kick reveal">A kerékpározás élménye</span>
+    <h2 class="big reveal">A szenvedélyhez nem kell vagyon, <em>csak a megfelelő kerékpár.</em></h2>
+    <p class="reveal">Egy jó bringa nem kiadás, hanem évekre szóló élmény: a reggeli körök, a hétvégi túrák, a pillanat, amikor már a következő ösvényt keresed. Mi azt a kerékpárt adjuk hozzá, amelyik kihozza belőled a kedvet, túlárazás nélkül.</p>
+    <div class="roadline reveal" style="width:120px;margin-top:30px"></div>
+  </div>
+</section>
+
+<!-- 5) HÁROM ÚT -->
+<section class="value"><div class="wrap">
+  <div class="sec-head reveal"><span class="kick">A megfontolt döntés</span><h2>Három út, egy értelmes választás</h2>
+    <p>Nem a legolcsóbb. A legjobb, amit a pénzedért kaphatsz.</p></div>
+  <div class="compare">
+    <div class="copt reveal"><div class="clab">Új kerékpár</div><h3>Csúcs, de drága</h3>
+      <ul class="cpts"><li class="no"><i>✕</i>Magas ár</li><li class="no"><i>✕</i>Jelentős értékvesztés néhány szezon alatt</li><li class="no"><i>✕</i>Azonos pénzből belépő szint</li></ul></div>
+    <div class="copt reveal"><div class="clab">Piactéri használt</div><h3>Olcsó, de kockázat</h3>
+      <ul class="cpts"><li class="no"><i>✕</i>Nincs garancia</li><li class="no"><i>✕</i>Ismeretlen állapot, eredet</li></ul></div>
+    <div class="copt best reveal"><div class="clab">Premium Bringa</div><h3>Az arany középút</h3>
+      <ul class="cpts"><li class="yes"><i>✓</i>30 napos garancia</li><li class="yes"><i>✓</i>Szakértői segítség a választáshoz</li><li class="yes"><i>✓</i>Őszinte állapot, reális ár</li></ul></div>
+  </div>
+  <div class="reveal" style="margin-top:36px"><a href="miert-eri-meg.html" class="btn btn-2">Miért éri meg? →</a></div>
+</div></section>
+
+<!-- 6) HOGYAN KERÜL HOZZÁD -->
+<section class="delivery" id="hogyan"><div class="wrap">
+  <div class="sec-head on-light reveal"><span class="kick">A te utad</span><h2>Hogyan kerül hozzád</h2>
+    <p>Két út, ugyanaz a gondosság — válaszd, ami kényelmesebb.</p></div>
   <div class="paths">
 
     <!-- A) SZEMÉLYES ÁTVÉTEL -->
@@ -470,14 +382,14 @@
   </div>
 </div></section>
 
-<!-- 8) BIZONYOSSÁG -->
+<!-- 7) BIZONYOSSÁG -->
 <div class="assure"><div class="wrap">
   <span><b>✓</b> 30 napos garancia</span>
   <span><b>✓</b> Megbízható, igazolt forrás</span>
   <span><b>✓</b> Őszinte háromfokú állapot: Újszerű · Kiváló · Jó</span>
 </div></div>
 
-<!-- 9) CTA BAND -->
+<!-- 8) CTA BAND -->
 <div class="band"><div class="wrap">
   <div><h2>Megtaláltad a tiédet?</h2><p>Foglald le, vagy kérdezz bátran, gyorsan válaszolunk.</p></div>
   <a href="kapcsolat.html" class="btn btn-dark">Kapcsolatfelvétel →</a>
@@ -513,28 +425,6 @@
     t.addEventListener('mouseenter',function(){sel(p);});
     t.addEventListener('focus',function(){sel(p);});
   });
-})();
-(function(){
-  var track=document.querySelector('.rs-track'); if(!track) return;
-  var stops=[].slice.call(track.querySelectorAll('.rs-stop'));
-  var you=document.getElementById('rs-you'), fill=track.querySelector('.rs-fill'), cap=document.getElementById('rs-cap');
-  var pos=['8%','50%','92%'];
-  var RS={
-    0:{t:'Kezdő',p:'A magabiztos kezdéshez. Stabil, könnyen kezelhető, megbocsátó gépek — az első igazi bringád is lehet minőség, nem kell egy gyengébbe beletörődnöd.'},
-    1:{t:'Haladó',p:'Már tudod, mit szeretsz. Fürgébb, többre képes vázak, amik tartják a tempót a hétvégi körökön és a technikásabb szakaszokon is.'},
-    2:{t:'Teljesítmény',p:'A tempó a cél. Könnyű, precíz, terepképes gépek felsőbb kategóriás felszereltséggel — hogy ne a bringa szabjon határt.'}
-  };
-  function pick(i){
-    stops.forEach(function(s){var on=+s.getAttribute('data-r')===i;s.classList.toggle('on',on);s.setAttribute('aria-selected',on?'true':'false');});
-    you.style.left=pos[i]; fill.style.width=pos[i];
-    cap.innerHTML='<b>'+RS[i].t+'.</b> '+RS[i].p;
-  }
-  stops.forEach(function(s){var i=+s.getAttribute('data-r');
-    s.addEventListener('click',function(){pick(i);});
-    s.addEventListener('mouseenter',function(){pick(i);});
-    s.addEventListener('focus',function(){pick(i);});
-  });
-  pick(1);
 })();
 </script>
 </body>
