@@ -53,6 +53,16 @@
 .mx-legend span{display:inline-flex;align-items:center;gap:8px}
 .mx-legend i{width:16px;height:3px;border-radius:2px;background:var(--copper);display:inline-block}
 .mx-legend i.z{width:13px;height:13px;border-radius:3px;background:rgba(194,137,90,.22);border:1px solid var(--copper-deep)}
+.mx-legend i.cap{width:16px;height:0;border-radius:0;background:none;border-top:3px dashed var(--haze)}
+.mx-cap{fill:none;stroke:var(--haze);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:7 7;opacity:0;transition:opacity 1s ease .45s}
+.mx-chart.drawn .mx-cap{opacity:.92}
+.mx-gap{fill:url(#mxgap);opacity:0;transition:opacity 1.1s ease .6s}
+.mx-chart.drawn .mx-gap{opacity:1}
+.mx-gapline{stroke:var(--copper);stroke-width:2;stroke-dasharray:3 4;opacity:0;transition:opacity .6s ease 1.55s}
+.mx-chart.drawn .mx-gapline{opacity:.95}
+.mx-captip{fill:var(--haze);opacity:0;transition:opacity .5s ease 1.3s}
+.mx-chart.drawn .mx-captip{opacity:1}
+.mx-gaplab{fill:var(--copper);font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase}
 
 /* érv-kártyák - animált aláhúzás + hover */
 .mx-args .why{transition:transform .25s ease}
@@ -132,6 +142,10 @@
           <stop offset="0" stop-color="#C2895A" stop-opacity=".34"/>
           <stop offset="1" stop-color="#C2895A" stop-opacity="0"/>
         </linearGradient>
+        <linearGradient id="mxgap" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#C2895A" stop-opacity=".28"/>
+          <stop offset="1" stop-color="#C2895A" stop-opacity=".05"/>
+        </linearGradient>
       </defs>
       <!-- tengelyek -->
       <line class="mx-grid" x1="70" y1="100" x2="710" y2="100"/>
@@ -141,22 +155,33 @@
       <line class="mx-axis" x1="70" y1="300" x2="710" y2="300"/>
       <text class="mx-ylab" x="34" y="172" transform="rotate(-90 34 172)" text-anchor="middle">Érték</text>
       <!-- okos belépő zóna -->
-      <rect class="mx-zone" x="280" y="40" width="104" height="260"/>
-      <!-- terület + görbe -->
+      <rect class="mx-zone" x="286" y="40" width="92" height="260"/>
+      <!-- a rés: amit megnyersz (tudás − ár) -->
+      <path class="mx-gap" d="M70 70 C230 84,420 96,710 132 L710 263 C620 257,520 246,420 226 C360 212,302 188,232 166 C182 150,140 122,70 70 Z"/>
+      <!-- piaci ár: terület + görbe -->
       <path class="mx-area" d="M70 70 C140 122,182 150,232 166 C302 188,360 212,420 226 C520 246,620 257,710 263 L710 300 L70 300 Z"/>
       <path class="mx-curve" d="M70 70 C140 122,182 150,232 166 C302 188,360 212,420 226 C520 246,620 257,710 263"/>
+      <!-- műszaki tudás: kitartó vonal -->
+      <path class="mx-cap" d="M70 70 C230 84,420 96,710 132"/>
+      <circle class="mx-captip" cx="330" cy="88" r="4"/>
+      <!-- a rés a 2. évnél -->
+      <path class="mx-gapline" d="M330 90 L330 197 M325 90 L335 90 M325 197 L335 197"/>
+      <text class="mx-gaplab" x="343" y="136">Amit megnyersz</text>
       <!-- okos belépő marker -->
       <circle class="mx-pulse" cx="330" cy="199" r="8"/>
       <circle class="mx-marker" cx="330" cy="199" r="8"/>
       <!-- annotációk -->
       <g class="mx-ann a1">
-        <path class="mx-anncon" d="M150 92 L182 150"/>
-        <text class="mx-anntext" x="92" y="84">A legnagyobb értékvesztés</text>
+        <path class="mx-anncon" d="M150 66 L196 154"/>
+        <text class="mx-anntext" x="80" y="60">A legnagyobb értékvesztés</text>
+      </g>
+      <g class="mx-ann a1">
+        <path class="mx-anncon" d="M566 106 L632 128"/>
+        <text class="mx-anntext" x="540" y="100">A tudás kitart</text>
       </g>
       <g class="mx-ann a2">
-        <path class="mx-anncon cop" d="M446 156 L334 195"/>
-        <text class="mx-anntext cop" x="462" y="148">Itt lépünk be okosan</text>
-        <text class="mx-zonelab" x="332" y="60" text-anchor="middle">már a 2. évében</text>
+        <path class="mx-anncon cop" d="M460 180 L338 200"/>
+        <text class="mx-anntext cop" x="430" y="196">Itt lépsz be okosan</text>
       </g>
       <!-- x címkék -->
       <text class="mx-axislab" x="70" y="324" text-anchor="middle">Új</text>
@@ -164,8 +189,9 @@
       <text class="mx-axislab" x="600" y="324" text-anchor="middle">4+ év</text>
     </svg>
     <div class="mx-legend">
-      <span><i></i> Egy új kerékpár értéke az idővel</span>
-      <span><i class="z"></i> A 2. év körüli „okos belépő" zóna</span>
+      <span><i></i> Piaci ár — esik az idővel</span>
+      <span><i class="cap"></i> Műszaki tudás — kitart</span>
+      <span><i class="z"></i> Amit megnyersz a 2. évnél</span>
     </div>
   </div>
 </div></section>
