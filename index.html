@@ -83,6 +83,25 @@
 .rs-tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.04em;text-transform:uppercase;color:var(--steel);border:1px solid var(--line-l);border-radius:20px;padding:6px 13px;background:#fff}
 .rs-cta{margin-top:26px}
 @media(max-width:560px){.rs-track{margin:0 6px}.rs-name{font-size:.5rem;letter-spacing:.04em}.rs-you span{font-size:.5rem}}
+
+/* ===== Tőlünk hozzád: emberi prep-szalag + letisztult átvételi utak ===== */
+.prep{display:grid;grid-template-columns:repeat(4,1fr);margin:38px 0 4px}
+.prep-step{position:relative;padding:0 16px;text-align:center}
+.prep-step::before{content:"";position:absolute;top:23px;left:-50%;width:100%;height:2px;background:var(--line-l);z-index:0}
+.prep-step:first-child::before{display:none}
+.prep-i{position:relative;z-index:1;width:48px;height:48px;margin:0 auto 14px;border-radius:50%;background:#fff;border:1.5px solid var(--copper);color:var(--copper-deep);display:grid;place-items:center;box-shadow:0 10px 22px -14px rgba(194,137,90,.7)}
+.prep-i svg{width:22px;height:22px}
+.prep-num{display:block;font-family:var(--mono);font-size:.5rem;letter-spacing:.18em;color:var(--copper-deep);margin-bottom:5px}
+.prep-step b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:106%;font-size:.84rem;color:var(--ink);margin-bottom:6px}
+.prep-step p{color:var(--ink-soft);font-size:.84rem;line-height:1.5;margin:0}
+@media(max-width:720px){.prep{grid-template-columns:1fr 1fr;gap:30px 0}.prep-step:nth-child(odd)::before{display:none}}
+@media(max-width:430px){.prep{grid-template-columns:1fr}.prep-step{display:grid;grid-template-columns:auto 1fr;gap:15px;text-align:left;padding:0 0 26px}.prep-step::before{top:0;left:23px;width:2px;height:100%}.prep-step:first-child::before{display:block}.prep-step:last-child::before{display:none}.prep-i{margin:0}.prep-num{margin-top:4px}}
+.path-bridge{margin:44px 0 0;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--fog);display:flex;align-items:center;gap:14px}
+.path-bridge::after{content:"";flex:1;height:1px;background:var(--line-l)}
+.path-essence{color:var(--ink-soft);font-size:.98rem;line-height:1.6;margin:0 0 18px}
+.path-facts{display:flex;flex-direction:column;gap:9px;margin-top:auto}
+.path-fact{font-family:var(--mono);font-size:.64rem;letter-spacing:.03em;text-transform:uppercase;color:var(--steel);display:flex;align-items:center;gap:10px}
+.path-fact i{color:var(--copper);font-style:normal;font-weight:700}
 </style>
 </head>
 <body>
@@ -285,10 +304,35 @@
   <div class="reveal" style="margin-top:36px"><a href="miert-eri-meg.html" class="btn btn-2">Miért éri meg? →</a></div>
 </div></section>
 
-<!-- 7) HOGYAN KERÜL HOZZÁD - két út -->
+<!-- 7) TŐLÜNK HOZZÁD - felkészítés + átvétel -->
 <section class="delivery" id="hogyan"><div class="wrap">
-  <div class="sec-head on-light reveal"><span class="kick">A te utad</span><h2>Hogyan kerül hozzád</h2>
-    <p>Két út, ugyanaz a gondosság. Válaszd azt, amelyik kényelmesebb.</p></div>
+  <div class="sec-head on-light reveal"><span class="kick">Tőlünk hozzád</span><h2>Mire hozzád ér, már a miénk volt</h2>
+    <p>Nem egy névtelen készletről beszélünk. Minden gép a kezünkön megy át, mielőtt a tiéd lesz — ez a négy lépés mindegyikre igaz.</p></div>
+
+  <div class="prep reveal">
+    <div class="prep-step">
+      <span class="prep-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+      <span class="prep-num">01</span><b>Kézzel válogatjuk</b>
+      <p>Csak az kerül be, ami minket is meggyőz — állapotban és eredetben egyaránt.</p>
+    </div>
+    <div class="prep-step">
+      <span class="prep-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span>
+      <span class="prep-num">02</span><b>Őszintén átnézzük</b>
+      <p>Végigmegyünk a lényegi pontokon, és amit látunk, azt jelöljük is — nem szépítünk.</p>
+    </div>
+    <div class="prep-step">
+      <span class="prep-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4a4 4 0 0 1-5.5 5.5L8 17l-2.5.5L5 20l-2 .5L3.5 18 4 16l7.5-7.5A4 4 0 0 1 17 3z"/></svg></span>
+      <span class="prep-num">03</span><b>Felkészítjük</b>
+      <p>Tisztítás és pontos beállítás a következő kilométerekre; ahol indokolt, csere.</p>
+    </div>
+    <div class="prep-step">
+      <span class="prep-i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <span class="prep-num">04</span><b>Garanciát adunk</b>
+      <p>30 nap, írásban — és a kérdéseidre az átvétel után is válaszolunk.</p>
+    </div>
+  </div>
+
+  <div class="path-bridge reveal">És ahogy a kezedbe kerül — válaszd, ami kényelmesebb</div>
   <div class="paths">
 
     <!-- A) SZEMÉLYES ÁTVÉTEL -->
@@ -320,11 +364,12 @@
       </div>
       <span class="plabel">Személyes átvétel</span>
       <h3>Debrecenben, élőben</h3>
-      <ol class="flow">
-        <li><span class="fn">1</span><div><b>Kiválasztod online</b><p>Böngészed a készletet, vagy megírod, mit keresel; segítünk leszűkíteni a hozzád illőkre.</p></div></li>
-        <li><span class="fn">2</span><div><b>Kipróbálod nálunk</b><p>Foglalt időpontban személyesen kipróbálod, a megfelelő méretre hangolva.</p></div></li>
-        <li><span class="fn">3</span><div><b>Garanciával hazaviszed</b><p>30 napos garanciával és a papírokkal a kezedben gurulsz haza.</p></div></li>
-      </ol>
+      <p class="path-essence">Foglalt időpontban személyesen kipróbálod, a megfelelő méretre hangoljuk — és ha stimmel, azonnal viheted.</p>
+      <div class="path-facts">
+        <span class="path-fact"><i>✓</i> Időpont-egyeztetéssel</span>
+        <span class="path-fact"><i>✓</i> Helyben kipróbálható, beállítva</span>
+        <span class="path-fact"><i>✓</i> Papírokkal, garanciával viheted</span>
+      </div>
     </article>
 
     <!-- B) ORSZÁGOS SZÁLLÍTÁS -->
@@ -369,11 +414,12 @@
       </div>
       <span class="plabel">Országos szállítás</span>
       <h3>Postázva, biztonságosan</h3>
-      <ol class="flow">
-        <li><span class="fn">1</span><div><b>Egyeztetünk</b><p>Megbeszéljük a részleteket; igény esetén előzetes videót küldünk a kerékpárról.</p></div></li>
-        <li><span class="fn">2</span><div><b>Bedobozoljuk</b><p>Új kerékpáros dobozba, gondosan szétszerelve és körbefóliázva csomagoljuk.</p></div></li>
-        <li><span class="fn">3</span><div><b>Megérkezik</b><p>Magyar Posta, utánvéttel is. Jellemzően egy nap alatt az otthonodig.</p></div></li>
-      </ol>
+      <p class="path-essence">Új kerékpáros dobozba, gondosan szétszerelve és körbefóliázva csomagoljuk; igény esetén előzetes videóval a gépről.</p>
+      <div class="path-facts">
+        <span class="path-fact"><i>✓</i> Új dobozban, körbefóliázva</span>
+        <span class="path-fact"><i>✓</i> Magyar Posta · utánvéttel is</span>
+        <span class="path-fact"><i>✓</i> Jellemzően ~1 nap alatt nálad</span>
+      </div>
     </article>
 
   </div>
