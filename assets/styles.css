@@ -568,3 +568,15 @@ select.sort:hover,select.sort:focus{border-color:var(--copper);outline:none;box-
   .mx-fade{animation:none;opacity:1;transform:none}
   .mx-curve{transition:none}
 }
+
+/* ===== Szekció-motívumok: részenként eltérő finom háttér + lassú réz-fény ===== */
+.showroom,.delivery{position:relative}
+.showroom>.wrap,.delivery>.wrap{position:relative;z-index:1}
+.showroom::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:repeating-linear-gradient(45deg,rgba(30,32,36,.03) 0 1px,transparent 1px 15px),repeating-linear-gradient(-45deg,rgba(30,32,36,.03) 0 1px,transparent 1px 15px)}
+.delivery::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(30,32,36,.06) 1px,transparent 1.5px);background-size:21px 21px}
+.value{background-image:repeating-linear-gradient(0deg,rgba(214,212,208,.018) 0 1px,transparent 1px 27px)}
+.exp,.story,.value,.mx-concept{position:relative;overflow:hidden}
+.exp>.wrap,.story>.wrap,.value>.wrap,.mx-concept>.wrap{position:relative;z-index:1}
+.exp::after,.story::after,.value::after,.mx-concept::after{content:"";position:absolute;width:60vw;max-width:740px;height:60vw;max-height:740px;border-radius:50%;top:-22%;right:-12%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(194,137,90,.07),transparent 62%);animation:secdrift 17s ease-in-out infinite}
+@keyframes secdrift{0%,100%{transform:translate(0,0) scale(1);opacity:.78}50%{transform:translate(-6%,8%) scale(1.12);opacity:1}}
+@media(prefers-reduced-motion:reduce){.exp::after,.story::after,.value::after,.mx-concept::after{animation:none}}
