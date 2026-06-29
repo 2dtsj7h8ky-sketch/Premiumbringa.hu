@@ -3,8 +3,8 @@
 
    KÉP: `mappa` = az assets/kepek/ alatti mappa neve. A fotók sorrendben 1..10.
         A borító az 1.jpg (ha még nincs 1.jpg, automatikusan a 2.jpg-re vált).
-   LEÍRÁS (`leiras`): NE az alkatrészeket sorold — azt szólja meg, KINEK ideális
-        a gép; szakértői, tanácsadó hangon.
+   LEÍRÁS (`leiras`): NE az alkatrészeket sorold; azt szólja meg, KINEK ideális
+        a kerékpár; szakértői, tanácsadó hangon. Kerüld a kötőjelet (—) és a "gép" szót.
    FELSZERELTSÉG (`reszletek`): csoportosított, bolti stílusú spec; a `suly` külön.
    kiemelt: a főoldali hero showcase ezt a darabot mutatja (csak az első számít).
    ========================================================================= */
@@ -44,7 +44,7 @@ const KESZLET = [
     hajtas:"Shimano Deore XT 3×9", fek:"Shimano MT200 hidraulikus, 160/160",
     kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2.25",
     spec:"29″ HPA alu · RockShox XC30 100 mm · Deore XT 3×9.",
-    leiras:"Annak való, aki magabiztos, jól gördülő 29-es túra-MTB-t keres hosszabb körökre és könnyebb terepre — és nem bánja, ha kicsit ki is tűnik vele. A széles áttétel a meredekebb emelkedőket is barátságossá teszi, a villa pedig komfortossá a rosszabb utakat. Ideális hétvégi túrákra, vegyes terepre, mindennapokra. Feltűnő narancs-piros megjelenés.",
+    leiras:"Annak való, aki magabiztos, jól gördülő 29-es túra-MTB-t keres hosszabb körökre és könnyebb terepre, és nem bánja, ha kicsit ki is tűnik vele. A széles áttétel a meredekebb emelkedőket is barátságossá teszi, a villa pedig komfortossá a rosszabb utakat. Ideális hétvégi túrákra, vegyes terepre, mindennapokra. Feltűnő narancs-piros megjelenés.",
     reszletek:[
       { cs:"Váz & felfüggesztés", t:[["Váz","HPA Aluminium Lite"],["Teleszkóp","RockShox XC30 TK Coil, 100 mm, távzár"]] },
       { cs:"Hajtás", t:[["Hajtómű","Shimano FC-M2000, 40×30×22T"],["Első váltó","Shimano Alivio, 3 sebesség"],["Hátsó váltó","Shimano Deore XT, 9 sebesség"],["Fogaskoszorú","Shimano CS-HG400, 12–36T"],["Lánc","Shimano CN-HG53"]] },
@@ -58,7 +58,7 @@ const KESZLET = [
     hajtas:"Shimano Deore 2×10", fek:"Shimano MT200 hidraulikus, 180/160",
     kerek:"29″ KTM Line · Schwalbe Magic Mary / Hans Dampf",
     spec:"29″ alu hardtail · RockShox Judy 100 mm · Shimano Deore 2×10.",
-    leiras:"Egy ritkábban látott, sportos osztrák hardtail annak, aki a kiszámítható tempót és a határozott irányíthatóságot keresi — és örül egy különlegesebb névnek a megszokott helyett. A könnyű váz és a minőségi gumipár lendületes, magabiztos tekerést ad túrán és erdei ösvényen. Jó választás, ha igényes, mégis elérhető MTB-t szeretnél, ami kicsit más, mint a tömegmodellek.",
+    leiras:"Egy ritkábban látott, sportos osztrák hardtail annak, aki a kiszámítható tempót és a határozott irányíthatóságot keresi, és örül egy különlegesebb névnek a megszokott helyett. A könnyű váz és a minőségi gumipár lendületes, magabiztos tekerést ad túrán és erdei ösvényen. Jó választás, ha igényes, mégis elérhető MTB-t szeretnél, ami kicsit más, mint a tömegmodellek.",
     reszletek:[
       { cs:"Váz & felfüggesztés", t:[["Váz","Könnyű alumínium váz"],["Teleszkóp","RockShox Judy Silver, 100 mm, zárható"]] },
       { cs:"Hajtás", t:[["Hajtómű","Shimano Deore, 36-26T"],["Első váltó","Shimano Deore M4100, 2 sebesség"],["Hátsó váltó","Shimano Deore M5120, 10 sebesség"],["Fogaskoszorú","Shimano Deore M4100, 11–42T"],["Lánc","Shimano Deore HG54"]] },
@@ -90,7 +90,7 @@ const MERETEK = [
 
 /* Állapot-besorolás — a termékoldali skálához (a kereskedés saját definíciói) */
 const ALLAPOT_LEIRAS = {
-  "Újszerű": "Alig használt gép, minimális használati nyommal — közel karcmentes; ami nyom egyáltalán van, az csak közelről, célzott fényben látszik. Nagyon alacsony futás. Minden kopóalkatrész (hajtáslánc, fékbetét, gumi) gyári és alig használt, bőséges tartalékkal. A legközelebbi állapot az újhoz — annak töredékéért.",
-  "Kiváló":  "Újszerű összképet mutató, igényes gép néhány apró, használatból eredő nyommal. Az összkép friss, az esztétikai hibák minimálisak (finom kopásnyomok, esetleg egy-egy alig látható karc). Több mint fél szezont futott, de végig gondozott. Az alkatrészek gyáriak, a gumi jellemzően eredeti és jó profilú, a kopóelemek bőven a használati tartományon belül.",
-  "Jó":      "Szervizelt, kifogástalanul működő gép a használat látható nyomaival. A karcokat és kopásnyomokat nyíltan vállaljuk, és a fotókon is megmutatjuk. A kopóalkatrészeket állapot szerint felülvizsgáltuk, és ahol indokolt volt, cseréltük. Ugyanaz a műszaki felkészítés és 30 napos garancia, mint minden gépünknél — a legjobb ár-érték a kínálatban."
+  "Újszerű": "Alig használt kerékpár, minimális használati nyommal, közel karcmentes; ami nyom egyáltalán van, az csak közelről, célzott fényben látszik. Nagyon alacsony futás. Minden kopóalkatrész (hajtáslánc, fékbetét, gumi) gyári és alig használt, bőséges tartalékkal. A legközelebbi állapot az újhoz, annak töredékéért.",
+  "Kiváló":  "Újszerű összképet mutató, igényes kerékpár néhány apró, használatból eredő nyommal. Az összkép friss, az esztétikai hibák minimálisak (finom kopásnyomok, esetleg egy-egy alig látható karc). Több mint fél szezont futott, de végig gondozott. Az alkatrészek gyáriak, a gumi jellemzően eredeti és jó profilú, a kopóelemek bőven a használati tartományon belül.",
+  "Jó":      "Szervizelt, kifogástalanul működő kerékpár a használat látható nyomaival. A karcokat és kopásnyomokat nyíltan vállaljuk, és a fotókon is megmutatjuk. A kopóalkatrészeket állapot szerint felülvizsgáltuk, és ahol indokolt volt, cseréltük. Ugyanaz a műszaki felkészítés és 30 napos garancia, mint minden kerékpárunknál. A legjobb ár-érték a kínálatban."
 };

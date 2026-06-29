@@ -256,7 +256,7 @@
           <div class="psize">
             <span class="ps-lab">Gyári méretajánlás</span>
             <div class="ps-val">${b.meret ? `<em>${esc(b.meret)}</em>` : ""}${sizeRange ? `<span class="ps-range"> · kb. ${esc(sizeRange)} testmagassághoz</span>` : ""}</div>
-            <p class="ps-note">Ez a <b>gyári</b> ajánlás — az ideális méret testalkattól, üléshelyzettől és igénytől függően eltérhet. Kérdezz, és segítünk pontosan kiválasztani, majd a méretedre beállítani.</p>
+            <p class="ps-note">Ez a <b>gyári</b> ajánlás; az ideális méret testalkattól, üléshelyzettől és igénytől függően eltérhet. Kérdezz, és segítünk pontosan kiválasztani, majd a méretedre beállítani.</p>
           </div>` : "";
 
     host.innerHTML = `
@@ -266,7 +266,7 @@
         <div class="pgallery">
           <div class="pmain">${galMain}${b.allapot ? `<span class="${condClass(b.allapot)} pcond">${esc(b.allapot)}</span>` : ""}</div>
           <div class="pthumbs" id="pthumbs">${thumbs}</div>
-          <p class="preal"><span class="pr-dot"></span>A fotók a <b>tényleges</b> gépet és annak valós állapotát mutatják — a kopásnyomokat is őszintén megmutatjuk.</p>
+          <p class="preal"><span class="pr-dot"></span>A fotók a <b>tényleges</b> kerékpárt és annak valós állapotát mutatják; a kopásnyomokat is őszintén megmutatjuk.</p>
           <p class="pnote">A bringát személyesen, Debrecenben kipróbálhatod.</p>
         </div>
         <div class="pinfo">
