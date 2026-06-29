@@ -15,8 +15,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&family=Hanken+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/styles.css">
 <style>
-/* ====== Készlet - oldal-specifikus: ragadós szűrő + kártya-belépő + darabszám-pop ====== */
-.filterpanel{position:sticky;top:calc(var(--nav-h) + 14px);z-index:20}
+/* ====== Készlet - oldal-specifikus: fent maradó (nem ragadós) szűrő + kártya-belépő + darabszám-pop ====== */
+.filterpanel{position:static}
 .fp-toggle{display:none}
 .fp-body{display:block}
 #keszlet-grid .bike:nth-child(2){transition-delay:.05s}
@@ -30,7 +30,7 @@
 .count.kx-pop{animation:kxpop .45s ease}
 @keyframes kxpop{0%{transform:scale(1)}45%{transform:scale(1.09)}100%{transform:scale(1)}}
 @media(max-width:760px){
-  .filterpanel{top:calc(var(--nav-h) + 6px);padding:14px 16px}
+  .filterpanel{padding:14px 16px}
   .fp-toggle{display:flex;width:100%;align-items:center;justify-content:space-between;gap:12px;background:transparent;border:0;padding:4px 2px;cursor:pointer;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
   .fp-chevron{width:9px;height:9px;border-right:2px solid var(--ink-soft);border-bottom:2px solid var(--ink-soft);transform:rotate(45deg);transition:transform .2s;flex:none}
   .filterpanel.open .fp-chevron{transform:rotate(-135deg)}
