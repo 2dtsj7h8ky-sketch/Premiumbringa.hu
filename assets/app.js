@@ -279,7 +279,7 @@
         <div class="pgallery">
           <div class="pmain">${galMain}${b.allapot ? `<span class="${condClass(b.allapot)} pcond">${esc(b.allapot)}</span>` : ""}</div>
           <div class="pthumbs" id="pthumbs">${thumbs}</div>
-          <p class="preal"><span class="pr-dot"></span>A fotók a <b>tényleges</b> kerékpárt és annak valós állapotát mutatják; a kopásnyomokat is őszintén megmutatjuk.</p>
+          <p class="preal"><span class="pr-dot"></span><span>A fotók a <b>tényleges</b> kerékpárt és annak valós állapotát mutatják; a kopásnyomokat is őszintén megmutatjuk.</span></p>
           <p class="pnote">A bringát személyesen, Debrecenben kipróbálhatod.</p>
         </div>
         <div class="pinfo">
