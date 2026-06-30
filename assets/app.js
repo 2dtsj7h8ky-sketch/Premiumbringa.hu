@@ -252,7 +252,7 @@
       const rows = [["Váz", b.vaz], ["Villa", b.villa], ["Hajtás", b.hajtas], ["Fék", b.fek], ["Kerék", b.kerek]].filter(r => r[1]);
       specInner = rows.length ? `<table class="spec-table"><tbody>${rows.map(r => `<tr><th>${esc(r[0])}</th><td>${esc(String(r[1]))}</td></tr>`).join("")}</tbody></table>` : "";
     }
-    const specTabla = specInner ? `<details class="pspec"><summary>Teljes felszereltség &amp; gyári adatok</summary><div class="pspec-body">${specInner}</div></details>` : "";
+    const specTabla = specInner ? `<div class="pspec"><h3 class="pspec-h">Teljes felszereltség &amp; gyári adatok</h3><div class="pspec-body">${specInner}</div></div>` : "";
 
     /* Állapot-besorolás (grafikus háromfokú skála) */
     const condDesc = (typeof ALLAPOT_LEIRAS !== "undefined" && b.allapot && ALLAPOT_LEIRAS[b.allapot]) || "";

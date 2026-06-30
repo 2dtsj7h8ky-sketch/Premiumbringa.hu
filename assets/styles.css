@@ -395,10 +395,7 @@ select.sort{font-family:var(--mono);font-size:.7rem;color:var(--ink);background:
 .ps-note{margin:12px 0 0;color:var(--fog);font-size:.86rem;line-height:1.55}
 .ps-note b{color:var(--copper);font-weight:600}
 .pspec{margin:22px 0 0;border-top:1px solid var(--line)}
-.pspec summary{list-style:none;cursor:pointer;font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--haze);padding:16px 0 4px;display:flex;justify-content:space-between;align-items:center}
-.pspec summary::-webkit-details-marker{display:none}
-.pspec summary::after{content:"+";color:var(--copper);font-size:1.2rem;line-height:1}
-.pspec[open] summary::after{content:"–"}
+.pspec-h{font-family:var(--mono);font-weight:500;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--haze);padding:16px 0 4px;margin:0}
 .pspec .spec-table{margin-top:10px}
 /* kulcs-adatok csík */
 .pkeys{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:18px 0 22px}
