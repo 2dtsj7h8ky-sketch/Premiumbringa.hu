@@ -159,20 +159,6 @@
 @media(prefers-reduced-motion:reduce){
   .mtb.ph2 #mtb-frame,.mtb.ph3 #mtb-chainring,.mtb.ph3 #mtb-spokes-r,.mtb.ph3 #mtb-spokes-f,.sc-spark .spk{animation:none}
 }
-/* Rólunk - heró fogadalom-sáv (eltér a Miért éri meg számlálóitól) */
-.rl-pledges{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 26px;margin-top:32px;max-width:780px}
-.rl-pledge{border-left:2px solid var(--copper);padding:3px 0 3px 16px}
-.rl-pledge b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:106%;font-size:1.02rem;color:var(--bright);margin-bottom:6px;line-height:1.12}
-.rl-pledge span{color:var(--haze);font-size:.9rem;line-height:1.5}
-@media(max-width:680px){.rl-pledges{grid-template-columns:1fr;gap:16px}}
-/* Amit nyersz - nyereség-kártyák */
-.win-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px}
-.win-card{border:1px solid var(--line);border-radius:14px;padding:24px 26px 24px 30px;background:linear-gradient(160deg,#212327,#191a1c);position:relative;overflow:hidden}
-.win-card::before{content:"";position:absolute;left:0;top:22px;bottom:22px;width:3px;border-radius:3px;background:var(--copper)}
-.win-card b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:106%;font-size:1.04rem;color:var(--bright);margin:0 0 9px;line-height:1.18}
-.win-card span{display:block;color:var(--haze);font-size:.96rem;line-height:1.6}
-.win-sign{margin-top:26px;text-align:center;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:108%;font-size:clamp(1.15rem,2.6vw,1.55rem);color:var(--copper);letter-spacing:.01em;line-height:1.1}
-@media(max-width:680px){.win-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -196,15 +182,57 @@
   <div class="wrap">
     <nav class="crumb mx-fade" aria-label="Útvonal"><a href="index.html">Főoldal</a> <span>/</span> <b>Rólunk</b></nav>
     <span class="kick mx-fade">Rólunk</span>
-    <h1 class="mx-fade d1">A jó kerékpár közelebb van,<br><em>mint hinnéd.</em></h1>
-    <p class="mx-fade d2">Korszerű, rangos német márkák, kiváló állapotban, az új ár töredékéért. A nehezét mi végezzük el. Neked annyi marad, hogy kiválaszd, és felülj rá.</p>
-    <div class="rl-pledges mx-fade d3" aria-label="Amit nyersz">
-      <div class="rl-pledge"><b>Rangos név, elérhető áron</b><span>Korszerű technológia, amit új áron talán nem engednél meg.</span></div>
-      <div class="rl-pledge"><b>Komoly megtakarítás</b><span>A nagy értékvesztésen a gép már túl van.</span></div>
-      <div class="rl-pledge"><b>Azonnal indulhatsz</b><span>Beállítva, készen, az átvétel napján.</span></div>
-    </div>
+    <h1 class="mx-fade d1">Amit egy jó kerékpár<br><em>megnyit.</em></h1>
+    <p class="mx-fade d2">Egy jó gép nem csak abban segít, hogy eljuss valahova. Lehetőséget nyit: a korszerű, rangos kerékpár elérhető közelségbe kerül, és vele a megtakarítás, a több élmény, és egy tudatosabb döntés is.</p>
   </div>
 </header>
+
+<!-- AMIT NYERSZ -->
+<section class="value"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="kick">Amit nyersz</span>
+    <h2>Négy lehetőség, egyetlen jó döntésből</h2>
+  </div>
+  <div class="pr-grid">
+
+    <div class="pr reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="8"/><path d="M12 8v8M10 10.5h3a1.5 1.5 0 0 1 0 3h-3.2a1.6 1.6 0 0 0 0 3.2H13"/>
+      </svg>
+      <h3>Okos pénz</h3>
+      <p>A felső kategóriás, korszerű gép az új ár töredékéért lehet a tiéd. A legnagyobb értékvesztésen a kerékpár már túljutott, így te a megmaradt, valódi értéket kapod meg, lényegesen kedvezőbb áron.</p>
+    </div>
+
+    <div class="pr reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 19l5.5-8 3.5 4.5 3-4 6 7.5z"/><circle cx="17" cy="7" r="2"/>
+      </svg>
+      <h3>Több élmény</h3>
+      <p>Ugyanabból a keretből egy komolyabb géphez jutsz, és vele hosszabb távokhoz, magabiztosabb vezetéshez, gondtalanabb hétvégékhez. Az élmény a megfelelő gépen múlik, nem az árcédulán.</p>
+    </div>
+
+    <div class="pr reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 3l2.6 5.3 5.9.8-4.3 4.1 1 5.8-5.2-2.8-5.2 2.8 1-5.8-4.3-4.1 5.9-.8z"/>
+      </svg>
+      <h3>A vágyott név, közel</h3>
+      <p>Az a márka, amelyet eddig csak a kirakatban néztél, most reálisan elérhető. Cube, KTM, Trek és más rangos nevek mai generációs modelljei, kiváló, gondosan ellenőrzött állapotban.</p>
+    </div>
+
+    <div class="pr reveal">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M5 19c0-8 6-13 14-14 0 8-5 14-14 14z"/><path d="M9 15c2-3.5 5-5.5 8-6.5"/>
+      </svg>
+      <h3>Jó a környezetnek is</h3>
+      <p>Egy jó gép továbbélése érezhetően kíméli a környezetet: kevesebb gyártás, kevesebb alapanyag, kevesebb hulladék. A tudatos választás itt nem lemondás, hanem nyereség, ami jól is esik.</p>
+    </div>
+
+  </div>
+
+  <p class="reveal" style="text-align:center;margin-top:40px;font-family:var(--disp);font-weight:800;font-stretch:108%;font-size:clamp(1.1rem,2.4vw,1.5rem);color:var(--bright)">
+    A szenvedélyhez nem kell vagyon. <span style="color:var(--copper)">Csak a megfelelő gép.</span>
+  </p>
+</div></section>
 
 <!-- AMIT MINDEN KERÉKPÁRON ÁTNÉZÜNK - INTERAKTÍV MTB -->
 <section class="mtb-sec"><div class="wrap">
@@ -303,19 +331,6 @@
     <div class="mtb-detail" id="mtb-detail" aria-live="polite"></div>
     <div class="mtb-after"><p>A nehezét elvégeztük: átvilágítható eredet, beállított állapot, 30 napos garancia. A java rád vár, válaszd ki a sajátod.</p><a href="keszlet.html" class="btn btn-1">Nézd meg a készletet →</a></div>
   </div>
-</div></section>
-
-<!-- AMIT NYERSZ -->
-<section class="value"><div class="wrap">
-  <div class="sec-head reveal"><span class="kick">Amit nyersz</span><h2>Nem kevesebb. Csak okosabban.</h2>
-    <p>A nehezét levesszük a válladról. Ami marad, az tiszta nyereség.</p></div>
-  <div class="win-grid reveal">
-    <div class="win-card"><b>Korszerű technológia, rangos név</b><span>Olyan szint, amit új áron talán nem engednél meg magadnak.</span></div>
-    <div class="win-card"><b>Komoly megtakarítás</b><span>A nagy értékvesztésen a gép már túl van, a tudás viszont megmaradt.</span></div>
-    <div class="win-card"><b>Azonnal induló élmény</b><span>Beállítva, készen, az átvétel napján mehetsz vele.</span></div>
-    <div class="win-card"><b>Tudatosabb döntés</b><span>A pénztárcának és a környezetnek is jobb választás.</span></div>
-  </div>
-  <p class="win-sign reveal">Nem régi vasak. Mai generációs nevek.</p>
 </div></section>
 
 <!-- ELVEK -->
