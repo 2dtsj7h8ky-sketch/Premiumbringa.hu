@@ -436,8 +436,11 @@ footer .slogan{color:var(--fog);font-size:.94rem;max-width:32ch}
 footer .col h4{font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin:0 0 16px}
 footer .col a,footer .col .li{display:block;color:var(--haze);text-decoration:none;font-size:.9rem;margin-bottom:11px;transition:.2s}
 footer .col a:hover{color:var(--bright)}
-footer .bot{display:flex;justify-content:space-between;align-items:center;padding-top:26px;flex-wrap:wrap;gap:10px}
+footer .bot{display:flex;justify-content:space-between;align-items:center;padding-top:26px;flex-wrap:wrap;gap:10px 22px}
 footer .bot span{font-family:var(--mono);font-size:.62rem;color:var(--steel);letter-spacing:.05em}
+footer .footlegal{display:flex;gap:16px;flex-wrap:wrap}
+footer .footlegal a{font-family:var(--mono);font-size:.62rem;letter-spacing:.05em;text-transform:uppercase;color:var(--haze);text-decoration:none;transition:color .2s}
+footer .footlegal a:hover{color:var(--copper)}
 
 /* fade-in */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
