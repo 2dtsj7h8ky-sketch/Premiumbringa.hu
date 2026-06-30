@@ -28,35 +28,30 @@
 .mtb .comp{cursor:pointer;transition:opacity .35s ease,filter .35s ease}
 .mtb .comp.dim{opacity:.3}
 .mtb .comp.active{opacity:1;filter:drop-shadow(0 0 8px rgba(194,137,90,.9))}
-.mtb .tire{fill:none;stroke:#141518;stroke-linecap:round}
-.mtb .tread{fill:none;stroke:#2b2d32;stroke-dasharray:3 6}
-.mtb .tread2{fill:none;stroke:#202227;stroke-dasharray:1 7}
-.mtb .rim{fill:none;stroke:#3f434b}
-.mtb .rim2{fill:none;stroke:#6c717b}
-.mtb .spoke{fill:none;stroke:#979ca5}
+.mtb .tire{fill:none;stroke:#15161a;stroke-linecap:round}
+.mtb .tread{fill:none;stroke:#2e3035;stroke-dasharray:3 11;stroke-linecap:round}
+.mtb .rim{fill:none;stroke:#454953}
+.mtb .rim2{fill:none;stroke:#6a6f79}
+.mtb .spoke{fill:none;stroke:#5c606a}
 .mtb .hub{fill:#1a1c20}
-.mtb .hubc{fill:#b0b4ba}
-.mtb .rotor{fill:none;stroke:#b8bcc2}
-.mtb .ftube{fill:none;stroke:url(#tiGrad);stroke-linecap:round;stroke-linejoin:round}
-.mtb .fhi{fill:none;stroke:#f0f2f5;stroke-linecap:round;opacity:.5}
-.mtb .post{fill:none;stroke:#141518;stroke-linecap:round}
+.mtb .hubc{fill:#9a9ea6}
+.mtb .rotor{fill:none;stroke:#9498a0}
+.mtb .ftube{fill:none;stroke:url(#frameGrad);stroke-linecap:round;stroke-linejoin:round}
+.mtb .fhi{fill:none;stroke:#f2d6b6;stroke-linecap:round;opacity:.45}
+.mtb .post{fill:none;stroke:#15161a;stroke-linecap:round}
 .mtb .postlo{fill:none;stroke:#3a3d44;stroke-linecap:round}
-.mtb .sad{fill:#141518}
-.mtb .sadhi{fill:none;stroke:#3a3d44;stroke-width:1.4}
+.mtb .sad{fill:#15161a}
+.mtb .sadhi{fill:none;stroke:#3a3d44;stroke-width:1.5}
 .mtb .stem{fill:none;stroke:#1b1d21;stroke-linecap:round}
 .mtb .bar{fill:none;stroke:#1b1d21;stroke-linecap:round}
-.mtb .grip{fill:#141518}
-.mtb .bell{fill:#2a2d33}
-.mtb .cable{fill:none;stroke:#141518;stroke-width:1.6}
-.mtb .gbox{fill:#1a1c20;stroke:#3a3d44;stroke-width:1.5}
-.mtb .gboxhi{fill:#292c32}
-.mtb .gbolt{fill:#4a4d54}
-.mtb .cog{fill:none;stroke:#767a82}
-.mtb .crank{fill:none;stroke:#141518;stroke-linecap:round}
-.mtb .pedal{fill:#141518}
-.mtb .chain{fill:none;stroke:#7c808a;stroke-width:2.4}
+.mtb .grip{fill:#15161a}
+.mtb .cog{fill:none;stroke:#787c84}
+.mtb .cogc{fill:#787c84}
+.mtb .crank{fill:none;stroke:#15161a;stroke-linecap:round}
+.mtb .pedal{fill:#15161a}
+.mtb .chain{fill:none;stroke:#7c808a;stroke-width:2.6}
 .mtb .fcrown{fill:none;stroke:#3a3d44;stroke-linecap:round}
-.mtb .stanch{fill:none;stroke:#2b2e34;stroke-linecap:round}
+.mtb .stanch{fill:none;stroke:#9aa0a9;stroke-linecap:round}
 .mtb .forklo{fill:none;stroke:url(#floGrad);stroke-linecap:round}
 .mtb .copperdecal{stroke:var(--copper);stroke-linecap:round}
 .mtb .cal{fill:#1a1c20;stroke:#3a3d44;stroke-width:1}
@@ -243,40 +238,36 @@
       </g>
 
       <!-- PADLÓ -->
-      <line class="mtb-floor" x1="150" y1="394" x2="650" y2="394"/>
-      <line class="mtb-floor" x1="220" y1="412" x2="560" y2="412" opacity=".5"/>
+      <line class="mtb-floor" x1="140" y1="392" x2="630" y2="392"/>
+      <line class="mtb-floor" x1="210" y1="410" x2="550" y2="410" opacity=".5"/>
 
-      <g transform="translate(-40 0)">
-      <!-- SZERVIZÁLLVÁNY (2-3. fázis) -->
+      <g transform="translate(-25 0)">
       <g class="st-repair">
-        <line class="mtb-stand" x1="462" y1="394" x2="426" y2="394"/><line class="mtb-stand" x1="462" y1="394" x2="498" y2="394"/><line class="mtb-stand" x1="462" y1="388" x2="444" y2="370"/>
-        <line class="mtb-stand" x1="462" y1="394" x2="462" y2="212"/><line class="mtb-stand" x1="462" y1="216" x2="364" y2="200" style="stroke-width:4"/><circle class="mtb-clamp" cx="360" cy="200" r="11"/>
+        <line class="mtb-stand" x1="440" y1="392" x2="404" y2="392"/><line class="mtb-stand" x1="440" y1="392" x2="476" y2="392"/><line class="mtb-stand" x1="440" y1="386" x2="422" y2="368"/>
+        <line class="mtb-stand" x1="440" y1="392" x2="440" y2="224"/><line class="mtb-stand" x1="440" y1="228" x2="352" y2="212" style="stroke-width:4"/><circle class="mtb-clamp" cx="348" cy="212" r="11"/>
       </g>
-      <!-- KIÁLLÍTÓ ÁLLVÁNY (4. fázis) -->
       <g class="st-display">
-        <path class="mtb-stand" d="M247 394 L273 364 L299 394"/><line class="mtb-stand" x1="255" y1="384" x2="291" y2="384"/>
+        <path class="mtb-stand" d="M226 392 L252 364 L278 392"/><line class="mtb-stand" x1="234" y1="382" x2="270" y2="382"/>
       </g>
 
-      <g><circle class="tire" cx="273" cy="304" r="87" style="stroke-width:18"/><circle class="tread" cx="273" cy="304" r="87.5" style="stroke-width:20"/><circle class="tread2" cx="273" cy="304" r="80" style="stroke-width:6"/><circle class="rim" cx="273" cy="304" r="69" style="stroke-width:5"/><circle class="rim2" cx="273" cy="304" r="63" style="stroke-width:1.3"/><g id="mtb-spokes-r" class="spoke" style="stroke-width:1.3"><line x1="273" y1="304" x2="339.0" y2="304.0"/><line x1="273" y1="304" x2="334.0" y2="329.3"/><line x1="273" y1="304" x2="319.7" y2="350.7"/><line x1="273" y1="304" x2="298.3" y2="365.0"/><line x1="273" y1="304" x2="273.0" y2="370.0"/><line x1="273" y1="304" x2="247.7" y2="365.0"/><line x1="273" y1="304" x2="226.3" y2="350.7"/><line x1="273" y1="304" x2="212.0" y2="329.3"/><line x1="273" y1="304" x2="207.0" y2="304.0"/><line x1="273" y1="304" x2="212.0" y2="278.7"/><line x1="273" y1="304" x2="226.3" y2="257.3"/><line x1="273" y1="304" x2="247.7" y2="243.0"/><line x1="273" y1="304" x2="273.0" y2="238.0"/><line x1="273" y1="304" x2="298.3" y2="243.0"/><line x1="273" y1="304" x2="319.7" y2="257.3"/><line x1="273" y1="304" x2="334.0" y2="278.7"/></g><circle class="hub" cx="273" cy="304" r="9"/><circle class="hubc" cx="273" cy="304" r="3.5"/></g>
-      <circle class="rotor" cx="273" cy="304" r="26" style="stroke-width:2"/><circle class="rotor" cx="273" cy="304" r="19" style="stroke-width:2;stroke-dasharray:2 5"/><circle class="rotor" cx="273" cy="304" r="11" style="stroke-width:1.6"/><rect class="cal" x="296" y="285" width="9" height="14" rx="2"/>
+      <g><circle class="tire" cx="252" cy="302" r="84" style="stroke-width:19"/><circle class="tread" cx="252" cy="302" r="84" style="stroke-width:22"/><circle class="rim" cx="252" cy="302" r="66" style="stroke-width:5"/><circle class="rim2" cx="252" cy="302" r="60" style="stroke-width:1.5"/><g id="mtb-spokes-r" class="spoke" style="stroke-width:1.6"><line x1="252" y1="302" x2="315.0" y2="302.0"/><line x1="252" y1="302" x2="306.6" y2="333.5"/><line x1="252" y1="302" x2="283.5" y2="356.6"/><line x1="252" y1="302" x2="252.0" y2="365.0"/><line x1="252" y1="302" x2="220.5" y2="356.6"/><line x1="252" y1="302" x2="197.4" y2="333.5"/><line x1="252" y1="302" x2="189.0" y2="302.0"/><line x1="252" y1="302" x2="197.4" y2="270.5"/><line x1="252" y1="302" x2="220.5" y2="247.4"/><line x1="252" y1="302" x2="252.0" y2="239.0"/><line x1="252" y1="302" x2="283.5" y2="247.4"/><line x1="252" y1="302" x2="306.6" y2="270.5"/></g><circle class="hub" cx="252" cy="302" r="8"/><circle class="hubc" cx="252" cy="302" r="3"/></g>
+      <circle class="rotor" cx="252" cy="302" r="24" style="stroke-width:2"/><circle class="rotor" cx="252" cy="302" r="17" style="stroke-width:2;stroke-dasharray:2 5"/><rect class="cal" x="274" y="282" width="10" height="15" rx="2"/>
 
       <g>
-        <ellipse class="gbox" cx="394" cy="356" rx="36" ry="27"/><ellipse class="gboxhi" cx="387" cy="348" rx="22" ry="12"/><circle class="gbolt" cx="394" cy="356" r="3"/>
-        <circle id="mtb-chainring" class="cog" cx="394" cy="356" r="17" style="stroke-width:2.4;stroke-dasharray:2.5 4"/><line class="crank" x1="394" y1="356" x2="418" y2="392" style="stroke-width:8"/><rect class="pedal" x="410" y="388" width="20" height="7" rx="2"/>
-        <circle class="cog" cx="273" cy="304" r="16" style="stroke-width:2.6"/><circle class="cog" cx="273" cy="304" r="10" style="stroke-width:2"/><line class="chain" x1="377" y1="345" x2="285" y2="293"/><line class="chain" x1="289" y1="317" x2="380" y2="368"/>
+        <circle id="mtb-chainring" class="cog" cx="380" cy="318" r="20" style="stroke-width:3;stroke-dasharray:2.5 4"/><circle class="cogc" cx="380" cy="318" r="6"/><line class="crank" x1="380" y1="318" x2="402" y2="356" style="stroke-width:9"/><rect class="pedal" x="394" y="352" width="21" height="8" rx="2"/>
+        <circle class="cog" cx="252" cy="302" r="15" style="stroke-width:2.8"/><circle class="cog" cx="252" cy="302" r="9" style="stroke-width:2"/><line class="chain" x1="366" y1="312" x2="265" y2="293"/><line class="chain" x1="264" y1="314" x2="368" y2="330"/>
       </g>
 
       <g id="mtb-frame">
-        <line class="ftube" x1="388" y1="352" x2="360" y2="190" style="stroke-width:14"/><line class="ftube" x1="388" y1="352" x2="532" y2="250" style="stroke-width:16"/><line class="ftube" x1="360" y1="190" x2="517" y2="198" style="stroke-width:13"/><line class="ftube" x1="514" y1="194" x2="534" y2="250" style="stroke-width:17"/><line class="ftube" x1="388" y1="352" x2="277" y2="304" style="stroke-width:9"/><line class="ftube" x1="362" y1="200" x2="277" y2="304" style="stroke-width:8"/><line class="fhi" x1="388" y1="351" x2="360" y2="189" style="stroke-width:4"/><line class="fhi" x1="388" y1="351" x2="532" y2="249" style="stroke-width:5"/><line class="fhi" x1="360" y1="189" x2="516" y2="197" style="stroke-width:4"/>
-        <line class="post" x1="360" y1="190" x2="346" y2="150" style="stroke-width:8"/><line class="postlo" x1="361" y1="198" x2="353" y2="176" style="stroke-width:10"/>
-        <path class="sad" d="M318 150 Q346 140 382 147 Q374 161 346 162 Q327 162 318 150 Z"/><path class="sadhi" d="M323 149 Q346 142 376 147"/>
-        <line class="stem" x1="518" y1="198" x2="542" y2="184" style="stroke-width:8"/><path class="bar" d="M543 184 Q556 175 567 180" style="stroke-width:7"/><rect class="grip" x="556" y="182" width="15" height="9" rx="4.5"/><circle class="bell" cx="546" cy="176" r="4"/>
-        <path class="cable" d="M550 186 Q576 196 580 232 Q581 252 562 264"/>
+        <line class="ftube" x1="380" y1="318" x2="348" y2="212" style="stroke-width:13"/><line class="ftube" x1="380" y1="318" x2="508" y2="226" style="stroke-width:17"/><line class="ftube" x1="348" y1="212" x2="480" y2="174" style="stroke-width:12"/><line class="ftube" x1="478" y1="172" x2="510" y2="228" style="stroke-width:16"/><line class="ftube" x1="380" y1="318" x2="256" y2="302" style="stroke-width:11"/><line class="ftube" x1="350" y1="220" x2="256" y2="302" style="stroke-width:9"/><line class="fhi" x1="380" y1="317" x2="348" y2="211" style="stroke-width:5"/><line class="fhi" x1="380" y1="317" x2="508" y2="225" style="stroke-width:6"/><line class="fhi" x1="348" y1="211" x2="480" y2="173" style="stroke-width:4"/><line class="fhi" x1="380" y1="317" x2="256" y2="301" style="stroke-width:4"/>
+        <line class="post" x1="348" y1="212" x2="330" y2="156" style="stroke-width:9"/><line class="postlo" x1="349" y1="218" x2="339" y2="188" style="stroke-width:11"/>
+        <path class="sad" d="M302 154 Q330 144 368 151 Q360 166 330 167 Q310 167 302 154 Z"/><path class="sadhi" d="M307 153 Q330 146 362 151"/>
+        <line class="stem" x1="480" y1="174" x2="506" y2="159" style="stroke-width:9"/><path class="bar" d="M507 159 Q521 150 533 155 L538 166" style="stroke-width:8"/><rect class="grip" x="524" y="156" width="15" height="10" rx="5"/>
       </g>
 
       <g id="mtb-front">
-        <line class="fcrown" x1="523" y1="251" x2="543" y2="251" style="stroke-width:9"/><line class="stanch" x1="535" y1="252" x2="550" y2="276" style="stroke-width:8"/><line class="forklo" x1="548" y1="273" x2="568" y2="305" style="stroke-width:13"/><line class="copperdecal" x1="556" y1="284" x2="563" y2="298" style="stroke-width:3"/>
-        <circle class="tire" cx="568" cy="304" r="87" style="stroke-width:18"/><circle class="tread" cx="568" cy="304" r="87.5" style="stroke-width:20"/><circle class="tread2" cx="568" cy="304" r="80" style="stroke-width:6"/><circle class="rim" cx="568" cy="304" r="69" style="stroke-width:5"/><circle class="rim2" cx="568" cy="304" r="63" style="stroke-width:1.3"/><g id="mtb-spokes-f" class="spoke" style="stroke-width:1.3"><line x1="568" y1="304" x2="634.0" y2="304.0"/><line x1="568" y1="304" x2="629.0" y2="329.3"/><line x1="568" y1="304" x2="614.7" y2="350.7"/><line x1="568" y1="304" x2="593.3" y2="365.0"/><line x1="568" y1="304" x2="568.0" y2="370.0"/><line x1="568" y1="304" x2="542.7" y2="365.0"/><line x1="568" y1="304" x2="521.3" y2="350.7"/><line x1="568" y1="304" x2="507.0" y2="329.3"/><line x1="568" y1="304" x2="502.0" y2="304.0"/><line x1="568" y1="304" x2="507.0" y2="278.7"/><line x1="568" y1="304" x2="521.3" y2="257.3"/><line x1="568" y1="304" x2="542.7" y2="243.0"/><line x1="568" y1="304" x2="568.0" y2="238.0"/><line x1="568" y1="304" x2="593.3" y2="243.0"/><line x1="568" y1="304" x2="614.7" y2="257.3"/><line x1="568" y1="304" x2="629.0" y2="278.7"/></g><circle class="hub" cx="568" cy="304" r="9"/><circle class="hubc" cx="568" cy="304" r="3.5"/><circle class="rotor" cx="568" cy="304" r="26" style="stroke-width:2"/><circle class="rotor" cx="568" cy="304" r="19" style="stroke-width:2;stroke-dasharray:2 5"/><circle class="rotor" cx="568" cy="304" r="11" style="stroke-width:1.6"/><rect class="cal" x="557" y="277" width="9" height="15" rx="2"/>
+        <line class="fcrown" x1="500" y1="227" x2="516" y2="227" style="stroke-width:9"/><line class="stanch" x1="508" y1="228" x2="530" y2="266" style="stroke-width:9"/><line class="forklo" x1="528" y1="263" x2="558" y2="303" style="stroke-width:14"/><path class="forklo" d="M520 280 Q536 274 542 288" style="stroke-width:5;fill:none"/><line class="copperdecal" x1="536" y1="278" x2="544" y2="296" style="stroke-width:3.5"/>
+        <circle class="tire" cx="558" cy="302" r="84" style="stroke-width:19"/><circle class="tread" cx="558" cy="302" r="84" style="stroke-width:22"/><circle class="rim" cx="558" cy="302" r="66" style="stroke-width:5"/><circle class="rim2" cx="558" cy="302" r="60" style="stroke-width:1.5"/><g id="mtb-spokes-f" class="spoke" style="stroke-width:1.6"><line x1="558" y1="302" x2="621.0" y2="302.0"/><line x1="558" y1="302" x2="612.6" y2="333.5"/><line x1="558" y1="302" x2="589.5" y2="356.6"/><line x1="558" y1="302" x2="558.0" y2="365.0"/><line x1="558" y1="302" x2="526.5" y2="356.6"/><line x1="558" y1="302" x2="503.4" y2="333.5"/><line x1="558" y1="302" x2="495.0" y2="302.0"/><line x1="558" y1="302" x2="503.4" y2="270.5"/><line x1="558" y1="302" x2="526.5" y2="247.4"/><line x1="558" y1="302" x2="558.0" y2="239.0"/><line x1="558" y1="302" x2="589.5" y2="247.4"/><line x1="558" y1="302" x2="612.6" y2="270.5"/></g><circle class="hub" cx="558" cy="302" r="8"/><circle class="hubc" cx="558" cy="302" r="3"/><circle class="rotor" cx="558" cy="302" r="24" style="stroke-width:2"/><circle class="rotor" cx="558" cy="302" r="17" style="stroke-width:2;stroke-dasharray:2 5"/><rect class="cal" x="535" y="274" width="10" height="16" rx="2"/>
       </g>
       </g>
 
