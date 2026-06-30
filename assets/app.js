@@ -75,14 +75,27 @@
   /* ---- NAV: mobilmenü ---- */
   function initNav(){
     const burger = $(".burger"), menu = $("#menu");
-    if(!burger || !menu) return;
-    const close = () => { menu.classList.remove("open"); burger.setAttribute("aria-expanded","false"); };
-    burger.addEventListener("click", () => {
-      const open = menu.classList.toggle("open");
-      burger.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    menu.addEventListener("click", e => { if(e.target.closest("a")) close(); });
-    document.addEventListener("keydown", e => { if(e.key === "Escape") close(); });
+    const dd = $(".nav-dd"), ddt = dd && dd.querySelector(".nav-dd-t");
+    const closeDD = () => { if(dd){ dd.classList.remove("open"); if(ddt) ddt.setAttribute("aria-expanded","false"); } };
+    if(ddt){
+      ddt.addEventListener("click", e => {
+        e.stopPropagation();
+        const o = dd.classList.toggle("open");
+        ddt.setAttribute("aria-expanded", o ? "true" : "false");
+      });
+      document.addEventListener("click", e => { if(dd && !dd.contains(e.target)) closeDD(); });
+    }
+    if(burger && menu){
+      const close = () => { menu.classList.remove("open"); burger.setAttribute("aria-expanded","false"); };
+      burger.addEventListener("click", () => {
+        const open = menu.classList.toggle("open");
+        burger.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      menu.addEventListener("click", e => { if(e.target.closest("a")){ close(); closeDD(); } });
+      document.addEventListener("keydown", e => { if(e.key === "Escape"){ close(); closeDD(); } });
+    } else {
+      document.addEventListener("keydown", e => { if(e.key === "Escape") closeDD(); });
+    }
   }
 
   /* ---- Logó-jelvény (bringa-jel) a fejléc szóvédjegye mellé ---- */
