@@ -44,19 +44,36 @@
 .mtb .dark{fill:#202227}
 .mtb .darkln{fill:none;stroke:#202227;stroke-linecap:round}
 .mtb .copperdecal{stroke:var(--copper);stroke-linecap:round}
-.mtb.sel-fork #mtb-front{animation:mtbBob 1.5s ease-in-out infinite}
-@keyframes mtbBob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
-.mtb.sel-wheel #mtb-spokes-r,.mtb.sel-wheel #mtb-spokes-f{animation:mtbSpin 3.4s linear infinite;transform-box:fill-box;transform-origin:center}
-@keyframes mtbSpin{to{transform:rotate(360deg)}}
-.mtb.sel-drive #mtb-chainring{animation:mtbSpin 2.4s linear infinite;transform-box:fill-box;transform-origin:center}
-.mtb.sel-brake .mtb-rotor{animation:mtbPulse 1.2s ease-in-out infinite}
-@keyframes mtbPulse{0%,100%{opacity:1}50%{opacity:.4}}
-.mtb.sel-frame #mtb-frame{animation:mtbGlow 2.2s ease-in-out infinite}
+/* fázis-animációk */
+.mtb.ph1 #mtb-frame{animation:mtbGlow 2.2s ease-in-out infinite}
 @keyframes mtbGlow{0%,100%{filter:drop-shadow(0 0 8px rgba(194,137,90,.9))}50%{filter:drop-shadow(0 0 13px rgba(237,235,231,.95))}}
-.mtb-ctrl{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
-.mtb-btn{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--haze);background:transparent;border:1px solid var(--line);border-radius:30px;padding:10px 16px;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
-.mtb-btn:hover{border-color:var(--copper);color:var(--copper)}
-.mtb-btn.on{background:var(--copper);color:#15171a;border-color:var(--copper)}
+.mtb.ph2 #mtb-chainring{animation:mtbSpin 2.4s linear infinite;transform-box:fill-box;transform-origin:center}
+.mtb.ph2 .mtb-rotor{animation:mtbPulse 1.2s ease-in-out infinite}
+@keyframes mtbPulse{0%,100%{opacity:1}50%{opacity:.4}}
+.mtb.ph3 #mtb-spokes-r,.mtb.ph3 #mtb-spokes-f{animation:mtbSpin 3.4s linear infinite;transform-box:fill-box;transform-origin:center}
+@keyframes mtbSpin{to{transform:rotate(360deg)}}
+.mtb.ph3 #mtb-front{animation:mtbBob 1.5s ease-in-out infinite}
+@keyframes mtbBob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+.mtb-done{opacity:0;transform:scale(.7);transform-box:fill-box;transform-origin:center;transition:opacity .45s ease,transform .5s cubic-bezier(.2,1.5,.4,1)}
+.mtb.ph4 .mtb-done{opacity:1;transform:scale(1)}
+.mtb-done text{fill:var(--copper);font-family:var(--mono);font-size:13px;letter-spacing:.13em;font-weight:600}
+.ph-nav{margin-top:26px}
+.ph-track{display:flex;gap:4px}
+.ph-step{flex:1;position:relative;background:none;border:0;cursor:pointer;padding:14px 6px 0;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.ph-step::before{content:"";position:absolute;top:30px;left:-50%;width:100%;height:2px;background:var(--line);z-index:0}
+.ph-step:first-child::before{display:none}
+.ph-step.done::before,.ph-step.on::before{background:var(--copper-deep)}
+.ph-n{position:relative;z-index:1;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--line);background:#1b1d20;color:var(--fog);font-family:var(--disp);font-weight:800;font-size:.9rem;display:grid;place-items:center;transition:.3s}
+.ph-step.on .ph-n{border-color:var(--copper);background:var(--copper);color:#15171a}
+.ph-step.done .ph-n{border-color:var(--copper-deep);color:var(--copper)}
+.ph-t{font-family:var(--mono);font-size:.55rem;letter-spacing:.05em;text-transform:uppercase;color:var(--fog);line-height:1.45;max-width:15ch;transition:color .3s}
+.ph-step.on .ph-t{color:var(--copper)}
+.ph-bar{margin-top:16px;height:3px;border-radius:2px;background:var(--line);overflow:hidden}
+.ph-bar-f{display:block;height:100%;border-radius:2px;background:linear-gradient(90deg,var(--copper-deep),var(--copper));transform:scaleX(0);transform-origin:left}
+.ph-bar-f.go{animation:phbar 5200ms linear forwards}
+@keyframes phbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:560px){.ph-t{font-size:.46rem;letter-spacing:.01em}.ph-step{padding-top:10px}}
+@media(prefers-reduced-motion:reduce){.ph-bar-f.go{animation:none;transform:scaleX(1)}}
 .mtb-detail{margin-top:20px;min-height:54px;display:flex;align-items:flex-start;gap:14px;border-top:1px solid var(--line);padding-top:18px}
 .mtb-detail .num{font-family:var(--disp);font-weight:800;font-size:1.6rem;color:var(--copper);line-height:.9;flex:none}
 .mtb-detail p{color:var(--haze);font-size:1rem;line-height:1.6;margin:0}
@@ -117,7 +134,7 @@
 @media(max-width:760px){.gar-cov{grid-template-columns:1fr}}
 @media(max-width:540px){.gar-hero{grid-template-columns:1fr;gap:16px}.gh-stat{flex-direction:row;align-items:baseline;gap:10px}}
 @media(prefers-reduced-motion:reduce){
-  .mtb.sel-fork #mtb-front,.mtb.sel-wheel #mtb-spokes-r,.mtb.sel-wheel #mtb-spokes-f,.mtb.sel-drive #mtb-chainring,.mtb.sel-brake .mtb-rotor,.mtb.sel-frame #mtb-frame{animation:none}
+  .mtb.ph1 #mtb-frame,.mtb.ph2 #mtb-chainring,.mtb.ph2 .mtb-rotor,.mtb.ph3 #mtb-spokes-r,.mtb.ph3 #mtb-spokes-f,.mtb.ph3 #mtb-front{animation:none}
 }
 </style>
 </head>
@@ -155,10 +172,10 @@
 
 <!-- AMIT MINDEN KERÉKPÁRON ÁTNÉZÜNK - INTERAKTÍV MTB -->
 <section class="mtb-sec"><div class="wrap">
-  <div class="sec-head reveal"><span class="kick">A mércénk</span><h2>Amit minden kerékpáron átnézünk</h2>
-    <p>Minden kerékpárt úgy adunk át, hogy azonnal nyeregbe pattanhass: <b>átnézve, felfrissítve és beállítva</b>. Nem ígérünk csodát és nem építjük újra a bringát, de ami a biztonságos, élvezetes tekeréshez kell, azt rendben tudjuk. Vidd a kurzort a részekre, vagy válassz alább.</p></div>
+  <div class="sec-head reveal"><span class="kick">A folyamat</span><h2>Négy lépésben, menetkészre</h2>
+    <p>Nem egyszerű felújítás, hanem megújítás. Minden kerékpárt négy lépésben készítünk fel a sok kilométerre, a bolti állapothoz a lehető legközelebb. A folyamat magától halad; léptetni kézzel is tudsz.</p></div>
   <div class="mtb-stage reveal">
-    <svg class="mtb sel-fork" viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Interaktív MTB szervizállványon: teleszkóp, kerék és agy, hajtás, fék és váz átnézett pontjai.">
+    <svg class="mtb ph1" viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="MTB szervizállványon, a felkészítés négy lépésében: szétszerelés és felület, hajtás és fék, összeszerelés és kalibrálás, végül menetkész állapot.">
       <defs>
         <linearGradient id="frameGrad" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0" stop-color="#D89456"/>
@@ -270,16 +287,25 @@
         <circle class="mtb-clamp" cx="356" cy="218" r="12"/>
         <path class="mtb-stand" d="M346 212 a12 12 0 0 1 20 2" style="stroke-width:3"/>
       </g>
+      <g transform="translate(388 96)">
+        <g id="mtb-done" class="mtb-done">
+          <circle r="30" fill="#C2895A"/>
+          <path d="M-13 1 L-4 11 L14 -11" fill="none" stroke="#15171a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <text y="52" text-anchor="middle">MENETKÉSZ</text>
+        </g>
+      </g>
     </svg>
-    <div class="mtb-ctrl" role="group" aria-label="Alkatrész kiválasztása">
-      <button class="mtb-btn" type="button" data-part="fork" aria-pressed="true">Teleszkóp</button>
-      <button class="mtb-btn" type="button" data-part="wheel" aria-pressed="false">Kerék &amp; agy</button>
-      <button class="mtb-btn" type="button" data-part="drive" aria-pressed="false">Hajtás</button>
-      <button class="mtb-btn" type="button" data-part="brake" aria-pressed="false">Fék</button>
-      <button class="mtb-btn" type="button" data-part="frame" aria-pressed="false">Váz</button>
+    <div class="ph-nav" role="group" aria-label="A felkészítés lépései">
+      <div class="ph-track">
+        <button class="ph-step on" type="button" data-ph="0" aria-pressed="true"><span class="ph-n">1</span><span class="ph-t">Szétszerelés &amp; felület</span></button>
+        <button class="ph-step" type="button" data-ph="1" aria-pressed="false"><span class="ph-n">2</span><span class="ph-t">Hajtás &amp; fék</span></button>
+        <button class="ph-step" type="button" data-ph="2" aria-pressed="false"><span class="ph-n">3</span><span class="ph-t">Összeszerelés &amp; kalibrálás</span></button>
+        <button class="ph-step" type="button" data-ph="3" aria-pressed="false"><span class="ph-n">4</span><span class="ph-t">Menetkész &amp; kihirdetve</span></button>
+      </div>
+      <div class="ph-bar"><span class="ph-bar-f" id="ph-bar-f"></span></div>
     </div>
     <div class="mtb-detail" id="mtb-detail" aria-live="polite"></div>
-    <p class="mtb-hint"><b>Esztétikai felfrissítés:</b> mélytisztítás és ápolás. <b>Mechanikai felkészítés:</b> ellenőrzés, tisztítás és pontos beállítás, és ahol indokolt, csere vagy korrekció. Amelyik kerékpár nem üti meg a mércénket, be sem kerül a készletbe.</p>
+    <p class="mtb-hint"><b>Nem felújítás, hanem megújítás.</b> Minden kerékpárt felkészítünk a sok kilométerre, a bolti állapothoz a lehető legközelebb. Amelyik nem üti meg a mércénket, be sem kerül a készletbe.</p>
   </div>
 </div></section>
 
@@ -398,42 +424,48 @@
   var stage = document.querySelector('.mtb');
   if(!stage) return;
   var comps = Array.prototype.slice.call(stage.querySelectorAll('.comp'));
-  var btns = Array.prototype.slice.call(document.querySelectorAll('.mtb-btn'));
+  var steps = Array.prototype.slice.call(document.querySelectorAll('.ph-step'));
   var detail = document.getElementById('mtb-detail');
-  var DATA = {
-    fork:{n:'01',pillar:'Mechanikai',t:'Teleszkóp',d:'A villa működését és simaságát ellenőrizzük és tisztítjuk; ahol indokolt, korrigáljuk. Ami nem üti meg a szintet, az nem kerül a polcra.'},
-    wheel:{n:'02',pillar:'Mechanikai',t:'Kerék és agy',d:'Átnézzük a kerék központosságát és az agyak forgását, a sima, megbízható gördülésre hangolva.'},
-    drive:{n:'03',pillar:'Mechanikai',t:'Hajtás',d:'A hajtást megtisztítjuk, a váltást pontosan beállítjuk; a kopó elemeket átnézzük, és ahol kell, cseréljük.'},
-    brake:{n:'04',pillar:'Mechanikai',t:'Fék',d:'A fékek működését és kopását ellenőrizzük és beállítjuk; a biztonság nálunk nem alku tárgya.'},
-    frame:{n:'05',pillar:'Esztétikai',t:'Váz & megjelenés',d:'A vázat és a kontaktpontokat mélytisztítjuk és ápoljuk; a kerékpár úgy néz ki és úgy szól, ahogy elvárod.'}
-  };
-  function select(part){
-    if(!DATA[part]) return;
-    stage.setAttribute('class','mtb sel-'+part);
+  var bar = document.getElementById('ph-bar-f');
+  var box = document.querySelector('.mtb-stage');
+  var rm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var PH = [
+    {n:'01',t:'Szétszerelés & felület',d:'Szétszedjük, alapos mélytisztítást kap, a vázat pedig védőréteggel látjuk el.',parts:['frame']},
+    {n:'02',t:'Hajtás & fék',d:'A hajtást zsírtalanítjuk, a fékrendszert kitisztítjuk; ahol indokolt, alkatrészt cserélünk.',parts:['drive','brake']},
+    {n:'03',t:'Összeszerelés & kalibrálás',d:'Visszaépítjük, finomhangoljuk és pontosan kalibráljuk: kerekek, váltó és fék a helyére.',parts:['wheel','fork']},
+    {n:'04',t:'Menetkész & kihirdetve',d:'Bolti állapothoz közeli, ellenőrzött és menetkész. Felkerül a készletbe, hogy téged vigyen.',parts:['frame','drive','brake','wheel','fork']}
+  ];
+  var cur = -1;
+  function show(i){
+    cur = i;
+    var ph = PH[i];
+    stage.setAttribute('class','mtb ph'+(i+1));
     comps.forEach(function(c){
-      var on = c.getAttribute('data-part') === part;
+      var on = ph.parts.indexOf(c.getAttribute('data-part')) > -1;
       c.classList.toggle('active', on);
       c.classList.toggle('dim', !on);
     });
-    btns.forEach(function(b){
-      var on = b.getAttribute('data-part') === part;
-      b.classList.toggle('on', on);
-      b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    steps.forEach(function(s, si){
+      s.classList.toggle('on', si === i);
+      s.classList.toggle('done', si < i);
+      s.setAttribute('aria-pressed', si === i ? 'true' : 'false');
     });
-    var x = DATA[part];
-    detail.innerHTML = '<span class="num">'+x.n+'</span><div class="col"><span class="pill">'+x.pillar+'</span><p><b>'+x.t+'.</b> '+x.d+'</p></div>';
+    detail.innerHTML = '<span class="num">'+ph.n+'</span><div class="col"><p><b>'+ph.t+'.</b> '+ph.d+'</p></div>';
+    if(bar && !rm){ bar.classList.remove('go'); void bar.offsetWidth; bar.classList.add('go'); }
   }
-  btns.forEach(function(b){
-    var p = b.getAttribute('data-part');
-    b.addEventListener('click', function(){ select(p); });
-    b.addEventListener('mouseenter', function(){ select(p); });
-    b.addEventListener('focus', function(){ select(p); });
+  if(bar && !rm){
+    bar.addEventListener('animationend', function(){ show((cur+1) % PH.length); });
+  }
+  steps.forEach(function(s, si){
+    s.addEventListener('click', function(){ show(si); });
+    s.addEventListener('mouseenter', function(){ show(si); });
+    s.addEventListener('focus', function(){ show(si); });
   });
-  comps.forEach(function(c){
-    var p = c.getAttribute('data-part');
-    c.addEventListener('mouseenter', function(){ select(p); });
-  });
-  select('fork');
+  if(box && bar && !rm){
+    box.addEventListener('mouseenter', function(){ bar.style.animationPlayState = 'paused'; });
+    box.addEventListener('mouseleave', function(){ bar.style.animationPlayState = 'running'; });
+  }
+  show(0);
 })();
 </script>
 </body>
