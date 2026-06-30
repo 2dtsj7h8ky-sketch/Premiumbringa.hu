@@ -81,6 +81,43 @@
 .pr h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:108%;font-size:1.12rem;color:var(--bright);margin:0 0 9px}
 .pr p{color:var(--haze);font-size:.95rem;line-height:1.6;margin:0}
 @media(max-width:760px){.pr-grid{grid-template-columns:1fr}}
+/* ====== Rólunk - garancia (három réteg) ====== */
+.garancia .wrap{display:block}
+.gar-head{max-width:660px;margin-bottom:42px}
+.gar-head .kick{display:block;margin-bottom:14px}
+.gar-head h2{font-size:clamp(1.7rem,3.4vw,2.3rem);color:var(--bright);margin:0 0 16px}
+.gar-head p{color:var(--haze);font-size:1.05rem;line-height:1.7;font-weight:300;margin:0;max-width:60ch}
+.gar-layers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gar-layer{position:relative;border:1px solid var(--line);border-radius:16px;padding:26px 24px;background:linear-gradient(160deg,#212327,#191a1c);display:flex;flex-direction:column}
+.gar-layer .ln{font-family:var(--mono);font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--copper-deep)}
+.gar-badge{margin:13px 0;font-family:var(--disp);font-weight:800;font-stretch:110%;font-size:1.55rem;color:var(--bright);line-height:1}
+.gar-badge span{font-size:.9rem;color:var(--fog);font-weight:600;margin-left:4px}
+.gar-layer h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:106%;font-size:1.02rem;color:var(--bright);margin:0 0 10px}
+.gar-layer p{color:var(--haze);font-size:.92rem;line-height:1.6;margin:0}
+.gar-layer.own{border-color:var(--copper);background:linear-gradient(160deg,#26201b,#1b1714)}
+.gar-layer.own .ln{color:var(--copper)}
+.gar-layer.own .gar-badge{color:var(--copper)}
+.gar-tag{position:absolute;top:0;right:18px;transform:translateY(-50%);font-family:var(--mono);font-size:.5rem;letter-spacing:.12em;text-transform:uppercase;color:#15171a;background:var(--copper);padding:4px 9px;border-radius:20px}
+.gar-cov{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.gar-col{border:1px solid var(--line);border-radius:16px;padding:24px 26px;background:var(--carbon-2)}
+.gar-col h4{display:flex;align-items:center;gap:11px;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 16px}
+.gar-col.yes h4{color:var(--copper)}
+.gar-col.no h4{color:var(--fog)}
+.gar-col h4 i{width:21px;height:21px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:.7rem;flex:none}
+.gar-col.yes h4 i{background:rgba(194,137,90,.16);color:var(--copper);border:1px solid var(--copper-deep)}
+.gar-col.no h4 i{background:rgba(126,129,137,.12);color:var(--fog);border:1px solid var(--line)}
+.gar-col ul{list-style:none;margin:0;padding:0}
+.gar-col li{position:relative;padding-left:20px;margin-bottom:11px;color:var(--haze);font-size:.95rem;line-height:1.55}
+.gar-col li:last-child{margin-bottom:0}
+.gar-col li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%}
+.gar-col.yes li::before{background:var(--copper)}
+.gar-col.no li::before{background:var(--steel)}
+.gar-foot{margin-top:18px;border:1px solid var(--line);border-radius:16px;padding:24px 28px;background:var(--carbon-2);display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px;justify-content:space-between}
+.gar-foot .gf-txt{flex:1 1 380px}
+.gar-foot h4{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:106%;font-size:1.05rem;color:var(--bright);margin:0 0 8px}
+.gar-foot p{color:var(--haze);font-size:.95rem;line-height:1.6;margin:0}
+.gar-foot a.gf-formal{color:var(--copper)}
+@media(max-width:760px){.gar-layers{grid-template-columns:1fr}.gar-cov{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){
   .mtb.sel-fork #mtb-front,.mtb.sel-wheel #mtb-spokes-r,.mtb.sel-wheel #mtb-spokes-f,.mtb.sel-drive #mtb-chainring,.mtb.sel-brake .mtb-rotor,.mtb.sel-frame #mtb-frame{animation:none}
 }
@@ -293,19 +330,60 @@
 </div></section>
 
 <!-- GARANCIA -->
-<section class="story" id="garancia"><div class="wrap">
-  <div class="reveal">
-    <span class="kick">Garancia & feltételek</span>
-    <h2 style="margin-top:14px">30 napos garancia, írásban</h2>
-    <p><strong>Mit jelent?</strong> Minden megvásárolt kerékpárra 30 napra érvényes garanciát adunk arra az állapotra, amelyben átadtuk: a működő hajtásra, fékre és csapágyakra. Ha ezen belül anyag- vagy szerelési hiba jelentkezik, jelezd: megvizsgáljuk és rendezzük.</p>
-    <p><strong>Mire nem terjed ki?</strong> A rendeltetésszerű használatból eredő kopásra (gumi, fékbetét, lánc), a sérülésekre és a nem rendeltetésszerű használatra.</p>
-    <p>Minden kerékpárt átnézünk, megtisztítunk és beállítunk az átadás előtt; a kérdéseidre a vásárlás után is válaszolunk. A részletes garanciafeltételeket az átvételkor, írásban rögzítjük, és előtte is nyugodtan kérdezz bármit.</p>
+<section class="story garancia" id="garancia"><div class="wrap">
+  <div class="gar-head reveal">
+    <span class="kick">A fedezeted</span>
+    <h2>Megvédünk, miután a tiéd lett</h2>
+    <p>A vásárlásod nem ér véget az átadásnál. Három réteg áll mögötted: a törvény, a gyártó, és mi magunk is.</p>
   </div>
-  <div class="story-card reveal">
-    <div class="row"><span class="k">Garancia</span><span class="vv">30 nap · <em>írásban</em></span></div>
-    <div class="row"><span class="k">Állapot-skála</span><span class="vv">Újszerű · Kiváló · <em>Jó</em></span></div>
-    <div class="row"><span class="k">Szállítás</span><span class="vv">Magyar Posta · <em>utánvét</em></span></div>
-    <div class="row"><span class="k">Átvétel</span><span class="vv">Debrecen, egyeztetéssel</span></div>
+
+  <div class="gar-layers reveal">
+    <div class="gar-layer">
+      <span class="ln">01 · Törvény</span>
+      <div class="gar-badge">1 <span>év</span></div>
+      <h3>Kellékszavatosság</h3>
+      <p>A teljesítéskor már meglévő hibákért a törvény szerint egy évig helytállunk. Ez minden vásárlót megillet.</p>
+    </div>
+    <div class="gar-layer">
+      <span class="ln">02 · Gyártó</span>
+      <div class="gar-badge">2 <span>év</span></div>
+      <h3>Termékszavatosság</h3>
+      <p>Gyári alkatrész hibájára a gyártóval szemben élhetsz igénnyel, a forgalomba hozataltól két évig.</p>
+    </div>
+    <div class="gar-layer own">
+      <span class="gar-tag">Amit mi teszünk hozzá</span>
+      <span class="ln">03 · Premium Bringa</span>
+      <div class="gar-badge">30 <span>nap</span></div>
+      <h3>Saját jótállás</h3>
+      <p>Ezen felül minden kerékpárra 30 napos jótállást adunk a működő hajtásra, fékre és csapágyakra.</p>
+    </div>
+  </div>
+
+  <div class="gar-cov reveal">
+    <div class="gar-col yes">
+      <h4><i>✓</i> Amire a jótállás kiterjed</h4>
+      <ul>
+        <li>A működő hajtás, fék és csapágyak</li>
+        <li>Az átadáskori, igazolt állapot</li>
+        <li>Anyag- vagy szerelési hiba, ha a 30 napon belül jelentkezik</li>
+      </ul>
+    </div>
+    <div class="gar-col no">
+      <h4><i>✕</i> Amire nem</h4>
+      <ul>
+        <li>A használatból eredő kopás: gumi, fékbetét, lánc, féktárcsa</li>
+        <li>Sérülés és a nem rendeltetésszerű használat</li>
+        <li>Az előre jelzett, fotón is látható kopásnyomok</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="gar-foot reveal">
+    <div class="gf-txt">
+      <h4>Ha hibát észlelsz</h4>
+      <p>Jelzed nekünk, megvizsgáljuk, és rendezzük. A számla egyben a jótállási jegyed, külön papír nem kell. A részletes, formális feltételek az <a class="gf-formal" href="aszf.html#szavatossag">ÁSZF szavatosság pontjában</a> olvashatók.</p>
+    </div>
+    <a href="kapcsolat.html" class="btn btn-1">Kapcsolat →</a>
   </div>
 </div></section>
 
