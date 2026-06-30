@@ -136,6 +136,12 @@
 @media(prefers-reduced-motion:reduce){
   .mtb.ph1 #mtb-frame,.mtb.ph2 #mtb-chainring,.mtb.ph2 .mtb-rotor,.mtb.ph3 #mtb-spokes-r,.mtb.ph3 #mtb-spokes-f,.mtb.ph3 #mtb-front{animation:none}
 }
+/* Rólunk - heró fogadalom-sáv (eltér a Miért éri meg számlálóitól) */
+.rl-pledges{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 26px;margin-top:32px;max-width:780px}
+.rl-pledge{border-left:2px solid var(--copper);padding:3px 0 3px 16px}
+.rl-pledge b{display:block;font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:106%;font-size:1.02rem;color:var(--bright);margin-bottom:6px;line-height:1.12}
+.rl-pledge span{color:var(--haze);font-size:.9rem;line-height:1.5}
+@media(max-width:680px){.rl-pledges{grid-template-columns:1fr;gap:16px}}
 </style>
 </head>
 <body>
@@ -161,11 +167,10 @@
     <span class="kick mx-fade">Rólunk & Bizalom</span>
     <h1 class="mx-fade d1">Egy tekeréssel közelebb<br><em>a vágyott bringához.</em></h1>
     <p class="mx-fade d2">Azért dolgozunk, hogy a minőségi kerékpár ne legyen luxus, hanem országszerte elérhető, jól megválasztott döntés.</p>
-    <div class="mx-stats mx-fade d3" aria-label="A Premium Bringa számokban">
-      <div class="mx-stat"><span class="mx-num" data-count="30" data-suffix=" nap">0 nap</span><span class="mx-lab">garancia, írásban</span></div>
-      <div class="mx-stat"><span class="mx-num" data-count="3" data-suffix=" fok">0 fok</span><span class="mx-lab">őszinte állapot-skála</span></div>
-      <div class="mx-stat"><span class="mx-num" data-count="5" data-suffix=" terület">0 terület</span><span class="mx-lab">amit átnézünk</span></div>
-      <div class="mx-stat"><span class="mx-num" data-count="100" data-suffix="%">0%</span><span class="mx-lab">átnézve, beállítva</span></div>
+    <div class="rl-pledges mx-fade d3" aria-label="Ahogy dolgozunk">
+      <div class="rl-pledge"><b>Csak igazolt eredet</b><span>Nyugat-európai, átvilágítható háttérrel.</span></div>
+      <div class="rl-pledge"><b>Négy lépés a felkészítésig</b><span>Megújítás, a bolti állapothoz a lehető legközelebb.</span></div>
+      <div class="rl-pledge"><b>30 napos jótállás</b><span>A törvényes szavatossági jogaidon felül.</span></div>
     </div>
   </div>
 </header>
