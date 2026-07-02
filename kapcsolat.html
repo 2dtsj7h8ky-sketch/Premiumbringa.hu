@@ -41,6 +41,10 @@
 .btn-msg{background:linear-gradient(135deg,#00B2FF 0%,#006AFF 60%,#A033FF 130%);color:#fff;border:0;box-shadow:0 8px 22px rgba(0,106,255,.34)}
 .btn-msg:hover{filter:brightness(1.07)}
 .btn-msg svg{width:18px;height:18px;flex:none}
+/* Térkép: fix 16:9 arány, ne nyúljon a szövegoszlop magasságára (széles képernyőn ne vágja le Debrecent) */
+.kx-contact.visit .wrap{align-items:start}
+.kx-contact .map.kx-map{flex:none;aspect-ratio:16/9;min-height:0}
+@media(max-width:760px){.kx-contact .map.kx-map{aspect-ratio:4/3}}
 .kx-msg-row a{display:inline-flex;align-items:center;gap:8px}
 .kx-msg-row a svg{width:15px;height:15px;flex:none;color:#006AFF}
 .kx-msg-row .l{color:#006AFF}
@@ -92,7 +96,7 @@
     </div>
   </div>
   <div class="reveal" style="display:flex;flex-direction:column;gap:26px">
-    <div class="map kx-map draw-on-scroll" style="flex:1">
+    <div class="map kx-map draw-on-scroll">
       <svg class="kx-mapsvg" viewBox="0 0 640 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <rect class="km-bg" x="0" y="0" width="640" height="360"/>
         <path class="km-country" d="M133 101 L172 116 L268 125 L331 97 L352 51 L388 74 L448 52 L532 67 L590 92 L556 114 L504 194 L456 248 L381 272 L288 268 L268 291 L220 306 L168 297 L136 279 L86 250 L76 222 L50 204 L76 194 L76 156 L92 131 L108 108 Z"/>
