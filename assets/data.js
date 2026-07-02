@@ -9,8 +9,22 @@
    kiemelt: a főoldali hero showcase ezt a darabot mutatja (csak az első számít).
    ========================================================================= */
 const KESZLET = [
+  { id:"specialized-chisel-expert", mappa:"SpecializedChiselExpert", marka:"Specialized", model:"Specialized Chisel Expert", magassag:[176,186],
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2019, meret:"L", kerekmeret:"29″", suly:"12,3 kg", ar:380000,
+    vaz:"D'Aluisio Smartweld M5 alumínium · 12,3 kg", villa:"RockShox Reba RL, 100 mm, állítható keménység",
+    hajtas:"SRAM NX Eagle 1×12", fek:"SRAM Level TL hidraulikus, 180/160",
+    kerek:"29″ Specialized XC · Fast Trak GRIPTON 2.3",
+    spec:"29″ verseny-XC hardtail · RockShox Reba 100 mm · SRAM NX Eagle 1×12.",
+    leiras:"Annak, aki verseny-XC érzésre vágyik carbon ára nélkül, és a legszívesebben első sorból indulna. A D'Aluisio Smartweld alumíniumváz feszes és könnyű, ezért az emelkedő rövidebbnek, a hosszú kör könnyebbnek érződik, és a bringa azonnal reagál arra, amit a lábad belead. Ideális maratonra, tempós hétvégi körökre vagy első komoly XC hardtailnek, ha a valódi tudást fizetnéd meg a név helyett. L váz a 176 és 186 cm közötti tekerőknek.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","D'Aluisio Smartweld M5 alumínium"],["Teleszkóp","RockShox Reba RL, 100 mm, állítható keménység"]] },
+      { cs:"Hajtás", t:[["Hajtómű","Truvativ Stylo DUB, 32T"],["Hátsó váltó","SRAM NX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM NX Eagle, 11–50T"],["Lánc","SRAM NX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fékek","SRAM Level TL hidraulikus, 180/160"],["Kerékszett","29″ Specialized XC"],["Gumik","Specialized Fast Trak GRIPTON, 2.3"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Specialized Alloy Minirise, 750 mm"],["Nyereg","Body Geometry Phenom Comp"]] }
+    ] },
+
   { id:"cube-reaction-tm-pro", mappa:"CubeReactionTMPro", marka:"Cube", model:"Cube Reaction TM Pro", magassag:[168,183],
-    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Újszerű", ev:2019, meret:"M (18″)", kerekmeret:"27,5″", suly:"13,6 kg", ar:300000,
+    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Kiváló", ev:2019, meret:"M (18″)", kerekmeret:"27,5″", suly:"13,6 kg", ar:300000,
     vaz:"Erős aluminium · 13,6 kg", villa:"RockShox Sektor RL, 130 mm, állítható",
     hajtas:"Shimano SLX 1×10", fek:"Shimano MT520 hidraulikus, 180/180",
     kerek:"27,5″ Rodi Tryp 35 · Specialized Ground Control tubeless",
