@@ -10,6 +10,20 @@
    kiemelt: a főoldali hero showcase ezt a darabot mutatja (csak az első számít).
    ========================================================================= */
 const KESZLET = [
+  { id:"trek-roscoe-7", mappa:"TrekRoscoe7", marka:"Trek", model:"Trek Roscoe 7", magassag:[176,186],
+    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Újszerű", ev:2025, meret:"M/L (18,5″)", kerekmeret:"29″", suly:"14,1 kg", ar:400000,
+    vaz:"Alpha Gold Aluminium · 14,1 kg", villa:"RockShox Recon Silver, 140 mm, állítható",
+    hajtas:"Shimano Deore 1×12", fek:"Shimano MT200 hidraulikus, 180/180",
+    kerek:"29″ Bontrager Line TLR 30 · Bontrager XR4 / Maxxis Aggressor 2.6",
+    spec:"29″ trail hardtail · RockShox Recon 140 mm · dropper · Deore 1×12.",
+    leiras:"Annak, aki a lejtőn, a kanyarban és a gyökeres, technikás szakaszon szeretné igazán otthon érezni magát. A 140 mm-es RockShox Recon villa és a laza, magabiztos geometria bátrabb vonalakra ösztönöz, mint amire egy merevebb XC hardtailen vállalkoznál, a dropper nyeregcső pedig egy gombnyomásra eltűnik az utadból lefelé. A széles, 2,6 colos gumik ott is tapadnak, ahol más már csúszkál, a Shimano Deore 1×12 hajtás pedig egyszerű és megbízható: egy kar, teljes tartomány. Ideális, ha most szoksz rá a terepre, vagy régóta keresed a trail hardtailt, ami mer játszani. Legújabb, 2025-ös generáció, alig futott.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Alpha Gold Aluminium"],["Teleszkóp","RockShox Recon Silver, 140 mm, állítható keménység"],["Nyeregcső","TranzX dropper"]] },
+      { cs:"Hajtás", t:[["Hajtómű","Shimano MT511, 30T"],["Hátsó váltó","Shimano Deore, 12 sebesség"],["Fogaskoszorú","Shimano Deore M6100, 10–51T"],["Lánc","Shimano Deore M6100"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 hidraulikus, 180/180"],["Kerékszett","29″ Bontrager Line TLR 30, tubeless-ready"],["Gumik","Bontrager XR4 / Maxxis Aggressor, 2.6"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager Rhythm Comp, 780 mm"],["Nyereg","Bontrager Verse P3"]] }
+    ] },
+
   { id:"specialized-chisel-expert", mappa:"SpecializedChiselExpert", marka:"Specialized", model:"Specialized Chisel Expert", magassag:[176,186],
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2019, meret:"L", kerekmeret:"29″", suly:"12,3 kg", ar:380000,
     vaz:"D'Aluisio Smartweld M5 alumínium · 12,3 kg", villa:"RockShox Reba RL, 100 mm, állítható keménység",
