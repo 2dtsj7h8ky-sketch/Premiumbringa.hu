@@ -67,6 +67,20 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Cube Active"]] }
     ] },
 
+  { id:"cube-reaction-race", mappa:"CubeReactionRace", marka:"Cube", model:"Cube Reaction Race", magassag:[170,182],
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2020, meret:"M (18″)", kerekmeret:"29″", suly:"12,7 kg", ar:310000,
+    vaz:"High Performance Aluminium · 12,7 kg", villa:"RockShox Judy Silver, 100 mm, zárható",
+    hajtas:"SRAM GX Eagle 1×12", fek:"Shimano Deore BR-M6000, 180/160",
+    kerek:"29″ Cube EX21 · Schwalbe Tough Tom / Rapid Rob",
+    spec:"29″ XC hardtail · RockShox Judy 100 mm · SRAM GX Eagle 1×12.",
+    leiras:"Annak, aki a sebességet és a hatékonyságot keresi minden tekerésnél. A Cube Reaction Race könnyű, mindössze 12,7 kg-os alumínium XC hardtail, ami minden hajtásodat azonnal lendületté fordítja. A szíve a teljes SRAM GX Eagle 1×12 hajtás: tiszta, gyors váltás terhelés alatt is, egy karral a meredektől a sík útig. A RockShox Judy villa kormányról zárható, hogy aszfalton és sima emelkedőn semmi energia ne vesszen el, a Deore fékrendszer pedig pontosan illeszkedik a sportos karakterhez. Nem egy nehéz, mindenes túratárs, hanem fürge, precíz versenyhardtail annak, aki azonnali választ vár a lábára.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","High Performance Aluminium"],["Teleszkóp","RockShox Judy Silver, 100 mm, zárható"]] },
+      { cs:"Hajtás", t:[["Hajtómű","SRAM Stylo Eagle, 32T"],["Hátsó váltó","SRAM GX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM XG-1275 Eagle, 10–50T"],["Lánc","SRAM NX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Shimano Deore BR-M6000, 180/160"],["Kerékszett","29″ Cube EX21"],["Gumik","Schwalbe Tough Tom / Rapid Rob"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Natural Fit Venec Lite"]] }
+    ] },
+
   { id:"cube-reaction-tm-pro", mappa:"CubeReactionTMPro", marka:"Cube", model:"Cube Reaction TM Pro", magassag:[168,183],
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Kiváló", ev:2019, meret:"M (18″)", kerekmeret:"27,5″", suly:"13,6 kg", ar:300000,
     vaz:"Erős aluminium · 13,6 kg", villa:"RockShox Sektor RL, 130 mm, állítható",
