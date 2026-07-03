@@ -67,6 +67,20 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Cube Active"]] }
     ] },
 
+  { id:"cube-reaction-pro", mappa:"CubeReactionPro", marka:"Cube", model:"Cube Reaction Pro", magassag:[176,186],
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"L (19″)", kerekmeret:"29″", suly:"13,1 kg", ar:330000,
+    vaz:"Aluminium Lite · 13,1 kg", villa:"RockShox Judy Silver, 100 mm, zárható",
+    hajtas:"Shimano Deore XT 1×12", fek:"Shimano XT BR-M8100, 180/160",
+    kerek:"29″ Cube ZX20 · Schwalbe Racing Ralph Addix 2.25",
+    spec:"29″ XC hardtail · RockShox Judy 100 mm · Shimano XT 1×12.",
+    leiras:"Annak, aki a részletekre is ad, és élménydúsabb tekerésre vágyik. A 2024-es Cube Reaction Pro friss, új generációs XC hardtail, ahol a menetélmény és a letisztult, sportos megjelenés egy irányba húz. A kulcsa az XT szintű hajtás és fék: tiszta, gyors, precíz működés terhelés alatt is, egy karral a teljes tartomány. A könnyű alumínium váz fürge és feszes, a RockShox Judy villa pedig kormányról zárható a hatékony emelkedőkhöz. Az a fajta bringa, ami az első métereken meggyőz: közvetlen, összeszedett, ránézésre is rendben. Ha friss évjáratú, komolyan felszerelt XC hardtailt keresel, ez pontosan az.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Aluminium Lite"],["Teleszkóp","RockShox Judy Silver, 100 mm, zárható"]] },
+      { cs:"Hajtás", t:[["Hajtómű","Shimano FC-MT611, 32T"],["Hátsó váltó","Shimano Deore XT, 12 sebesség"],["Fogaskoszorú","Shimano Deore CS-M6100, 10–51T"],["Lánc","Shimano CN-M6100"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Shimano XT BR-M8100, 180/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Schwalbe Racing Ralph Addix Performance, 2.25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Natural Fit Venec"]] }
+    ] },
+
   { id:"cube-reaction-race", mappa:"CubeReactionRace", marka:"Cube", model:"Cube Reaction Race", magassag:[170,182],
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2020, meret:"M (18″)", kerekmeret:"29″", suly:"12,7 kg", ar:310000,
     vaz:"High Performance Aluminium · 12,7 kg", villa:"RockShox Judy Silver, 100 mm, zárható",
