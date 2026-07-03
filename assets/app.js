@@ -44,6 +44,12 @@
   const param = key => new URLSearchParams(location.search).get(key);
   const data = (typeof KESZLET !== "undefined") ? KESZLET : [];
 
+  /* ---- "Friss" felvétel: a legújabb feltöltéshez képest 14 napon belül ---- */
+  const felveTime = b => b.felveve ? new Date(b.felveve).getTime() : 0;
+  const maxFelve = data.reduce((m, b) => Math.max(m, felveTime(b)), 0);
+  const FRESH_MS = 14 * 864e5;
+  const isFriss = b => !!b.felveve && maxFelve > 0 && (maxFelve - felveTime(b)) <= FRESH_MS;
+
   /* ---- termékkártya (showroom + készlet) ---- */
   function bikeCard(b){
     const media = `<span class="bk-wheel"></span><span class="bk-wheel two"></span>`
@@ -51,7 +57,7 @@
     const meta = [b.ev, b.meret].filter(Boolean).join(" · ");
     return `
     <a class="bike reveal" href="bringa.html?id=${encodeURIComponent(b.id)}" data-szegmens="${esc(b.szegmens)}" data-allapot="${esc(b.allapot||"")}">
-      <div class="img">${media}<span class="cat">${esc(b.kategoria)}</span>${condBadge(b)}</div>
+      <div class="img">${media}${isFriss(b) ? '<span class="fresh"><i></i>Friss</span>' : ""}<span class="cat">${esc(b.kategoria)}</span>${condBadge(b)}</div>
       <div class="bd">
         <h3>${esc(b.model)}</h3>
         <div class="spec">${esc(b.spec || b.kategoria)}</div>
@@ -192,8 +198,9 @@
         const band = MERETEK.find(s => s.kulcs === aktivMeret);
         if(band && band.h) list = list.filter(b => Array.isArray(b.magassag) && b.magassag[0] <= band.h[1] && b.magassag[1] >= band.h[0]);
       }
-      const sort = sortSel ? sortSel.value : "ajanlott";
-      if(sort === "ar-asc") list.sort((a,b)=>a.ar-b.ar);
+      const sort = sortSel ? sortSel.value : "friss";
+      if(sort === "friss") list.sort((a,b)=>felveTime(b)-felveTime(a));
+      else if(sort === "ar-asc") list.sort((a,b)=>a.ar-b.ar);
       else if(sort === "ar-desc") list.sort((a,b)=>b.ar-a.ar);
       else if(sort === "ev-desc") list.sort((a,b)=>b.ev-a.ev);
       return list;
@@ -218,6 +225,10 @@
       aktivMeret = c.dataset.v; renderMeret(); render();
     });
     if(sortSel) sortSel.addEventListener("change", render);
+    const updEl = document.getElementById("updated");
+    if(updEl && maxFelve > 0){
+      updEl.textContent = "Készlet frissítve: " + new Date(maxFelve).toLocaleDateString("hu-HU");
+    }
     renderSeg(); renderCond(); renderMeret(); render();
   }
 

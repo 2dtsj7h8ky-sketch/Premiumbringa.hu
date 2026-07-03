@@ -8,9 +8,12 @@
         A MÉRETET/testmagasságot NE írd a leírásba: azt a méret-blokk tartalmazza.
    FELSZERELTSÉG (`reszletek`): csoportosított, bolti stílusú spec; a `suly` külön.
    kiemelt: a főoldali hero showcase ezt a darabot mutatja (csak az első számít).
+   felveve: a felvétel dátuma (YYYY-MM-DD). Ez hajtja a "Legfrissebb" rendezést,
+        a "Friss" jelvényt (a legújabbhoz képest 14 napon belül) és a "Frissítve" dátumot.
+        ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
-  { id:"cube-stereo-120-pro", mappa:"CubeStereoPro", marka:"Cube", model:"Cube Stereo 120 Pro", magassag:[170,182],
+  { id:"cube-stereo-120-pro", mappa:"CubeStereoPro", marka:"Cube", model:"Cube Stereo 120 Pro", magassag:[170,182], felveve:"2026-06-22",
     kategoria:"Trail · Fully", szegmens:"trail", allapot:"Kiváló", ev:2022, meret:"M (18″)", kerekmeret:"29″", suly:"14,8 kg", ar:430000,
     vaz:"HPA alumínium, ETC 4-csuklós · 14,8 kg", villa:"RockShox Judy Silver TK, 130 mm, zárható",
     hajtas:"SRAM NX Eagle 1×12", fek:"Magura MT Thirty hidraulikus, 180/180",
@@ -25,7 +28,7 @@ const KESZLET = [
     ],
     kiemelt:true },
 
-  { id:"trek-roscoe-7", mappa:"TrekRoscoe7", marka:"Trek", model:"Trek Roscoe 7", magassag:[176,186],
+  { id:"trek-roscoe-7", mappa:"TrekRoscoe7", marka:"Trek", model:"Trek Roscoe 7", magassag:[176,186], felveve:"2026-06-14",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Újszerű", ev:2025, meret:"M/L (18,5″)", kerekmeret:"29″", suly:"14,1 kg", ar:400000,
     vaz:"Alpha Gold Aluminium · 14,1 kg", villa:"RockShox Recon Silver, 140 mm, állítható",
     hajtas:"Shimano Deore 1×12", fek:"Shimano MT200 hidraulikus, 180/180",
@@ -39,7 +42,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager Rhythm Comp, 780 mm"],["Nyereg","Bontrager Verse P3"]] }
     ] },
 
-  { id:"gt-zaskar-lt-elite", mappa:"GTZaskarLTELite", marka:"GT", model:"GT Zaskar LT Elite", magassag:[172,182],
+  { id:"gt-zaskar-lt-elite", mappa:"GTZaskarLTELite", marka:"GT", model:"GT Zaskar LT Elite", magassag:[172,182], felveve:"2026-07-03",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Kiváló", ev:2021, meret:"M", kerekmeret:"29″", suly:"14,4 kg", ar:290000,
     vaz:"Zaskar LT Triple Triangle alu · 14,4 kg", villa:"SR Suntour Zeron 35, 130 mm, állítható",
     hajtas:"SRAM SX Eagle 1×12", fek:"Shimano MT410 hidraulikus, 180/160",
@@ -53,7 +56,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","GT, 780 mm"],["Nyereg","WTB Silverado Sport"]] }
     ] },
 
-  { id:"specialized-chisel-expert", mappa:"SpecializedChiselExpert", marka:"Specialized", model:"Specialized Chisel Expert", magassag:[176,186],
+  { id:"specialized-chisel-expert", mappa:"SpecializedChiselExpert", marka:"Specialized", model:"Specialized Chisel Expert", magassag:[176,186], felveve:"2026-06-02",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2019, meret:"L", kerekmeret:"29″", suly:"12,3 kg", ar:380000,
     vaz:"D'Aluisio Smartweld M5 alumínium · 12,3 kg", villa:"RockShox Reba RL, 100 mm, állítható keménység",
     hajtas:"SRAM NX Eagle 1×12", fek:"SRAM Level TL hidraulikus, 180/160",
@@ -67,7 +70,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Specialized Alloy Minirise, 750 mm"],["Nyereg","Body Geometry Phenom Comp"]] }
     ] },
 
-  { id:"cube-race-one", mappa:"CubeRaceOne", marka:"Cube", model:"Cube Race One", magassag:[168,180],
+  { id:"cube-race-one", mappa:"CubeRaceOne", marka:"Cube", model:"Cube Race One", magassag:[168,180], felveve:"2026-06-08",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2017, meret:"M (18″)", kerekmeret:"27,5″", suly:"12,7 kg", ar:320000,
     vaz:"Aluminium Lite · 12,7 kg", villa:"Fox 32 Float Performance, 100 mm, állítható",
     hajtas:"Shimano SLX / XT 2×11", fek:"Shimano Deore BR-M615 hidraulikus, 180/160",
@@ -81,7 +84,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Cube Active"]] }
     ] },
 
-  { id:"cube-reaction-pro", mappa:"CubeReactionPro", marka:"Cube", model:"Cube Reaction Pro", magassag:[176,186],
+  { id:"cube-reaction-pro", mappa:"CubeReactionPro", marka:"Cube", model:"Cube Reaction Pro", magassag:[176,186], felveve:"2026-06-30",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"L (19″)", kerekmeret:"29″", suly:"13,1 kg", ar:330000,
     vaz:"Aluminium Lite · 13,1 kg", villa:"RockShox Judy Silver, 100 mm, zárható",
     hajtas:"Shimano Deore XT 1×12", fek:"Shimano XT BR-M8100, 180/160",
@@ -95,7 +98,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Natural Fit Venec"]] }
     ] },
 
-  { id:"cube-reaction-race", mappa:"CubeReactionRace", marka:"Cube", model:"Cube Reaction Race", magassag:[170,182],
+  { id:"cube-reaction-race", mappa:"CubeReactionRace", marka:"Cube", model:"Cube Reaction Race", magassag:[170,182], felveve:"2026-06-26",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2020, meret:"M (18″)", kerekmeret:"29″", suly:"12,7 kg", ar:310000,
     vaz:"High Performance Aluminium · 12,7 kg", villa:"RockShox Judy Silver, 100 mm, zárható",
     hajtas:"SRAM GX Eagle 1×12", fek:"Shimano Deore BR-M6000, 180/160",
@@ -109,7 +112,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Natural Fit Venec Lite"]] }
     ] },
 
-  { id:"cube-reaction-tm-pro", mappa:"CubeReactionTMPro", marka:"Cube", model:"Cube Reaction TM Pro", magassag:[168,183],
+  { id:"cube-reaction-tm-pro", mappa:"CubeReactionTMPro", marka:"Cube", model:"Cube Reaction TM Pro", magassag:[168,183], felveve:"2026-05-20",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Kiváló", ev:2019, meret:"M (18″)", kerekmeret:"27,5″", suly:"13,6 kg", ar:300000,
     vaz:"Erős aluminium · 13,6 kg", villa:"RockShox Sektor RL, 130 mm, állítható",
     hajtas:"Shimano SLX 1×10", fek:"Shimano MT520 hidraulikus, 180/180",
@@ -123,7 +126,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Evolution, 760 mm"],["Nyereg","Natural Fit Active"]] }
     ] },
 
-  { id:"cube-aim-sl", mappa:"CubeAimSL4", marka:"Cube", model:"Cube Aim SL", magassag:[184,196],
+  { id:"cube-aim-sl", mappa:"CubeAimSL4", marka:"Cube", model:"Cube Aim SL", magassag:[184,196], felveve:"2026-05-12",
     kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"XL (21″)", kerekmeret:"29″", suly:"13,8 kg", ar:220000,
     vaz:"Könnyű alumínium · 13,8 kg", villa:"RockShox Judy Silver TK, 100 mm, zárható",
     hajtas:"Shimano Alivio 2×9", fek:"Shimano MT200 hidraulikus, 160/160",
@@ -137,7 +140,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
     ] },
 
-  { id:"cube-analog", mappa:"CubeAnalogHpa", marka:"Cube", model:"Cube Analog HPA", magassag:[172,188],
+  { id:"cube-analog", mappa:"CubeAnalogHpa", marka:"Cube", model:"Cube Analog HPA", magassag:[172,188], felveve:"2026-05-06",
     kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2019, meret:"L (21″)", kerekmeret:"29″", suly:"14,2 kg", ar:220000,
     vaz:"HPA Aluminium Lite · 14,2 kg", villa:"RockShox XC30, 100 mm, távzár",
     hajtas:"Shimano Deore XT 3×9", fek:"Shimano MT200 hidraulikus, 160/160",
@@ -151,7 +154,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Syncross"]] }
     ] },
 
-  { id:"ktm-ultra-flite", mappa:"KTMUltraFlite2", marka:"KTM", model:"KTM Ultra Flite", magassag:[168,180],
+  { id:"ktm-ultra-flite", mappa:"KTMUltraFlite2", marka:"KTM", model:"KTM Ultra Flite", magassag:[168,180], felveve:"2026-04-28",
     kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2021, meret:"M (17″)", kerekmeret:"29″", suly:"14,3 kg", ar:240000,
     vaz:"Könnyű alumínium · 14,3 kg", villa:"RockShox Judy Silver, 100 mm, zárható",
     hajtas:"Shimano Deore 2×10", fek:"Shimano MT200 hidraulikus, 180/160",

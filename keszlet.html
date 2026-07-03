@@ -83,6 +83,7 @@
         <label for="sort">Rendezés</label>
         <div class="selectwrap">
           <select class="sort" id="sort">
+            <option value="friss">Legfrissebb feltöltés</option>
             <option value="ajanlott">Ajánlott</option>
             <option value="ar-asc">Ár, növekvő</option>
             <option value="ar-desc">Ár, csökkenő</option>
@@ -105,7 +106,10 @@
     <p class="sizehint">Nem tudod a méreted? <a href="kapcsolat.html">Segítünk, szólj.</a></p>
     </div>
   </div>
-  <p class="count" id="count" aria-live="polite"></p>
+  <div class="countrow">
+    <p class="count" id="count" aria-live="polite"></p>
+    <span class="updated" id="updated"></span>
+  </div>
   <div class="grid" id="keszlet-grid"></div>
 </div></section>
 
