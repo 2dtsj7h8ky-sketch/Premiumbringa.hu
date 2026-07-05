@@ -28,20 +28,6 @@ const KESZLET = [
     ],
     kiemelt:true },
 
-  { id:"trek-roscoe-7", mappa:"TrekRoscoe7", marka:"Trek", model:"Trek Roscoe 7", magassag:[176,186], felveve:"2026-06-14",
-    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Újszerű", ev:2025, meret:"M/L (18,5″)", kerekmeret:"29″", suly:"14,1 kg", ar:400000,
-    vaz:"Alpha Gold Aluminium · 14,1 kg", villa:"RockShox Recon Silver, 140 mm, állítható",
-    hajtas:"Shimano Deore 1×12", fek:"Shimano MT200 hidraulikus, 180/180",
-    kerek:"29″ Bontrager Line TLR 30 · Bontrager XR4 / Maxxis Aggressor 2.6",
-    spec:"29″ trail hardtail · RockShox Recon 140 mm · dropper · Deore 1×12.",
-    leiras:"Annak, aki a lejtőn, a kanyarban és a gyökeres, technikás szakaszon szeretné igazán otthon érezni magát. A 140 mm-es RockShox Recon villa és a laza, magabiztos geometria bátrabb vonalakra ösztönöz, mint amire egy merevebb XC hardtailen vállalkoznál, a dropper nyeregcső pedig egy gombnyomásra eltűnik az utadból lefelé. A széles, 2,6 colos gumik ott is tapadnak, ahol más már csúszkál, a Shimano Deore 1×12 hajtás pedig egyszerű és megbízható: egy kar, teljes tartomány. Ideális, ha most szoksz rá a terepre, vagy régóta keresed a trail hardtailt, ami mer játszani. Legújabb, 2025-ös generáció, alig futott.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","Alpha Gold Aluminium"],["Teleszkóp","RockShox Recon Silver, 140 mm, állítható keménység"],["Nyeregcső","TranzX dropper"]] },
-      { cs:"Hajtás", t:[["Hajtómű","Shimano MT511, 30T"],["Hátsó váltó","Shimano Deore, 12 sebesség"],["Fogaskoszorú","Shimano Deore M6100, 10–51T"],["Lánc","Shimano Deore M6100"]] },
-      { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 hidraulikus, 180/180"],["Kerékszett","29″ Bontrager Line TLR 30, tubeless-ready"],["Gumik","Bontrager XR4 / Maxxis Aggressor, 2.6"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager Rhythm Comp, 780 mm"],["Nyereg","Bontrager Verse P3"]] }
-    ] },
-
   { id:"gt-zaskar-lt-elite", mappa:"GTZaskarLTELite", marka:"GT", model:"GT Zaskar LT Elite", magassag:[172,182], felveve:"2026-07-03",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Kiváló", ev:2021, meret:"M", kerekmeret:"29″", suly:"14,4 kg", ar:290000,
     vaz:"Zaskar LT Triple Triangle alu · 14,4 kg", villa:"SR Suntour Zeron 35, 130 mm, állítható",
