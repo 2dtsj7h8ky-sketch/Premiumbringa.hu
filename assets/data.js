@@ -29,7 +29,7 @@ const KESZLET = [
     kiemelt:true },
 
   { id:"gt-zaskar-lt-elite", mappa:"GTZaskarLTELite", marka:"GT", model:"GT Zaskar LT Elite", magassag:[172,182], felveve:"2026-07-03",
-    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Kiváló", ev:2021, meret:"M", kerekmeret:"29″", suly:"14,4 kg", ar:290000,
+    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Jó", ev:2021, meret:"M", kerekmeret:"29″", suly:"14,4 kg", ar:290000,
     vaz:"Zaskar LT Triple Triangle alu · 14,4 kg", villa:"SR Suntour Zeron 35, 130 mm, állítható",
     hajtas:"SRAM SX Eagle 1×12", fek:"Shimano MT410 hidraulikus, 180/160",
     kerek:"29″ WTB ST i30 TCS · Schwalbe Hans Dampf",
