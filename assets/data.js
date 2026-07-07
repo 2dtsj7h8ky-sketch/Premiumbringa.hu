@@ -29,7 +29,7 @@ const KESZLET = [
     kiemelt:true },
 
   { id:"marin-bobcat-trail-3", mappa:"MarinBobcatTrail", marka:"Marin", model:"Marin Bobcat Trail 3", magassag:[182,195], felveve:"2026-07-08",
-    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Kiváló", ev:2020, meret:"XL", kerekmeret:"29″", ar:160000,
+    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Kiváló", ev:2020, meret:"XL", kerekmeret:"29″", suly:"14 kg", ar:160000,
     vaz:"Series 2 6061 alumínium", villa:"SR Suntour XCM, 120 mm, zárható",
     hajtas:"Shimano Altus 1×8", fek:"Tektro HD-M275 hidraulikus, 160/160",
     kerek:"29″ Marin · Schwalbe Hurricane",
