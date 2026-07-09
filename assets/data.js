@@ -28,6 +28,20 @@ const KESZLET = [
     ],
     kiemelt:true },
 
+  { id:"radon-jealous-9", mappa:"RadonJealous", marka:"Radon", model:"Radon Jealous 9.0", magassag:[173,183], felveve:"2026-07-09",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2018, meret:"L (56 cm)", kerekmeret:"29″", suly:"kb. 11 kg", ar:430000,
+    vaz:"Super Strong Carbon szénszál · kb. 11 kg", villa:"RockShox SID RL, 100 mm, Solo Air, zárható",
+    hajtas:"SRAM GX Eagle 1×12", fek:"Magura MT5 (elöl 4, hátul 2 dugattyús), 180/160",
+    kerek:"29″ Newmen Evolution SL · Schwalbe Racing Ralph / Rocket Ron",
+    spec:"29″ karbon verseny-XC · RockShox SID 100 mm · SRAM GX Eagle 1×12.",
+    leiras:"Annak, aki nem elégszik meg azzal, hogy egy bringa csak jó, hanem a lába alatt akarja érezni, hogy minden grammját megtervezték. A Radon Jealous karbon verseny-XC hardtail, egyetlen célra építve: hogy semmi felesleg ne legyen rajta. A szíve a RockShox SID, a márka legendás XC versenyvillája, amin a világ legjobbjai gyűjtik a World Cup-győzelmeket. A karbon vázon minden gramm ott van, ahol dolgozik, és sehol, ahol nem. Egy hosszú túrán érzed meg igazán: az emelkedő rövidebbnek tűnik, a nagy kör könnyebbnek, és a végén, amikor másnak már elege van, neked még mindig van kedved továbbtekerni. A Magura fék és a SRAM GX Eagle 1×12 macera nélkül hozza ezt a szintet. A Radont a beavatottak veszik: ugyanaz a karbon és felszereltség, mint a nagy neveknél, a márkafelár nélkül. Nem a logót fizeted meg, hanem a valódi tudást a lábad alatt.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Super Strong Carbon szénszálas váz"],["Teleszkóp","RockShox SID RL, 100 mm, Solo Air, zárható"],["Nyeregcső","Alumínium (utólag cserélve)"]] },
+      { cs:"Hajtás", t:[["Hajtómű","SRAM X1 Eagle karbon, 34T"],["Hátsó váltó","SRAM GX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM GX Eagle, 10–50T"],["Lánc","SRAM GX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Magura MT5 (elöl 4, hátul 2 dugattyús), 180/160"],["Kerékszett","29″ Newmen Evolution SL"],["Gumik","Schwalbe Racing Ralph / Rocket Ron"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Advanced Carbon"],["Nyereg","Selle Italia SLR"]] }
+    ] },
+
   { id:"cube-aim-slx", mappa:"CubeAimSLX", marka:"Cube", model:"Cube Aim SLX", magassag:[168,180], felveve:"2026-07-09",
     kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2023, meret:"M (18″)", kerekmeret:"29″", suly:"13,8 kg", ar:220000,
     vaz:"Könnyű alumínium · 13,8 kg", villa:"RockShox Judy Silver TK Coil, 100 mm, zárható",
