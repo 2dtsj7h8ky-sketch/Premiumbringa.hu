@@ -290,7 +290,7 @@
         <div class="pgallery">
           <div class="pmain">${galMain}${b.allapot ? `<span class="${condClass(b.allapot)} pcond">${esc(b.allapot)}</span>` : ""}</div>
           <div class="pthumbs" id="pthumbs">${thumbs}</div>
-          <p class="preal"><span class="pr-dot"></span><span>A fotók a <b>tényleges</b> kerékpárt mutatják, és hűen tükrözik annak állapotát; a kopásnyomokat is őszintén megmutatjuk.</span></p>
+          <p class="preal"><span class="pr-dot"></span><span>A fotók a <b>tényleges</b> kerékpárt mutatják, és hűen tükrözik annak állapotát; az esetleges esztétikai hibákról szívesen küldünk közelebbi képet is.</span></p>
           <p class="pnote">Amíg megjelenik, elérhető. További információért az <a href="kapcsolat.html">elérhetőségnél</a> nyugodtan érdeklődj.</p>
         </div>
         <div class="pinfo">
