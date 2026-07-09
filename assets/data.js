@@ -56,20 +56,6 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
     ] },
 
-  { id:"marin-bobcat-trail-3", mappa:"MarinBobcatTrail", marka:"Marin", model:"Marin Bobcat Trail 3", magassag:[182,195], felveve:"2026-07-08",
-    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Kiváló", ev:2020, meret:"XL", kerekmeret:"29″", suly:"14 kg", ar:160000,
-    vaz:"Series 2 6061 alumínium", villa:"SR Suntour XCM, 120 mm, zárható",
-    hajtas:"Shimano Altus 1×8", fek:"Tektro HD-M275 hidraulikus, 160/160",
-    kerek:"29″ Marin · Schwalbe Hurricane",
-    spec:"29″ trail hardtail · SR Suntour 120 mm · 1×8, ingázásra hangolva.",
-    leiras:"Annak, aki fürge, gondtalan bringát keres a városba, ami egy könnyebb ösvényen is otthon van. A Marin a kaliforniai MTB-gyökereiről ismert márka, a Bobcat Trail pedig a strapabíró belépő hardtailek egyike. Ezt a példányt tudatosan ingázásra hangolták: a gyári kétszeres helyett letisztult, egyszerű 1×8-as rendszer, terepgumi helyett gördülékeny aszfaltgumi. Elöl a 120 mm-es SR Suntour teleszkóp simítja az egyenetlen utat, a Tektro hidraulikus tárcsafékek pedig magabiztos lassítást adnak. Ideális első bringának, napi ingázásra vagy könnyű hétvégi tekerésre, a Marin vázminőségével, elérhető áron.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","Series 2 6061 alumínium"],["Teleszkóp","SR Suntour XCM, 120 mm, zárható"]] },
-      { cs:"Hajtás", t:[["Hajtómű","Meroca, 42T"],["Hátsó váltó","Shimano Altus, 8 sebesség"],["Fogaskoszorú","SunRace, 11–34T"],["Lánc","KMC Z-8.3"]] },
-      { cs:"Fék & kerék", t:[["Fékek","Tektro HD-M275 hidraulikus, 160/160"],["Kerékszett","29″ Marin"],["Gumik","Schwalbe Hurricane"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Marin, 780 mm"],["Nyereg","Marin MTB"]] }
-    ] },
-
   { id:"gt-zaskar-lt-elite", mappa:"GTZaskarLTELite", marka:"GT", model:"GT Zaskar LT Elite", magassag:[172,182], felveve:"2026-07-03",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Jó", ev:2021, meret:"M", kerekmeret:"29″", suly:"14,4 kg", ar:290000,
     vaz:"Zaskar LT Triple Triangle alu · 14,4 kg", villa:"SR Suntour Zeron 35, 130 mm, állítható",
