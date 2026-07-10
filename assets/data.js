@@ -13,21 +13,6 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
-  { id:"cube-stereo-120-pro", mappa:"CubeStereoPro", marka:"Cube", model:"Cube Stereo 120 Pro", magassag:[170,182], felveve:"2026-06-22",
-    kategoria:"Trail · Fully", szegmens:"trail", allapot:"Kiváló", ev:2022, meret:"M (18″)", kerekmeret:"29″", suly:"14,8 kg", ar:430000,
-    vaz:"HPA alumínium, ETC 4-csuklós · 14,8 kg", villa:"RockShox Judy Silver TK, 130 mm, zárható",
-    hajtas:"SRAM NX Eagle 1×12", fek:"Magura MT Thirty hidraulikus, 180/180",
-    kerek:"29″ Cube EX25 · Schwalbe Nobby Nic Addix 2.4",
-    spec:"29″ trail fully · RockShox 130 / Manitou 120 mm · dropper · NX Eagle 1×12.",
-    leiras:"Annak, aki ott is nyugodtan haladna, ahol a merevfarú már ver és fáraszt. A Cube Stereo 120 elöl és hátul is rugózással nyeli a talajt: 130 mm elöl, 120 mm hátul, hosszú, egész napos körökre hangolva, hogy többet és kényelmesebben tekerhess. A SRAM Eagle 1×12 egy karral adja a teljes tartományt, a dropper egy gombnyomásra eltűnik lefelé, a 29-es kerék pedig magabiztosan gördül át azon, amin más megakad. Alatta a Cube bevált HPA alumínium váza, német precizitással. Ideális, ha a merevfarú után lépnél feljebb, vagy egyből a kényelmes összteleszkópossal kezdenél, és azt a nyugalmat keresed, amiért a full suspensiont választják.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","HPA alumínium, ETC 4-csuklós hátsó rugózás"],["Teleszkóp","RockShox Judy Silver TK, 130 mm, zárható"],["Rugóstag","Manitou Radium Expert RL, 120 mm, zárható"],["Nyeregcső","Cube Dropper Post, 130 mm"]] },
-      { cs:"Hajtás", t:[["Hajtómű","SRAM X1 1000 Eagle DUB, 30T"],["Hátsó váltó","SRAM NX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM PG-1210 Eagle, 11–50T"],["Lánc","SRAM SX Eagle"]] },
-      { cs:"Fék & kerék", t:[["Fékek","Magura MT Thirty, 180/180"],["Kerékszett","29″ Cube EX25"],["Gumik","Schwalbe Nobby Nic Addix Performance, 2.4"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Evolution SL, 760 mm"],["Nyereg","Natural Fit Venec Lite"]] }
-    ],
-    kiemelt:true },
-
   { id:"cube-aim-sl-l", mappa:"CubeAimSL", marka:"Cube", model:"Cube Aim SL", magassag:[176,188], felveve:"2026-07-09",
     kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"L (20″)", kerekmeret:"29″", suly:"13,8 kg", ar:200000,
     vaz:"Könnyű alumínium · 13,8 kg", villa:"RockShox Judy Silver TK Coil, 100 mm, zárható",
@@ -96,7 +81,8 @@ const KESZLET = [
       { cs:"Hajtás", t:[["Hajtómű","Truvativ Stylo DUB, 32T"],["Hátsó váltó","SRAM NX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM NX Eagle, 11–50T"],["Lánc","SRAM NX Eagle"]] },
       { cs:"Fék & kerék", t:[["Fékek","SRAM Level TL hidraulikus, 180/160"],["Kerékszett","29″ Specialized XC"],["Gumik","Specialized Fast Trak GRIPTON, 2.3"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Specialized Alloy Minirise, 750 mm"],["Nyereg","Body Geometry Phenom Comp"]] }
-    ] },
+    ],
+    kiemelt:true },
 
   { id:"cube-race-one", mappa:"CubeRaceOne", marka:"Cube", model:"Cube Race One", magassag:[168,180], felveve:"2026-06-08",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2017, meret:"M (18″)", kerekmeret:"27,5″", suly:"12,7 kg", ar:320000,
