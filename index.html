@@ -89,6 +89,13 @@
 .qp-meta b{font-size:.92rem;font-family:var(--disp);font-weight:800}
 .qp-meta i{margin-left:auto;font-style:normal;font-size:1rem;transition:transform .25s}
 .qp-tile:hover .qp-meta i{transform:translateX(6px)}
+.qp-tile.soon{opacity:.72}
+.qp-tile.soon:hover{opacity:1;transform:translateY(-4px);border-color:var(--copper-deep);background:linear-gradient(160deg,#212327,#191a1c);box-shadow:none}
+.qp-tile.soon .qp-ico{color:var(--fog)}
+.qp-tile.soon:hover .qp-ico{color:var(--copper)}
+.qp-tile.soon::before{background:var(--fog)}
+.qp-meta.soon{color:var(--fog)}
+.qp-soon-badge{font-family:var(--mono);font-weight:600;letter-spacing:.1em}
 @media(max-width:520px){.qp-grid{grid-template-columns:1fr 1fr;gap:12px}.qp-tile{padding:16px 15px 14px}.qp-tile.all{grid-column:1/-1}.qp-ico{width:34px;height:34px}.qp-name{font-size:1rem}.qp-desc{font-size:.82rem}}
 @media(prefers-reduced-motion:reduce){.qp-tile,.qp-ico,.qp-meta i{transition:none}}
 </style>
@@ -422,27 +429,36 @@
   });
 })();
 
-/* Quick-pick: Mit keresel? — élő darabszámú stílus-csempék */
+/* Quick-pick: Mit keresel? — kategória-csempék (elérhető + tervezett) */
 (function(){
   var grid=document.getElementById('qp-grid');
   if(!grid || typeof KESZLET==='undefined') return;
-  var META={
-    trail:{name:'Trail',desc:'Lejtő, kanyar, technikás terep.',ico:'<path d="M3 20h18"/><path d="M3 19l6-12 4 8 2.2-4 5.8 8"/>'},
-    xc:{name:'XC / Túra',desc:'Hosszú körök, túra, tempó.',ico:'<circle cx="12" cy="13" r="8"/><path d="M12 13V8.4"/><path d="M9.5 2.5h5"/>'},
-    cross:{name:'Cross',desc:'Városi és vegyes utak.',ico:'<path d="M5 20l3-16M19 20l-3-16M11.5 4v3M11.5 11v3M11.5 17v3"/>'},
-    noi:{name:'Női',desc:'Női vázgeometria.',ico:'<circle cx="6" cy="17" r="3.2"/><circle cx="18" cy="17" r="3.2"/><path d="M6 17l5-8h6M9.5 9h4.5l2.5 8"/>'}
-  };
+  /* soon:true = tervezett kategória (még nincs készleten); a kapcsolatra visz */
+  var CATS=[
+    {k:'trail', name:'Trail', desc:'Lejtő, kanyar, technikás terep.', ico:'<path d="M3 20h18"/><path d="M3 19l6-12 4 8 2.2-4 5.8 8"/>'},
+    {k:'xc', name:'XC / Túra', desc:'Hosszú körök, túra, tempó.', ico:'<circle cx="12" cy="13" r="8"/><path d="M12 13V8.4"/><path d="M9.5 2.5h5"/>'},
+    {k:'trekking', name:'Trekking', desc:'Kényelmes túra és ingázás.', soon:true, ico:'<path d="M4 20h16"/><path d="M8 20V5l7 3-7 3"/>'},
+    {k:'orszaguti', name:'Országúti', desc:'Aszfalt, tempó, hosszú táv.', soon:true, ico:'<path d="M3 9h13a3 3 0 1 1 3 3H3"/><path d="M3 15h9a3 3 0 1 0-3 3"/>'},
+    {k:'gravel', name:'Gravel', desc:'Aszfalt és murva között.', soon:true, ico:'<circle cx="6" cy="16" r="3.2"/><circle cx="18" cy="16" r="3.2"/><path d="M6 16l4-7h6M9.5 9h4.5l3 7"/>'},
+    {k:'fitness', name:'Fitness', desc:'Városi, sportos, egyenes kormány.', soon:true, ico:'<path d="M3 12h4l2-6 4 12 2-6h6"/>'}
+  ];
   var svg=function(p){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+p+'</svg>';};
   var html='';
-  ['trail','xc','cross','noi'].forEach(function(k){
-    var n=KESZLET.filter(function(b){return b.szegmens===k;}).length;
-    if(!n) return;
-    var m=META[k];
-    html+='<a class="qp-tile" href="keszlet.html?szegmens='+k+'">'
-      +'<span class="qp-ico">'+svg(m.ico)+'</span>'
-      +'<span class="qp-name">'+m.name+'</span>'
-      +'<span class="qp-desc">'+m.desc+'</span>'
-      +'<span class="qp-meta"><b>'+n+'</b> elérhető <i>→</i></span></a>';
+  CATS.forEach(function(c){
+    var n=KESZLET.filter(function(b){return b.szegmens===c.k;}).length;
+    if(n>0){
+      html+='<a class="qp-tile" href="keszlet.html?szegmens='+c.k+'">'
+        +'<span class="qp-ico">'+svg(c.ico)+'</span>'
+        +'<span class="qp-name">'+c.name+'</span>'
+        +'<span class="qp-desc">'+c.desc+'</span>'
+        +'<span class="qp-meta"><b>'+n+'</b> elérhető <i>→</i></span></a>';
+    } else if(c.soon){
+      html+='<a class="qp-tile soon" href="kapcsolat.html">'
+        +'<span class="qp-ico">'+svg(c.ico)+'</span>'
+        +'<span class="qp-name">'+c.name+'</span>'
+        +'<span class="qp-desc">'+c.desc+'</span>'
+        +'<span class="qp-meta soon"><span class="qp-soon-badge">Hamarosan</span> · szólj <i>→</i></span></a>';
+    }
   });
   html+='<a class="qp-tile all" href="keszlet.html">'
     +'<span class="qp-ico">'+svg('<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>')+'</span>'
