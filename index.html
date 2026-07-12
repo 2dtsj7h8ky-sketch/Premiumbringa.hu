@@ -68,6 +68,29 @@
 .path-facts{display:flex;flex-direction:column;gap:9px;margin-top:auto}
 .path-fact{font-family:var(--mono);font-size:.64rem;letter-spacing:.03em;text-transform:uppercase;color:var(--steel);display:flex;align-items:center;gap:10px}
 .path-fact i{color:var(--copper);font-style:normal;font-weight:700}
+
+/* ===== Quick-pick: Mit keresel? (könnyű belépő a hero után) ===== */
+.qp{position:relative;background:var(--carbon);border-top:1px solid var(--line);padding:clamp(44px,6.5vw,78px) 0}
+.qp-head{max-width:620px}
+.qp-head h2{color:var(--bright);font-size:clamp(1.6rem,3.4vw,2.3rem);margin:12px 0 12px}
+.qp-head p{color:var(--haze);font-size:1.02rem;line-height:1.6;margin:0}
+.qp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:16px;margin-top:36px}
+.qp-tile{display:flex;flex-direction:column;background:linear-gradient(160deg,#212327,#191a1c);border:1px solid var(--line);border-radius:16px;padding:22px 22px 18px;text-decoration:none;color:inherit;position:relative;overflow:hidden;transition:transform .25s,border-color .25s,background .25s,box-shadow .25s}
+.qp-tile::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--copper);transform:scaleY(0);transform-origin:top;transition:transform .3s}
+.qp-tile:hover{transform:translateY(-5px);border-color:var(--copper);background:linear-gradient(160deg,#26201b,#1b1714);box-shadow:0 18px 40px rgba(0,0,0,.32)}
+.qp-tile:hover::before{transform:scaleY(1)}
+.qp-tile.all{background:linear-gradient(160deg,#2a2118,#1c1712);border-color:var(--copper-deep)}
+.qp-ico{width:42px;height:42px;color:var(--copper);margin-bottom:14px;transition:transform .3s}
+.qp-tile:hover .qp-ico{transform:translateY(-2px) scale(1.06)}
+.qp-ico svg{width:100%;height:100%;display:block}
+.qp-name{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:108%;font-size:1.16rem;color:var(--bright);line-height:1.1}
+.qp-desc{color:var(--haze);font-size:.9rem;line-height:1.5;margin:7px 0 16px;flex:1}
+.qp-meta{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--copper);margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.qp-meta b{font-size:.92rem;font-family:var(--disp);font-weight:800}
+.qp-meta i{margin-left:auto;font-style:normal;font-size:1rem;transition:transform .25s}
+.qp-tile:hover .qp-meta i{transform:translateX(6px)}
+@media(max-width:520px){.qp-grid{grid-template-columns:1fr 1fr;gap:12px}.qp-tile{padding:16px 15px 14px}.qp-tile.all{grid-column:1/-1}.qp-ico{width:34px;height:34px}.qp-name{font-size:1rem}.qp-desc{font-size:.82rem}}
+@media(prefers-reduced-motion:reduce){.qp-tile,.qp-ico,.qp-meta i{transition:none}}
 </style>
 </head>
 <body>
@@ -100,6 +123,16 @@
     <div class="hero-art mx-fade d3" id="hero-feature"></div>
   </div>
 </header>
+
+<!-- 1b) QUICK-PICK: MIT KERESEL? -->
+<section class="qp" id="kezdes"><div class="wrap">
+  <div class="qp-head reveal">
+    <span class="kick">Kezdjük egyszerűen</span>
+    <h2>Mit keresel?</h2>
+    <p>Válaszd ki a stílust, és egyből a neked való, felkészített bringákat mutatjuk.</p>
+  </div>
+  <div class="qp-grid reveal" id="qp-grid"></div>
+</div></section>
 
 <!-- 2) MIÉRT PREMIUM BRINGA -->
 <section class="value" id="miert">
@@ -387,6 +420,36 @@
     t.addEventListener('mouseenter',function(){sel(p);});
     t.addEventListener('focus',function(){sel(p);});
   });
+})();
+
+/* Quick-pick: Mit keresel? — élő darabszámú stílus-csempék */
+(function(){
+  var grid=document.getElementById('qp-grid');
+  if(!grid || typeof KESZLET==='undefined') return;
+  var META={
+    trail:{name:'Trail',desc:'Lejtő, kanyar, technikás terep.',ico:'<path d="M3 20h18"/><path d="M3 19l6-12 4 8 2.2-4 5.8 8"/>'},
+    xc:{name:'XC / Túra',desc:'Hosszú körök, túra, tempó.',ico:'<circle cx="12" cy="13" r="8"/><path d="M12 13V8.4"/><path d="M9.5 2.5h5"/>'},
+    cross:{name:'Cross',desc:'Városi és vegyes utak.',ico:'<path d="M5 20l3-16M19 20l-3-16M11.5 4v3M11.5 11v3M11.5 17v3"/>'},
+    noi:{name:'Női',desc:'Női vázgeometria.',ico:'<circle cx="6" cy="17" r="3.2"/><circle cx="18" cy="17" r="3.2"/><path d="M6 17l5-8h6M9.5 9h4.5l2.5 8"/>'}
+  };
+  var svg=function(p){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+p+'</svg>';};
+  var html='';
+  ['trail','xc','cross','noi'].forEach(function(k){
+    var n=KESZLET.filter(function(b){return b.szegmens===k;}).length;
+    if(!n) return;
+    var m=META[k];
+    html+='<a class="qp-tile" href="keszlet.html?szegmens='+k+'">'
+      +'<span class="qp-ico">'+svg(m.ico)+'</span>'
+      +'<span class="qp-name">'+m.name+'</span>'
+      +'<span class="qp-desc">'+m.desc+'</span>'
+      +'<span class="qp-meta"><b>'+n+'</b> elérhető <i>→</i></span></a>';
+  });
+  html+='<a class="qp-tile all" href="keszlet.html">'
+    +'<span class="qp-ico">'+svg('<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>')+'</span>'
+    +'<span class="qp-name">A teljes készlet</span>'
+    +'<span class="qp-desc">Nézd meg egyben az összes felkészített bringát.</span>'
+    +'<span class="qp-meta"><b>'+KESZLET.length+'</b> bringa <i>→</i></span></a>';
+  grid.innerHTML=html;
 })();
 </script>
 </body>
