@@ -13,20 +13,6 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
-  { id:"cube-aim-sl-l", mappa:"CubeAimSL", marka:"Cube", model:"Cube Aim SL", magassag:[176,188], felveve:"2026-07-09",
-    kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"L (20″)", kerekmeret:"29″", suly:"13,8 kg", ar:200000,
-    vaz:"Könnyű alumínium · 13,8 kg", villa:"RockShox Judy Silver TK Coil, 100 mm, zárható",
-    hajtas:"Shimano Alivio 2×9", fek:"Shimano BL-MT200 hidraulikus, 160/160",
-    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2.25",
-    spec:"29″ alu hardtail · RockShox Judy 100 mm · Shimano Alivio 2×9.",
-    leiras:"Annak, aki stílusos, megbízható MTB-t keres a hétvégi túrákra, ami kedvet csinál a következő körhöz is. A Cube Aim SL belépő kategóriás terepbringa, de a kiegyensúlyozott geometria, a tiszta váltás és a finoman dolgozó RockShox villa együtt meglepően összeszedett, könnyen megszerethető karaktert adnak. Kényelmes, mégis van benne sportosság, modern a megjelenése, de nem hivalkodó. Igazi mindenre kész társ, amivel könnyű beleszeretni a terepbringázásba, akár most kezdesz bele, akár megbízható hétköznapi bringát keresel.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","Könnyű alumínium"],["Teleszkóp","RockShox Judy Silver TK Coil, 100 mm, zárható"]] },
-      { cs:"Hajtás", t:[["Hajtómű","Shimano FC-MT101, 36×22T"],["Első váltó","Shimano Altus, 2 sebesség"],["Hátsó váltó","Shimano Alivio, 9 sebesség"],["Fogaskoszorú","Shimano CS-HG201, 11–36T"],["Lánc","KMC X9"]] },
-      { cs:"Fék & kerék", t:[["Fékek","Shimano BL-MT200 hidraulikus, 160/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Schwalbe Smart Sam, 2.25"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
-    ] },
-
   { id:"radon-jealous-9", mappa:"RadonJealous", marka:"Radon", model:"Radon Jealous 9.0", magassag:[173,183], felveve:"2026-07-09",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2018, meret:"L (56 cm)", kerekmeret:"29″", suly:"kb. 11 kg", ar:430000,
     vaz:"Super Strong Carbon szénszál · kb. 11 kg", villa:"RockShox SID RL, 100 mm, Solo Air, zárható",
