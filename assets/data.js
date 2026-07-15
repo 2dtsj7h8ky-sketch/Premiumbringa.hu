@@ -27,20 +27,6 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Advanced Carbon"],["Nyereg","Selle Italia SLR"]] }
     ] },
 
-  { id:"cube-aim-slx", mappa:"CubeAimSLX", marka:"Cube", model:"Cube Aim SLX", magassag:[168,180], felveve:"2026-07-09",
-    kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2023, meret:"M (18″)", kerekmeret:"29″", suly:"13,8 kg", ar:220000,
-    vaz:"Könnyű alumínium · 13,8 kg", villa:"RockShox Judy Silver TK Coil, 100 mm, zárható",
-    hajtas:"Shimano Alivio 2×9", fek:"Shimano BL-MT200 hidraulikus, 160/160",
-    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2.25",
-    spec:"29″ alu hardtail · RockShox Judy 100 mm · Shimano Alivio 2×9.",
-    leiras:"Annak, aki stílusos, megbízható MTB-t szeretne, ami nem csak kiszolgálja a hétvégi túrát, hanem kedvet is csinál a következőhöz. A Cube Aim SLX belépő kategóriás terepbringa, de a kiegyensúlyozott geometria, a tiszta váltás és a finoman dolgozó RockShox villa együtt meglepően összeszedett, könnyen megszerethető karaktert adnak. Kényelmes, mégis van benne sportosság, modern a megjelenése, de nem hivalkodó. Igazi mindenre kész társ, amivel könnyű beleszeretni a terepbringázásba, akár most kezdesz bele, akár megbízható hétköznapi bringát keresel.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","Könnyű alumínium"],["Teleszkóp","RockShox Judy Silver TK Coil, 100 mm, zárható"]] },
-      { cs:"Hajtás", t:[["Hajtómű","Shimano FC-MT101, 36×22T"],["Első váltó","Shimano Altus, 2 sebesség"],["Hátsó váltó","Shimano Alivio, 9 sebesség"],["Fogaskoszorú","Shimano CS-HG201, 11–36T"],["Lánc","KMC X9"]] },
-      { cs:"Fék & kerék", t:[["Fékek","Shimano BL-MT200 hidraulikus, 160/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Schwalbe Smart Sam, 2.25"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
-    ] },
-
   { id:"gt-zaskar-lt-elite", mappa:"GTZaskarLTELite", marka:"GT", model:"GT Zaskar LT Elite", magassag:[172,182], felveve:"2026-07-03",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Jó", ev:2021, meret:"M", kerekmeret:"29″", suly:"14,4 kg", ar:290000,
     vaz:"Zaskar LT Triple Triangle alu · 14,4 kg", villa:"SR Suntour Zeron 35, 130 mm, állítható",
