@@ -27,20 +27,6 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Advanced Carbon"],["Nyereg","Selle Italia SLR"]] }
     ] },
 
-  { id:"gt-zaskar-lt-elite", mappa:"GTZaskarLTELite", marka:"GT", model:"GT Zaskar LT Elite", magassag:[172,182], felveve:"2026-07-03",
-    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Jó", ev:2021, meret:"M", kerekmeret:"29″", suly:"14,4 kg", ar:290000,
-    vaz:"Zaskar LT Triple Triangle alu · 14,4 kg", villa:"SR Suntour Zeron 35, 130 mm, állítható",
-    hajtas:"SRAM SX Eagle 1×12", fek:"Shimano MT410 hidraulikus, 180/160",
-    kerek:"29″ WTB ST i30 TCS · Schwalbe Hans Dampf",
-    spec:"29″ trail hardtail · SR Suntour 130 mm · dropper · SX Eagle 1×12.",
-    leiras:"Annak, aki akkor éled fel igazán, amikor a terep lefelé fordul. A GT Zaskar LT a legendás hardtail mai, trail felé kihegyezett formája: a jellegzetes Triple Triangle váz, a laza, hosszú geometria és a 130 mm-es villa együtt azt adják, hogy magabiztosan engedd rá a bringát a köves, gyökeres, gyors szakaszokra. A dropper nyeregcső egy gombnyomásra tűnik el az utadból lefelé, a széles kormány és a rövid nyak pedig pontos, játékos irányítást ad a kanyarban. A széles, fogazott gumik ott is kapaszkodnak, ahol egy XC bringa már csúszkálna. Nem visszafog, hanem bátorít a csapatásra, amit eddig kerülgettél. Ha karakteres, magabiztos trail hardtailt keresel egy legendás névtől, ez pontosan az.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","Zaskar LT Triple Triangle alumínium"],["Teleszkóp","SR Suntour Zeron 35, 130 mm, állítható keménység"],["Nyeregcső","TranzX dropper"]] },
-      { cs:"Hajtás", t:[["Hajtómű","SRAM SX Eagle PowerSpline, 30T"],["Hátsó váltó","SRAM SX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM SX Eagle, 11–50T"],["Lánc","SRAM SX Eagle"]] },
-      { cs:"Fék & kerék", t:[["Fékek","Shimano MT410 hidraulikus, 180/160"],["Kerékszett","29″ WTB ST i30 TCS 2.0"],["Gumik","Schwalbe Hans Dampf"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","GT, 780 mm"],["Nyereg","WTB Silverado Sport"]] }
-    ] },
-
   { id:"specialized-chisel-expert", mappa:"SpecializedChiselExpert", marka:"Specialized", model:"Specialized Chisel Expert", magassag:[176,186], felveve:"2026-06-02",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2019, meret:"L", kerekmeret:"29″", suly:"12,3 kg", ar:380000,
     vaz:"D'Aluisio Smartweld M5 alumínium · 12,3 kg", villa:"RockShox Reba RL, 100 mm, állítható keménység",
