@@ -175,6 +175,16 @@
 .gar-steps .n{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-size:.66rem;font-weight:600;color:var(--copper);border:1px solid var(--copper-deep);background:rgba(194,137,90,.1)}
 .gar-steps .tx{color:var(--haze);font-size:.96rem;line-height:1.6}
 .gar-steps .tx b{color:var(--bright);font-weight:600;display:block;margin-bottom:3px}
+/* érvényesítés: egyszerű 4 lépéses folyamat */
+.gar-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.gar-fstep{border:1px solid var(--line);border-radius:14px;padding:20px 18px;background:var(--carbon-2)}
+.gar-fstep .n{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;font-family:var(--mono);font-size:.62rem;font-weight:600;color:var(--copper);border:1px solid var(--copper-deep);background:rgba(194,137,90,.1);margin-bottom:13px}
+.gar-fstep h4{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:106%;font-size:.95rem;color:var(--bright);margin:0 0 7px;line-height:1.15}
+.gar-fstep p{color:var(--haze);font-size:.9rem;line-height:1.55;margin:0}
+.gar-fnote{margin-top:18px;color:var(--fog);font-size:.86rem;line-height:1.7}
+.gar-fnote b{color:var(--haze);font-weight:600}
+@media(max-width:860px){.gar-flow{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.gar-flow{grid-template-columns:1fr}}
 /* határidők */
 .gar-times{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
 .gar-time{border:1px solid var(--line);border-radius:12px;padding:12px 16px;background:var(--carbon-2);min-width:150px;flex:1 1 150px}
@@ -463,12 +473,13 @@
 
   <div class="gar-block reveal">
     <h3>Hogyan érvényesítsd</h3>
-    <ol class="gar-steps">
-      <li><span class="n">1</span><span class="tx"><b>Szólj, amint észreveszed</b>Hívj, írj Messengeren vagy e-mailben. A hibát a felfedezése után késedelem nélkül közöld. Fogyasztóként a felfedezéstől számított két hónapon belül közölt hibát a törvény késedelem nélkül közöltnek tekinti.</span></li>
-      <li><span class="n">2</span><span class="tx"><b>Egyeztessünk időpontot</b>A javítást a debreceni műhelyünkben végezzük, előzetes telefonos egyeztetés után. Kérünk, a hibát mindig előbb nekünk jelezd.</span></li>
-      <li><span class="n">3</span><span class="tx"><b>Hozd a számlát</b>A vásárlást a számla igazolja, amely egyben a jótállási jegyed is.</span></li>
-      <li><span class="n">4</span><span class="tx"><b>Megnézzük és megjavítjuk</b>A bejelentett igényről jogszabály szerint jegyzőkönyvet veszünk fel. Törekszünk arra, hogy a kijavítás legfeljebb 15 napon belül elkészüljön; ha hosszabb időt igényel, tájékoztatunk a várható határidőről.</span></li>
-    </ol>
+    <div class="gar-flow">
+      <div class="gar-fstep"><span class="n">1</span><h4>Kapcsolatfelvétel</h4><p>Szólj telefonon, Messengeren vagy e-mailben, amint észreveszed.</p></div>
+      <div class="gar-fstep"><span class="n">2</span><h4>Időpont-egyeztetés</h4><p>Megbeszéljük, mikor hozod be a debreceni műhelyünkbe.</p></div>
+      <div class="gar-fstep"><span class="n">3</span><h4>Javítás</h4><p>Megvizsgáljuk és rendezzük, jellemzően 15 napon belül.</p></div>
+      <div class="gar-fstep"><span class="n">4</span><h4>Tájékoztatás</h4><p>Végig jelezzük, hol tart, és hogy mi lett az eredmény.</p></div>
+    </div>
+    <p class="gar-fnote">A hibát a felfedezése után késedelem nélkül jelezd: fogyasztóként a felfedezéstől számított <b>két hónapon belül</b> közölt bejelentés időben érkezettnek számít. A vásárlást a <b>számla</b> igazolja, amely egyben a jótállási jegyed. A bejelentett igényről jogszabály szerint <b>jegyzőkönyvet</b> veszünk fel, és másolatot adunk róla.</p>
     <div class="gar-times">
       <div class="gar-time"><b>30 nap</b><span>Garancia</span></div>
       <div class="gar-time"><b>1 év</b><span>Kellékszavatosság</span></div>
