@@ -147,7 +147,7 @@
 .gar-col li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%}
 .gar-col.yes li::before{background:var(--copper)}
 .gar-col.no li::before{background:var(--steel)}
-/* két réteg: önkéntes garancia + törvényi szavatosság */
+/* garancia + kellékszavatosság kártyák */
 .gar-layers{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:34px}
 .gar-layer{border:1px solid var(--line);border-radius:18px;padding:26px 28px;background:linear-gradient(160deg,#212327,#191a1c);display:flex;flex-direction:column}
 .gar-layer.own{border-color:var(--copper);background:linear-gradient(160deg,#2a2118,#1c1712)}
@@ -160,6 +160,11 @@
 .gar-layer p{color:var(--haze);font-size:.96rem;line-height:1.62;margin:0 0 12px}
 .gar-layer p:last-child{margin-bottom:0}
 .gar-layer b{color:var(--bright);font-weight:600}
+/* amit átadás előtt elvégzünk */
+.gar-prep{border:1px solid var(--copper);border-radius:18px;padding:26px 30px;background:linear-gradient(160deg,#26201b,#1b1714);margin-bottom:30px}
+.gar-prep h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:106%;font-size:1.06rem;color:var(--copper);margin:0 0 10px}
+.gar-prep p{color:var(--haze);font-size:1rem;line-height:1.68;margin:0}
+.gar-prep b{color:var(--bright);font-weight:600}
 /* alcímes blokk */
 .gar-block{margin-top:34px}
 .gar-block > h3{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:106%;font-size:1.12rem;color:var(--bright);margin:0 0 8px}
@@ -388,47 +393,59 @@
 <section class="story garancia" id="garancia"><div class="wrap">
   <div class="gar-head reveal">
     <span class="kick">Garancia és szavatosság</span>
-    <h2>Két réteg véd, hogy nyugodtan tekerhess</h2>
-    <p>Használt kerékpárnál a legfontosabb kérdés: mi van, ha baj van. Két réteg áll mögötted. Az egyik a törvény szerint jár neked, a másikat ezen felül, önként vállaljuk. Alább pontosan leírjuk, mire, meddig és milyen feltételekkel.</p>
+    <h2>Azt garantáljuk, amit mi alkottunk rajta</h2>
+    <p>Használt kerékpárokat árulunk. Ezek különféle gyártóktól származnak, akik annak idején jótállást vállaltak rájuk, ez pedig természetesen rég lejárt. Egy kerékpár viszont karbantartva jóval tovább bírja, mint a gyártói jótállás ideje, ez vitathatatlan. Ezért nem a gyártó helyett ígérünk valamit: azért állunk helyt, amit mi teszünk hozzá.</p>
+  </div>
+
+  <div class="gar-prep reveal">
+    <h3>Amit átadás előtt elvégzünk</h3>
+    <p>Minden kerékpárt <b>átszervizelünk, beállítunk</b>, és az elhasználódott alkatrészeket kicseréljük. Így <b>használatra kész és beállított</b> állapotban kerül hozzád, és a tapasztalatunk szerint ezekkel jó darabig, jellemzően évekig nem lesz gondod.</p>
   </div>
 
   <div class="gar-layers reveal">
     <div class="gar-layer own">
-      <span class="gl-tag">Amit önként vállalunk</span>
+      <span class="gl-tag">Amit mi vállalunk</span>
       <div class="gl-num">30 <small>nap</small></div>
-      <h3>Garancia a működőképességre</h3>
-      <p>Az átvételtől számított 30 napon át jótállunk azért, hogy a kerékpár rendeltetésszerű használat mellett <b>megbízhatóan és biztonságosan működik</b>: a hajtás, a fékrendszer, a kormányzás és a csapágyak teszik a dolgukat. Ha ezen belül anyag- vagy szerelési hiba jön elő, megvizsgáljuk és díjmentesen rendezzük.</p>
-      <p>Ez önkéntes vállalás. A jogszabályból eredő jogaidat nem érinti és nem korlátozza: a két réteg egymás mellett él, és mindig a számodra kedvezőbbre hivatkozhatsz.</p>
+      <h3>Garancia</h3>
+      <p>Arra vállalunk garanciát, amit mi alkottunk a kerékpáron: a szervizre, a beállításra, a cserélt alkatrészekre, és arra, hogy a kerékpár <b>minden komponense hibátlanul és biztonságosan működik</b>. Kiterjed a kopó és forgó alkatrészek <b>meghibásodására</b> is, például egy csapágy berágódására vagy egy agy játékára.</p>
+      <p>A garancia és a jótállás a magyar jogban ugyanaz: amikor garanciát mondunk, jótállásra gondolunk. Ez önkéntes vállalás, a jogszabályból eredő jogaidat nem érinti és nem korlátozza.</p>
     </div>
     <div class="gar-layer law">
-      <span class="gl-tag">Amire a törvény kötelez</span>
+      <span class="gl-tag">Amit a törvény ír elő</span>
       <div class="gl-num">1 <small>év</small></div>
       <h3>Kellékszavatosság</h3>
-      <p>Használt kerékpárra a kellékszavatosság az átvételtől számított <b>1 évig</b> áll fenn. Ez a törvényi minimum, ennél rövidebb érvényesen nem köthető ki. Arra a hibára vonatkozik, amely a kerékpárban <b>már az átadáskor benne volt</b>, de csak később derült ki.</p>
-      <p>Ebben az évben a törvény a te oldaladon áll: <b>vélelmezni kell, hogy a hiba már az átadáskor fennállt</b>, tehát nem neked kell bizonyítanod. Neked csak jelezned kell.</p>
+      <p>Azokra a <b>rejtett hibákra</b> vonatkozik, amelyek a vásárláskor nem voltak ismertek, de már benne voltak a kerékpárban, és csak később jöttek elő. Használt kerékpárnál az átvételtől számított 1 év; ez a törvényi minimum, ennél rövidebb érvényesen nem köthető ki.</p>
+      <p>Ebben az évben a törvény vélelmezi, hogy a hiba már az átadáskor fennállt, tehát <b>nem neked kell bizonyítanod</b>. Neked csak jelezned kell.</p>
     </div>
   </div>
 
   <div class="gar-cov reveal">
     <div class="gar-col yes">
-      <h4><i>✓</i> Mire terjed ki</h4>
+      <h4><i>✓</i> Mit tekintünk hibának</h4>
       <ul>
-        <li>A kerékpár biztonságos, rendeltetésszerű működése: hajtás, fékrendszer, kormányzás, kerekek, csapágyak</li>
+        <li>Ami a rendeltetésszerű, biztonságos működést akadályozza: nem fog a fék, terhelés alatt ugrik a váltó, játszik vagy zörög egy csapágy</li>
+        <li>A kopó és forgó alkatrészek meghibásodása: berágódott csapágy, kilazult agy, magától deformálódó kerék</li>
         <li>Anyag- vagy szerelési hiba, illetve olyan rejtett hiba, amely már az átadáskor fennállt</li>
-        <li>Az átadáskor vállalt, a besorolással és a fotókkal dokumentált állapot</li>
       </ul>
     </div>
     <div class="gar-col no">
-      <h4><i>✕</i> Mire nem terjed ki</h4>
+      <h4><i>✕</i> Mi nem hiba, hanem a használat velejárója</h4>
       <ul>
-        <li>A használat természetes velejárói: a gumi, a fékbetét, a lánc, a féktárcsa, a fogaskoszorú és a bowden kopása, a defekt</li>
-        <li>Az átvételkor ismert, jelzett és a fotókon bemutatott kopásnyomok, hibák</li>
-        <li>Esés, ütközés, baleset vagy túlterhelés okozta sérülés</li>
-        <li>Nem rendeltetésszerű használat, például versenyzés vagy ugratás olyan kerékpárral, amely nem erre készült</li>
-        <li>Illetéktelen vagy szakszerűtlen szerelés, átalakítás, máshol végzett javítás következménye</li>
-        <li>A karbantartás elmulasztása, nagynyomású mosás, szakszerűtlen tárolás vagy szállítás, elemi kár</li>
+        <li>A kopóalkatrészek természetes fogyása: gumi, fékbetét, lánc, féktárcsa, fogaskoszorú</li>
+        <li>A defekt, a bowden bejáratódása utáni utánállítás, a lánc nyúlása</li>
+        <li>A rendszeres karbantartás igénye: tisztítás, kenés, utánhúzás, fékállítás</li>
+        <li>Az átvételkor ismert, jelzett és a fotókon bemutatott kopásnyomok</li>
+        <li>Esés, ütközés, baleset, túlterhelés, nem rendeltetésszerű használat</li>
+        <li>Illetéktelen vagy szakszerűtlen szerelés, máshol végzett javítás következménye</li>
+        <li>A karbantartás elmulasztása, nagynyomású mosás, szakszerűtlen tárolás, elemi kár</li>
       </ul>
     </div>
+  </div>
+
+  <div class="gar-block reveal">
+    <h3>Kipróbálás és az első kilométerek</h3>
+    <p class="lead">Vásárlás előtt a telephelyünkön kipróbálhatod a kerékpárt, és ezt javasoljuk is. Ha valami nem olyan, amilyennek szerinted lennie kell, még helyben orvosoljuk, és a személyes beállításokban is segítünk.</p>
+    <p class="lead">Ritkán előfordul, hogy egy probléma a kipróbálás során nem jön elő, használat közben viszont jelentkezik. Ilyenkor kérünk, mielőbb jelezd. Éppen ezért érdemes a kerékpárt rögtön használatba venni, nem a tárolóba tenni.</p>
   </div>
 
   <div class="gar-block reveal">
@@ -445,12 +462,12 @@
     <h3>Hogyan érvényesítsd</h3>
     <ol class="gar-steps">
       <li><span class="n">1</span><span class="tx"><b>Jelezd, amint észreveszed</b>Hívj, írj Messengeren vagy e-mailben. A hibát a felfedezése után késedelem nélkül közöld. Fogyasztóként a felfedezéstől számított két hónapon belül közölt hibát a törvény késedelem nélkül közöltnek tekinti.</span></li>
-      <li><span class="n">2</span><span class="tx"><b>Hozd a számlát</b>A vásárlást a számla igazolja, amely egyben a jótállási jegyed is. Külön jótállási jegyet nem állítunk ki.</span></li>
-      <li><span class="n">3</span><span class="tx"><b>Jegyzőkönyvet veszünk fel</b>A bejelentett szavatossági vagy jótállási igényről jogszabály szerint jegyzőkönyvet készítünk, és másolatot adunk róla.</span></li>
-      <li><span class="n">4</span><span class="tx"><b>Megvizsgáljuk és megjavítjuk</b>Törekszünk arra, hogy a kijavítás legfeljebb 15 napon belül elkészüljön. Ha ennél tovább tartana, tájékoztatunk a várható időről.</span></li>
+      <li><span class="n">2</span><span class="tx"><b>Egyeztessünk időpontot</b>A javítást a debreceni műhelyünkben végezzük, előzetes telefonos egyeztetés után. Kérünk, a hibát mindig előbb nekünk jelezd.</span></li>
+      <li><span class="n">3</span><span class="tx"><b>Hozd a számlát</b>A vásárlást a számla igazolja, amely egyben a jótállási jegyed is. Külön jótállási jegyet nem állítunk ki.</span></li>
+      <li><span class="n">4</span><span class="tx"><b>Megvizsgáljuk és megjavítjuk</b>A bejelentett igényről jogszabály szerint jegyzőkönyvet veszünk fel. Törekszünk arra, hogy a kijavítás legfeljebb 15 napon belül elkészüljön; ha ennél tovább tartana, tájékoztatunk a várható időről.</span></li>
     </ol>
     <div class="gar-times">
-      <div class="gar-time"><b>30 nap</b><span>Önkéntes garancia</span></div>
+      <div class="gar-time"><b>30 nap</b><span>Garancia</span></div>
       <div class="gar-time"><b>1 év</b><span>Kellékszavatosság</span></div>
       <div class="gar-time"><b>1 év</b><span>A vélelem ideje</span></div>
       <div class="gar-time"><b>2 hónap</b><span>Bejelentés a felfedezéstől</span></div>
@@ -460,7 +477,7 @@
 
   <p class="gar-note reveal">
     <b>Termékszavatosság.</b> Gyártási hiba esetén a gyártóval vagy forgalmazóval szemben termékszavatossági igényt is érvényesíthetsz, a termék forgalomba hozatalától számított két éven belül. Több éves, használt kerékpárnál ez a határidő jellemzően már letelt. Ugyanazon hiba miatt kellékszavatossági és termékszavatossági igényt egyidejűleg nem érvényesíthetsz.<br><br>
-    <b>Kérésünk.</b> A hibát mindig előbb nekünk jelezd. Ha máshol javíttatod, az abból eredő további hibákért nem tudunk helytállni.<br><br>
+    <b>Ha később akadna gondod.</b> A fenti időszakokon túl is jelezd nyugodtan telefonon, hátha tudunk segíteni. Attól, hogy egy határidő letelt, még szívesen ránézünk a kerékpárra.<br><br>
     A részletes feltételeket az <a href="aszf.html#szavatossag">ÁSZF szavatosság és jótállás pontja</a> tartalmazza. Fogyasztói jogvita esetén a lakóhelyed vagy a székhelyünk szerint illetékes békéltető testülethez fordulhatsz.
   </p>
 
