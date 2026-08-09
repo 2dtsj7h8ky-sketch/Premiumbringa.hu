@@ -8,7 +8,7 @@
         A MÉRETET/testmagasságot NE írd a leírásba: azt a méret-blokk tartalmazza.
    FELSZERELTSÉG (`reszletek`): csoportosított, bolti stílusú spec; a `suly` külön.
    megjegyzes (opcionális): ismert hiba/eltérés ŐSZINTE közlése; a termékoldalon
-        külön, jól látható „Fontos, őszintén" blokként jelenik meg. Az így közölt,
+        külön, jól látható „Fontos" blokként jelenik meg. Az így közölt,
         átadáskor ismert hibára a 30 napos garancia nem terjed ki.
    kiemelt: a főoldali hero showcase ezt a darabot mutatja (csak az első számít).
    felveve: a felvétel dátuma (YYYY-MM-DD). Ez hajtja a "Legfrissebb" rendezést,

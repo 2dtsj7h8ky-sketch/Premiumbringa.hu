@@ -299,7 +299,7 @@
           <div class="pprice">${arSzoveg(b)}</div>
           ${keySpecs}
           <p class="plead">${b.leiras ? esc(b.leiras) : "A részletes leírás hamarosan, a hirdetés adatai alapján."}</p>
-          ${b.megjegyzes ? `<div class="pdisc"><span class="pdisc-ic" aria-hidden="true"></span><p><b>Fontos, őszintén.</b> ${esc(b.megjegyzes)}</p></div>` : ""}
+          ${b.megjegyzes ? `<div class="pdisc"><span class="pdisc-ic" aria-hidden="true"></span><p><b>Fontos.</b> ${esc(b.megjegyzes)}</p></div>` : ""}
           <div class="buybox">
             <a class="btn btn-1" href="tel:+36204360307">Érdeklődöm telefonon →</a>
             <a class="btn btn-2" href="kapcsolat.html">Időpont kipróbálásra</a>
