@@ -379,6 +379,12 @@ select.sort{font-family:var(--mono);font-size:.7rem;color:var(--ink);background:
 .pprice{font-family:var(--disp);font-weight:800;font-size:2rem;color:var(--copper);font-stretch:108%;margin:18px 0 4px}
 .pprice small{font-size:.9rem;color:var(--haze);font-weight:600}
 .plead{color:var(--haze);font-size:1rem;line-height:1.7;margin:18px 0 26px;font-weight:300}
+/* Őszinte megjegyzés: ismert hiba/eltérés jól látható, de nem riasztó közlése */
+.pdisc{display:flex;gap:12px;align-items:flex-start;background:rgba(194,137,90,.09);border:1px solid rgba(194,137,90,.34);border-left-width:3px;border-radius:12px;padding:14px 16px;margin:-6px 0 26px}
+.pdisc-ic{flex:none;width:19px;height:19px;border-radius:50%;background:var(--copper);position:relative;margin-top:2px}
+.pdisc-ic::after{content:"!";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--carbon);font-family:var(--mono);font-size:.72rem;font-weight:700;line-height:1}
+.pdisc p{margin:0;color:var(--bright);font-size:.92rem;line-height:1.62}
+.pdisc b{color:var(--copper)}
 .buybox{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:30px}
 .spec-table{width:100%;border-collapse:collapse;border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .spec-table tr{border-bottom:1px solid var(--line)}
@@ -561,6 +567,16 @@ footer .footlegal a:hover{color:var(--copper)}
 .chip:hover{border-color:var(--copper);color:var(--copper-deep);transform:translateY(-1px)}
 .chip.on{background:var(--ink);color:var(--light);border-color:var(--ink);box-shadow:0 8px 18px -10px rgba(30,32,36,.55)}
 .chip.on:hover{color:var(--light);border-color:var(--copper);transform:translateY(-1px)}
+/* Kategória-választó: a fő terepbringa-kategóriák (Trail/Enduro, XC) kiemelt,
+   réz-hangsúlyos stílust kapnak, elkülönítve a másodlagos szűrőktől */
+#seg-filters{gap:10px}
+.chip.seg{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;font-size:.66rem;border-radius:32px}
+.chip.seg.fo{color:var(--ink);border-color:rgba(194,137,90,.45)}
+.chip.seg.fo::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--copper);flex:none}
+.chip.seg:hover{border-color:var(--copper);color:var(--copper-deep)}
+.chip.seg.on{background:var(--copper);color:#fff;border-color:var(--copper);box-shadow:0 10px 22px -12px rgba(194,137,90,.75)}
+.chip.seg.on::before{background:#fff}
+.chip.seg.on:hover{background:var(--copper-deep);border-color:var(--copper-deep);color:#fff}
 select.sort{appearance:none;-webkit-appearance:none;font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--ink);background:#fff;border:1px solid var(--line-l);border-radius:30px;padding:10px 36px 10px 15px;cursor:pointer;transition:border-color .2s,box-shadow .2s}
 select.sort:hover,select.sort:focus{border-color:var(--copper);outline:none;box-shadow:0 0 0 3px rgba(194,137,90,.14)}
 .count{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:24px 0;display:inline-flex;align-items:center;gap:8px}

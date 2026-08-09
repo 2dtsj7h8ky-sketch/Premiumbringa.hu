@@ -6,3 +6,7 @@
 
 # Logok
 *.log
+
+# Nyers fotó-források (soha ne kerüljön repóba)
+*.tif
+*.tiff

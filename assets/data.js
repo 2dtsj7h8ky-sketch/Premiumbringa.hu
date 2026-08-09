@@ -7,12 +7,44 @@
         a kerékpár; szakértői, tanácsadó hangon. Kerüld a kötőjelet (—) és a "gép" szót.
         A MÉRETET/testmagasságot NE írd a leírásba: azt a méret-blokk tartalmazza.
    FELSZERELTSÉG (`reszletek`): csoportosított, bolti stílusú spec; a `suly` külön.
+   megjegyzes (opcionális): ismert hiba/eltérés ŐSZINTE közlése; a termékoldalon
+        külön, jól látható „Fontos, őszintén" blokként jelenik meg. Az így közölt,
+        átadáskor ismert hibára a 30 napos garancia nem terjed ki.
    kiemelt: a főoldali hero showcase ezt a darabot mutatja (csak az első számít).
    felveve: a felvétel dátuma (YYYY-MM-DD). Ez hajtja a "Legfrissebb" rendezést,
         a "Friss" jelvényt (a legújabbhoz képest 14 napon belül) és a "Frissítve" dátumot.
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"trek-roscoe-7", mappa:"TrekRoscoe7", marka:"Trek", model:"Trek Roscoe 7", magassag:[172,182], felveve:"2026-08-09",
+    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Újszerű", ev:2022, meret:"M/L", kerekmeret:"29″", suly:"14 kg", ar:380000,
+    vaz:"Alpha Gold alumínium · 14 kg", villa:"RockShox Recon Silver, 140 mm, állítható keménység",
+    hajtas:"Shimano Deore 1×12", fek:"Shimano MT200 hidraulikus, 180/180",
+    kerek:"29″ Bontrager Line TLR 30 (Tubeless Ready) · Bontrager XR4 2.6″",
+    spec:"29″ trail hardtail · RockShox Recon 140 mm · Shimano Deore 1×12, dropperrel.",
+    leiras:"Annak, akinek a bringa nem csak közlekedés, hanem élmény minden körben. A Roscoe igazi trail hardtail: dropper nyeregcsővel és magabiztos, játékos geometriával épült, ezért ott is otthon van, ahol a terep izgalmasabbá válik, a hétköznapokon mégis könnyed és barátságos marad. A bő, 2.6-os gumik és a 140 mm-es teleszkóp elnyelik a gyökeret és a követ, így bátran engeded rá a lejtőt, a türkiz szín pedig élőben is üt. Az a fajta bringa, amire felülsz, és egyből kedved támad felfedezni vele a következő ösvényt. Ideális első bátrabb trailbringának, vagy ha egy megbízható, mégis izgalmas társat keresel a hétvégi kalandokhoz.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Alpha Gold alumínium"],["Teleszkóp","RockShox Recon Silver, 140 mm, állítható keménység"],["Nyeregcső","TranzX dropper (állítható)"]] },
+      { cs:"Hajtás", t:[["Hajtómű","Shimano MT511, 30T"],["Hátsó váltó","Shimano Deore M6100, 12 sebesség"],["Fogaskoszorú","Shimano Deore M6100, 10–51T"],["Lánc","Shimano Deore M6100"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 hidraulikus, 180/180"],["Kerékszett","29″ Bontrager Line TLR 30, Tubeless Ready"],["Gumik","Bontrager XR4 Team Issue, 2.6″"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager Rhythm Comp, 780 mm"],["Nyereg","Bontrager Verse P3"]] }
+    ] },
+
+  { id:"cube-reaction-c62-one", mappa:"CubeReactionC62One", marka:"Cube", model:"Cube Reaction C:62 One", magassag:[180,192], felveve:"2026-08-09",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"XL (21″)", kerekmeret:"29″", suly:"11,5 kg", ar:380000,
+    vaz:"C:62 Monocoque karbon · 11,5 kg", villa:"SR Suntour Raidon 32, 100 mm",
+    hajtas:"SRAM SX / NX Eagle 1×12", fek:"Magura MT Thirty hidraulikus, 180/160",
+    kerek:"29″ Answer Atac AM (Tubeless Ready) · Schwalbe Racing Ray 2.25",
+    spec:"29″ karbon XC hardtail · SR Suntour Raidon 100 mm · SRAM Eagle 1×12.",
+    megjegyzes:"Ennél a példánynál a villa zárás (lockout) funkciója nem működik, ami ezeknél a villáknál jellemzően a hosszabb állásból ered. A rugózás egyébként kifogástalan, a villa mechanikailag hibátlanul dolgozik, a hiba kizárólag a zárhatóságot érinti. Az árat ennek tudatában alakítottuk ki, és vásárlás előtt szívesen bemutatjuk.",
+    leiras:"Annak, aki a karbon XC érzését keresi, de nem versenyzőként, hanem a hétköznapok és a hétvégi kalandok kedvéért. A monocoque karbonváz ott nyeli a rezgést, ahol kell, és ott feszes, ahol az erőt kell átadni, ezért a hosszú túrán is friss maradsz, a lendületed pedig nem vész el. Az alacsony tömeget már az első emelkedőnél megérzed: nem téged dolgoztat, hanem viszi a tempódat. Ugyanaz a bringa a reggeli gyors körre és az egész napos, nagy kirándulásra, a tűzpiros szín pedig élőben teszi igazán különlegessé. Ideális, ha valódi karbon XC-re vágysz olyan áron, amiért ezen a szinten sokszor még alumíniumot adnak.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","C:62 Monocoque karbon váz"],["Teleszkóp","SR Suntour Raidon 32, 100 mm (a zárás/lockout jelenleg nem működik)"]] },
+      { cs:"Hajtás", t:[["Hajtómű","SRAM SX Eagle DUB, 32T"],["Hátsó váltó","SRAM NX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM XG-1230 Eagle, 11–50T"],["Lánc","SRAM SX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Magura MT Thirty hidraulikus, 180/160"],["Kerékszett","29″ Answer Atac AM, Tubeless Ready"],["Gumik","Schwalbe Racing Ray, Addix Performance 2.25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Natural Fit Venec Sequence"]] }
+    ] },
+
   { id:"radon-jealous-9", mappa:"RadonJealous", marka:"Radon", model:"Radon Jealous 9.0", magassag:[173,183], felveve:"2026-07-09",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2018, meret:"L (56 cm)", kerekmeret:"29″", suly:"kb. 11 kg", ar:430000,
     vaz:"Super Strong Carbon szénszál · kb. 11 kg", villa:"RockShox SID RL, 100 mm, Solo Air, zárható",
@@ -72,10 +104,12 @@ const KESZLET = [
 ];
 
 /* Szűrő-szegmensek (a Készlet-oldalon csak a raktáron lévők jelennek meg) */
+/* A `fo:true` szegmensek a fő terepbringa-kategóriák (Trail/Enduro, XC/Túra):
+   ezek kapnak kiemelt, kategória-jellegű stílust a Készlet szűrőjében. */
 const SZEGMENSEK = [
   { kulcs:"mind",  nev:"Összes" },
-  { kulcs:"trail", nev:"Trail" },
-  { kulcs:"xc",    nev:"XC / Túra" },
+  { kulcs:"trail", nev:"Trail / Enduro", fo:true },
+  { kulcs:"xc",    nev:"XC / Túra",      fo:true },
   { kulcs:"cross", nev:"Cross" },
   { kulcs:"noi",   nev:"Női" }
 ];
