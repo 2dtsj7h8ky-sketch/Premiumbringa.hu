@@ -136,8 +136,8 @@ const KESZLET = [
    ezek kapnak kiemelt, kategória-jellegű stílust a Készlet szűrőjében. */
 const SZEGMENSEK = [
   { kulcs:"mind",  nev:"Összes" },
-  { kulcs:"trail", nev:"Trail / Enduro", fo:true },
   { kulcs:"xc",    nev:"XC / Túra",      fo:true },
+  { kulcs:"trail", nev:"Trail / Enduro", fo:true },
   { kulcs:"cross", nev:"Cross" },
   { kulcs:"noi",   nev:"Női" }
 ];
