@@ -30,6 +30,20 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager Rhythm Comp, 780 mm"],["Nyereg","Bontrager Verse P3"]] }
     ] },
 
+  { id:"cube-access-ws-eaz", mappa:"CubeAccessEAZ", marka:"Cube", model:"Cube Access WS EAZ", magassag:[166,178], felveve:"2026-08-09",
+    kategoria:"Női · MTB", szegmens:"noi", allapot:"Újszerű", ev:2022, meret:"M (18″)", kerekmeret:"29″", suly:"14,5 kg", ar:210000,
+    vaz:"Aluminium Lite · 14,5 kg", villa:"SR Suntour XCT, 100 mm, zárható",
+    hajtas:"Shimano Altus / Acera 2×8", fek:"Tektro HD-M275 hidraulikus, 160/160",
+    kerek:"29″ Cube ZX20 · Cube Impac Smartpac 2.25",
+    spec:"29″ alu női MTB · SR Suntour XCT 100 mm · Shimano 2×8.",
+    leiras:"Annak, aki most kezdi a tekerést, vagy egyszerűen egy szép, megbízható és minőségi bringára vágyik. A Cube a vázat kifejezetten a női testalkatra hangolta, ezért az első pillanattól kézre áll: könnyű, kényelmes, mégis sportos. A korszerű alumínium váz, a Shimano hajtás és a hidraulikus tárcsafék magabiztosan viszi a tempót a kerékpárúton, a városban és a könnyebb terepen is. A gyári fehér-rózsaszín fényezés finom, elegáns párosítás, ami élőben is kitűnik a sorból. Igazi mindenre kész társ, amivel könnyű beleszeretni a tekerésbe.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Aluminium Lite váz"],["Teleszkóp","SR Suntour XCT, 100 mm, zárható"]] },
+      { cs:"Hajtás", t:[["Hajtómű","Shimano FC-M315, 36×22T"],["Első váltó","Shimano Altus, 2 sebesség"],["Hátsó váltó","Shimano Acera, 8 sebesség"],["Fogaskoszorú","Shimano CS-HG31, 11–34T"],["Lánc","KMC Z8.3"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Tektro HD-M275 / TKD-150 hidraulikus, 160/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Cube Impac Smartpac 2.25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
+    ] },
+
   { id:"cube-aim-ex", mappa:"CubeAimEX", marka:"Cube", model:"Cube Aim EX", magassag:[174,186], felveve:"2026-08-09",
     kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2023, meret:"L (19″)", kerekmeret:"29″", suly:"14,3 kg", ar:230000,
     vaz:"Aluminium Lite · 14,3 kg", villa:"SR Suntour XCM, 100 mm, zárható",
