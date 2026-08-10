@@ -30,6 +30,20 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager Rhythm Comp, 780 mm"],["Nyereg","Bontrager Verse P3"]] }
     ] },
 
+  { id:"cube-aim-ex", mappa:"CubeAimEX", marka:"Cube", model:"Cube Aim EX", magassag:[174,186], felveve:"2026-08-09",
+    kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2023, meret:"L (19″)", kerekmeret:"29″", suly:"14,3 kg", ar:230000,
+    vaz:"Aluminium Lite · 14,3 kg", villa:"SR Suntour XCM, 100 mm, zárható",
+    hajtas:"Shimano Deore 2×10", fek:"Shimano MT200 / UR300 hidraulikus, 160/160",
+    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2.25",
+    spec:"29″ alu MTB hardtail · SR Suntour XCM 100 mm · Shimano Deore 2×10.",
+    leiras:"Annak, aki stílusos, megbízható MTB-t keres, ami nem csak kiszolgálja a hétvégi túrát, hanem kedvet is csinál a következőhöz. A korszerű alumínium váz, a tiszta Shimano Deore váltás és a hidraulikus tárcsafék összeszedett, könnyen megszerethető karaktert ad: lendületes a kerékpárúton, mégis megvan benne a terepszabadság, akár ingázásról, akár egy hétvégi túráról van szó. Kényelmes, mégis sportos, a Cube neve pedig a német minőség garanciája. A gyári karamell fényezés ritkán látott árnyalat, ránézésre is kitűnik a sorból. Igazi mindenre kész társ, amivel könnyű beleszeretni a tekerésbe, akár most kezdesz bele, akár egy megbízható hétköznapi bringát keresel.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Aluminium Lite váz"],["Teleszkóp","SR Suntour XCM, 100 mm, zárható"]] },
+      { cs:"Hajtás", t:[["Hajtómű","Shimano Deore FC-M4100, 36×26T"],["Első váltó","Shimano Deore FD-M6025, 2 sebesség"],["Hátsó váltó","Shimano Deore RD-M5120, 10 sebesség"],["Fogaskoszorú","Sunrace CSM52, 11–42T"],["Lánc","KMC X10"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 / UR300 hidraulikus, 160/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Schwalbe Smart Sam 2.25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
+    ] },
+
   { id:"mondraker-chrono", mappa:"MondrakerChrono", marka:"Mondraker", model:"Mondraker Chrono", magassag:[174,186], felveve:"2026-08-09",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2022, meret:"L", kerekmeret:"29″", suly:"12,9 kg", ar:360000,
     vaz:"6061 Xtralite alumínium · 12,9 kg", villa:"X-Fusion RC32, állítható keménység + előfeszítés",
