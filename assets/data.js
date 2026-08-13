@@ -16,34 +16,6 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
-  { id:"trek-roscoe-7", mappa:"TrekRoscoe7", marka:"Trek", model:"Trek Roscoe 7", magassag:[172,182], felveve:"2026-08-09",
-    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Újszerű", ev:2022, meret:"M/L", kerekmeret:"29″", suly:"14 kg", ar:380000,
-    vaz:"Alpha Gold alumínium · 14 kg", villa:"RockShox Recon Silver, 140 mm, állítható keménység",
-    hajtas:"Shimano Deore 1×12", fek:"Shimano MT200 hidraulikus, 180/180",
-    kerek:"29″ Bontrager Line TLR 30 (Tubeless Ready) · Bontrager XR4 2.6″",
-    spec:"29″ trail hardtail · RockShox Recon 140 mm · Shimano Deore 1×12, dropperrel.",
-    leiras:"Annak, akinek a bringa nem csak közlekedés, hanem élmény minden körben. A Roscoe igazi trail hardtail: dropper nyeregcsővel és magabiztos, játékos geometriával épült, ezért ott is otthon van, ahol a terep izgalmasabbá válik, a hétköznapokon mégis könnyed és barátságos marad. A bő, 2.6-os gumik és a 140 mm-es teleszkóp elnyelik a gyökeret és a követ, így bátran engeded rá a lejtőt, a türkiz szín pedig élőben is üt. Az a fajta bringa, amire felülsz, és egyből kedved támad felfedezni vele a következő ösvényt. Ideális első bátrabb trailbringának, vagy ha egy megbízható, mégis izgalmas társat keresel a hétvégi kalandokhoz.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","Alpha Gold alumínium"],["Teleszkóp","RockShox Recon Silver, 140 mm, állítható keménység"],["Nyeregcső","TranzX dropper (állítható)"]] },
-      { cs:"Hajtás", t:[["Hajtómű","Shimano MT511, 30T"],["Hátsó váltó","Shimano Deore M6100, 12 sebesség"],["Fogaskoszorú","Shimano Deore M6100, 10–51T"],["Lánc","Shimano Deore M6100"]] },
-      { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 hidraulikus, 180/180"],["Kerékszett","29″ Bontrager Line TLR 30, Tubeless Ready"],["Gumik","Bontrager XR4 Team Issue, 2.6″"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager Rhythm Comp, 780 mm"],["Nyereg","Bontrager Verse P3"]] }
-    ] },
-
-  { id:"cube-access-ws-eaz", mappa:"CubeAccessEAZ", marka:"Cube", model:"Cube Access WS EAZ", magassag:[166,178], felveve:"2026-08-09",
-    kategoria:"Női · MTB", szegmens:"noi", allapot:"Újszerű", ev:2022, meret:"M (18″)", kerekmeret:"29″", suly:"14,5 kg", ar:210000,
-    vaz:"Aluminium Lite · 14,5 kg", villa:"SR Suntour XCT, 100 mm, zárható",
-    hajtas:"Shimano Altus / Acera 2×8", fek:"Tektro HD-M275 hidraulikus, 160/160",
-    kerek:"29″ Cube ZX20 · Cube Impac Smartpac 2.25",
-    spec:"29″ alu női MTB · SR Suntour XCT 100 mm · Shimano 2×8.",
-    leiras:"Annak, aki most kezdi a tekerést, vagy egyszerűen egy szép, megbízható és minőségi bringára vágyik. A Cube a vázat kifejezetten a női testalkatra hangolta, ezért az első pillanattól kézre áll: könnyű, kényelmes, mégis sportos. A korszerű alumínium váz, a Shimano hajtás és a hidraulikus tárcsafék magabiztosan viszi a tempót a kerékpárúton, a városban és a könnyebb terepen is. A gyári fehér-rózsaszín fényezés finom, elegáns párosítás, ami élőben is kitűnik a sorból. Igazi mindenre kész társ, amivel könnyű beleszeretni a tekerésbe.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","Aluminium Lite váz"],["Teleszkóp","SR Suntour XCT, 100 mm, zárható"]] },
-      { cs:"Hajtás", t:[["Hajtómű","Shimano FC-M315, 36×22T"],["Első váltó","Shimano Altus, 2 sebesség"],["Hátsó váltó","Shimano Acera, 8 sebesség"],["Fogaskoszorú","Shimano CS-HG31, 11–34T"],["Lánc","KMC Z8.3"]] },
-      { cs:"Fék & kerék", t:[["Fékek","Tektro HD-M275 / TKD-150 hidraulikus, 160/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Cube Impac Smartpac 2.25"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
-    ] },
-
   { id:"cube-aim-ex", mappa:"CubeAimEX", marka:"Cube", model:"Cube Aim EX", magassag:[174,186], felveve:"2026-08-09",
     kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2023, meret:"L (19″)", kerekmeret:"29″", suly:"14,3 kg", ar:230000,
     vaz:"Aluminium Lite · 14,3 kg", villa:"SR Suntour XCM, 100 mm, zárható",
