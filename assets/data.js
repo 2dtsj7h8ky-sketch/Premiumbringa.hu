@@ -16,6 +16,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-aim-slx", mappa:"CubeAimSLX2", marka:"Cube", model:"Cube Aim SLX", magassag:[182,196], felveve:"2026-08-15",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2025, meret:"XL (21″)", kerekmeret:"29″", suly:"14,9 kg", ar:240000,
+    vaz:"Aluminium Lite · 14,9 kg", villa:"SR Suntour XCM, 100 mm, remote lockout",
+    hajtas:"Shimano Cues 1×11", fek:"Shimano MT200 / UR300 hidraulikus, 160/160",
+    kerek:"29″ Cube EX25 · Schwalbe Smart Sam 2.25",
+    spec:"29″ alu XC hardtail · SR Suntour XCM 100 mm · Shimano Cues 1×11.",
+    leiras:"Annak, aki egy szép, friss XC hardtailt keres, ami látványra és tartalomra is üt. A Cube Aim SLX-nél a gyöngyházas kék-lila a főszereplő: egy ilyen mellett nehéz visszapillantás nélkül elmenni. A látvány mögött a legújabb, 2025-ös generáció áll: korszerű alumínium váz, letisztult Shimano 1×11 hajtás egyetlen karral az egész áttételhez, és kormányról zárható rugós villa, ami terepen nyeli a talajt, aszfalton feszesre záródik, hogy egy watt se vesszen kárba. Fürge, közvetlen karakter, ami reggel a kerékpárúton pörög, hétvégén a földúton is otthon van, a Cube neve pedig a német minőség garanciája. Az a bringa, ami nem csak jó, hanem jól is néz ki, és pont ettől öröm minden nap elővenni.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Aluminium Lite váz"],["Teleszkóp","SR Suntour XCM, 100 mm, remote lockout"]] },
+      { cs:"Hajtás", t:[["Hajtómű","Prowheel CC10Y-NW, 32T"],["Hátsó váltó","Shimano Cues RD-U6000, 11 sebesség"],["Fogaskoszorú","Shimano Cues CS-LG400, 11–50T"],["Lánc","KMC xGlide"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 / UR300 hidraulikus, 160/160"],["Kerékszett","29″ Cube EX25"],["Gumik","Schwalbe Smart Sam 2.25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Acid Venec Lite"]] }
+    ] },
+
   { id:"cube-attention", mappa:"CubeAttention", marka:"Cube", model:"Cube Attention", magassag:[174,186], felveve:"2026-08-15",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2021, meret:"L (19″)", kerekmeret:"29″", suly:"13,7 kg", ar:240000,
     vaz:"Aluminium Lite · 13,7 kg", villa:"RockShox Judy Silver TK Air, 100 mm, PopLoc",
