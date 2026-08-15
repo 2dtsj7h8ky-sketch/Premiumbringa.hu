@@ -16,6 +16,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-attention", mappa:"CubeAttention", marka:"Cube", model:"Cube Attention", magassag:[174,186], felveve:"2026-08-15",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2021, meret:"L (19″)", kerekmeret:"29″", suly:"13,7 kg", ar:240000,
+    vaz:"Aluminium Lite · 13,7 kg", villa:"RockShox Judy Silver TK Air, 100 mm, PopLoc",
+    hajtas:"Shimano Deore 2×10", fek:"Shimano MT200 hidraulikus, 180/160",
+    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2.25",
+    spec:"29″ alu XC hardtail · RockShox Judy 100 mm · Shimano Deore 2×10.",
+    leiras:"Annak, aki szereti, ha a bringája észreveteti magát, de a tudás is ott van alatta. A sárga Cube Attention fürge, sportos XC hardtail: reggel elrepít a munkába, hétvégén felvisz a dombra, és egyiket sem érzi tehernek. A levegős, zárható RockShox Judy villa sima úton feszes, terepen nyel, a Shimano 2×10 hajtással pedig minden emelkedőhöz és lapos szakaszhoz van fokozatod. Alatta a Cube neve, vagyis német minőség, amiben nem kell csalódni. Igazi mindennapos társ a hétköznapokhoz és a kalandokhoz is, amire ráadásul öröm ránézni. Ha neked a megjelenés annyit számít, mint a tudás, ez a te bringád.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Aluminium Lite váz"],["Teleszkóp","RockShox Judy Silver TK Air, 100 mm, PopLoc zárás"]] },
+      { cs:"Hajtás", t:[["Hajtómű","Shimano Deore FC-M4100, 36×26T"],["Első váltó","Shimano Deore FD-M6025, 2 sebesség"],["Hátsó váltó","Shimano Deore RD-M4120, 10 sebesség"],["Fogaskoszorú","Shimano Deore CS-M4100, 11–42T"],["Lánc","KMC X10"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 hidraulikus, 180/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Schwalbe Smart Sam 2.25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
+    ] },
+
   { id:"cube-aim-ex", mappa:"CubeAimEX", marka:"Cube", model:"Cube Aim EX", magassag:[174,186], felveve:"2026-08-09",
     kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2023, meret:"L (19″)", kerekmeret:"29″", suly:"14,3 kg", ar:230000,
     vaz:"Aluminium Lite · 14,3 kg", villa:"SR Suntour XCM, 100 mm, zárható",
