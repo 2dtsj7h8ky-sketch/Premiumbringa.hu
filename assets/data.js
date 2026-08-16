@@ -16,6 +16,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"giant-escape-2", mappa:"GiantEscape", marka:"Giant", model:"Giant Escape 2", magassag:[175,188], felveve:"2026-08-15",
+    kategoria:"Fitness · Hybrid", szegmens:"fitness", allapot:"Kiváló", ev:2021, meret:"L", kerekmeret:"28″", suly:"kb. 13 kg", ar:230000,
+    vaz:"ALUXX-Grade alumínium · kb. 13 kg", villa:"Merev (rigid) villa",
+    hajtas:"Shimano Altus 2×8", fek:"Tektro HD-R280 hidraulikus tárcsa, 160/160",
+    kerek:"28″ Giant GX · Giant S-X2 (defektvédett)",
+    spec:"28″ fitness hybrid · merev villa · Shimano 2×8, hidraulikus tárcsafék.",
+    leiras:"Annak, aki praktikus, gyors és szép bringát keres a mindennapokra és a szabadidős tekerésre. A Giant Escape fitness hybrid a városban van a legnagyobb előnyben: fürgébb és gyorsabb, mint egy MTB, kényelmesebb és barátságosabb, mint egy országúti vagy gravel. A könnyű ALUXX alumínium váz és a merev villa feszes, közvetlen élményt ad, minden pedálnyomásod tiszta lendület lesz, az egyenes kormány pedig magabiztos, kényelmes testtartást ad a rövid ingázáson és a hosszabb távon is. A Shimano hajtással az emelkedő és a sík út is könnyedén megy, a bordó váz pedig elegáns, ízléses megjelenést kölcsönöz. Mivel a hétvégi körök nagy része kerékpárúton zajlik, ez a bringa nemcsak a városban, hanem a szabadidős tekerésen is pontosan a helyén van.",
+    reszletek:[
+      { cs:"Váz & villa", t:[["Váz","ALUXX-Grade alumínium váz"],["Villa","Merev (rigid) villa"]] },
+      { cs:"Hajtás", t:[["Hajtómű","Kovácsolt alu hajtókar, 30×46T"],["Első váltó","Shimano FD-TY710, 2 sebesség"],["Hátsó váltó","Shimano Altus, 8 sebesség"],["Fogaskoszorú","Shimano CS-HG31, 11–34T"],["Lánc","KMC Z8.3"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Tektro HD-R280 hidraulikus tárcsa, 160/160"],["Kerékszett","28″ Giant GX"],["Gumik","Giant S-X2 (defektvédett)"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Giant Sport XC (egyenes)"],["Nyereg","Giant Sport Comfort"]] }
+    ] },
+
   { id:"cube-aim-slx", mappa:"CubeAimSLX2", marka:"Cube", model:"Cube Aim SLX", magassag:[182,196], felveve:"2026-08-15",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2025, meret:"XL (21″)", kerekmeret:"29″", suly:"14,9 kg", ar:240000,
     vaz:"Aluminium Lite · 14,9 kg", villa:"SR Suntour XCM, 100 mm, remote lockout",
@@ -164,10 +178,11 @@ const KESZLET = [
    ezek kapnak kiemelt, kategória-jellegű stílust a Készlet szűrőjében. */
 const SZEGMENSEK = [
   { kulcs:"mind",  nev:"Összes" },
-  { kulcs:"xc",    nev:"XC / Túra",      fo:true },
-  { kulcs:"trail", nev:"Trail / Enduro", fo:true },
-  { kulcs:"cross", nev:"Cross" },
-  { kulcs:"noi",   nev:"Női" }
+  { kulcs:"xc",      nev:"XC / Túra",      fo:true },
+  { kulcs:"trail",   nev:"Trail / Enduro", fo:true },
+  { kulcs:"fitness", nev:"Fitness" },
+  { kulcs:"cross",   nev:"Cross" },
+  { kulcs:"noi",     nev:"Női" }
 ];
 
 const ALLAPOTOK = ["Újszerű", "Kiváló", "Jó"];

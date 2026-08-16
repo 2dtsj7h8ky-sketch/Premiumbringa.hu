@@ -258,6 +258,7 @@
     <a class="chip seg" href="keszlet.html">Összes</a>
     <a class="chip seg fo" href="keszlet.html?szegmens=xc">XC / Túra</a>
     <a class="chip seg fo" href="keszlet.html?szegmens=trail">Trail / Enduro</a>
+    <a class="chip seg" href="keszlet.html?szegmens=fitness">Fitness</a>
     <a class="chip seg" href="keszlet.html?szegmens=cross">Cross</a>
     <a class="chip seg" href="keszlet.html?szegmens=noi">Női</a>
   </div>
@@ -408,7 +409,7 @@
   <div class="top">
     <div><a href="index.html" class="logo">Premium<b>Bringa</b></a><div class="slogan">Minőségi német márkák, egy tekerés közelségében. Debrecen.</div></div>
     <div class="col"><h4>Menü</h4><a href="keszlet.html">Készlet</a><a href="miert-eri-meg.html">Miért éri meg</a><a href="rolunk.html">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a><a href="rolunk.html#garancia">Garancia</a></div>
-    <div class="col"><h4>Kategóriák</h4><a href="keszlet.html?szegmens=xc">XC / Túra</a><a href="keszlet.html?szegmens=trail">Trail / Enduro</a><a href="keszlet.html?szegmens=cross">Cross</a><a href="keszlet.html?szegmens=noi">Női</a></div>
+    <div class="col"><h4>Kategóriák</h4><a href="keszlet.html?szegmens=xc">XC / Túra</a><a href="keszlet.html?szegmens=trail">Trail / Enduro</a><a href="keszlet.html?szegmens=fitness">Fitness</a><a href="keszlet.html?szegmens=cross">Cross</a><a href="keszlet.html?szegmens=noi">Női</a></div>
     <div class="col"><h4>Kapcsolat</h4><span class="li">+36 20 436 0307</span><span class="li">info@premiumbringa.hu</span><span class="li">Debrecen, HU</span><span class="li">Magyar Posta · utánvét</span></div>
   </div>
   <div class="bot"><span>© 2026 Premium Bringa</span><nav class="footlegal" aria-label="Jogi"><a href="aszf.html">ÁSZF</a><a href="adatkezeles.html">Adatkezelés</a><a href="rolunk.html#garancia">Garancia</a></nav><span>Cube · KTM · Trek · Specialized</span></div>
@@ -443,10 +444,10 @@
   var CATS=[
     {k:'xc', name:'XC / Túra', desc:'Sokoldalú, túrára és könnyebb terepre hangolt.', ico:'<circle cx="12" cy="13" r="8"/><path d="M12 13V8.4"/><path d="M9.5 2.5h5"/>'},
     {k:'trail', name:'Trail / Enduro', desc:'Masszívabb, terepre hangolt karakter.', ico:'<path d="M3 20h18"/><path d="M3 19l6-12 4 8 2.2-4 5.8 8"/>'},
+    {k:'fitness', name:'Fitness', desc:'Városi, sportos, egyenes kormány.', ico:'<path d="M3 12h4l2-6 4 12 2-6h6"/>'},
     {k:'trekking', name:'Trekking', desc:'Kényelmes túra és ingázás.', soon:true, ico:'<path d="M4 20h16"/><path d="M8 20V5l7 3-7 3"/>'},
     {k:'orszaguti', name:'Országúti', desc:'Aszfalt, tempó, hosszú táv.', soon:true, ico:'<path d="M3 9h13a3 3 0 1 1 3 3H3"/><path d="M3 15h9a3 3 0 1 0-3 3"/>'},
-    {k:'gravel', name:'Gravel', desc:'Aszfalt és murva között.', soon:true, ico:'<circle cx="6" cy="16" r="3.2"/><circle cx="18" cy="16" r="3.2"/><path d="M6 16l4-7h6M9.5 9h4.5l3 7"/>'},
-    {k:'fitness', name:'Fitness', desc:'Városi, sportos, egyenes kormány.', soon:true, ico:'<path d="M3 12h4l2-6 4 12 2-6h6"/>'}
+    {k:'gravel', name:'Gravel', desc:'Aszfalt és murva között.', soon:true, ico:'<circle cx="6" cy="16" r="3.2"/><circle cx="18" cy="16" r="3.2"/><path d="M6 16l4-7h6M9.5 9h4.5l3 7"/>'}
   ];
   var svg=function(p){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">'+p+'</svg>';};
   var html='';
