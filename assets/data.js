@@ -17,7 +17,7 @@
    ========================================================================= */
 const KESZLET = [
   { id:"cube-cross-sl", mappa:"CubeCrossSL", marka:"Cube", model:"Cube Cross SL", magassag:[158,170], felveve:"2026-08-20",
-    kategoria:"Női · Cross-trekking", szegmens:"noi", allapot:"Kiváló", ev:2020, meret:"S (46 cm)", kerekmeret:"28″", suly:"11,7 kg", ar:300000,
+    kategoria:"Trekking · Női", szegmens:"trekking", allapot:"Kiváló", ev:2020, meret:"S (46 cm)", kerekmeret:"28″", suly:"11,7 kg", ar:300000,
     vaz:"Aluminium SuperLite · 11,7 kg", villa:"RockShox Paragon Gold RMT, 65 mm, remote lockout",
     hajtas:"SRAM GX Eagle 1×12", fek:"Shimano XT M8100 hidraulikus, 180/160",
     kerek:"28″ DT Swiss CSW MA 1.9 · Specialized Pathfinder",
@@ -181,9 +181,10 @@ const SZEGMENSEK = [
   { kulcs:"mind",  nev:"Összes" },
   { kulcs:"xc",      nev:"XC / Túra",      fo:true },
   { kulcs:"trail",   nev:"Trail / Enduro", fo:true },
-  { kulcs:"fitness", nev:"Fitness" },
-  { kulcs:"cross",   nev:"Cross" },
-  { kulcs:"noi",     nev:"Női" }
+  { kulcs:"fitness",  nev:"Fitness" },
+  { kulcs:"trekking", nev:"Trekking" },
+  { kulcs:"cross",    nev:"Cross" },
+  { kulcs:"noi",      nev:"Női" }
 ];
 
 const ALLAPOTOK = ["Újszerű", "Kiváló", "Jó"];
