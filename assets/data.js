@@ -16,6 +16,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-attention-2", mappa:"CubeAttention2", marka:"Cube", model:"Cube Attention", magassag:[182,195], felveve:"2026-08-20",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2021, meret:"XL (21″)", kerekmeret:"29″", suly:"13,7 kg", ar:240000,
+    vaz:"Aluminium Lite · 13,7 kg", villa:"RockShox Judy Silver TK, 100 mm, PopLoc",
+    hajtas:"Shimano Deore 2×10", fek:"Shimano MT200 hidraulikus, 180/160",
+    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2.25",
+    spec:"29″ alu XC hardtail · RockShox Judy 100 mm · Shimano Deore 2×10.",
+    leiras:"Annak, aki stílusos, megbízható MTB-t szeretne, ami nem csak kiszolgálja a hétvégi túrát, hanem kedvet is csinál a következőhöz. A Cube Attention sportos, jól felszerelt terepbringa: a kiegyensúlyozott geometria, a tiszta Shimano 2×10 váltás és a finoman dolgozó, levegős RockShox Judy villa együtt meglepően összeszedett, könnyen megszerethető karaktert adnak. Kényelmes, mégis van benne sportosság, a megjelenése modern, de nem hivalkodó. Igazi mindenre kész társ, amivel könnyű beleszeretni a terepbringázásba, akár most kezded, akár egy megbízható hétköznapi bringát keresel.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Aluminium Lite váz"],["Teleszkóp","RockShox Judy Silver TK, 100 mm, PopLoc"]] },
+      { cs:"Hajtás", t:[["Hajtómű","Shimano Deore FC-M4100, 36×26T"],["Első váltó","Shimano Deore FD-M6025, 2 sebesség"],["Hátsó váltó","Shimano Deore RD-M4120, 10 sebesség"],["Fogaskoszorú","Shimano Deore CS-M4100, 11–42T"],["Lánc","KMC X10"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 hidraulikus, 180/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Schwalbe Smart Sam 2.25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
+    ] },
+
   { id:"cube-cross-sl", mappa:"CubeCrossSL", marka:"Cube", model:"Cube Cross SL", magassag:[158,170], felveve:"2026-08-20",
     kategoria:"Trekking · Női", szegmens:"trekking", allapot:"Kiváló", ev:2020, meret:"S (46 cm)", kerekmeret:"28″", suly:"11,7 kg", ar:300000,
     vaz:"Aluminium SuperLite · 11,7 kg", villa:"RockShox Paragon Gold RMT, 65 mm, remote lockout",
