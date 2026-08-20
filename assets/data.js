@@ -16,6 +16,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-attention-sl", mappa:"CubeAttentionSL", marka:"Cube", model:"Cube Attention SL", magassag:[182,196], felveve:"2026-08-20",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"XL (21″)", kerekmeret:"29″", suly:"13,6 kg", ar:290000,
+    vaz:"Aluminium Lite · 13,6 kg", villa:"RockShox Judy TK Air, 100 mm, zárható",
+    hajtas:"Shimano Deore XT 1×12", fek:"Shimano MT200 hidraulikus, 180/160",
+    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam Active 2.25",
+    spec:"29″ alu XC hardtail · RockShox Judy 100 mm · Shimano Deore XT 1×12.",
+    leiras:"Annak, aki sportos, modern MTB-t keres valódi Cube minőséggel. A Cube Attention SL az a szint, ahol a merevfarú MTB igazi sporteszközzé válik: a könnyű alumínium váz és a modern geometria gyorssá, stabillá és magabiztossá teszi. Hátul Shimano Deore XT váltó dolgozik 1×12 hajtással, ami terhelés alatt is tisztán vált, elöl a kormányról zárható, levegős RockShox Judy villa. Elsősorban könnyű, sokoldalú társ a hétköznapokra: fürgén pörög a városi aszfalton és a kerékpárúton, elvisz egy hosszabb túrára, és a terepen is magabiztos marad, ahol izgalmasabbra fordul. Univerzális, kiszámítható és élvezetes, érezhetően dinamikusabb az átlagnál.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Aluminium Lite váz"],["Teleszkóp","RockShox Judy TK Air, 100 mm, zárható"]] },
+      { cs:"Hajtás", t:[["Hajtómű","Acid, 32T"],["Hátsó váltó","Shimano Deore XT, 12 sebesség"],["Fogaskoszorú","Shimano Deore CS-M6100, 10–51T"],["Lánc","Shimano CN-M6100"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 hidraulikus, 180/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Schwalbe Smart Sam Active 2.25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
+    ] },
+
   { id:"cube-attention-2", mappa:"CubeAttention2", marka:"Cube", model:"Cube Attention", magassag:[182,195], felveve:"2026-08-20",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2021, meret:"XL (21″)", kerekmeret:"29″", suly:"13,7 kg", ar:240000,
     vaz:"Aluminium Lite · 13,7 kg", villa:"RockShox Judy Silver TK, 100 mm, PopLoc",
