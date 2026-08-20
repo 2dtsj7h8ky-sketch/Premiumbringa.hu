@@ -16,6 +16,21 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"ghost-sl-amr-x-59", mappa:"GhostSLAMRX5.9", marka:"Ghost", model:"Ghost SL AMR X 5.9", magassag:[170,182], felveve:"2026-08-20",
+    kategoria:"Trail · Fully", szegmens:"trail", allapot:"Jó", ev:2019, meret:"M", kerekmeret:"29″", suly:"14,2 kg", ar:380000,
+    vaz:"SL AMR AL alumínium · 14,2 kg", villa:"RockShox Yari, 160 mm, rebound + lockout",
+    hajtas:"SRAM GX Eagle 1×12", fek:"SRAM G2 RE hidraulikus, 200/180",
+    kerek:"29″ DT Swiss M1900 Spline · Continental Kryptotal",
+    spec:"29″ alu trail fully · RockShox Yari 160 mm + Cane Creek coil · SRAM GX Eagle 1×12, dropperrel.",
+    megjegyzes:"Ez a példány néhány szépséghibát visel, cserébe kedvező áron vihető. A hátsó lengőkaron (kerékjárat) jelentősebb felületi festékleverődés látszik, a villa csúszócsövének felső, becsúszó szakaszán pedig egy kisebb felületi karc. Ez a karc a rugóút azon végén van, ameddig a villa normál használatban nem süllyed be, így a működést gyakorlatilag nem érinti. Megjelenésre és fényezésre egyébként gyönyörű, és minden hibát megmutatunk a fotókon.",
+    leiras:"Annak, aki a saját határait szereti feszegetni, nem a bringáét. A Ghost SL AMR X abból a fajtából való, amiből ma keveset látni: komoly képességű trail-enduro darab, ami felfelé hatékonyan repít, lefelé pedig felszabadul. A német mérnöki háttér pont erre a kettősségre épített: elég gyors a hosszú, egész napos túrához, és elég bátor a legtechnikásabb terephez is. Az igazi karakterét a tekercsrugós Cane Creek hátsó futómű adja, elöl pedig egy utólag beépített RockShox Yari villa dolgozik, ami sokat dob rajta. Ehhez fogós Continental gumipár, DT Swiss kerék és SRAM GX Eagle hajtás jön. Ha a lejtő adja a napod fénypontját, ez a te bringád.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","SL AMR AL alumínium váz"],["Teleszkóp","RockShox Yari, 160 mm, rebound + lockout"],["Rugóstag","Cane Creek Inline Coil CS, 145 mm"],["Nyeregcső","JD dropper (állítható)"]] },
+      { cs:"Hajtás", t:[["Hajtómű","SRAM Truvativ Descendant 6K Eagle, 32T"],["Hátsó váltó","SRAM GX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM XG-1275, 10–50T"]] },
+      { cs:"Fék & kerék", t:[["Fékek","SRAM G2 RE hidraulikus, 200/180"],["Kerékszett","29″ DT Swiss M1900 Spline"],["Gumik","Continental Kryptotal"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Ground Fiftyone Race 35, 780 mm"],["Nyereg","SDG Fly Mountain"]] }
+    ] },
+
   { id:"giant-escape-2", mappa:"GiantEscape", marka:"Giant", model:"Giant Escape 2", magassag:[175,188], felveve:"2026-08-15",
     kategoria:"Fitness · Hybrid", szegmens:"fitness", allapot:"Kiváló", ev:2021, meret:"L", kerekmeret:"28″", suly:"kb. 13 kg", ar:230000,
     vaz:"ALUXX-Grade alumínium · kb. 13 kg", villa:"Merev (rigid) villa",
