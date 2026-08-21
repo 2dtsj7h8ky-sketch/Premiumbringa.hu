@@ -58,21 +58,6 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Advanced Carbon, 740 mm"]] }
     ] },
 
-  { id:"ghost-sl-amr-x-59", mappa:"GhostSLAMRX5.9", marka:"Ghost", model:"Ghost SL AMR X 5.9", magassag:[170,182], felveve:"2026-08-20",
-    kategoria:"Trail · Fully", szegmens:"trail", allapot:"Jó", ev:2019, meret:"M", kerekmeret:"29″", suly:"14,2 kg", ar:380000,
-    vaz:"SL AMR AL alumínium · 14,2 kg", villa:"RockShox Yari, 160 mm, rebound + lockout",
-    hajtas:"SRAM GX Eagle 1×12", fek:"SRAM G2 RE hidraulikus, 200/180",
-    kerek:"29″ DT Swiss M1900 Spline · Continental Kryptotal",
-    spec:"29″ alu trail fully · RockShox Yari 160 mm + Cane Creek coil · SRAM GX Eagle 1×12, dropperrel.",
-    megjegyzes:"Ez a példány néhány szépséghibát visel, cserébe kedvező áron vihető. A hátsó lengőkaron (kerékjárat) jelentősebb felületi festékleverődés látszik, a villa csúszócsövének felső, becsúszó szakaszán pedig egy kisebb felületi karc. Ez a karc a rugóút azon végén van, ameddig a villa normál használatban nem süllyed be, így a működést gyakorlatilag nem érinti. Megjelenésre és fényezésre egyébként gyönyörű, és minden hibát megmutatunk a fotókon.",
-    leiras:"Annak, aki a saját határait szereti feszegetni, nem a bringáét. A Ghost SL AMR X abból a fajtából való, amiből ma keveset látni: komoly képességű trail-enduro darab, ami felfelé hatékonyan repít, lefelé pedig felszabadul. A német mérnöki háttér pont erre a kettősségre épített: elég gyors a hosszú, egész napos túrához, és elég bátor a legtechnikásabb terephez is. Az igazi karakterét a tekercsrugós Cane Creek hátsó futómű adja, elöl pedig egy utólag beépített RockShox Yari villa dolgozik, ami sokat dob rajta. Ehhez fogós Continental gumipár, DT Swiss kerék és SRAM GX Eagle hajtás jön. Ha a lejtő adja a napod fénypontját, ez a te bringád.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","SL AMR AL alumínium váz"],["Teleszkóp","RockShox Yari, 160 mm, rebound + lockout"],["Rugóstag","Cane Creek Inline Coil CS, 145 mm"],["Nyeregcső","JD dropper (állítható)"]] },
-      { cs:"Hajtás", t:[["Hajtómű","SRAM Truvativ Descendant 6K Eagle, 32T"],["Hátsó váltó","SRAM GX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM XG-1275, 10–50T"]] },
-      { cs:"Fék & kerék", t:[["Fékek","SRAM G2 RE hidraulikus, 200/180"],["Kerékszett","29″ DT Swiss M1900 Spline"],["Gumik","Continental Kryptotal"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Ground Fiftyone Race 35, 780 mm"],["Nyereg","SDG Fly Mountain"]] }
-    ] },
-
   { id:"giant-escape-2", mappa:"GiantEscape", marka:"Giant", model:"Giant Escape 2", magassag:[175,188], felveve:"2026-08-15",
     kategoria:"Fitness · Hybrid", szegmens:"fitness", allapot:"Kiváló", ev:2021, meret:"L", kerekmeret:"28″", suly:"kb. 13 kg", ar:230000,
     vaz:"ALUXX-Grade alumínium · kb. 13 kg", villa:"Merev (rigid) villa",
@@ -186,20 +171,6 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fékek","Shimano Deore BR-M615 hidraulikus, 180/160"],["Kerékszett","27,5″ Cube ZX20"],["Gumik","Schwalbe Tough Tom / Rapid Rob"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Cube Active"]] }
     ] },
-
-  { id:"cube-aim-sl", mappa:"CubeAimSL4", marka:"Cube", model:"Cube Aim SL", magassag:[184,196], felveve:"2026-05-12",
-    kategoria:"MTB · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"XL (21″)", kerekmeret:"29″", suly:"13,8 kg", ar:220000,
-    vaz:"Könnyű alumínium · 13,8 kg", villa:"RockShox Judy Silver TK, 100 mm, zárható",
-    hajtas:"Shimano Alivio 2×9", fek:"Shimano MT200 hidraulikus, 160/160",
-    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2.25",
-    spec:"29″ alu hardtail · RockShox Judy 100 mm · Shimano 2×9.",
-    leiras:"Sokoldalú belépő a minőségi terepbringázásba annak, aki kiszámítható, gondtalan tekerésre vágyik. A légrugós villa és a finom váltás csendes, precíz működést ad, a könnyű váz pedig fürgévé teszi a hétvégi erdei körökön és a mindennapokban egyaránt. Jó döntés első komolyabb MTB-nek, vagy megbízható túratársnak a földutakra.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","Könnyű alumínium váz"],["Teleszkóp","RockShox Judy Silver TK, 100 mm, zárható"]] },
-      { cs:"Hajtás", t:[["Hajtómű","Shimano FC-MT101, 36×22T"],["Első váltó","Shimano Altus, 2 sebesség"],["Hátsó váltó","Shimano Alivio, 9 sebesség"],["Fogaskoszorú","Shimano CS-HG201, 11–36T"],["Lánc","KMC X9"]] },
-      { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 hidraulikus, 160/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Schwalbe Smart Sam, 2.25"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
-    ] }
 ];
 
 /* Szűrő-szegmensek (a Készlet-oldalon csak a raktáron lévők jelennek meg) */
