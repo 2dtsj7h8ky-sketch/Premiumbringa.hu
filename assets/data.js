@@ -131,12 +131,12 @@ const KESZLET = [
     kiemelt:true },
 
   { id:"cube-race-one", mappa:"CubeRaceOne", marka:"Cube", model:"Cube Race One", magassag:[168,180], felveve:"2026-06-08",
-    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2017, meret:"M (18″)", kerekmeret:"27,5″", suly:"12,7 kg", ar:320000,
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2017, meret:"M (18″)", kerekmeret:"27,5″", suly:"12,7 kg", ar:300000, regiAr:320000,
     vaz:"Aluminium Lite · 12,7 kg", villa:"Fox 32 Float Performance, 100 mm, állítható",
     hajtas:"Shimano SLX / XT 2×11", fek:"Shimano Deore BR-M615 hidraulikus, 180/160",
     kerek:"27,5″ Cube ZX20 · Schwalbe Tough Tom / Rapid Rob",
     spec:"27,5″ XC hardtail · Fox 32 Float 100 mm · Shimano SLX/XT 2×11.",
-    leiras:"Annak, aki már beleszeretett a tekerésbe, és egy lépcsővel feljebb lépne a belépő szintről. A Fox Performance villát rendszerint jóval drágább kerékpárokon látni, itt viszont adott, és pont ez árulja el, mennyivel többet tud ez a felszereltség az árához képest. A Shimano SLX és XT párosa terhelés alatt is tisztán és pontosan vált, a könnyű alumínium váz semmit nem veszít az erődből, a 27,5-es kerék pedig fürge és gyors a szűk, kanyargós ösvényen. Ideális, ha a hétvégi kört néha versennyé fokoznád, de a legtöbbször csak élveznéd, ahogy minden mozdulatra azonnal válaszol.",
+    leiras:"A Race One-t a Cube olyan karakterrel építette, amilyet ma is ritkán látni: versenyre hangolt XC merevfarú, Fox Performance Float 32 villával és Shimano XT hajtással, mindössze 12,7 kg-ban. Ez a páros rendszerint drágább kerékpárokon jár, itt pedig egy gyakorlatilag új állapotban fennmaradt példányon ül. És hogy miért pont ez: mert az első pedálnyomásra azonnal ugrik, a Fox csendesen, pontosan dolgozik, aszfalton feszes marad, az XT terhelés alatt is tisztán vált, a 27,5-es kerék alacsonyabb súlypontja pedig egyedibb, fürgébb karaktert ad, amit azonnal megérzel. Pont ott áll, ahol a felső kategóriás alkatrészek, a könnyű váz és az elérhető ár összeér. Az a bringa, ami a terepet és a kerékpárutas száguldást is érezhetően élvezetesebbé teszi, és az első métereken meggyőz. Annak, aki a részletekre is ad, és a hétvégi körből élményt akar.",
     reszletek:[
       { cs:"Váz & felfüggesztés", t:[["Váz","Aluminium Lite"],["Teleszkóp","Fox 32 Float Performance, 100 mm, állítható keménység"]] },
       { cs:"Hajtás", t:[["Hajtómű","Shimano XT FC-M8000, 36×26T"],["Első váltó","Shimano SLX, 2 sebesség"],["Hátsó váltó","Shimano Deore XT, 11 sebesség"],["Fogaskoszorú","Shimano SLX CS-M7000, 11–42T"],["Lánc","Shimano CN-HG600"]] },

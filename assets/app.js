@@ -37,8 +37,13 @@
     `<img src="${esc(bikeKep(b))}" alt="${esc(alt)}" loading="lazy" decoding="async" onerror="${coverOnerr(b)}">`;
 
   /* Hiánytűrő mezők (amíg a hirdetésből nem töltjük az adatot) */
-  const arSzoveg = b => (b.ar && Number(b.ar) > 0) ? `${huFt(b.ar)} <small>Ft</small>` : `<small class="ar-soon">Ár: érdeklődj</small>`;
+  /* Akció: ha van `regiAr` és nagyobb a jelenlegi árnál → áthúzott régi ár + jelvény */
+  const isAkcio = b => b.ar && b.regiAr && Number(b.regiAr) > Number(b.ar);
+  const arSzoveg = b => (b.ar && Number(b.ar) > 0)
+    ? `${isAkcio(b) ? `<s class="ar-old">${huFt(b.regiAr)}</s> ` : ""}${huFt(b.ar)} <small>Ft</small>`
+    : `<small class="ar-soon">Ár: érdeklődj</small>`;
   const condBadge = b => b.allapot ? `<span class="${condClass(b.allapot)}">${esc(b.allapot)}</span>` : "";
+  const akcioBadge = b => isAkcio(b) ? '<span class="akcio">Akció</span>' : "";
   const $ = (sel, root=document) => root.querySelector(sel);
   const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
   const param = key => new URLSearchParams(location.search).get(key);
@@ -57,7 +62,7 @@
     const meta = [b.ev, b.meret].filter(Boolean).join(" · ");
     return `
     <a class="bike reveal" href="bringa.html?id=${encodeURIComponent(b.id)}" data-szegmens="${esc(b.szegmens)}" data-allapot="${esc(b.allapot||"")}">
-      <div class="img">${media}${isFriss(b) ? '<span class="fresh"><i></i>Friss</span>' : ""}<span class="cat">${esc(b.kategoria)}</span>${condBadge(b)}</div>
+      <div class="img">${media}${isFriss(b) ? '<span class="fresh"><i></i>Friss</span>' : ""}${akcioBadge(b)}<span class="cat">${esc(b.kategoria)}</span>${condBadge(b)}</div>
       <div class="bd">
         <h3>${esc(b.model)}</h3>
         <div class="spec">${esc(b.spec || b.kategoria)}</div>
@@ -137,7 +142,7 @@
     const catline = [b.kategoria, b.ev, b.meret].filter(Boolean).join(" · ");
     host.innerHTML = `
     <a class="feature" href="bringa.html?id=${encodeURIComponent(b.id)}">
-      <div class="ph">${media}<span class="tag">★ Kiemelt darab</span>${condBadge(b)}</div>
+      <div class="ph">${media}<span class="tag">★ Kiemelt darab</span>${akcioBadge(b)}${condBadge(b)}</div>
       <div class="bd">
         <div class="cat">${esc(catline)}</div>
         <h3>${esc(b.model)}</h3>
@@ -288,7 +293,7 @@
       <nav class="crumb" aria-label="Útvonal"><a href="index.html">Főoldal</a> <span>/</span> <a href="keszlet.html">Készlet</a> <span>/</span> <b>${esc(b.model)}</b></nav>
       <div class="product">
         <div class="pgallery">
-          <div class="pmain">${galMain}${b.allapot ? `<span class="${condClass(b.allapot)} pcond">${esc(b.allapot)}</span>` : ""}</div>
+          <div class="pmain">${galMain}${b.allapot ? `<span class="${condClass(b.allapot)} pcond">${esc(b.allapot)}</span>` : ""}${isAkcio(b) ? '<span class="akcio pakcio">Akció</span>' : ""}</div>
           <div class="pthumbs" id="pthumbs">${thumbs}</div>
           <p class="preal"><span class="pr-dot"></span><span>A fotók a <b>tényleges</b> kerékpárt mutatják, és hűen tükrözik annak állapotát; az esetleges esztétikai hibákról szívesen küldünk közelebbi képet is.</span></p>
           <p class="pnote">Amíg megjelenik, elérhető. További információért az <a href="kapcsolat.html">elérhetőségnél</a> nyugodtan érdeklődj.</p>
