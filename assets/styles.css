@@ -637,3 +637,29 @@ footer .social{display:flex;gap:15px;margin-top:16px}
 footer .social a{color:var(--fog);display:inline-flex;transition:color .2s ease,transform .15s ease}
 footer .social a:hover{color:var(--copper);transform:translateY(-2px)}
 footer .social svg{width:20px;height:20px;display:block}
+
+/* ============ Kövess minket (social blokk) ============ */
+.follow{background:var(--carbon-2);background-image:var(--weave);border-top:1px solid var(--line);position:relative;overflow:hidden}
+.follow::before{content:"";position:absolute;inset:0;background:radial-gradient(76% 56% at 50% -8%,rgba(194,137,90,.13),transparent 64%);pointer-events:none}
+.follow .wrap{position:relative;padding-top:66px;padding-bottom:70px;text-align:center}
+.follow h2{font-size:clamp(1.55rem,3.6vw,2.2rem);color:var(--bright);margin-top:15px}
+.f-draw{display:block;width:190px;height:14px;margin:16px auto 0;overflow:visible}
+.f-draw .mx-curve{fill:none;stroke:var(--copper);stroke-width:2.2;stroke-linecap:round;transition:stroke-dashoffset 1.15s cubic-bezier(.22,.8,.2,1)}
+.f-lead{color:var(--haze);max-width:54ch;margin:18px auto 0;font-size:1rem;line-height:1.7}
+.f-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.f-card{position:relative;display:flex;flex-direction:column;align-items:center;gap:13px;padding:32px 20px 28px;background:var(--carbon);border:1px solid var(--line);border-radius:16px;text-decoration:none;overflow:hidden;transition:opacity .7s ease,transform .7s ease,border-color .28s ease,box-shadow .28s ease}
+.f-grid .f-card:nth-child(2){transition-delay:.09s}
+.f-grid .f-card:nth-child(3){transition-delay:.18s}
+.f-card:hover{transition-delay:0s}
+.f-card.in:hover{transform:translateY(-6px);border-color:var(--copper);box-shadow:0 24px 44px -28px rgba(0,0,0,.85)}
+.f-card::after{content:"";position:absolute;top:0;left:-60%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(237,235,231,.07),transparent);transform:skewX(-14deg);opacity:0;pointer-events:none}
+.f-card.in:hover::after{opacity:1;animation:fsheen .9s ease}
+@keyframes fsheen{from{left:-60%}to{left:120%}}
+.f-ico{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--haze);background:rgba(237,235,231,.02);transition:color .28s ease,border-color .28s ease,background .28s ease,transform .28s ease}
+.f-card.in:hover .f-ico{color:var(--copper);border-color:var(--copper);background:rgba(194,137,90,.12);transform:translateY(-2px) scale(1.06)}
+.f-ico svg{width:23px;height:23px;display:block}
+.f-name{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:.96rem;letter-spacing:.01em;color:var(--bright);line-height:1}
+.f-handle{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;color:var(--fog);transition:color .28s ease}
+.f-card.in:hover .f-handle{color:var(--copper)}
+@media(max-width:760px){.f-grid{grid-template-columns:1fr;gap:12px}.follow .wrap{padding-top:52px;padding-bottom:56px}}
+@media(prefers-reduced-motion:reduce){.f-card,.f-ico,.f-handle{transition:none}.f-card.in:hover::after{animation:none}.f-draw .mx-curve{transition:none}}
