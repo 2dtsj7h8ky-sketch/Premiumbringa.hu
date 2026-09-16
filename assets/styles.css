@@ -631,3 +631,9 @@ select.sort:hover,select.sort:focus{border-color:var(--copper);outline:none;box-
 .exp::after,.story::after,.value::after,.mx-concept::after{content:"";position:absolute;width:60vw;max-width:740px;height:60vw;max-height:740px;border-radius:50%;top:-22%;right:-12%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(194,137,90,.07),transparent 62%);animation:secdrift 17s ease-in-out infinite}
 @keyframes secdrift{0%,100%{transform:translate(0,0) scale(1);opacity:.78}50%{transform:translate(-6%,8%) scale(1.12);opacity:1}}
 @media(prefers-reduced-motion:reduce){.exp::after,.story::after,.value::after,.mx-concept::after{animation:none}}
+
+/* Footer social ikonok (monochrome) */
+footer .social{display:flex;gap:15px;margin-top:16px}
+footer .social a{color:var(--fog);display:inline-flex;transition:color .2s ease,transform .15s ease}
+footer .social a:hover{color:var(--copper);transform:translateY(-2px)}
+footer .social svg{width:20px;height:20px;display:block}
