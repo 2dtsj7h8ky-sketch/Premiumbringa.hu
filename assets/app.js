@@ -47,13 +47,19 @@
   const $ = (sel, root=document) => root.querySelector(sel);
   const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
   const param = key => new URLSearchParams(location.search).get(key);
-  const data = (typeof KESZLET !== "undefined") ? KESZLET : [];
+  /* ---- "Eladva": a darab az eladástól számított 14 napig még látszik (limitált érzet),
+         utána magától lekerül a készletről. ---- */
+  const SOLD_MS = 14 * 864e5;
+  const isEladva = b => !!b.eladva;
+  const eladvaTime = b => b.eladva ? new Date(b.eladva).getTime() : 0;
+  const soldExpired = b => isEladva(b) && (Date.now() - eladvaTime(b)) > SOLD_MS;
+  const data = ((typeof KESZLET !== "undefined") ? KESZLET : []).filter(b => !soldExpired(b));
 
   /* ---- "Friss" felvétel: a legújabb feltöltéshez képest 14 napon belül ---- */
   const felveTime = b => b.felveve ? new Date(b.felveve).getTime() : 0;
-  const maxFelve = data.reduce((m, b) => Math.max(m, felveTime(b)), 0);
+  const maxFelve = data.filter(b => !isEladva(b)).reduce((m, b) => Math.max(m, felveTime(b)), 0);
   const FRESH_MS = 14 * 864e5;
-  const isFriss = b => !!b.felveve && maxFelve > 0 && (maxFelve - felveTime(b)) <= FRESH_MS;
+  const isFriss = b => !isEladva(b) && !!b.felveve && maxFelve > 0 && (maxFelve - felveTime(b)) <= FRESH_MS;
 
   /* ---- termékkártya (showroom + készlet) ---- */
   function bikeCard(b){
@@ -61,8 +67,8 @@
       + imgTag(b, `${b.model}${b.allapot ? ", "+b.allapot+" állapot" : ""}`);
     const meta = [b.ev, b.meret].filter(Boolean).join(" · ");
     return `
-    <a class="bike reveal" href="bringa.html?id=${encodeURIComponent(b.id)}" data-szegmens="${esc(b.szegmens)}" data-allapot="${esc(b.allapot||"")}">
-      <div class="img">${media}${isFriss(b) ? '<span class="fresh"><i></i>Friss</span>' : ""}${akcioBadge(b)}<span class="cat">${esc(b.kategoria)}</span>${condBadge(b)}</div>
+    <a class="bike reveal${isEladva(b) ? " sold" : ""}" href="bringa.html?id=${encodeURIComponent(b.id)}" data-szegmens="${esc(b.szegmens)}" data-allapot="${esc(b.allapot||"")}">
+      <div class="img">${media}${isEladva(b) ? '<span class="soldstamp">Eladva</span>' : (isFriss(b) ? '<span class="fresh"><i></i>Friss</span>' : "") + akcioBadge(b)}<span class="cat">${esc(b.kategoria)}</span>${condBadge(b)}</div>
       <div class="bd">
         <h3>${esc(b.model)}</h3>
         <div class="spec">${esc(b.spec || b.kategoria)}</div>
@@ -135,7 +141,7 @@
   function initFeature(){
     const host = $("#hero-feature");
     if(!host) return;
-    const b = data.find(x => x.kiemelt) || data[0];
+    const b = data.find(x => x.kiemelt && !isEladva(x)) || data.find(x => !isEladva(x)) || data[0];
     if(!b){ host.remove(); return; }
     const media = `<span class="wheel two"></span><span class="wheel"></span>`
       + `<img src="${esc(bikeKep(b))}" alt="${esc(b.model)} · kiemelt darab" decoding="async" onerror="${coverOnerr(b)}">`;
@@ -157,7 +163,8 @@
     const grid = $("#home-grid");
     if(!grid) return;
     const n = parseInt(grid.dataset.limit || "6", 10);
-    grid.innerHTML = data.slice(0, n).map(bikeCard).join("");
+    const sorrend = data.slice().sort((a,b) => (isEladva(a)?1:0) - (isEladva(b)?1:0));
+    grid.innerHTML = sorrend.slice(0, n).map(bikeCard).join("");
     observeReveals();
   }
 
@@ -208,13 +215,18 @@
       else if(sort === "ar-asc") list.sort((a,b)=>a.ar-b.ar);
       else if(sort === "ar-desc") list.sort((a,b)=>b.ar-a.ar);
       else if(sort === "ev-desc") list.sort((a,b)=>b.ev-a.ev);
+      /* az eladott darabok mindig a lista végére (stabil rendezés) */
+      list.sort((a,b) => (isEladva(a)?1:0) - (isEladva(b)?1:0));
       return list;
     }
     function render(){
       const list = current();
       grid.innerHTML = list.length ? list.map(bikeCard).join("")
         : `<p class="empty">Erre a szűrésre jelenleg nincs elérhető kerékpár. Próbálj tágabb szűrőt, vagy <a href="kapcsolat.html">jelezd, mit keresel</a>.</p>`;
-      if(countEl) countEl.textContent = `${list.length} kerékpár`;
+      if(countEl){
+        const elerheto = list.filter(b => !isEladva(b)).length, elkelt = list.length - elerheto;
+        countEl.textContent = `${elerheto} kerékpár` + (elkelt ? ` · ${elkelt} nemrég elkelt` : "");
+      }
       observeReveals();
     }
     if(segBox) segBox.addEventListener("click", e => {
@@ -293,10 +305,10 @@
       <nav class="crumb" aria-label="Útvonal"><a href="index.html">Főoldal</a> <span>/</span> <a href="keszlet.html">Készlet</a> <span>/</span> <b>${esc(b.model)}</b></nav>
       <div class="product">
         <div class="pgallery">
-          <div class="pmain">${galMain}${b.allapot ? `<span class="${condClass(b.allapot)} pcond">${esc(b.allapot)}</span>` : ""}${isAkcio(b) ? '<span class="akcio pakcio">Akció</span>' : ""}</div>
+          <div class="pmain${isEladva(b) ? " sold" : ""}">${galMain}${b.allapot ? `<span class="${condClass(b.allapot)} pcond">${esc(b.allapot)}</span>` : ""}${isEladva(b) ? '<span class="soldstamp psold-stamp">Eladva</span>' : (isAkcio(b) ? '<span class="akcio pakcio">Akció</span>' : "")}</div>
           <div class="pthumbs" id="pthumbs">${thumbs}</div>
           <p class="preal"><span class="pr-dot"></span><span>A fotók a <b>tényleges</b> kerékpárt mutatják, és hűen tükrözik annak állapotát; az esetleges esztétikai hibákról szívesen küldünk közelebbi képet is.</span></p>
-          <p class="pnote">Amíg megjelenik, elérhető. További információért az <a href="kapcsolat.html">elérhetőségnél</a> nyugodtan érdeklődj.</p>
+          ${isEladva(b) ? '<p class="pnote">Ez a darab elkelt. A <a href="keszlet.html">készletben</a> megnézheted az elérhető kerékpárokat.</p>' : '<p class="pnote">Amíg megjelenik, elérhető. További információért az <a href="kapcsolat.html">elérhetőségnél</a> nyugodtan érdeklődj.</p>'}
         </div>
         <div class="pinfo">
           <span class="kick">${esc(b.kategoria)}</span>
@@ -305,10 +317,10 @@
           ${keySpecs}
           <p class="plead">${b.leiras ? esc(b.leiras) : "A részletes leírás hamarosan, a hirdetés adatai alapján."}</p>
           ${b.megjegyzes ? `<div class="pdisc"><span class="pdisc-ic" aria-hidden="true"></span><p><b>Fontos.</b> ${esc(b.megjegyzes)}</p></div>` : ""}
-          <div class="buybox">
+          ${isEladva(b) ? `<div class="psold"><b>Ez a kerékpár elkelt.</b><span>Hasonló darabot rendszeresen hozunk. Írd meg, mit keresel, és szólunk, amint befut.</span><a class="btn btn-1" href="kapcsolat.html">Szólj, mit keresel →</a></div>` : `<div class="buybox">
             <a class="btn btn-1" href="tel:+36204360307">Érdeklődöm telefonon →</a>
             <a class="btn btn-2" href="kapcsolat.html">Időpont kipróbálásra</a>
-          </div>
+          </div>`}
           ${condBlock}
           ${sizeBlock}
           ${specTabla}
@@ -334,8 +346,8 @@
     // kapcsolódó darabok (azonos szegmens, max 3)
     const relHost = $("#related-grid");
     if(relHost){
-      const rel = data.filter(x => x.id !== b.id && x.szegmens === b.szegmens).slice(0,3);
-      const pool = rel.length ? rel : data.filter(x => x.id !== b.id).slice(0,3);
+      const rel = data.filter(x => x.id !== b.id && !isEladva(x) && x.szegmens === b.szegmens).slice(0,3);
+      const pool = rel.length ? rel : data.filter(x => x.id !== b.id && !isEladva(x)).slice(0,3);
       relHost.innerHTML = pool.map(bikeCard).join("");
     }
     observeReveals();

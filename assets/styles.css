@@ -663,3 +663,16 @@ footer .social svg{width:20px;height:20px;display:block}
 .f-card.in:hover .f-handle{color:var(--copper)}
 @media(max-width:760px){.f-grid{grid-template-columns:1fr;gap:12px}.follow .wrap{padding-top:52px;padding-bottom:56px}}
 @media(prefers-reduced-motion:reduce){.f-card,.f-ico,.f-handle{transition:none}.f-card.in:hover::after{animation:none}.f-draw .mx-curve{transition:none}}
+
+/* ============ „Eladva" státusz (limitált érzet) ============ */
+.bike.sold .img img{filter:grayscale(.82) brightness(.5)}
+.bike.sold .bd h3{color:var(--ink-soft)}
+.bike.sold .price{color:var(--ink-soft)}
+.soldstamp{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(-7deg);z-index:4;font-family:var(--mono);font-weight:700;font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:var(--bright);padding:10px 12px 10px 20px;border:2px solid var(--bright);border-radius:4px;background:rgba(18,20,22,.46);box-shadow:0 0 0 4px rgba(18,20,22,.22),0 10px 26px -14px rgba(0,0,0,.7);white-space:nowrap;pointer-events:none}
+.pmain.sold img{filter:grayscale(.82) brightness(.52)}
+.pmain .psold-stamp{font-size:1.02rem;padding:14px 18px 14px 30px;border-width:2.5px}
+.psold{display:flex;flex-direction:column;align-items:flex-start;gap:9px;background:var(--carbon-2);border:1px solid var(--line);border-left:3px solid var(--copper);border-radius:12px;padding:20px 22px;margin-bottom:30px}
+.psold b{color:var(--bright);font-size:1.02rem;font-weight:600}
+.psold span{color:var(--haze);font-size:.94rem;line-height:1.6}
+.psold .btn{margin-top:7px}
+@media(prefers-reduced-motion:reduce){.soldstamp{transform:translate(-50%,-50%)}}
