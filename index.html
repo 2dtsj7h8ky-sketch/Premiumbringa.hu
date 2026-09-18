@@ -37,15 +37,15 @@
 .wpx-tab.on .wpx-tt{color:var(--copper)}
 .wpx-tdesc{font-size:.85rem;color:var(--fog);line-height:1.5;margin:0;transition:color .25s}
 .wpx-tab.on .wpx-tdesc{color:var(--haze)}
-.wpx-stage{border:1px solid #363a41;border-radius:20px;background:radial-gradient(135% 120% at 74% 2%,#2b3037,#181b20 70%);box-shadow:0 26px 64px rgba(0,0,0,.42);padding:30px 34px;display:grid;grid-template-columns:236px 1fr;gap:34px;align-items:center}
+.wpx-stage{border:1px solid #363a41;border-radius:20px;background:radial-gradient(135% 120% at 74% 2%,#2b3037,#181b20 70%);box-shadow:0 26px 64px rgba(0,0,0,.42);padding:30px 34px}
+.wpx-item{display:none}
+.wpx-item.on{display:grid;grid-template-columns:236px 1fr;gap:34px;align-items:center;animation:wpxin .5s ease}
 .wpx-fig{position:relative}
 .wpx-fig::before{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 50% 46%,rgba(194,137,90,.13),transparent 66%);z-index:0}
-.wpx-svg{display:none;width:100%;height:auto;position:relative;z-index:1}
-.wpx-svg.on{display:block;animation:wpxin .5s ease}
-.wpx-bodies{position:relative}
-@media(min-width:901px){.wpx-bodies{padding-left:34px;border-left:1px solid #2f333a}}
-.wpx-pane{display:none}
-.wpx-pane.on{display:block;animation:wpxin .5s ease}
+.wpx-svg{display:block;width:100%;height:auto;position:relative;z-index:1}
+.wpx-body{position:relative;padding-left:34px;border-left:1px solid #2f333a}
+.wpx-mn{display:none}
+.wpx-nav{display:none}
 .wpx-ph{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-stretch:108%;font-size:clamp(1.32rem,2.2vw,1.5rem);color:var(--bright);margin:0 0 14px;line-height:1.14}
 .wpx-pb{color:var(--haze);font-size:1.02rem;line-height:1.72;margin:0 0 20px}
 .wpx-keys{display:flex;flex-wrap:wrap;gap:9px}
@@ -70,9 +70,26 @@
 @keyframes wpxin{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}
 @keyframes wpxspin{to{transform:rotate(360deg)}}
 @keyframes wpxbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
-@media(max-width:900px){.wpx-grid{grid-template-columns:1fr;gap:22px}.wpx-tabs{flex-direction:row;flex-wrap:wrap;gap:12px}.wpx-tab{flex:1 1 200px}.wpx-tab:not(.on){opacity:1}}
-@media(max-width:620px){.wpx-stage{grid-template-columns:1fr;padding:24px 22px;gap:24px}.wpx-fig{width:200px;margin:0 auto}.wpx-bodies{border-left:0;padding-left:0}}
-@media(prefers-reduced-motion:reduce){.wpx-ring,.wpx-okos,.wpx-badge{animation:none}.wpx-svg.on,.wpx-pane.on{animation:none}}
+@media(max-width:900px){
+  .wpx-grid{grid-template-columns:1fr;gap:16px;margin-top:34px}
+  .wpx-tabs{display:none}
+  .wpx-stage{border:0;background:none;box-shadow:none;padding:0 0 6px;display:flex;gap:13px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .wpx-stage::-webkit-scrollbar{display:none}
+  .wpx-item,.wpx-item.on{display:block;flex:0 0 86%;scroll-snap-align:center;animation:none;border:1px solid #363a41;border-radius:20px;background:radial-gradient(135% 120% at 74% 2%,#2b3037,#181b20 70%);box-shadow:0 18px 38px rgba(0,0,0,.34);padding:22px 20px 24px;transition:border-color .3s ease}
+  .wpx-item.on{border-color:var(--copper)}
+  .wpx-fig{width:162px;margin:0 auto 2px}
+  .wpx-body{padding-left:0;border-left:0}
+  .wpx-mn{display:block;font-family:var(--mono);font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;color:var(--copper);margin-bottom:9px}
+  .wpx-ph{font-size:1.16rem;margin-bottom:10px}
+  .wpx-pb{font-size:.95rem;line-height:1.62;margin-bottom:14px}
+  .wpx-nav{display:flex;align-items:center;justify-content:center;gap:13px}
+  .wpx-hint{font-family:var(--mono);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fog)}
+  .wpx-dots{display:flex;gap:8px}
+  .wpx-dot{width:7px;height:7px;border-radius:50%;border:0;padding:0;background:#3a3d44;cursor:pointer;transition:background .25s ease,transform .25s ease}
+  .wpx-dot.on{background:var(--copper);transform:scale(1.4)}
+}
+@media(max-width:480px){.wpx-item,.wpx-item.on{flex-basis:89%;padding:20px 18px 22px}.wpx-fig{width:146px}}
+@media(prefers-reduced-motion:reduce){.wpx-ring,.wpx-okos,.wpx-badge{animation:none}.wpx-item.on{animation:none}.wpx-stage{scroll-behavior:auto}.wpx-dot,.wpx-item{transition:none}}
 
 /* ===== Átvételi utak: letisztult kártyák ===== */
 .path-essence{color:var(--ink-soft);font-size:.98rem;line-height:1.6;margin:0 0 18px}
@@ -180,9 +197,9 @@
       </div>
 
       <div class="wpx-stage">
-        <div class="wpx-fig">
-          <!-- 1) HOZZÁFÉRÉS -->
-          <svg class="wpx-svg on" data-p="acc" viewBox="0 0 300 300" role="img" aria-label="Keresett prémium márkák kerékpárjai egy helyen">
+        <article class="wpx-item on" data-p="acc">
+          <div class="wpx-fig">
+            <svg class="wpx-svg" data-p="acc" viewBox="0 0 300 300" role="img" aria-label="Keresett prémium márkák kerékpárjai egy helyen">
             <g class="wpx-ring"><circle cx="150" cy="152" r="112" fill="none" stroke="#3a3d44" stroke-width="9" stroke-dasharray="3 12"/></g>
             <circle cx="150" cy="152" r="92" fill="none" stroke="#2e3137" stroke-width="1.4"/>
             <ellipse cx="150" cy="222" rx="92" ry="11" fill="rgba(194,137,90,.10)"/>
@@ -196,8 +213,17 @@
             <g class="wpx-chip"><rect x="22" y="246" width="70" height="26" rx="13"/><text x="57" y="263">Mondraker</text></g>
             <g class="wpx-chip on"><rect x="166" y="246" width="100" height="26" rx="13"/><text x="216" y="263">Specialized</text></g>
           </svg>
-          <!-- 2) TUDATOS ÉRTÉK -->
-          <svg class="wpx-svg" data-p="val" viewBox="0 0 300 300" role="img" aria-label="Ugyanaz a kerékpár, jelentősen kedvezőbb áron">
+          </div>
+          <div class="wpx-body">
+            <span class="wpx-mn">01 · Hozzáférés</span>
+            <h3 class="wpx-ph">Hozzáférés a vágyott minőséghez</h3>
+            <p class="wpx-pb">A keresett prémium márkák (Cube, KTM, Mondraker, Specialized) korszerű, igényes modelljei. Ezekhez a bolton kívül máshol nehéz megbízhatóan hozzájutni, a márkanév pedig önmagában minőséget jelent.</p>
+            <div class="wpx-keys"><span class="wpx-key">Keresett márkák</span><span class="wpx-key">Korszerű modellek</span><span class="wpx-key">Igazolt minőség</span></div>
+          </div>
+        </article>
+        <article class="wpx-item" data-p="val">
+          <div class="wpx-fig">
+            <svg class="wpx-svg" data-p="val" viewBox="0 0 300 300" role="img" aria-label="Ugyanaz a kerékpár, jelentősen kedvezőbb áron">
             <ellipse cx="150" cy="182" rx="86" ry="10" fill="rgba(194,137,90,.10)"/>
             <g class="wpx-bike" transform="translate(30,-2) scale(0.235)">
               <g class="wh"><circle cx="285" cy="600" r="150"/><circle cx="735" cy="600" r="150"/></g>
@@ -211,8 +237,17 @@
             <rect x="74" y="254" width="112" height="14" rx="7" fill="#C2895A"/>
             <g class="wpx-okos"><rect x="200" y="250" width="62" height="22" rx="11" fill="#C2895A"/><text class="wpx-pct" x="231" y="265">&#8722;40%</text></g>
           </svg>
-          <!-- 3) FEDEZETTSÉG -->
-          <svg class="wpx-svg" data-p="cov" viewBox="0 0 300 300" role="img" aria-label="A kerékpár felkészítve és 30 napos garanciával fedezve">
+          </div>
+          <div class="wpx-body">
+            <span class="wpx-mn">02 · Tudatos érték</span>
+            <h3 class="wpx-ph">Ár, érték és tudás egyensúlya</h3>
+            <p class="wpx-pb">Egy használt prémium kerékpár nemcsak elérhetőbb, hanem tudatosabb döntés is. A tudás és a minőség megmarad, a nagy értékvesztésen viszont már túl vagy. Megbízható forrásból ez nem kockázat, hanem a legjobb ár-érték arány.</p>
+            <div class="wpx-keys"><span class="wpx-key">Akár 40%-kal olcsóbb</span><span class="wpx-key">Megmaradó érték</span><span class="wpx-key">Tudatos döntés</span></div>
+          </div>
+        </article>
+        <article class="wpx-item" data-p="cov">
+          <div class="wpx-fig">
+            <svg class="wpx-svg" data-p="cov" viewBox="0 0 300 300" role="img" aria-label="A kerékpár felkészítve és 30 napos garanciával fedezve">
             <path d="M150 22 L264 64 L264 158 C264 220,214 262,150 282 C86 262,36 220,36 158 L36 64 Z" fill="rgba(194,137,90,.05)" stroke="#C2895A" stroke-width="3" stroke-linejoin="round"/>
             <ellipse cx="150" cy="190" rx="74" ry="9" fill="rgba(194,137,90,.10)"/>
             <g class="wpx-bike" transform="translate(48,32) scale(0.2)">
@@ -223,26 +258,24 @@
             <g class="wpx-badge"><rect x="110" y="208" width="80" height="26" rx="13" fill="#C2895A"/><text x="150" y="225">30 NAP</text></g>
             <text class="wpx-wsub" x="150" y="254">Válogatva · felkészítve</text>
           </svg>
-        </div>
-
-        <div class="wpx-bodies">
-          <div class="wpx-pane on" data-p="acc">
-            <h3 class="wpx-ph">Hozzáférés a vágyott minőséghez</h3>
-            <p class="wpx-pb">A keresett német márkák (Cube, KTM, Trek, Specialized) korszerű, igényes modelljei. Ezekhez a bolton kívül máshol nehéz megbízhatóan hozzájutni, a márkanév pedig önmagában minőséget jelent.</p>
-            <div class="wpx-keys"><span class="wpx-key">Keresett márkák</span><span class="wpx-key">Korszerű modellek</span><span class="wpx-key">Igazolt minőség</span></div>
           </div>
-          <div class="wpx-pane" data-p="val">
-            <h3 class="wpx-ph">Ár, érték és tudás egyensúlya</h3>
-            <p class="wpx-pb">Egy használt prémium kerékpár nemcsak elérhetőbb, hanem tudatosabb döntés is. A tudás és a minőség megmarad, a nagy értékvesztésen viszont már túl vagy. Megbízható forrásból ez nem kockázat, hanem a legjobb ár-érték arány.</p>
-            <div class="wpx-keys"><span class="wpx-key">Akár 40%-kal olcsóbb</span><span class="wpx-key">Megmaradó érték</span><span class="wpx-key">Tudatos döntés</span></div>
-          </div>
-          <div class="wpx-pane" data-p="cov">
+          <div class="wpx-body">
+            <span class="wpx-mn">03 · Fedezettség</span>
             <h3 class="wpx-ph">Bebiztosított döntés</h3>
             <p class="wpx-pb">Nem csak eladunk, felelősséget is vállalunk. Igényes, megkímélt kerékpárokat válogatunk, gondosan felkészítjük a következő kilométerekre, és 30 napos garanciát adunk rá. Te csak felülsz és tekersz.</p>
             <div class="wpx-keys"><span class="wpx-key">Válogatott példány</span><span class="wpx-key">Pontos felkészítés</span><span class="wpx-key">30 napos garancia</span></div>
           </div>
+        </article>
+      </div>
+      <div class="wpx-nav">
+        <span class="wpx-hint" aria-hidden="true">Húzd oldalra</span>
+        <div class="wpx-dots" role="tablist" aria-label="Pillérek">
+          <button class="wpx-dot on" type="button" data-p="acc" aria-label="1. pillér: Hozzáférés"></button>
+          <button class="wpx-dot" type="button" data-p="val" aria-label="2. pillér: Tudatos érték"></button>
+          <button class="wpx-dot" type="button" data-p="cov" aria-label="3. pillér: Fedezettség"></button>
         </div>
       </div>
+    </div>
     </div>
 
     <p class="why-close reveal">Te a kilométerekre figyelsz, <em>a többiről mi gondoskodunk.</em></p>
@@ -421,19 +454,47 @@
 (function(){
   var sec=document.getElementById('miert'); if(!sec) return;
   var tabs=[].slice.call(sec.querySelectorAll('.wpx-tab'));
-  var svgs=[].slice.call(sec.querySelectorAll('.wpx-svg'));
-  var panes=[].slice.call(sec.querySelectorAll('.wpx-pane'));
-  function sel(p){
+  var items=[].slice.call(sec.querySelectorAll('.wpx-item'));
+  var dots=[].slice.call(sec.querySelectorAll('.wpx-dot'));
+  var stage=sec.querySelector('.wpx-stage');
+  var mq=window.matchMedia('(max-width:900px)');
+  function mark(p){
     tabs.forEach(function(t){var on=t.getAttribute('data-p')===p;t.classList.toggle('on',on);t.setAttribute('aria-selected',on?'true':'false');});
-    svgs.forEach(function(s){s.classList.toggle('on',s.getAttribute('data-p')===p);});
-    panes.forEach(function(b){b.classList.toggle('on',b.getAttribute('data-p')===p);});
+    items.forEach(function(i){i.classList.toggle('on',i.getAttribute('data-p')===p);});
+    dots.forEach(function(d){d.classList.toggle('on',d.getAttribute('data-p')===p);});
+  }
+  function go(p){
+    mark(p);
+    if(mq.matches&&stage){
+      var it=items.filter(function(i){return i.getAttribute('data-p')===p;})[0];
+      if(it){
+        var sr=stage.getBoundingClientRect(),ir=it.getBoundingClientRect();
+        stage.scrollBy({left:(ir.left-sr.left)-(stage.clientWidth-it.offsetWidth)/2,behavior:'smooth'});
+      }
+    }
   }
   tabs.forEach(function(t){
     var p=t.getAttribute('data-p');
-    t.addEventListener('click',function(){sel(p);});
-    t.addEventListener('mouseenter',function(){sel(p);});
-    t.addEventListener('focus',function(){sel(p);});
+    t.addEventListener('click',function(){go(p);});
+    t.addEventListener('mouseenter',function(){if(!mq.matches)mark(p);});
+    t.addEventListener('focus',function(){if(!mq.matches)mark(p);});
   });
+  dots.forEach(function(d){d.addEventListener('click',function(){go(d.getAttribute('data-p'));});});
+  if(stage){
+    var raf=0;
+    stage.addEventListener('scroll',function(){
+      if(!mq.matches)return;
+      if(raf)cancelAnimationFrame(raf);
+      raf=requestAnimationFrame(function(){
+        var sr=stage.getBoundingClientRect(),mid=stage.clientWidth/2,best=null,bd=Infinity;
+        items.forEach(function(i){
+          var ir=i.getBoundingClientRect(),c=(ir.left-sr.left)+i.offsetWidth/2,d=Math.abs(c-mid);
+          if(d<bd){bd=d;best=i;}
+        });
+        if(best)mark(best.getAttribute('data-p'));
+      });
+    },{passive:true});
+  }
 })();
 
 /* Quick-pick: Mit keresel? Kategória-csempék (elérhető + tervezett) */
