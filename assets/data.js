@@ -100,7 +100,8 @@ const KESZLET = [
       { cs:"Hajtás", t:[["Hajtómű","SRAM SX Eagle, Boost DUB, 32T"],["Hátsó váltó","SRAM SX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM PG-1210, 11–50T"],["Lánc","SRAM SX Eagle"]] },
       { cs:"Fék & kerék", t:[["Fékek","SRAM Level TL hidraulikus, 160/160"],["Kerékszett","29″ MDK-XP1, Tubeless Ready"],["Gumik","Maxxis Ikon 2.2"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Onoff Sulfur, 740 mm"],["Nyereg","Mondraker Cross Country Series"]] }
-    ] },
+    ],
+    kiemelt:true },
 
   { id:"ktm-ultra-1964-pro", mappa:"KTMUltra1964Pro", marka:"KTM", model:"KTM Ultra 1964 Pro", magassag:[183,196], felveve:"2026-08-09",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2023, meret:"XL (53 cm)", kerekmeret:"29″", suly:"12,9 kg", ar:410000,
@@ -114,8 +115,7 @@ const KESZLET = [
       { cs:"Hajtás", t:[["Hajtómű","Shimano Deore XT M8100, 34T"],["Hátsó váltó","Shimano Deore XT Shadow+, 12 sebesség"],["Fogaskoszorú","Shimano Deore M6100, 10–51T"],["Lánc","Shimano Deore M6100"]] },
       { cs:"Fék & kerék", t:[["Fékek","Shimano Deore M6100 hidraulikus, 180/160"],["Kerékszett","29″ Shimano WH-MT501"],["Gumik","Schwalbe Racing Ray / Racing Ralph, Addix"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","KTM Team Flat Top, 740 mm"],["Nyereg","KTM Comp MTB Sport"]] }
-    ],
-    kiemelt:true },
+    ] },
 
   { id:"cube-reaction-c62-one", mappa:"CubeReactionC62One", marka:"Cube", model:"Cube Reaction C:62 One", magassag:[180,192], felveve:"2026-08-09",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"XL (21″)", kerekmeret:"29″", suly:"11,5 kg", ar:380000,
@@ -166,7 +166,7 @@ const KESZLET = [
    ezek kapnak kiemelt, kategória-jellegű stílust a Készlet szűrőjében. */
 const SZEGMENSEK = [
   { kulcs:"mind",  nev:"Összes" },
-  { kulcs:"xc",      nev:"XC / Túra",      fo:true },
+  { kulcs:"xc",      nev:"XC MTB",         fo:true },
   { kulcs:"trail",   nev:"Trail / Enduro", fo:true },
   { kulcs:"fitness",  nev:"Fitness" },
   { kulcs:"trekking", nev:"Trekking" },

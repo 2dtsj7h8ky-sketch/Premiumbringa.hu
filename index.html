@@ -50,6 +50,11 @@
 .wpx-pb{color:var(--haze);font-size:1.02rem;line-height:1.72;margin:0 0 20px}
 .wpx-keys{display:flex;flex-wrap:wrap;gap:9px}
 .wpx-key{font-family:var(--mono);font-size:.57rem;letter-spacing:.05em;text-transform:uppercase;color:var(--copper);border:1px solid var(--copper-deep);border-radius:20px;padding:6px 12px}
+.wpx-bike .wh{fill:none;stroke:#585c63;stroke-width:34}
+.wpx-bike .fr{fill:none;stroke:var(--copper);stroke-width:30;stroke-linecap:round;stroke-linejoin:round}
+.wpx-bike .hub{fill:var(--copper)}
+.wpx-wlab.l{text-anchor:start}
+.wpx-pct{fill:#15171a;font-family:var(--mono);font-size:11px;font-weight:600;text-anchor:middle}
 .wpx-ring{transform-box:fill-box;transform-origin:center;animation:wpxspin 30s linear infinite}
 .wpx-chip rect{fill:#1c1e22;stroke:#43464c;stroke-width:1.2}
 .wpx-chip text{fill:var(--silver);font-family:var(--mono);font-size:12px;text-anchor:middle;letter-spacing:.03em}
@@ -177,52 +182,46 @@
       <div class="wpx-stage">
         <div class="wpx-fig">
           <!-- 1) HOZZÁFÉRÉS -->
-          <svg class="wpx-svg on" data-p="acc" viewBox="0 0 300 300" role="img" aria-label="Exkluzív hozzáférés: német prémium márkák minőségi pecsétje">
-            <g class="wpx-ring"><circle cx="150" cy="150" r="84" fill="none" stroke="#3a3d44" stroke-width="10" stroke-dasharray="3 11"/></g>
-            <circle cx="150" cy="150" r="66" fill="none" stroke="#2e3137" stroke-width="1.5"/>
-            <g stroke="#9A6A40" stroke-width="1.2" opacity=".45">
-              <line x1="150" y1="150" x2="78" y2="80"/><line x1="150" y1="150" x2="222" y2="80"/><line x1="150" y1="150" x2="78" y2="220"/><line x1="150" y1="150" x2="222" y2="220"/>
+          <svg class="wpx-svg on" data-p="acc" viewBox="0 0 300 300" role="img" aria-label="Keresett prémium márkák kerékpárjai egy helyen">
+            <g class="wpx-ring"><circle cx="150" cy="152" r="112" fill="none" stroke="#3a3d44" stroke-width="9" stroke-dasharray="3 12"/></g>
+            <circle cx="150" cy="152" r="92" fill="none" stroke="#2e3137" stroke-width="1.4"/>
+            <ellipse cx="150" cy="222" rx="92" ry="11" fill="rgba(194,137,90,.10)"/>
+            <g class="wpx-bike" transform="translate(17,26) scale(0.26)">
+              <g class="wh"><circle cx="285" cy="600" r="150"/><circle cx="735" cy="600" r="150"/></g>
+              <g class="fr"><path d="M285 600 L402 352"/><path d="M402 352 L508 600"/><path d="M508 600 L285 600"/><path d="M402 352 L636 360"/><path d="M636 360 L508 600"/><path d="M636 360 L735 600"/><path d="M402 352 L398 322"/><path d="M636 360 L628 306"/><path d="M338 316 L452 308"/><path d="M560 292 L690 304"/></g>
+              <g class="hub"><circle cx="285" cy="600" r="16"/><circle cx="508" cy="600" r="16"/><circle cx="735" cy="600" r="16"/></g>
             </g>
-            <path d="M150 110 L184 124 L184 156 C184 178,167 195,150 202 C133 195,116 178,116 156 L116 124 Z" fill="rgba(194,137,90,.08)" stroke="#C2895A" stroke-width="3" stroke-linejoin="round"/>
-            <path d="M137 153 L147 163 L165 141" fill="none" stroke="#C2895A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-            <g class="wpx-chip"><rect x="46" y="66" width="62" height="26" rx="13"/><text x="77" y="83">Cube</text></g>
-            <g class="wpx-chip"><rect x="192" y="66" width="62" height="26" rx="13"/><text x="223" y="83">KTM</text></g>
-            <g class="wpx-chip"><rect x="46" y="208" width="62" height="26" rx="13"/><text x="77" y="225">Trek</text></g>
-            <g class="wpx-chip on"><rect x="174" y="208" width="92" height="26" rx="13"/><text x="220" y="225">Specialized</text></g>
+            <g class="wpx-chip"><rect x="28" y="36" width="62" height="26" rx="13"/><text x="59" y="53">Cube</text></g>
+            <g class="wpx-chip"><rect x="208" y="36" width="62" height="26" rx="13"/><text x="239" y="53">KTM</text></g>
+            <g class="wpx-chip"><rect x="22" y="246" width="70" height="26" rx="13"/><text x="57" y="263">Mondraker</text></g>
+            <g class="wpx-chip on"><rect x="166" y="246" width="100" height="26" rx="13"/><text x="216" y="263">Specialized</text></g>
           </svg>
           <!-- 2) TUDATOS ÉRTÉK -->
-          <svg class="wpx-svg" data-p="val" viewBox="0 0 300 300" role="img" aria-label="Ár és érték egyensúlya: a használt prémium az okosabb választás">
-            <path d="M126 252 L174 252 L150 230 Z" fill="#26282c" stroke="#43464c" stroke-width="1.5" stroke-linejoin="round"/>
-            <line x1="150" y1="232" x2="150" y2="120" stroke="#6a6f79" stroke-width="5" stroke-linecap="round"/>
-            <circle cx="150" cy="118" r="6" fill="#80858d"/>
-            <line x1="70" y1="100" x2="230" y2="140" stroke="#80858d" stroke-width="5" stroke-linecap="round"/>
-            <line x1="70" y1="100" x2="70" y2="146" stroke="#5a5e66" stroke-width="2"/>
-            <path d="M50 146 L90 146 L84 158 L56 158 Z" fill="none" stroke="#6a6f79" stroke-width="2" stroke-linejoin="round"/>
-            <rect x="58" y="124" width="24" height="20" rx="3" fill="rgba(194,137,90,.16)" stroke="#C2895A" stroke-width="1.6"/>
-            <text class="wpx-wlab" x="70" y="138">ÁR</text>
-            <line x1="230" y1="140" x2="230" y2="182" stroke="#5a5e66" stroke-width="2"/>
-            <path d="M206 182 L254 182 L248 196 L212 196 Z" fill="none" stroke="#6a6f79" stroke-width="2" stroke-linejoin="round"/>
-            <rect x="206" y="150" width="48" height="32" rx="4" fill="rgba(214,212,208,.08)" stroke="#a8abb1" stroke-width="1.6"/>
-            <text class="wpx-wlab big" x="230" y="170">ÉRTÉK</text>
-            <text class="wpx-wsub" x="230" y="214">+ tudás</text>
-            <g class="wpx-okos"><circle cx="230" cy="120" r="11" fill="#C2895A"/><path d="M225 120 L229 124 L236 116" fill="none" stroke="#15171a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <svg class="wpx-svg" data-p="val" viewBox="0 0 300 300" role="img" aria-label="Ugyanaz a kerékpár, jelentősen kedvezőbb áron">
+            <ellipse cx="150" cy="182" rx="86" ry="10" fill="rgba(194,137,90,.10)"/>
+            <g class="wpx-bike" transform="translate(30,-2) scale(0.235)">
+              <g class="wh"><circle cx="285" cy="600" r="150"/><circle cx="735" cy="600" r="150"/></g>
+              <g class="fr"><path d="M285 600 L402 352"/><path d="M402 352 L508 600"/><path d="M508 600 L285 600"/><path d="M402 352 L636 360"/><path d="M636 360 L508 600"/><path d="M636 360 L735 600"/><path d="M402 352 L398 322"/><path d="M636 360 L628 306"/><path d="M338 316 L452 308"/><path d="M560 292 L690 304"/></g>
+              <g class="hub"><circle cx="285" cy="600" r="16"/><circle cx="508" cy="600" r="16"/><circle cx="735" cy="600" r="16"/></g>
+            </g>
+            <text class="wpx-wsub" x="150" y="206">Ugyanaz a tudás, más ár</text>
+            <text class="wpx-wlab l" x="22" y="234">ÚJ</text>
+            <rect x="74" y="222" width="188" height="14" rx="7" fill="#2a2d33" stroke="#43464c" stroke-width="1.2"/>
+            <text class="wpx-wlab l" x="22" y="266">NÁLUNK</text>
+            <rect x="74" y="254" width="112" height="14" rx="7" fill="#C2895A"/>
+            <g class="wpx-okos"><rect x="200" y="250" width="62" height="22" rx="11" fill="#C2895A"/><text class="wpx-pct" x="231" y="265">&#8722;40%</text></g>
           </svg>
           <!-- 3) FEDEZETTSÉG -->
-          <svg class="wpx-svg" data-p="cov" viewBox="0 0 300 300" role="img" aria-label="Fedezett döntés: válogatás, felkészítés és 30 napos garancia">
-            <path d="M150 44 L242 78 L242 152 C242 206,202 242,150 260 C98 242,58 206,58 152 L58 78 Z" fill="rgba(194,137,90,.05)" stroke="#C2895A" stroke-width="3" stroke-linejoin="round"/>
-            <g class="wpx-layer">
-              <circle cx="104" cy="104" r="12" fill="none" stroke="#C2895A" stroke-width="2"/><path d="M99 104 L103 108 L110 99" fill="none" stroke="#C2895A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-              <text x="126" y="109">Válogatva</text>
+          <svg class="wpx-svg" data-p="cov" viewBox="0 0 300 300" role="img" aria-label="A kerékpár felkészítve és 30 napos garanciával fedezve">
+            <path d="M150 22 L264 64 L264 158 C264 220,214 262,150 282 C86 262,36 220,36 158 L36 64 Z" fill="rgba(194,137,90,.05)" stroke="#C2895A" stroke-width="3" stroke-linejoin="round"/>
+            <ellipse cx="150" cy="190" rx="74" ry="9" fill="rgba(194,137,90,.10)"/>
+            <g class="wpx-bike" transform="translate(48,32) scale(0.2)">
+              <g class="wh"><circle cx="285" cy="600" r="150"/><circle cx="735" cy="600" r="150"/></g>
+              <g class="fr"><path d="M285 600 L402 352"/><path d="M402 352 L508 600"/><path d="M508 600 L285 600"/><path d="M402 352 L636 360"/><path d="M636 360 L508 600"/><path d="M636 360 L735 600"/><path d="M402 352 L398 322"/><path d="M636 360 L628 306"/><path d="M338 316 L452 308"/><path d="M560 292 L690 304"/></g>
+              <g class="hub"><circle cx="285" cy="600" r="16"/><circle cx="508" cy="600" r="16"/><circle cx="735" cy="600" r="16"/></g>
             </g>
-            <g class="wpx-layer">
-              <circle cx="104" cy="146" r="12" fill="none" stroke="#C2895A" stroke-width="2"/><path d="M99 146 L103 150 L110 141" fill="none" stroke="#C2895A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-              <text x="126" y="151">Felkészítve</text>
-            </g>
-            <g class="wpx-layer">
-              <circle cx="104" cy="188" r="12" fill="none" stroke="#C2895A" stroke-width="2"/><path d="M99 188 L103 192 L110 183" fill="none" stroke="#C2895A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-              <text x="126" y="193">Garanciával</text>
-            </g>
-            <g class="wpx-badge"><rect x="112" y="214" width="76" height="26" rx="13" fill="#C2895A"/><text x="150" y="231">30 NAP</text></g>
+            <g class="wpx-badge"><rect x="110" y="208" width="80" height="26" rx="13" fill="#C2895A"/><text x="150" y="225">30 NAP</text></g>
+            <text class="wpx-wsub" x="150" y="254">Válogatva · felkészítve</text>
           </svg>
         </div>
 
@@ -256,7 +255,7 @@
     <p>Válogatott, igényes állapotú német kerékpárok, őszinte háromfokú állapotleírással.</p></div>
   <div class="filters reveal" style="margin-bottom:30px">
     <a class="chip seg" href="keszlet.html">Összes</a>
-    <a class="chip seg fo" href="keszlet.html?szegmens=xc">XC / Túra</a>
+    <a class="chip seg fo" href="keszlet.html?szegmens=xc">XC MTB</a>
     <a class="chip seg fo" href="keszlet.html?szegmens=trail">Trail / Enduro</a>
     <a class="chip seg" href="keszlet.html?szegmens=fitness">Fitness</a>
     <a class="chip seg" href="keszlet.html?szegmens=trekking">Trekking</a>
@@ -410,7 +409,7 @@
   <div class="top">
     <div><a href="index.html" class="logo">Premium<b>Bringa</b></a><div class="slogan">Minőségi német márkák, egy tekerés közelségében. Debrecen.</div></div>
     <div class="col"><h4>Menü</h4><a href="keszlet.html">Készlet</a><a href="miert-eri-meg.html">Miért éri meg</a><a href="rolunk.html">Rólunk</a><a href="kapcsolat.html">Kapcsolat</a><a href="rolunk.html#garancia">Garancia</a></div>
-    <div class="col"><h4>Kategóriák</h4><a href="keszlet.html?szegmens=xc">XC / Túra</a><a href="keszlet.html?szegmens=trail">Trail / Enduro</a><a href="keszlet.html?szegmens=fitness">Fitness</a><a href="keszlet.html?szegmens=trekking">Trekking</a><a href="keszlet.html?szegmens=cross">Cross</a><a href="keszlet.html?szegmens=noi">Női</a></div>
+    <div class="col"><h4>Kategóriák</h4><a href="keszlet.html?szegmens=xc">XC MTB</a><a href="keszlet.html?szegmens=trail">Trail / Enduro</a><a href="keszlet.html?szegmens=fitness">Fitness</a><a href="keszlet.html?szegmens=trekking">Trekking</a><a href="keszlet.html?szegmens=cross">Cross</a><a href="keszlet.html?szegmens=noi">Női</a></div>
     <div class="col"><h4>Kapcsolat</h4><span class="li">+36 20 436 0307</span><span class="li">info@premiumbringa.hu</span><span class="li">Debrecen, HU</span><span class="li">Magyar Posta · utánvét</span><div class="social" aria-label="Kövess minket"><a href="https://www.facebook.com/p/Premiumbringa-61591525711396/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.14 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.5-3.9 3.79-3.9 1.1 0 2.24.19 2.24.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33V22c4.78-.8 8.44-4.94 8.44-9.94z"/></svg></a><a href="https://www.instagram.com/premiumbringa.hu/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.tiktok.com/@premiumbringa.hu" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.31 2.11 1.5 3.58 3.5 3.75v2.4c-1.17.11-2.35-.19-3.5-.83v5.86c0 3.05-2.28 5.32-5.28 5.32-2.86 0-5.12-2.16-5.12-4.96 0-2.96 2.4-5.13 5.5-4.9v2.5c-.33-.06-.67-.09-1-.09-1.35 0-2.4 1-2.4 2.4 0 1.48 1.1 2.46 2.48 2.46 1.48 0 2.5-1.12 2.5-2.7V3h3.32z"/></svg></a></div></div>
   </div>
   <div class="bot"><span>© 2026 Premium Bringa</span><nav class="footlegal" aria-label="Jogi"><a href="aszf.html">ÁSZF</a><a href="adatkezeles.html">Adatkezelés</a><a href="rolunk.html#garancia">Garancia</a></nav><span>Cube · KTM · Trek · Specialized</span></div>
@@ -443,7 +442,7 @@
   if(!grid || typeof KESZLET==='undefined') return;
   /* soon:true = tervezett kategória (még nincs készleten); a kapcsolatra visz */
   var CATS=[
-    {k:'xc', name:'XC / Túra', desc:'Sokoldalú, túrára és könnyebb terepre hangolt.', ico:'<circle cx="12" cy="13" r="8"/><path d="M12 13V8.4"/><path d="M9.5 2.5h5"/>'},
+    {k:'xc', name:'XC MTB', desc:'Sokoldalú, túrára és könnyebb terepre hangolt.', ico:'<circle cx="12" cy="13" r="8"/><path d="M12 13V8.4"/><path d="M9.5 2.5h5"/>'},
     {k:'trail', name:'Trail / Enduro', desc:'Masszívabb, terepre hangolt karakter.', ico:'<path d="M3 20h18"/><path d="M3 19l6-12 4 8 2.2-4 5.8 8"/>'},
     {k:'fitness', name:'Fitness', desc:'Városi, sportos, egyenes kormány.', ico:'<path d="M3 12h4l2-6 4 12 2-6h6"/>'},
     {k:'trekking', name:'Trekking', desc:'Kényelmes túra és ingázás.', ico:'<path d="M4 20h16"/><path d="M8 20V5l7 3-7 3"/>'},
