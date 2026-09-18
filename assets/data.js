@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-reaction-tm", mappa:"CubeReactionTM", marka:"Cube", model:"Cube Reaction TM", magassag:[176,188], felveve:"2026-09-18",
+    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Jó", ev:2020, meret:"L (20″)", kerekmeret:"27,5″", suly:"13,9 kg", ar:280000,
+    vaz:"High Performance Aluminium · 13,9 kg", villa:"X-Fusion RC32, 130 mm, állítható keménység",
+    hajtas:"SRAM SX Eagle 1×12", fek:"Magura MT Thirty hidraulikus, 180/180",
+    kerek:"27,5″ Rodi TRYP 35 (Tubeless Ready) · Michelin Wild AM 2.6",
+    spec:"27,5″ trail hardtail · X-Fusion 130 mm · SRAM Eagle 1×12, dropperrel.",
+    leiras:"Annak, aki merevfarún is játszani akar, nem csak haladni. A Cube Reaction TM nem a klasszikus XC vonal, hanem trail felé tolt hardtail: a hosszabb, 130 mm-es rugóút, a stabilabb geometria és a vastagabb gumik együtt sokkal magabiztosabb, élvezetesebb terepet adnak. Az ugratás, a köves szakasz és a gyors lejtő nem hozza zavarba, sőt kedvet csinál hozzá. A dropper nyeregcső, az erősebb fékek és a trailre hangolt felépítés olyan karaktert adnak, ami közelebb áll az endurós élményhez, mint egy hagyományos merevfarúhoz. Megvan benne a Reaction gyorsasága, de mellé kapsz egy adag szabadságot és játékosságot.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","High Performance Aluminium váz"],["Teleszkóp","X-Fusion RC32, 130 mm, állítható keménység"],["Nyeregcső","Cube Dropper Post, 130 mm"]] },
+      { cs:"Hajtás", t:[["Hajtómű","SRAM X1 1000 Eagle, 30T"],["Hátsó váltó","SRAM SX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM PG-1210 Eagle, 11–50T"],["Lánc","SRAM SX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Magura MT Thirty hidraulikus, 180/180"],["Kerékszett","27,5″ Rodi TRYP 35, Tubeless Ready"],["Gumik","Michelin Wild AM 2.6, Tubeless Ready"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Evolution, 760 mm"]] }
+    ] },
+
   { id:"cube-attention-sl", mappa:"CubeAttentionSL", marka:"Cube", model:"Cube Attention SL", magassag:[182,196], felveve:"2026-08-20",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"XL (21″)", kerekmeret:"29″", suly:"13,6 kg", ar:290000,
     vaz:"Aluminium Lite · 13,6 kg", villa:"RockShox Judy TK Air, 100 mm, zárható",
