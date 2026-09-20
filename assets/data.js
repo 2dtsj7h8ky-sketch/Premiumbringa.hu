@@ -19,7 +19,7 @@
    ========================================================================= */
 const KESZLET = [
   { id:"cannondale-habit-4", mappa:"CannondaleHabit4", marka:"Cannondale", model:"Cannondale Habit 4", magassag:[168,180], felveve:"2026-09-20",
-    kategoria:"Trail · Fully", szegmens:"trail", allapot:"Újszerű", ev:2019, meret:"M", kerekmeret:"29″", suly:"15,3 kg", ar:440000,
+    kategoria:"Trail · Fully", szegmens:"trail", allapot:"Kiváló", ev:2019, meret:"M", kerekmeret:"29″", suly:"15,3 kg", ar:440000,
     vaz:"SmartForm C1 alumínium · 15,3 kg", villa:"Fox Float Rhythm 34, 130 mm",
     hajtas:"SRAM NX Eagle 1×12", fek:"SRAM Guide T hidraulikus, 180/180",
     kerek:"29″ WTB ST i25 TCS · Maxxis Minion DHF / High Roller II",
