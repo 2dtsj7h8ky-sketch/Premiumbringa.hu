@@ -353,6 +353,193 @@
     observeReveals();
   }
 
+
+  /* ---- Lightbox: kép megnyitása, lapozás, zoom (csak transform/opacity) ---- */
+  function initLightbox(){
+    const thumbs = $$("#pthumbs .pthumb");
+    const main   = document.querySelector(".pmain");
+    if(!main || !thumbs.length) return;
+    const srcs = thumbs.map(t => t.dataset.src);
+    const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const EASE = "cubic-bezier(.22,.8,.2,1)";
+    const TR = `transform .4s ${EASE}, opacity .24s ease`;
+
+    let el, img, cnt, idx = 0, open = false;
+    let sc = 1, tx = 0, ty = 0;
+    let drag = false, px = 0, py = 0, ox = 0, oy = 0, moved = 0;
+    let pinch = 0, pinchSc = 1;
+
+    function build(){
+      el = document.createElement("div");
+      el.className = "lbx";
+      el.setAttribute("role","dialog");
+      el.setAttribute("aria-modal","true");
+      el.setAttribute("aria-label","Fotónézegető");
+      el.innerHTML =
+        '<div class="lbx-bd"></div>' +
+        '<img class="lbx-img" alt="" decoding="async">' +
+        '<button class="lbx-x" type="button" aria-label="Bezárás"></button>' +
+        '<button class="lbx-nav lbx-prev" type="button" aria-label="Előző fotó"></button>' +
+        '<button class="lbx-nav lbx-next" type="button" aria-label="Következő fotó"></button>' +
+        '<div class="lbx-count"></div>';
+      document.body.appendChild(el);
+      img = el.querySelector(".lbx-img");
+      cnt = el.querySelector(".lbx-count");
+
+      el.querySelector(".lbx-x").addEventListener("click", close);
+      el.querySelector(".lbx-bd").addEventListener("click", close);
+      el.querySelector(".lbx-prev").addEventListener("click", e => { e.stopPropagation(); go(-1); });
+      el.querySelector(".lbx-next").addEventListener("click", e => { e.stopPropagation(); go(1); });
+
+      img.addEventListener("dblclick", e => { e.preventDefault(); zoomAt(e.clientX, e.clientY, sc > 1 ? 1 : 2.6); });
+      el.addEventListener("wheel", e => {
+        if(!open) return;
+        e.preventDefault();
+        zoomAt(e.clientX, e.clientY, sc * (e.deltaY < 0 ? 1.18 : 1/1.18));
+      }, { passive:false });
+
+      img.addEventListener("pointerdown", e => {
+        if(pinch) return;
+        drag = true; moved = 0;
+        px = e.clientX; py = e.clientY; ox = tx; oy = ty;
+        img.setPointerCapture(e.pointerId);
+        img.style.transition = "none";
+      });
+      img.addEventListener("pointermove", e => {
+        if(!drag || pinch) return;
+        const dx = e.clientX - px, dy = e.clientY - py;
+        moved = Math.max(moved, Math.abs(dx) + Math.abs(dy));
+        if(sc > 1){ tx = ox + dx; ty = oy + dy; clamp(); apply(false); }
+        else { tx = dx * .35; ty = 0; apply(false); }
+      });
+      img.addEventListener("pointerup", e => {
+        if(!drag) return;
+        drag = false;
+        try{ img.releasePointerCapture(e.pointerId); }catch(_){}
+        if(sc === 1){
+          const dx = e.clientX - px;
+          if(Math.abs(dx) > 60) go(dx < 0 ? 1 : -1);
+          else { tx = 0; apply(true); }
+        }
+      });
+      img.addEventListener("pointercancel", () => { drag = false; if(sc === 1){ tx = 0; apply(true); } });
+
+      /* pinch */
+      el.addEventListener("touchstart", e => {
+        if(e.touches.length === 2){ pinch = dist(e.touches); pinchSc = sc; drag = false; }
+      }, { passive:true });
+      el.addEventListener("touchmove", e => {
+        if(pinch && e.touches.length === 2){
+          e.preventDefault();
+          const d = dist(e.touches);
+          const m = midp(e.touches);
+          zoomAt(m.x, m.y, pinchSc * (d / pinch), false);
+        }
+      }, { passive:false });
+      el.addEventListener("touchend", e => { if(e.touches.length < 2) pinch = 0; }, { passive:true });
+
+      document.addEventListener("keydown", e => {
+        if(!open) return;
+        if(e.key === "Escape") close();
+        else if(e.key === "ArrowRight") go(1);
+        else if(e.key === "ArrowLeft") go(-1);
+      });
+    }
+
+    const dist = t => Math.hypot(t[0].clientX - t[1].clientX, t[0].clientY - t[1].clientY);
+    const midp = t => ({ x:(t[0].clientX + t[1].clientX)/2, y:(t[0].clientY + t[1].clientY)/2 });
+
+    function apply(anim){
+      img.style.transition = anim && !RM ? TR : "none";
+      img.style.transform = `translate3d(${tx}px,${ty}px,0) scale(${sc})`;
+    }
+    function clamp(){
+      const w = img.clientWidth * sc, h = img.clientHeight * sc;
+      const mx = Math.max(0, (w - innerWidth) / 2), my = Math.max(0, (h - innerHeight) / 2);
+      tx = Math.min(mx, Math.max(-mx, tx));
+      ty = Math.min(my, Math.max(-my, ty));
+    }
+    function zoomAt(cx, cy, ns, anim){
+      ns = Math.min(4, Math.max(1, ns));
+      const mx = innerWidth/2, my = innerHeight/2;
+      const ix = (cx - mx - tx) / sc, iy = (cy - my - ty) / sc;
+      tx = cx - mx - ix * ns; ty = cy - my - iy * ns;
+      sc = ns;
+      if(sc === 1){ tx = 0; ty = 0; }
+      clamp(); apply(anim !== false);
+      el.classList.toggle("zoomed", sc > 1);
+    }
+    function reset(){ sc = 1; tx = 0; ty = 0; el.classList.remove("zoomed"); apply(false); }
+
+    function preload(){
+      [idx-1, idx+1].forEach(i => {
+        const s = srcs[(i + srcs.length) % srcs.length];
+        if(s){ const p = new Image(); p.src = s; }
+      });
+    }
+    function show(n){
+      idx = (n + srcs.length) % srcs.length;
+      reset();
+      cnt.innerHTML = `<b>${idx+1}</b> / ${srcs.length}`;
+      const pre = new Image();
+      const swap = () => { img.src = srcs[idx]; img.style.opacity = "1"; };
+      img.style.transition = RM ? "none" : "opacity .18s ease";
+      img.style.opacity = "0";
+      pre.src = srcs[idx];
+      if(pre.complete) setTimeout(swap, RM ? 0 : 110); else pre.onload = () => setTimeout(swap, RM ? 0 : 110);
+      preload();
+    }
+
+    function openAt(i, from){
+      if(!el) build();
+      idx = i; open = true;
+      reset();
+      cnt.innerHTML = `<b>${idx+1}</b> / ${srcs.length}`;
+      img.src = srcs[idx];
+      img.style.opacity = "1";
+      el.classList.add("on");
+      document.documentElement.classList.add("lbx-lock");
+      preload();
+      if(from && !RM){
+        const run = () => {
+          const r = from.getBoundingClientRect(), t = img.getBoundingClientRect();
+          if(!t.width || !r.width) return;
+          const s = Math.max(r.width / t.width, r.height / t.height);
+          const dx = (r.left + r.width/2) - (t.left + t.width/2);
+          const dy = (r.top + r.height/2) - (t.top + t.height/2);
+          img.style.transition = "none";
+          img.style.transform = `translate3d(${dx}px,${dy}px,0) scale(${s})`;
+          requestAnimationFrame(() => {
+            img.style.transition = `transform .44s ${EASE}`;
+            img.style.transform = "translate3d(0,0,0) scale(1)";
+          });
+        };
+        img.complete ? requestAnimationFrame(run) : (img.onload = () => requestAnimationFrame(run));
+      }
+    }
+    function go(d){ show(idx + d); }
+    function close(){
+      if(!open) return;
+      open = false;
+      el.classList.remove("on");
+      document.documentElement.classList.remove("lbx-lock");
+      setTimeout(() => { if(!open){ reset(); img.removeAttribute("src"); } }, 300);
+    }
+
+    /* megnyitás: főkép + bélyegképek */
+    main.addEventListener("click", e => {
+      if(e.target.closest("button")) return;
+      const cur = document.getElementById("pmain-img");
+      if(!cur || cur.style.display === "none") return;
+      const i = Math.max(0, srcs.indexOf(cur.getAttribute("src")));
+      openAt(i, cur);
+    });
+    main.style.cursor = "zoom-in";
+    $$("#pthumbs .pthumb").forEach((t, i) => {
+      t.addEventListener("dblclick", () => openAt(i, t.querySelector("img") || t));
+    });
+  }
+
   /* ---- KAPCSOLAT: e-mail másolása ---- */
   function initCopy(){
     const btn = $("#copy"), link = $("#email");
@@ -450,6 +637,7 @@
     initHomeGrid();
     initKeszlet();
     initProduct();
+    initLightbox();
     initCopy();
     initScrollSpy();
     observeReveals();

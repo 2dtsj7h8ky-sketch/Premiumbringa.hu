@@ -676,3 +676,36 @@ footer .social svg{width:20px;height:20px;display:block}
 .psold span{color:var(--haze);font-size:.94rem;line-height:1.6}
 .psold .btn{margin-top:7px}
 @media(prefers-reduced-motion:reduce){.soldstamp{transform:translate(-50%,-50%)}}
+
+/* ============ Lightbox (fotónézegető: lapozás + zoom) ============ */
+html.lbx-lock{overflow:hidden}
+.lbx{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .28s ease,visibility .28s}
+.lbx.on{opacity:1;visibility:visible}
+.lbx-bd{position:absolute;inset:0;background:rgba(10,11,13,.94);backdrop-filter:blur(6px);cursor:zoom-out}
+.lbx-img{position:relative;max-width:94vw;max-height:90vh;object-fit:contain;border-radius:6px;box-shadow:0 40px 90px -30px rgba(0,0,0,.9);touch-action:none;cursor:zoom-in;will-change:transform;-webkit-user-select:none;user-select:none;-webkit-user-drag:none}
+.lbx.zoomed .lbx-img{cursor:grab}
+.lbx.zoomed .lbx-img:active{cursor:grabbing}
+.lbx-x,.lbx-nav{position:absolute;z-index:2;border:1px solid var(--line);background:rgba(26,27,30,.72);backdrop-filter:blur(8px);border-radius:50%;cursor:pointer;transition:border-color .2s,background .2s,transform .2s;display:grid;place-items:center}
+.lbx-x:hover,.lbx-nav:hover{border-color:var(--copper);background:rgba(26,27,30,.92)}
+.lbx-x{top:18px;right:18px;width:44px;height:44px}
+.lbx-x::before,.lbx-x::after{content:"";position:absolute;width:17px;height:2px;background:var(--bright);border-radius:2px}
+.lbx-x::before{transform:rotate(45deg)}
+.lbx-x::after{transform:rotate(-45deg)}
+.lbx-nav{top:50%;margin-top:-26px;width:52px;height:52px}
+.lbx-prev{left:18px}
+.lbx-next{right:18px}
+.lbx-nav::before{content:"";width:12px;height:12px;border-right:2px solid var(--bright);border-bottom:2px solid var(--bright);border-radius:1px}
+.lbx-prev::before{transform:rotate(135deg);margin-left:4px}
+.lbx-next::before{transform:rotate(-45deg);margin-right:4px}
+.lbx-nav:hover::before{border-color:var(--copper)}
+.lbx-count{position:absolute;z-index:2;bottom:20px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--fog);background:rgba(26,27,30,.72);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:30px;padding:8px 16px}
+.lbx-count b{color:var(--copper);font-weight:600}
+.lbx.zoomed .lbx-nav{opacity:0;pointer-events:none}
+@media(max-width:700px){
+  .lbx-img{max-width:100vw;max-height:82vh;border-radius:0}
+  .lbx-nav{width:44px;height:44px;margin-top:-22px}
+  .lbx-prev{left:8px}.lbx-next{right:8px}
+  .lbx-x{top:12px;right:12px;width:40px;height:40px}
+  .lbx-count{bottom:14px}
+}
+@media(prefers-reduced-motion:reduce){.lbx,.lbx-img,.lbx-x,.lbx-nav{transition:none}}
