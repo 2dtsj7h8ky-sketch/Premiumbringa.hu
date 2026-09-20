@@ -30,7 +30,8 @@ const KESZLET = [
       { cs:"Hajtás", t:[["Hajtómű","SRAM GX Eagle DUB, 30T"],["Hátsó váltó","SRAM GX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM GX Eagle XG-1275, 10–52T"],["Lánc","SRAM SX Eagle"]] },
       { cs:"Fék & kerék", t:[["Fékek","Magura MT5 négydugattyús, Storm 203/203"],["Kerékszett","29″ DT Swiss E1900 Spline"],["Gumik","Schwalbe Magic Mary / Big Betty"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Race Face Aeffect R, 780 mm"]] }
-    ] },
+    ],
+    kiemelt:true },
 
   { id:"cube-reaction-tm", mappa:"CubeReactionTM", marka:"Cube", model:"Cube Reaction TM", magassag:[176,188], felveve:"2026-09-18",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Jó", ev:2020, meret:"L (20″)", kerekmeret:"27,5″", suly:"13,9 kg", ar:280000,
@@ -114,8 +115,7 @@ const KESZLET = [
       { cs:"Hajtás", t:[["Hajtómű","SRAM SX Eagle, Boost DUB, 32T"],["Hátsó váltó","SRAM SX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM PG-1210, 11–50T"],["Lánc","SRAM SX Eagle"]] },
       { cs:"Fék & kerék", t:[["Fékek","SRAM Level TL hidraulikus, 160/160"],["Kerékszett","29″ MDK-XP1, Tubeless Ready"],["Gumik","Maxxis Ikon 2.2"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Onoff Sulfur, 740 mm"],["Nyereg","Mondraker Cross Country Series"]] }
-    ],
-    kiemelt:true },
+    ] },
 
   { id:"ktm-ultra-1964-pro", mappa:"KTMUltra1964Pro", marka:"KTM", model:"KTM Ultra 1964 Pro", magassag:[183,196], felveve:"2026-08-09",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2023, meret:"XL (53 cm)", kerekmeret:"29″", suly:"12,9 kg", ar:410000,
