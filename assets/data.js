@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"orbea-alma-m51", mappa:"OrbeaAlmaM51", marka:"Orbea", model:"Orbea Alma M51", magassag:[168,180], felveve:"2026-09-20",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"M", kerekmeret:"29″", suly:"11,5 kg", ar:430000,
+    vaz:"Orbea Carbon OMR monocoque · 11,5 kg", villa:"RockShox Judy Silver TK Solo Air, 100 mm, kormányról zárható",
+    hajtas:"SRAM NX Eagle 1×12", fek:"Shimano MT201 hidraulikus, 180/160",
+    kerek:"29″ tubeless felni · Maxxis Ikon 2,2",
+    spec:"29″ karbon XC versenyváz · RockShox Judy Silver 100 mm · SRAM NX Eagle 1×12, dropperrel.",
+    leiras:"Az Alma az Orbea versenyvonala, és ennél a darabnál a váz a lényeg: monocoque karbon, amelyik az erőt nem nyeli el, hanem továbbadja. Megemeled, és már abból tudod, mire számíts, 11,5 kilogramm alatta van annak, amit ebben az árban szokás. A villa a kormányról zárható, tehát aszfalton feszes, terepen pedig dolgozik. Matt arany fényezés, ami élőben sokkal komolyabb, mint fotón. Annak való, aki tempós hétvégi köröket, maratont vagy versenyt tervez, és tudja, hogy egy jó karbon vázra később bármi ráépíthető. Gyakorlatilag új, karcmentes, keveset futott példány.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Orbea Alma, Carbon OMR monocoque, 29″"],["Teleszkóp","RockShox Judy Silver TK Remote Solo Air, 100 mm"],["Fejcsapágy","Acros, kormánykorlátozóval"],["Nyeregcső","OC2 dropper, 80 mm"]] },
+      { cs:"Hajtás", t:[["Váltó","SRAM NX Eagle, 12 sebesség"],["Hajtómű","SRAM Stylo 6K Eagle DUB Boost, 32T"],["Kazetta","SRAM PG-1230 Eagle, 11–50T"],["Lánc","SRAM NX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano MT201 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ alu, tubeless ready"],["Gumi","Maxxis Ikon 2,2"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","OC1 lapos, 740 mm"],["Nyereg","Selle Italia Model X"],["Súly","11,5 kg"],["Vázgarancia","Orbea élettartam-garancia a vázra"]] }
+    ] },
   { id:"cannondale-habit-4", mappa:"CannondaleHabit4", marka:"Cannondale", model:"Cannondale Habit 4", magassag:[168,180], felveve:"2026-09-20",
     kategoria:"Trail · Fully", szegmens:"trail", allapot:"Kiváló", ev:2019, meret:"M", kerekmeret:"29″", suly:"15,3 kg", ar:440000,
     vaz:"SmartForm C1 alumínium · 15,3 kg", villa:"Fox Float Rhythm 34, 130 mm",
