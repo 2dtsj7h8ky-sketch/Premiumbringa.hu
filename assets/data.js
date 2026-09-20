@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"radon-swoop-cf-9", mappa:"RadonSwoop9.0", marka:"Radon", model:"Radon Swoop CF 9.0", magassag:[184,196], felveve:"2026-09-20",
+    kategoria:"Enduro · Fully", szegmens:"trail", allapot:"Újszerű", ev:2021, meret:"XL", kerekmeret:"29″", suly:"15,3 kg", ar:650000,
+    vaz:"Swoop Carbon szénszál · 15,3 kg", villa:"RockShox ZEB Select, Charger RC, 170 mm",
+    hajtas:"SRAM GX Eagle 1×12", fek:"Magura MT5 négydugattyús, 203/203",
+    kerek:"29″ DT Swiss E1900 Spline · Schwalbe Magic Mary / Big Betty",
+    spec:"29″ karbon enduro fully · RockShox ZEB 170 mm · SRAM GX Eagle 1×12, dropperrel.",
+    leiras:"Annak, aki a saját képességeit szereti feszegetni, nem a bringáét. A Swoop a Radon enduro platformja, amivel évek óta versenyeznek, a 9.0 pedig ennek a karbon vázas kiadása: nem kirakatmodell, hanem az a változat, amit a márka a saját csapatának is odaad. A masszívan erősített, mégis feszes karbon váznak köszönhetően 170 mm rugóúttal is 15,3 kg körül marad, vagyis fürgén fordul, könnyed, és nagy tempónál is a kezedben marad. Elöl a 38 mm-es csúszócsövű RockShox ZEB, hátul a Super Deluxe Select+ dolgozik, a négydugattyús Magura MT5 pedig ott is adagolható erőt ad, ahol a legnagyobb szükség van rá. A német direkt gyártó miatt ez a szint más név alatt jóval drágábban indul. A többit elintézi az első lejtő.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Swoop Carbon szénszálas váz"],["Teleszkóp","RockShox ZEB Select, Charger RC, DebonAir+, 170 mm"],["Rugóstag","RockShox Super Deluxe Select+, DebonAir+, 170 mm"],["Nyeregcső","Radon Competition dropper, 150 mm"]] },
+      { cs:"Hajtás", t:[["Hajtómű","SRAM GX Eagle DUB, 30T"],["Hátsó váltó","SRAM GX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM GX Eagle XG-1275, 10–52T"],["Lánc","SRAM SX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fékek","Magura MT5 négydugattyús, Storm 203/203"],["Kerékszett","29″ DT Swiss E1900 Spline"],["Gumik","Schwalbe Magic Mary / Big Betty"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Race Face Aeffect R, 780 mm"]] }
+    ] },
+
   { id:"cube-reaction-tm", mappa:"CubeReactionTM", marka:"Cube", model:"Cube Reaction TM", magassag:[176,188], felveve:"2026-09-18",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Jó", ev:2020, meret:"L (20″)", kerekmeret:"27,5″", suly:"13,9 kg", ar:280000,
     vaz:"High Performance Aluminium · 13,9 kg", villa:"X-Fusion RC32, 130 mm, állítható keménység",
