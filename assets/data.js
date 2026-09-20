@@ -19,12 +19,12 @@
    ========================================================================= */
 const KESZLET = [
   { id:"cannondale-habit-4", mappa:"CannondaleHabit4", marka:"Cannondale", model:"Cannondale Habit 4", magassag:[168,180], felveve:"2026-09-20",
-    kategoria:"Trail · Fully", szegmens:"trail", allapot:"Kiváló", ev:2019, meret:"M", kerekmeret:"29″", suly:"15,3 kg", ar:440000,
+    kategoria:"Trail · Fully", szegmens:"trail", allapot:"Újszerű", ev:2019, meret:"M", kerekmeret:"29″", suly:"15,3 kg", ar:440000,
     vaz:"SmartForm C1 alumínium · 15,3 kg", villa:"Fox Float Rhythm 34, 130 mm",
     hajtas:"SRAM NX Eagle 1×12", fek:"SRAM Guide T hidraulikus, 180/180",
     kerek:"29″ WTB ST i25 TCS · Maxxis Minion DHF / High Roller II",
     spec:"29″ alumínium trail fully · Fox 34 és Fox DPS, 130 mm · SRAM NX Eagle 1×12, dropperrel.",
-    leiras:"Az a fajta kerékpár, amelyik nem kényszerít választásra. Elöl is, hátul is 130 milliméter Fox futómű dolgozik, ami elég ahhoz, hogy a gyökeres, köves szakaszokon nyugodtan hagyd futni, viszont nem annyi, hogy hosszabb emelkedőn kilóra menne a dolog. A Cannondale ezt a geometriát arra szabta, hogy egész napos túrán is jól viselje magát, és ez pontosan érződik rajta. A dropper nyeregcsővel egy mozdulat a váltás a tekerés és az ereszkedés között. Karcmentes, keveset futott, teljesen gyári példány.",
+    leiras:"Az a fajta kerékpár, amelyik nem kényszerít választásra. Elöl is, hátul is 130 milliméter Fox futómű dolgozik, ami elég ahhoz, hogy a gyökeres, köves szakaszokon nyugodtan hagyd futni, viszont nem annyi, hogy hosszabb emelkedőn kilóra menne a dolog. A Cannondale ezt a geometriát arra szabta, hogy egész napos túrán is jól viselje magát, és ez pontosan érződik rajta. A dropper nyeregcsővel egy mozdulat a váltás a tekerés és az ereszkedés között. Szinte karcmentes, csak nagyon minimális nyommal, keveset futott, teljesen gyári példány.",
     reszletek:[
       { cs:"Váz & felfüggesztés", t:[["Váz","Cannondale Habit, SmartForm C1 alumínium, 29″"],["Teleszkóp","Fox Float Rhythm 34, 130 mm"],["Rugóstag","Fox Float Performance DPS EVOL, 130 mm"],["Nyeregcső","TranzX dropper, 125 mm"]] },
       { cs:"Hajtás", t:[["Váltó","SRAM NX Eagle, 12 sebesség"],["Hajtómű","Truvativ Stylo 6K, 32T"],["Kazetta","SRAM NX Eagle, 10–50T"],["Lánc","SRAM NX Eagle"]] },
