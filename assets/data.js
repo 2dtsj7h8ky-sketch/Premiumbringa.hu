@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"trek-x-caliber-8", mappa:"TrekXcaliber8", marka:"Trek", model:"Trek X-Caliber 8", magassag:[185,198], felveve:"2026-09-21",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2022, meret:"XL", kerekmeret:"29″", suly:"13,1 kg", ar:320000,
+    vaz:"Alpha Gold alumínium · 13,1 kg", villa:"RockShox Judy SL Solo Air, 100 mm, kormányról zárható",
+    hajtas:"Shimano XT M8100 1×12", fek:"Shimano MT200 hidraulikus, 180/160",
+    kerek:"29″ Bontrager Kovee · Maxxis Ardent Race 2,35",
+    spec:"29″ alumínium XC merevvázas · RockShox Judy SL 100 mm · Shimano XT M8100 1×12.",
+    leiras:"A Trek kínálatában ez az a pont, ahol egy merevvázas már valódi sporteszköz, de még mindennapi társ marad. A váltó Shimano XT, tehát nem a belépő szint: pontosan, halkan és terhelés alatt is megbízhatóan vált, ami hosszú távon a legtöbbet számít. A villa levegős és a kormányról zárható, így aszfalton feszes, terepen pedig dolgozik. Fürgén pörög a kerékpárúton, elvisz egy hosszabb túrára, és az erdei körökön is otthon van. A fehér-piros fényezésre a garázsban is visszanéz az ember. Ilyen nagy vázméretből eleve kevés jár, újszerű állapotban még kevesebb. Bolti állapotú, karcmentes, néhányszor elővett, teljesen gyári példány.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Trek X-Caliber, Alpha Gold alumínium, 29″"],["Teleszkóp","RockShox Judy SL, Solo Air, TurnKey lockout, 100 mm"],["Vázméret","XL, 21,5″"],["Súly","13,1 kg"]] },
+      { cs:"Hajtás", t:[["Váltó","Shimano XT M8100, 12 sebesség"],["Hajtómű","Shimano MT511, 30T"],["Kazetta","Shimano Deore M6100, 10–51T"],["Lánc","Shimano Deore M6100"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano MT200 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Bontrager Kovee"],["Gumi","Maxxis Ardent Race 2,35, EXO, tubeless ready"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager, 750 mm"],["Nyereg","Bontrager Arvada"],["Markolat","Bontrager XR Endurance"],["Kerékméret","29″"]] }
+    ] },
   { id:"orbea-alma-m51", mappa:"OrbeaAlmaM51", marka:"Orbea", model:"Orbea Alma M51", magassag:[168,180], felveve:"2026-09-20",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"M", kerekmeret:"29″", suly:"11,5 kg", ar:430000,
     vaz:"Orbea Carbon OMR monocoque · 11,5 kg", villa:"RockShox Judy Silver TK Solo Air, 100 mm, kormányról zárható",
