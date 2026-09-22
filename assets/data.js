@@ -58,7 +58,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Tektro MD-C510 tárcsafék"],["Tárcsák","160 / 160 mm"],["Felni","28″ Cube GR 2.3"],["Gumi","Schwalbe G-One Allround, 40-622"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Compact Race Bar"],["Nyereg","Natural Fit Venec Lite"],["Gumihely","45 mm-ig"],["Felszerelhetőség","Sárvédő-előkészítés"]] }
     ] },
-  { id:"trek-x-caliber-8", mappa:"TrekXcaliber8", marka:"Trek", model:"Trek X-Caliber 8", magassag:[185,198], felveve:"2026-09-21",
+  { id:"trek-x-caliber-8", mappa:"TrekXcaliber8", marka:"Trek", model:"Trek X-Caliber 8", magassag:[185,198], felveve:"2026-09-21", eladva:"2026-09-22",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2022, meret:"XL", kerekmeret:"29″", suly:"13,1 kg", ar:320000,
     vaz:"Alpha Gold alumínium · 13,1 kg", villa:"RockShox Judy SL Solo Air, 100 mm, kormányról zárható",
     hajtas:"Shimano XT M8100 1×12", fek:"Shimano MT200 hidraulikus, 180/160",
@@ -210,7 +210,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","KTM Team Flat Top, 740 mm"],["Nyereg","KTM Comp MTB Sport"]] }
     ] },
 
-  { id:"cube-reaction-c62-one", mappa:"CubeReactionC62One", marka:"Cube", model:"Cube Reaction C:62 One", magassag:[180,192], felveve:"2026-08-09",
+  { id:"cube-reaction-c62-one", mappa:"CubeReactionC62One", marka:"Cube", model:"Cube Reaction C:62 One", magassag:[180,192], felveve:"2026-08-09", eladva:"2026-09-22",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"XL (21″)", kerekmeret:"29″", suly:"11,5 kg", ar:380000,
     vaz:"C:62 Monocoque karbon · 11,5 kg", villa:"SR Suntour Raidon 32, 100 mm",
     hajtas:"SRAM SX / NX Eagle 1×12", fek:"Magura MT Thirty hidraulikus, 180/160",
