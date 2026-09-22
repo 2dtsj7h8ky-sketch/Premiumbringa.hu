@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-attention-sl-2", mappa:"CubeAttentionSL2", marka:"Cube", model:"Cube Attention SL", magassag:[168,180], felveve:"2026-09-22",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2021, meret:"M (18″)", kerekmeret:"29″", suly:"13,5 kg", ar:260000,
+    vaz:"Cube Aluminium Lite · 13,5 kg", villa:"RockShox Judy Silver levegős, 100 mm, PopLoc kormányról zárható",
+    hajtas:"Shimano XT M8100 1×12", fek:"Shimano BR-MT200 hidraulikus, 180/160",
+    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2,25",
+    spec:"29″ alumínium XC merevvázas · levegős RockShox Judy Silver 100 mm · Shimano XT M8100 1×12.",
+    leiras:"A hátsó váltó az az alkatrész, amit egy tekerésen több százszor használsz, és ide Shimano XT került, vagyis a felső középkategória, nem a belépő szint. Pontosan, halkan és terhelés alatt is megbízhatóan vált, és ez az, amit hosszú távon a legjobban megérzel. Elöl levegős RockShox Judy Silver dolgozik, amit a saját súlyodra hangolsz: terepen nyeli a köveket, aszfalton egy karral feszesre zárod. Reggel a városban fürge, hétvégén a túrán és az erdei körökön magabiztos. A petrol fényezés a piros részletekkel egyedi és ízléses, olyan párosítás, amit az újabb kerékpároknál hiányolni szoktam. Ebben az árban ilyen felszereltség ritkán jön szembe, ebben az állapotban még ritkábban: a használat nyomai a szokásosnál jóval kisebb mértékben látszanak, a lánc, a fékbetétek és a gumik bőséges tartalékkal.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Cube Attention SL, Aluminium Lite, 29″"],["Teleszkóp","RockShox Judy Silver levegős, 100 mm"],["Zárás","PopLoc, kormányról"],["Súly","13,5 kg"]] },
+      { cs:"Hajtás", t:[["Váltó","Shimano XT RD-M8100, 12 sebesség"],["Hajtómű","Shimano FC-MT511, 32T"],["Kazetta","Shimano Deore CS-M6100, 10–51T"],["Lánc","Shimano CN-M6100"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube ZX20"],["Gumi","Schwalbe Smart Sam 2,25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"],["Kerékméret","29″"],["Fényezés","Petrol, piros részletekkel"]] }
+    ] },
   { id:"cube-attention-3", mappa:"CubeAttention3", marka:"Cube", model:"Cube Attention", magassag:[176,186], felveve:"2026-09-22",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2023, meret:"L", kerekmeret:"29″", suly:"13,8 kg", ar:280000,
     vaz:"Cube Aluminium Lite · 13,8 kg", villa:"RockShox Judy Silver levegős, 100 mm, PopLoc kormányról zárható",
