@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-nuroad", mappa:"CubeNuroad", marka:"Cube", model:"Cube Nuroad", magassag:[172,182], felveve:"2026-09-22",
+    kategoria:"Gravel · Karbon villa", szegmens:"gravel", allapot:"Kiváló", ev:2022, meret:"M", kerekmeret:"28″", suly:"10,8 kg", ar:340000,
+    vaz:"Cube T6 Superlite alumínium · 10,8 kg", villa:"Cube Nuroad teljes karbon, Flat Mount Disc",
+    hajtas:"Shimano Claris 2×8", fek:"Tektro MD-C510 tárcsa, 160/160",
+    kerek:"28″ Cube GR 2.3 · Schwalbe G-One Allround 40 mm",
+    spec:"28″ gravel karbon villával · Cube Gravel Comfort geometria · Shimano Claris 2×8, tárcsafékkel.",
+    leiras:"Egyetlen bringa a hétköznapra és a hétvégére. Az alumínium váz feszesen adja tovább az erőt, a teljes karbon villa viszont már a kormány előtt elnyeli a rezgést, tehát a hosszú kilométerek után is marad erőd. A Cube Gravel Comfort geometriája nyugodt, kiszámítható fekvést ad, akár aszfalton tekersz, akár laza földúton. Hétfőn a munkába, szombaton a folyópartra, és közben nem kell két kerékpárt tartanod. A 45 milliméteres gumihely és a sárvédő-előkészítés nyitva hagyja az utat, ha később vadabb terepre vagy egész napos túrára hangolnád.",
+    megjegyzes:"A vázon a váztáska okozta felületi festékkopások láthatók, a fotókon szereplő mértékben. Ez kizárólag esztétikai jellegű, a váz szerkezetét nem érinti. Az árat ennek tudatában alakítottuk ki, és vásárlás előtt szívesen mutatunk róla közelebbi képet is.",
+    reszletek:[
+      { cs:"Váz & villa", t:[["Váz","Cube Nuroad, T6 Superlite alumínium, 28″"],["Villa","Cube Nuroad Flat Mount Disc, teljes karbon"],["Geometria","Cube Gravel Comfort"],["Súly","10,8 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano Claris RD-R2000, 8 sebesség"],["Első váltó","Shimano Claris, 2 sebesség"],["Hajtómű","Shimano Claris FC-R2000, 50/34T"],["Kazetta","Shimano CS-HG31, 11–34T"],["Lánc","KMC Z8.3"]] },
+      { cs:"Fék & kerék", t:[["Fék","Tektro MD-C510 tárcsafék"],["Tárcsák","160 / 160 mm"],["Felni","28″ Cube GR 2.3"],["Gumi","Schwalbe G-One Allround, 40-622"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Compact Race Bar"],["Nyereg","Natural Fit Venec Lite"],["Gumihely","45 mm-ig"],["Felszerelhetőség","Sárvédő-előkészítés"]] }
+    ] },
   { id:"trek-x-caliber-8", mappa:"TrekXcaliber8", marka:"Trek", model:"Trek X-Caliber 8", magassag:[185,198], felveve:"2026-09-21",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2022, meret:"XL", kerekmeret:"29″", suly:"13,1 kg", ar:320000,
     vaz:"Alpha Gold alumínium · 13,1 kg", villa:"RockShox Judy SL Solo Air, 100 mm, kormányról zárható",
@@ -221,6 +235,7 @@ const SZEGMENSEK = [
   { kulcs:"mind",  nev:"Összes" },
   { kulcs:"xc",      nev:"XC MTB",         fo:true },
   { kulcs:"trail",   nev:"Trail / Enduro", fo:true },
+  { kulcs:"gravel",   nev:"Gravel" },
   { kulcs:"fitness",  nev:"Fitness" },
   { kulcs:"trekking", nev:"Trekking" },
   { kulcs:"cross",    nev:"Cross" },
