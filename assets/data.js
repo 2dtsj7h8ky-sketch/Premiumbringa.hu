@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-attention-3", mappa:"CubeAttention3", marka:"Cube", model:"Cube Attention", magassag:[176,186], felveve:"2026-09-22",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2023, meret:"L", kerekmeret:"29″", suly:"13,8 kg", ar:280000,
+    vaz:"Cube Aluminium Lite · 13,8 kg", villa:"RockShox Judy Silver levegős, 100 mm, PopLoc kormányról zárható",
+    hajtas:"Shimano Deore / SLX 2×11", fek:"Shimano BR-MT200/UR300 hidraulikus, 180/160",
+    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2,25",
+    spec:"29″ alumínium XC merevvázas · levegős RockShox Judy Silver 100 mm · Shimano Deore és SLX 2×11.",
+    leiras:"Ebben az árfekvésben ritka, hogy a villa levegős legyen és a kormányról lehessen zárni, itt viszont pontosan ez a helyzet, Shimano Deore és SLX hajtással kiegészítve. Ez az a szint, ahol a hétköznapi tekerés is jó lesz, a hétvégi terepezés pedig igazi élmény. Reggel fürgén bevisz a városba, szombaton magabiztosan viszi a túrát. A tűznarancs gyöngyházas fényezés élőben mélyebb és élénkebb, mint fotón, és pont annyira feltűnő, amennyire egy sportos darabnak illik. Igényesen tartott példány, bőséges kopóalkatrész-tartalékkal és új gumival.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Cube Attention, Aluminium Lite, 29″"],["Teleszkóp","RockShox Judy Silver levegős, 100 mm"],["Zárás","PopLoc, kormányról"],["Súly","13,8 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano Deore RD-M4120, 11 sebesség"],["Első váltó","Shimano SLX FD-M7025, 2 sebesség"],["Hajtómű","Shimano Deore FC-M5100, 36/26T"],["Kazetta","Shimano CS-M5100, 11–42T"],["Lánc","KMC X11"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 / UR300 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube ZX20"],["Gumi","Schwalbe Smart Sam 2,25, új"]] },
+      { cs:"Egyéb", t:[["Sebességek","2×11"],["Kerékméret","29″"],["Fényezés","Tűznarancs gyöngyházas"],["Szerviz","Átvizsgálva és leszervizelve, menetkészen"]] }
+    ] },
   { id:"cube-nuroad", mappa:"CubeNuroad", marka:"Cube", model:"Cube Nuroad", magassag:[172,182], felveve:"2026-09-22",
     kategoria:"Gravel · Karbon villa", szegmens:"gravel", allapot:"Kiváló", ev:2022, meret:"M", kerekmeret:"28″", suly:"10,8 kg", ar:340000,
     vaz:"Cube T6 Superlite alumínium · 10,8 kg", villa:"Cube Nuroad teljes karbon, Flat Mount Disc",
