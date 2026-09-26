@@ -71,7 +71,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano MT200 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Bontrager Kovee"],["Gumi","Maxxis Ardent Race 2,35, EXO, tubeless ready"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager, 750 mm"],["Nyereg","Bontrager Arvada"],["Markolat","Bontrager XR Endurance"],["Kerékméret","29″"]] }
     ] },
-  { id:"orbea-alma-m51", mappa:"OrbeaAlmaM51", marka:"Orbea", model:"Orbea Alma M51", magassag:[168,180], felveve:"2026-09-20",
+  { id:"orbea-alma-m51", mappa:"OrbeaAlmaM51", marka:"Orbea", model:"Orbea Alma M51", magassag:[168,180], felveve:"2026-09-20", eladva:"2026-09-26",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"M", kerekmeret:"29″", suly:"11,5 kg", ar:430000,
     vaz:"Orbea Carbon OMR monocoque · 11,5 kg", villa:"RockShox Judy Silver TK Solo Air, 100 mm, kormányról zárható",
     hajtas:"SRAM NX Eagle 1×12", fek:"Shimano MT201 hidraulikus, 180/160",
@@ -84,7 +84,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano MT201 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ alu, tubeless ready"],["Gumi","Maxxis Ikon 2,2"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","OC1 lapos, 740 mm"],["Nyereg","Selle Italia Model X"],["Súly","11,5 kg"],["Vázgarancia","Orbea élettartam-garancia a vázra"]] }
     ] },
-  { id:"cannondale-habit-4", mappa:"CannondaleHabit4", marka:"Cannondale", model:"Cannondale Habit 4", magassag:[168,180], felveve:"2026-09-20",
+  { id:"cannondale-habit-4", mappa:"CannondaleHabit4", marka:"Cannondale", model:"Cannondale Habit 4", magassag:[168,180], felveve:"2026-09-20", eladva:"2026-09-26",
     kategoria:"Trail · Fully", szegmens:"trail", allapot:"Kiváló", ev:2019, meret:"M", kerekmeret:"29″", suly:"15,3 kg", ar:440000,
     vaz:"SmartForm C1 alumínium · 15,3 kg", villa:"Fox Float Rhythm 34, 130 mm",
     hajtas:"SRAM NX Eagle 1×12", fek:"SRAM Guide T hidraulikus, 180/180",
@@ -140,7 +140,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
     ] },
 
-  { id:"cube-attention-2", mappa:"CubeAttention2", marka:"Cube", model:"Cube Attention", magassag:[182,195], felveve:"2026-08-20",
+  { id:"cube-attention-2", mappa:"CubeAttention2", marka:"Cube", model:"Cube Attention", magassag:[182,195], felveve:"2026-08-20", eladva:"2026-09-26",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2021, meret:"XL (21″)", kerekmeret:"29″", suly:"13,7 kg", ar:240000,
     vaz:"Aluminium Lite · 13,7 kg", villa:"RockShox Judy Silver TK, 100 mm, PopLoc",
     hajtas:"Shimano Deore 2×10", fek:"Shimano MT200 hidraulikus, 180/160",
