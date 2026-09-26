@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-stereo-one22", mappa:"CubeStereoONE22", marka:"Cube", model:"Cube Stereo ONE22 HPC TM", magassag:[175,188], felveve:"2026-09-26",
+    kategoria:"Trail · Fully", szegmens:"trail", allapot:"Újszerű", ev:2024, meret:"L", kerekmeret:"29″", suly:"13,5 kg", ar:700000,
+    vaz:"HPC karbon monocoque első vázháromszög · 13,5 kg", villa:"Fox 34 Float Rhythm, 130 mm",
+    hajtas:"SRAM GX Eagle 1×12", fek:"Shimano XT BR-M8120 négydugattyús, 203/180",
+    kerek:"29″ Fulcrum Red Metal · Maxxis Ardent 2,4",
+    spec:"29″ karbon trail fully · Fox 34 és Fox Float DPS, 130 mm · SRAM GX Eagle 1×12, XT fékkel.",
+    leiras:"Egy összteleszkópos, amivel felfelé ugyanúgy öröm menni, mint lefelé. A számokban is látszik, miért: karbon első vázháromszöggel, Fox futóművel és XT fékkel együtt 13,5 kilogramm, ami ebben a kategóriában kivételesen kevés. A rugóstagon háromállású kapcsoló van, tehát nyitva nyeli a terepet, zárva viszont olyan feszes, mint egy merevvázas, és ez egyetlen mozdulat. A fék elöl négydugattyús XT 203-as tárcsával, ami hosszú ereszkedésen sem fárad el. A négycsuklós hátsó felfüggesztés fedett csapágyakkal nyugodt és tapadós marad. A flashgrey és olíva párosítás visszafogott, mégis karakteres, az a fajta szín, ami mellett elmész, aztán visszafordulsz. Keveset futott, szinte teljesen karcmentes példány, a teleszkóp, a rugóstag és a csapágyak feszesen, csendesen dolgoznak.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Cube Stereo ONE22 HPC, karbon monocoque, 29″"],["Teleszkóp","Fox 34 Float Rhythm, 130 mm"],["Rugóstag","Fox Float DPS, 130 mm, háromállású kapcsolóval"],["Hátsó felfüggesztés","ETC négycsuklós, fedett csapágyakkal"],["Nyeregcső","Cube dropper"]] },
+      { cs:"Hajtás", t:[["Váltó","SRAM GX Eagle, 12 sebesség"],["Hajtómű","SRAM X1 1000 Eagle DUB, 30T"],["Kazetta","SRAM XG-1275 Eagle, 10–52T"],["Lánc","SRAM Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano XT BR-M8120 négydugattyús elöl, BR-M8100 hátul"],["Tárcsák","203 / 180 mm"],["Felni","29″ Fulcrum Red Metal, tubeless ready"],["Gumi","Maxxis Ardent 2,4, EXO, tubeless ready"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Evolution SL, 760 mm"],["Súly","13,5 kg"],["Kerékméret","29″"],["Fényezés","Flashgrey és olíva"]] }
+    ] },
   { id:"cube-attention-sl-2", mappa:"CubeAttentionSL2", marka:"Cube", model:"Cube Attention SL", magassag:[168,180], felveve:"2026-09-22",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2021, meret:"M (18″)", kerekmeret:"29″", suly:"13,5 kg", ar:260000,
     vaz:"Cube Aluminium Lite · 13,5 kg", villa:"RockShox Judy Silver levegős, 100 mm, PopLoc kormányról zárható",
