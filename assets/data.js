@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-reaction-c62-race", mappa:"CubeReactionC62Race", marka:"Cube", model:"Cube Reaction C:62 Race", magassag:[168,180], felveve:"2026-09-30",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2020, meret:"M", kerekmeret:"29″", suly:"11,3 kg", ar:400000,
+    vaz:"Cube C:62 monocoque karbon · 11,3 kg", villa:"Fox 32 Rhythm, 2-Position Remote, 100 mm",
+    hajtas:"Shimano XT 2×12", fek:"Shimano XT BR-M8100, 180/160",
+    kerek:"29″ Cube EX21 tubeless ready · Schwalbe Racing Ray / Racing Ralph",
+    spec:"29″ karbon XC merevvázas · Fox 32 Rhythm 100 mm · teljes Shimano XT 2×12, 11,3 kg.",
+    leiras:"A Cube ezt a kiépítést szándékosan másképp gondolta: 2020-ban, amikor már szinte mindenki egyetlen lánckerékkel épített, ide visszatették a másodikat, a Shimano akkor vadonatúj XT hajtásával. Két lánckerék tizenkét fokozattal azt jelenti, hogy két áttétel között sosem lépsz nagyot, tehát a tempót pontosan ott tartod, ahol szeretnéd. A váltó és a fék is XT, nem a belépő szint, és a villa Fox, a kormányról zárhatóan. Mindezzel együtt tizenegy kiló három, ami karbon merevvázasnál is a könnyebbek közé tartozik. A szürke fényezés a narancs kiegészítéssel visszafogott, mégis megnézik. Újszerű, keveset futott példány, szinte teljesen karcmentes esztétikával, teljesen gyári.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Cube Reaction C:62 monocoque karbon, 29″"],["Teleszkóp","Fox 32 Rhythm, 100 mm"],["Zárás","2-Position Remote, kormányról"],["Súly","11,3 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano Deore XT, 12 sebesség"],["Első váltó","Shimano Deore XT, 2 sebesség"],["Hajtómű","Shimano SLX FC-M7120, 36/26T"],["Kazetta","Shimano XT CS-M8100, 10–45T"],["Lánc","Shimano CN-M7100"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano XT BR-M8100 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube EX21, tubeless ready"],["Gumi","Schwalbe Racing Ray elöl, Racing Ralph hátul, 2,25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Evolution, 720 mm"],["Nyereg","Natural Fit Venec"],["Kerékméret","29″"],["Fényezés","Szürke, narancs kiegészítéssel"]] }
+    ] },
   { id:"cube-stereo-one22", mappa:"CubeStereoONE22", marka:"Cube", model:"Cube Stereo ONE22 HPC TM", magassag:[175,188], felveve:"2026-09-26",
     kategoria:"Trail · Fully", szegmens:"trail", allapot:"Újszerű", ev:2024, meret:"L", kerekmeret:"29″", suly:"13,5 kg", ar:700000,
     vaz:"HPC karbon monocoque első vázháromszög · 13,5 kg", villa:"Fox 34 Float Rhythm, 130 mm",
