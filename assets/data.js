@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-nature-pro", mappa:"CubeNaturePro", marka:"Cube", model:"Cube Nature Pro", magassag:[160,172], felveve:"2026-10-01",
+    kategoria:"Trekking · Cross", szegmens:"trekking", allapot:"Újszerű", ev:2024, meret:"S (50 cm)", kerekmeret:"28″", suly:"14,1 kg", ar:230000,
+    vaz:"Cube Aluminium Superlite · 14,1 kg", villa:"SR Suntour NEX HLO, 63 mm, zárható",
+    hajtas:"Shimano Cues 2×10", fek:"Shimano BR-MT200 hidraulikus, 160/160",
+    kerek:"28″ Cube ZX20 · Schwalbe Land Cruiser",
+    spec:"28″ alumínium cross-trekking · zárható SR Suntour villa · Shimano Cues 2×10, hidraulikus fékkel.",
+    leiras:"Az a kerékpár, amelyik a kerékpárút és a földút között nem kér tőled döntést. Felegyenesedett ülés, ami hosszú távon sem fáraszt, és egy villa, amit rázós úton hagysz dolgozni, aszfalton pedig egy mozdulattal lezársz. A hajtás Shimano Cues, a gyártó friss generációja, széles tartománnyal a meredek emelkedőtől a gyors sík szakaszig. A váz sárvédőre, csomagtartóra és kitámasztóra elő van készítve, tehát ha később ingázásra vagy túrára rendeznéd be, az pár mozdulat. A bronz fényezés visszafogott és ritkán látni, élőben többet mutat, mint fotón. Újszerű, keveset futott, karcmentes példány.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Cube Nature, Aluminium Superlite, 28″"],["Teleszkóp","SR Suntour NEX HLO, 63 mm, lockout"],["Felszerelhetőség","Sárvédő, csomagtartó és kitámasztó előkészítés"],["Súly","14,1 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano Cues, 10 sebesség"],["Első váltó","Shimano Cues, 2 sebesség"],["Hajtómű","Shimano Cues FC-U6000, 46/30T"],["Kazetta","Shimano Cues CS-LG400, 11–39T"],["Lánc","KMC xGlide"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 hidraulikus tárcsa"],["Tárcsák","160 / 160 mm"],["Felni","28″ Cube ZX20"],["Gumi","Schwalbe Land Cruiser Active"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Comfort Trail Bar, 660 mm"],["Nyereg","Natural Fit Sequence"],["Kerékméret","28″"],["Fényezés","Bronz"]] }
+    ] },
   { id:"cube-attention-sl-3", mappa:"CubeAttentionSL3", marka:"Cube", model:"Cube Attention SL", magassag:[182,196], felveve:"2026-10-01",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"XL (21″)", kerekmeret:"29″", suly:"13,6 kg", ar:280000,
     vaz:"Cube Aluminium Lite · 13,6 kg", villa:"RockShox Judy TK Air, 100 mm, kormányról zárható",
