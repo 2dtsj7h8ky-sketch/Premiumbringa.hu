@@ -18,7 +18,7 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
-  { id:"cube-reaction-c62-race", mappa:"CubeReactionC62Race", marka:"Cube", model:"Cube Reaction C:62 Race", magassag:[168,180], felveve:"2026-09-30",
+  { id:"cube-reaction-c62-race", mappa:"CubeReactionC62Race", marka:"Cube", model:"Cube Reaction C:62 Race", magassag:[168,180], felveve:"2026-09-30", eladva:"2026-10-01",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2020, meret:"M", kerekmeret:"29″", suly:"11,3 kg", ar:400000,
     vaz:"Cube C:62 monocoque karbon · 11,3 kg", villa:"Fox 32 Rhythm, 2-Position Remote, 100 mm",
     hajtas:"Shimano XT 2×12", fek:"Shimano XT BR-M8100, 180/160",
@@ -31,7 +31,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano XT BR-M8100 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube EX21, tubeless ready"],["Gumi","Schwalbe Racing Ray elöl, Racing Ralph hátul, 2,25"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Evolution, 720 mm"],["Nyereg","Natural Fit Venec"],["Kerékméret","29″"],["Fényezés","Szürke, narancs kiegészítéssel"]] }
     ] },
-  { id:"cube-stereo-one22", mappa:"CubeStereoONE22", marka:"Cube", model:"Cube Stereo ONE22 HPC TM", magassag:[175,188], felveve:"2026-09-26",
+  { id:"cube-stereo-one22", mappa:"CubeStereoONE22", marka:"Cube", model:"Cube Stereo ONE22 HPC TM", magassag:[175,188], felveve:"2026-09-26", kiemelt:true,
     kategoria:"Trail · Fully", szegmens:"trail", allapot:"Újszerű", ev:2024, meret:"L", kerekmeret:"29″", suly:"13,5 kg", ar:700000,
     vaz:"HPC karbon monocoque első vázháromszög · 13,5 kg", villa:"Fox 34 Float Rhythm, 130 mm",
     hajtas:"SRAM GX Eagle 1×12", fek:"Shimano XT BR-M8120 négydugattyús, 203/180",
@@ -85,19 +85,6 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Tektro MD-C510 tárcsafék"],["Tárcsák","160 / 160 mm"],["Felni","28″ Cube GR 2.3"],["Gumi","Schwalbe G-One Allround, 40-622"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Compact Race Bar"],["Nyereg","Natural Fit Venec Lite"],["Gumihely","45 mm-ig"],["Felszerelhetőség","Sárvédő-előkészítés"]] }
     ] },
-  { id:"trek-x-caliber-8", mappa:"TrekXcaliber8", marka:"Trek", model:"Trek X-Caliber 8", magassag:[185,198], felveve:"2026-09-21", eladva:"2026-09-22",
-    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2022, meret:"XL", kerekmeret:"29″", suly:"13,1 kg", ar:320000,
-    vaz:"Alpha Gold alumínium · 13,1 kg", villa:"RockShox Judy SL Solo Air, 100 mm, kormányról zárható",
-    hajtas:"Shimano XT M8100 1×12", fek:"Shimano MT200 hidraulikus, 180/160",
-    kerek:"29″ Bontrager Kovee · Maxxis Ardent Race 2,35",
-    spec:"29″ alumínium XC merevvázas · RockShox Judy SL 100 mm · Shimano XT M8100 1×12.",
-    leiras:"A Trek kínálatában ez az a pont, ahol egy merevvázas már valódi sporteszköz, de még mindennapi társ marad. A váltó Shimano XT, tehát nem a belépő szint: pontosan, halkan és terhelés alatt is megbízhatóan vált, ami hosszú távon a legtöbbet számít. A villa levegős és a kormányról zárható, így aszfalton feszes, terepen pedig dolgozik. Fürgén pörög a kerékpárúton, elvisz egy hosszabb túrára, és az erdei körökön is otthon van. A fehér-piros fényezésre a garázsban is visszanéz az ember. Bolti állapotú, karcmentes, néhányszor elővett, teljesen gyári példány.",
-    reszletek:[
-      { cs:"Váz & futómű", t:[["Váz","Trek X-Caliber, Alpha Gold alumínium, 29″"],["Teleszkóp","RockShox Judy SL, Solo Air, TurnKey lockout, 100 mm"],["Vázméret","XL, 21,5″"],["Súly","13,1 kg"]] },
-      { cs:"Hajtás", t:[["Váltó","Shimano XT M8100, 12 sebesség"],["Hajtómű","Shimano MT511, 30T"],["Kazetta","Shimano Deore M6100, 10–51T"],["Lánc","Shimano Deore M6100"]] },
-      { cs:"Fék & kerék", t:[["Fék","Shimano MT200 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Bontrager Kovee"],["Gumi","Maxxis Ardent Race 2,35, EXO, tubeless ready"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager, 750 mm"],["Nyereg","Bontrager Arvada"],["Markolat","Bontrager XR Endurance"],["Kerékméret","29″"]] }
-    ] },
   { id:"orbea-alma-m51", mappa:"OrbeaAlmaM51", marka:"Orbea", model:"Orbea Alma M51", magassag:[168,180], felveve:"2026-09-20", eladva:"2026-09-26",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"M", kerekmeret:"29″", suly:"11,5 kg", ar:430000,
     vaz:"Orbea Carbon OMR monocoque · 11,5 kg", villa:"RockShox Judy Silver TK Solo Air, 100 mm, kormányról zárható",
@@ -124,7 +111,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","SRAM Guide T hidraulikus tárcsa"],["Tárcsák","180 / 180 mm"],["Felni","WTB ST i25 TCS 2.0, tubeless ready"],["Gumi","Maxxis Minion DHF 2,5 elöl · High Roller II 2,30 hátul"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cannondale C3 Riser, 780 mm"],["Kormányszár","Cannondale C3"],["Nyereg","Cannondale Stage 3"],["Súly","15,3 kg"]] }
     ] },
-  { id:"radon-swoop-cf-9", mappa:"RadonSwoop9.0", marka:"Radon", model:"Radon Swoop CF 9.0", magassag:[184,196], felveve:"2026-09-20",
+  { id:"radon-swoop-cf-9", mappa:"RadonSwoop9.0", marka:"Radon", model:"Radon Swoop CF 9.0", magassag:[184,196], felveve:"2026-09-20", eladva:"2026-10-01",
     kategoria:"Enduro · Fully", szegmens:"trail", allapot:"Újszerű", ev:2021, meret:"XL", kerekmeret:"29″", suly:"15,3 kg", ar:650000,
     vaz:"Swoop Carbon szénszál · 15,3 kg", villa:"RockShox ZEB Select, Charger RC, 170 mm",
     hajtas:"SRAM GX Eagle 1×12", fek:"Magura MT5 négydugattyús, 203/203",
@@ -136,8 +123,7 @@ const KESZLET = [
       { cs:"Hajtás", t:[["Hajtómű","SRAM GX Eagle DUB, 30T"],["Hátsó váltó","SRAM GX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM GX Eagle XG-1275, 10–52T"],["Lánc","SRAM SX Eagle"]] },
       { cs:"Fék & kerék", t:[["Fékek","Magura MT5 négydugattyús, Storm 203/203"],["Kerékszett","29″ DT Swiss E1900 Spline"],["Gumik","Schwalbe Magic Mary / Big Betty"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Race Face Aeffect R, 780 mm"]] }
-    ],
-    kiemelt:true },
+    ] },
 
   { id:"cube-reaction-tm", mappa:"CubeReactionTM", marka:"Cube", model:"Cube Reaction TM", magassag:[176,188], felveve:"2026-09-18",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Jó", ev:2020, meret:"L (20″)", kerekmeret:"27,5″", suly:"13,9 kg", ar:280000,
@@ -237,21 +223,6 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","KTM Team Flat Top, 740 mm"],["Nyereg","KTM Comp MTB Sport"]] }
     ] },
 
-  { id:"cube-reaction-c62-one", mappa:"CubeReactionC62One", marka:"Cube", model:"Cube Reaction C:62 One", magassag:[180,192], felveve:"2026-08-09", eladva:"2026-09-22",
-    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"XL (21″)", kerekmeret:"29″", suly:"11,5 kg", ar:380000,
-    vaz:"C:62 Monocoque karbon · 11,5 kg", villa:"SR Suntour Raidon 32, 100 mm",
-    hajtas:"SRAM SX / NX Eagle 1×12", fek:"Magura MT Thirty hidraulikus, 180/160",
-    kerek:"29″ Answer Atac AM (Tubeless Ready) · Schwalbe Racing Ray 2.25",
-    spec:"29″ karbon XC hardtail · SR Suntour Raidon 100 mm · SRAM Eagle 1×12.",
-    megjegyzes:"Ennél a példánynál a villa zárás (lockout) funkciója nem működik, ami ezeknél a villáknál jellemzően a hosszabb állásból ered. A rugózás egyébként kifogástalan, a villa mechanikailag hibátlanul dolgozik, a hiba kizárólag a zárhatóságot érinti. Az árat ennek tudatában alakítottuk ki, és vásárlás előtt szívesen bemutatjuk.",
-    leiras:"Annak, aki a karbon XC érzését keresi, de nem versenyzőként, hanem a hétköznapok és a hétvégi kalandok kedvéért. A monocoque karbonváz ott nyeli a rezgést, ahol kell, és ott feszes, ahol az erőt kell átadni, ezért a hosszú túrán is friss maradsz, a lendületed pedig nem vész el. Az alacsony tömeget már az első emelkedőnél megérzed: nem téged dolgoztat, hanem viszi a tempódat. Ugyanaz a bringa a reggeli gyors körre és az egész napos, nagy kirándulásra, a tűzpiros szín pedig élőben teszi igazán különlegessé. Ideális, ha valódi karbon XC-re vágysz olyan áron, amiért ezen a szinten sokszor még alumíniumot adnak.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","C:62 Monocoque karbon váz"],["Teleszkóp","SR Suntour Raidon 32, 100 mm (a zárás/lockout jelenleg nem működik)"]] },
-      { cs:"Hajtás", t:[["Hajtómű","SRAM SX Eagle DUB, 32T"],["Hátsó váltó","SRAM NX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM XG-1230 Eagle, 11–50T"],["Lánc","SRAM SX Eagle"]] },
-      { cs:"Fék & kerék", t:[["Fékek","Magura MT Thirty hidraulikus, 180/160"],["Kerékszett","29″ Answer Atac AM, Tubeless Ready"],["Gumik","Schwalbe Racing Ray, Addix Performance 2.25"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Natural Fit Venec Sequence"]] }
-    ] },
-
   { id:"cube-race-one", mappa:"CubeRaceOne", marka:"Cube", model:"Cube Race One", magassag:[168,180], felveve:"2026-06-08",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2017, meret:"M (18″)", kerekmeret:"27,5″", suly:"12,7 kg", ar:300000, regiAr:320000,
     vaz:"Aluminium Lite · 12,7 kg", villa:"Fox 32 Float Performance, 100 mm, állítható",
@@ -266,19 +237,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Cube Active"]] }
     ] },,
 
-  { id:"specialized-chisel-expert", mappa:"SpecializedChiselExpert", marka:"Specialized", model:"Specialized Chisel Expert", magassag:[176,186], felveve:"2026-06-02", eladva:"2026-09-16",
-    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2019, meret:"L", kerekmeret:"29″", suly:"12,3 kg", ar:380000,
-    vaz:"D'Aluisio Smartweld M5 alumínium · 12,3 kg", villa:"RockShox Reba RL, 100 mm, állítható keménység",
-    hajtas:"SRAM NX Eagle 1×12", fek:"SRAM Level TL hidraulikus, 180/160",
-    kerek:"29″ Specialized XC · Fast Trak GRIPTON 2.3",
-    spec:"29″ verseny-XC hardtail · RockShox Reba 100 mm · SRAM NX Eagle 1×12.",
-    leiras:"Annak, aki verseny-XC érzésre vágyik carbon ára nélkül, és a legszívesebben első sorból indulna. A D'Aluisio Smartweld alumíniumváz feszes és könnyű, ezért az emelkedő rövidebbnek, a hosszú kör könnyebbnek érződik, és a bringa azonnal reagál arra, amit a lábad belead. Ideális maratonra, tempós hétvégi körökre vagy első komoly XC hardtailnek, ha a valódi tudást fizetnéd meg a név helyett.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","D'Aluisio Smartweld M5 alumínium"],["Teleszkóp","RockShox Reba RL, 100 mm, állítható keménység"]] },
-      { cs:"Hajtás", t:[["Hajtómű","Truvativ Stylo DUB, 32T"],["Hátsó váltó","SRAM NX Eagle, 12 sebesség"],["Fogaskoszorú","SRAM NX Eagle, 11–50T"],["Lánc","SRAM NX Eagle"]] },
-      { cs:"Fék & kerék", t:[["Fékek","SRAM Level TL hidraulikus, 180/160"],["Kerékszett","29″ Specialized XC"],["Gumik","Specialized Fast Trak GRIPTON, 2.3"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Specialized Alloy Minirise, 750 mm"],["Nyereg","Body Geometry Phenom Comp"]] }
-    ] }
+
 ];
 
 /* Szűrő-szegmensek (a Készlet-oldalon csak a raktáron lévők jelennek meg) */
