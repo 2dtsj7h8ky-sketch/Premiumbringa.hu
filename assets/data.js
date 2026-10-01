@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-attention-sl-3", mappa:"CubeAttentionSL3", marka:"Cube", model:"Cube Attention SL", magassag:[182,196], felveve:"2026-10-01",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"XL (21″)", kerekmeret:"29″", suly:"13,6 kg", ar:280000,
+    vaz:"Cube Aluminium Lite · 13,6 kg", villa:"RockShox Judy TK Air, 100 mm, kormányról zárható",
+    hajtas:"Shimano Deore XT 1×12", fek:"Shimano BR-MT200 hidraulikus, 180/160",
+    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam Active 2,25",
+    spec:"29″ alumínium XC merevvázas · levegős RockShox Judy TK 100 mm · Shimano Deore XT 1×12.",
+    leiras:"Az Attention SL a vonal sportos csúcsa, és ez két dolgon látszik a leginkább. A hátsó váltó Shimano Deore XT, ami terhelés alatt is tisztán vált, a villa pedig levegős és a kormányról zárható, tehát aszfalton feszes, terepen dolgozik. Könnyű, kiszámítható, és pontosan az a fajta kerékpár, amit hétköznap is elővesz az ember, nem csak hétvégén. A Reverseblue fényezést viszont nem lehet rendesen lefotózni: világoskék alap, amibe a fény törésével zöld és lila beütések keverednek, minden szögből más árnyalat. A Cube keveset adott ki ebből a színből. Igényes, teljesen gyári darab, megkímélt állapotban.",
+    megjegyzes:"A vázon néhány kisebb, használatból vagy szállításból adódó felületi esztétikai hiba látható, a fotókon szereplő mértékben. Ez kizárólag esztétikai jellegű, a váz szerkezetét és a működést nem érinti. Az árat ennek tudatában alakítottuk ki, és vásárlás előtt szívesen mutatunk róla közelebbi képet is.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Cube Attention SL, Aluminium Lite, 29″"],["Teleszkóp","RockShox Judy TK Air, 100 mm"],["Zárás","Kormányról zárható"],["Súly","13,6 kg"]] },
+      { cs:"Hajtás", t:[["Váltó","Shimano Deore XT, 12 sebesség"],["Hajtómű","Shimano Deore, ACID 32T"],["Kazetta","Shimano Deore CS-M6100, 10–51T"],["Lánc","Shimano CN-M6100"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube ZX20"],["Gumi","Schwalbe Smart Sam Active 2,25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"],["Kerékméret","29″"],["Fényezés","Reverseblue"]] }
+    ] },
   { id:"cube-reaction-c62-race", mappa:"CubeReactionC62Race", marka:"Cube", model:"Cube Reaction C:62 Race", magassag:[168,180], felveve:"2026-09-30", eladva:"2026-10-01",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2020, meret:"M", kerekmeret:"29″", suly:"11,3 kg", ar:400000,
     vaz:"Cube C:62 monocoque karbon · 11,3 kg", villa:"Fox 32 Rhythm, 2-Position Remote, 100 mm",
