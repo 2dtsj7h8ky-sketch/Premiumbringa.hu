@@ -58,7 +58,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"],["Kerékméret","29″"],["Fényezés","Petrol, piros részletekkel"]] }
     ] },
   { id:"cube-attention-3", mappa:"CubeAttention3", marka:"Cube", model:"Cube Attention", magassag:[176,186], felveve:"2026-09-22",
-    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2023, meret:"L", kerekmeret:"29″", suly:"13,8 kg", ar:280000,
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2023, meret:"L", kerekmeret:"29″", suly:"13,8 kg", ar:260000, regiAr:280000,
     vaz:"Cube Aluminium Lite · 13,8 kg", villa:"RockShox Judy Silver levegős, 100 mm",
     hajtas:"Shimano Deore / SLX 2×11", fek:"Shimano BR-MT200/UR300 hidraulikus, 180/160",
     kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2,25",
