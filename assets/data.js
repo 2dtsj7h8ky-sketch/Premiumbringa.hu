@@ -18,7 +18,7 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
-  { id:"cube-nature-pro", mappa:"CubeNaturePro", marka:"Cube", model:"Cube Nature Pro", magassag:[160,172], felveve:"2026-10-01",
+  { id:"cube-nature-pro", mappa:"CubeNaturePro", marka:"Cube", model:"Cube Nature Pro", magassag:[160,172], felveve:"2026-10-01", eladva:"2026-10-03",
     kategoria:"Trekking · Cross", szegmens:"trekking", allapot:"Újszerű", ev:2024, meret:"S (50 cm)", kerekmeret:"28″", suly:"14,1 kg", ar:230000,
     vaz:"Cube Aluminium Superlite · 14,1 kg", villa:"SR Suntour NEX HLO, 63 mm, zárható",
     hajtas:"Shimano Cues 2×10", fek:"Shimano BR-MT200 hidraulikus, 160/160",
