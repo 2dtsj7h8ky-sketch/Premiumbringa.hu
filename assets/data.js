@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-acid-2", mappa:"CubeAcid2", marka:"Cube", model:"Cube Acid", magassag:[182,196], felveve:"2026-10-05",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2020, meret:"XL (21″)", kerekmeret:"29″", suly:"13,3 kg", ar:230000,
+    vaz:"Cube Aluminium Lite, dupla falazott · 13,3 kg", villa:"RockShox Recon Silver levegős, 100 mm, PopLoc kormányról zárható",
+    hajtas:"SRAM NX Eagle 1×12", fek:"Shimano BR-MT400 hidraulikus, 180/160",
+    kerek:"29″ Cube SD20 · Schwalbe Smart Sam Active 2,25",
+    spec:"29″ alumínium XC merevvázas · levegős RockShox Recon 100 mm · SRAM NX Eagle 1×12.",
+    leiras:"Az Acid az a Cube, amit a gyártó már a haladóknak szánt: ugyanaz a könnyű, dupla falazott váz, mint a Reaction vonalon, egy szinttel a belépő modellek fölötti felszereltséggel. A levegős RockShox Recon villát a saját súlyodra hangolod, a kormányról pedig egy mozdulattal zárod. A SRAM Eagle egyláncos hajtás egyetlen karral, tizenkét fokozattal ad megoldást minden emelkedőre és tempóra. A vázban rejtett csomagtartó-fülek vannak, tehát hétköznap ingázásra, hétvégén terepre is befogható, és egyikben sem érzel kompromisszumot. A villa és a hajtás is többet tud, mint amennyit az ára sejtet. Gyári, hibátlan műszaki állapotú, megkímélt példány.",
+    megjegyzes:"A vázon használatból vagy szállításból adódó felületi esztétikai hibák láthatók, a fotókon szereplő mértékben. Ez kizárólag esztétikai jellegű, a műszaki állapot hibátlan. Az árat ennek tudatában alakítottuk ki, és vásárlás előtt szívesen mutatunk róla közelebbi képet is.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Cube Acid, Aluminium Lite, dupla falazott, 29″"],["Teleszkóp","RockShox Recon Silver levegős, 100 mm"],["Zárás","PopLoc, kormányról"],["Súly","13,3 kg"]] },
+      { cs:"Hajtás", t:[["Váltó","SRAM NX Eagle, 12 sebesség"],["Hajtómű","SRAM Stylo Eagle DUB, 32T"],["Kazetta","SRAM XG-1230 Eagle, 11–50T"],["Lánc","SRAM NX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT400 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube SD20"],["Gumi","Schwalbe Smart Sam Active 2,25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"],["Felszerelhetőség","Rejtett csomagtartó-fülek"],["Kerékméret","29″"]] }
+    ] },
   { id:"cube-nature-pro", mappa:"CubeNaturePro", marka:"Cube", model:"Cube Nature Pro", magassag:[160,172], felveve:"2026-10-01", eladva:"2026-10-03",
     kategoria:"Trekking · Cross", szegmens:"trekking", allapot:"Újszerű", ev:2024, meret:"S (50 cm)", kerekmeret:"28″", suly:"14,1 kg", ar:230000,
     vaz:"Cube Aluminium Superlite · 14,1 kg", villa:"SR Suntour NEX HLO, 63 mm, zárható",
