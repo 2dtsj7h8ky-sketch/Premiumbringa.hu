@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"bergamont-grandurance-5", mappa:"BergamontGrandurance5", marka:"Bergamont", model:"Bergamont Grandurance 5", magassag:[170,183], felveve:"2026-10-05",
+    kategoria:"Gravel · All-road", szegmens:"gravel", allapot:"Jó", ev:2019, meret:"M (55 cm)", kerekmeret:"28″", suly:"10,4 kg", ar:320000,
+    vaz:"Grandurance alumínium · 10,4 kg", villa:"Grandurance alumínium, tárcsafékes",
+    hajtas:"Shimano Sora 2×9", fek:"Shimano BR-R317 tárcsafék, 160/160",
+    kerek:"28″ BGM Allroad · Continental Grand Sport Race",
+    spec:"28″ alumínium all-road gravel · Shimano Sora 2×9 · tárcsafék, 10,4 kg.",
+    leiras:"A Bergamont hamburgi gyártó a Scott csoportból, a Grandurance pedig az all-road vonaluk: egy 10,4 kilogrammos gravel váz, amit ugyanúgy szántak a városi aszfaltra, mint a földútra. A szögletes, jellegzetes formája miatt messziről felismerni. A Shimano Sora hajtás egyszerű, megbízható és bárhol szervizelhető, a tárcsafék minden időben biztosan lassít, a kifelé hajló kormány pedig hosszú távon is kényelmes fogást ad. Most Continental Grand Sport Race gumikkal gurul, ami aszfalton kifejezetten gyorssá teszi. A váz viszont 37 milliméterig enged gumit, tehát egy cserével földúti gravellé alakítható, a sárvédő-fülekkel pedig ingázásra is berendezhető. Szép, megkímélt, gyári példány.",
+    megjegyzes:"A kerékpáron kisebb, használatból adódó esztétikai nyomok láthatók, a fotókon szereplő mértékben. Ez kizárólag esztétikai jellegű, a működést nem érinti. Az árat ennek tudatában alakítottuk ki, és vásárlás előtt szívesen mutatunk róla közelebbi képet is.",
+    reszletek:[
+      { cs:"Váz & villa", t:[["Váz","Bergamont Grandurance, 700c alumínium"],["Villa","Grandurance alumínium"],["Gumihely","37 mm-ig"],["Felszerelhetőség","Sárvédő-fülek"],["Súly","10,4 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano Sora RD-R3000, 9 sebesség"],["Első váltó","Shimano Sora FD-R3000, 2 sebesség"],["Hajtómű","Shimano Sora FC-R3000, 50/34T"],["Kazetta","Shimano CS-HG201-9, 11–34T"],["Lánc","KMC X9"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano BR-R317 tárcsafék"],["Tárcsák","160 / 160 mm"],["Felni","28″ BGM Allroad"],["Gumi","Continental Grand Sport Race"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Syncros Creston 2.0, kifelé hajló"],["Nyereg","Syncros FL2.5"],["Kerékméret","28″"]] }
+    ] },
   { id:"cube-acid-2", mappa:"CubeAcid2", marka:"Cube", model:"Cube Acid", magassag:[182,196], felveve:"2026-10-05",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2020, meret:"XL (21″)", kerekmeret:"29″", suly:"13,3 kg", ar:230000,
     vaz:"Cube Aluminium Lite, dupla falazott · 13,3 kg", villa:"RockShox Recon Silver levegős, 100 mm, PopLoc kormányról zárható",
