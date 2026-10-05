@@ -181,6 +181,9 @@
     let aktivSzeg = param("szegmens") && SZEGMENSEK.some(s => s.kulcs === param("szegmens")) ? param("szegmens") : "mind";
     let aktivAllapot = "mind";
     let aktivMeret = "mind";
+    /* „Akciós" kapcsoló: a kategóriától független, linkelhető is (keszlet.html?akcio=1) */
+    let csakAkcio = param("akcio") === "1";
+    const akcios = b => isAkcio(b) && !isEladva(b);
 
     function renderSeg(){
       const keszleten = new Set(data.map(b => b.szegmens));
@@ -188,6 +191,9 @@
         .filter(s => s.kulcs === "mind" || keszleten.has(s.kulcs))
         .map(s => `<button class="chip seg${s.fo?" fo":""}${s.kulcs===aktivSzeg?" on":""}" type="button" data-v="${s.kulcs}" aria-pressed="${s.kulcs===aktivSzeg}">${esc(s.nev)}</button>`)
         .join("");
+      const nAkcio = data.filter(akcios).length;
+      if(!nAkcio) csakAkcio = false;
+      else segBox.innerHTML += `<button class="chip seg sale${csakAkcio?" on":""}" type="button" data-akcio="1" aria-pressed="${csakAkcio}">Akciós <b>${nAkcio}</b></button>`;
     }
     function renderCond(){
       if(!condBox) return;
@@ -205,6 +211,7 @@
     function current(){
       let list = data.slice();
       if(aktivSzeg !== "mind") list = list.filter(b => b.szegmens === aktivSzeg);
+      if(csakAkcio) list = list.filter(akcios);
       if(aktivAllapot !== "mind") list = list.filter(b => b.allapot === aktivAllapot);
       if(aktivMeret !== "mind"){
         const band = MERETEK.find(s => s.kulcs === aktivMeret);
@@ -231,7 +238,8 @@
     }
     if(segBox) segBox.addEventListener("click", e => {
       const c = e.target.closest(".chip"); if(!c) return;
-      aktivSzeg = c.dataset.v; renderSeg(); render();
+      if(c.dataset.akcio) csakAkcio = !csakAkcio; else aktivSzeg = c.dataset.v;
+      renderSeg(); render();
     });
     if(condBox) condBox.addEventListener("click", e => {
       const c = e.target.closest(".chip"); if(!c) return;

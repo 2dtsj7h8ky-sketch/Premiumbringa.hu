@@ -585,6 +585,15 @@ footer .footlegal a:hover{color:var(--copper)}
 .chip.seg.on{background:var(--copper);color:#fff;border-color:var(--copper);box-shadow:0 10px 22px -12px rgba(194,137,90,.75)}
 .chip.seg.on::before{background:#fff}
 .chip.seg.on:hover{background:var(--copper-deep);border-color:var(--copper-deep);color:#fff}
+/* „Akciós" kapcsoló-chip: az akció-jelvény vörösével, darabszámmal */
+.chip.seg.sale{color:#B4472A;border-color:rgba(198,81,47,.45)}
+.chip.seg.sale::before{content:"";width:6px;height:6px;border-radius:50%;background:#C6512F;flex:none}
+.chip.seg.sale b{font-weight:600;opacity:.65}
+.chip.seg.sale:hover{border-color:#C6512F;color:#B4472A}
+.chip.seg.sale.on{background:#C6512F;color:#fff;border-color:#C6512F;box-shadow:0 10px 22px -12px rgba(198,81,47,.8)}
+.chip.seg.sale.on::before{background:#fff}
+.chip.seg.sale.on b{opacity:.85}
+.chip.seg.sale.on:hover{background:#B4472A;border-color:#B4472A;color:#fff}
 select.sort{appearance:none;-webkit-appearance:none;font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--ink);background:#fff;border:1px solid var(--line-l);border-radius:30px;padding:10px 36px 10px 15px;cursor:pointer;transition:border-color .2s,box-shadow .2s}
 select.sort:hover,select.sort:focus{border-color:var(--copper);outline:none;box-shadow:0 0 0 3px rgba(194,137,90,.14)}
 .count{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin:24px 0;display:inline-flex;align-items:center;gap:8px}
