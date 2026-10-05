@@ -33,7 +33,7 @@ const KESZLET = [
       { cs:"Vezérlés & komfort", t:[["Kormány","Kifelé hajló gravel kormány"],["Nyereg","Selle Italia"],["Kerékméret","28″"]] }
     ] },
   { id:"bergamont-grandurance-5", mappa:"BergamontGrandurance5", marka:"Bergamont", model:"Bergamont Grandurance 5", magassag:[170,183], felveve:"2026-10-05",
-    kategoria:"Gravel · All-road", szegmens:"gravel", allapot:"Jó", ev:2019, meret:"M (55 cm)", kerekmeret:"28″", suly:"10,4 kg", ar:320000,
+    kategoria:"Gravel · All-road", szegmens:"gravel", allapot:"Kiváló", ev:2019, meret:"M (55 cm)", kerekmeret:"28″", suly:"10,4 kg", ar:320000,
     vaz:"Grandurance alumínium · 10,4 kg", villa:"Grandurance alumínium, tárcsafékes",
     hajtas:"Shimano Sora 2×9", fek:"Shimano BR-R317 tárcsafék, 160/160",
     kerek:"28″ BGM Allroad · Continental Grand Sport Race",
