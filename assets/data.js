@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"bergamont-grandurance-5-0", mappa:"BergamontGrandurance5.0", marka:"Bergamont", model:"Bergamont Grandurance 5.0", magassag:[170,183], felveve:"2026-10-05",
+    kategoria:"Gravel · All-road", szegmens:"gravel", allapot:"Jó", ev:2018, meret:"M (55 cm)", kerekmeret:"28″", suly:"10,5 kg", ar:250000,
+    vaz:"Grandurance 6061 alumínium · 10,5 kg", villa:"Grandurance alumínium, tárcsafékes",
+    hajtas:"Shimano Sora 2×9", fek:"TRP Spyre mechanikus tárcsafék, 160/160",
+    kerek:"28″ BGM Allroad · Michelin Power Cyclocross Jet 33 mm",
+    spec:"28″ alumínium all-road gravel · Shimano Sora 2×9 · TRP Spyre tárcsafék, 10,5 kg.",
+    leiras:"Azoknak való, akik most ismerkednek a gravellel vagy az országúti tekeréssel, és egy könnyű, megbízható kerékpárral vágnának bele. A Bergamont hamburgi gyártó a Scott csoportból, a Grandurance pedig az all-road vonaluk: könnyű alumínium váz, amit ugyanúgy szántak az aszfaltra, mint a földútra. A Shimano Sora hajtás egyszerű és bárhol szervizelhető. A TRP Spyre a mechanikus tárcsafékek legjobbjai közül való, kétoldali dugattyúval pontosan és egyenletesen lassít. Most 33 milliméteres Michelin Power Cyclocross gumikkal gurul, ami földúton és erdei úton kifejezetten tapadós, a zöld oldalfal pedig a megjelenését is egyedivé teszi. Egy sima gumival aszfalton gyors országútivá alakul, a sárvédő-fülekkel pedig ingázásra is berendezhető. Hibátlan műszaki állapotú, gyári példány, kedvező áron.",
+    megjegyzes:"A vázon felületi festékhibák és esztétikai nyomok láthatók, a fotókon szereplő mértékben. Ez kizárólag esztétikai jellegű, a műszaki állapot hibátlan. Az árat ennek tudatában alakítottuk ki, és vásárlás előtt szívesen mutatunk róla közelebbi képet is.",
+    reszletek:[
+      { cs:"Váz & villa", t:[["Váz","Bergamont Grandurance, 700c, 6061 alumínium"],["Villa","Grandurance alumínium"],["Felszerelhetőség","Sárvédő-fülek"],["Súly","10,5 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano Sora RD-R3000, 9 sebesség"],["Első váltó","Shimano Sora FD-R3000, 2 sebesség"],["Hajtómű","Shimano Sora FC-R3000, 50/34T"],["Kazetta","Shimano CS-HG201-9, 11–34T"],["Lánc","KMC X9"]] },
+      { cs:"Fék & kerék", t:[["Fék","TRP Spyre mechanikus tárcsafék, kétoldali dugattyúval"],["Tárcsák","160 / 160 mm"],["Felni","28″ BGM Allroad"],["Gumi","Michelin Power Cyclocross Jet, 33 mm"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Kifelé hajló gravel kormány"],["Nyereg","Selle Italia"],["Kerékméret","28″"]] }
+    ] },
   { id:"bergamont-grandurance-5", mappa:"BergamontGrandurance5", marka:"Bergamont", model:"Bergamont Grandurance 5", magassag:[170,183], felveve:"2026-10-05",
     kategoria:"Gravel · All-road", szegmens:"gravel", allapot:"Jó", ev:2019, meret:"M (55 cm)", kerekmeret:"28″", suly:"10,4 kg", ar:320000,
     vaz:"Grandurance alumínium · 10,4 kg", villa:"Grandurance alumínium, tárcsafékes",
