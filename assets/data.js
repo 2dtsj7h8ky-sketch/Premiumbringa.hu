@@ -154,32 +154,6 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Tektro MD-C510 tárcsafék"],["Tárcsák","160 / 160 mm"],["Felni","28″ Cube GR 2.3"],["Gumi","Schwalbe G-One Allround, 40-622"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Compact Race Bar"],["Nyereg","Natural Fit Venec Lite"],["Gumihely","45 mm-ig"],["Felszerelhetőség","Sárvédő-előkészítés"]] }
     ] },
-  { id:"orbea-alma-m51", mappa:"OrbeaAlmaM51", marka:"Orbea", model:"Orbea Alma M51", magassag:[168,180], felveve:"2026-09-20", eladva:"2026-09-26",
-    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"M", kerekmeret:"29″", suly:"11,5 kg", ar:430000,
-    vaz:"Orbea Carbon OMR monocoque · 11,5 kg", villa:"RockShox Judy Silver TK Solo Air, 100 mm, kormányról zárható",
-    hajtas:"SRAM NX Eagle 1×12", fek:"Shimano MT201 hidraulikus, 180/160",
-    kerek:"29″ tubeless felni · Maxxis Ikon 2,2",
-    spec:"29″ karbon XC versenyváz · RockShox Judy Silver 100 mm · SRAM NX Eagle 1×12, dropperrel.",
-    leiras:"Az Alma az Orbea versenyvonala, és ennél a darabnál a váz a lényeg: monocoque karbon, amelyik az erőt nem nyeli el, hanem továbbadja. Megemeled, és már abból tudod, mire számíts, 11,5 kilogramm alatta van annak, amit ebben az árban szokás. A villa a kormányról zárható, tehát aszfalton feszes, terepen pedig dolgozik. Matt arany fényezés, ami élőben sokkal komolyabb, mint fotón. Annak való, aki tempós hétvégi köröket, maratont vagy versenyt tervez, és tudja, hogy egy jó karbon vázra később bármi ráépíthető. Gyakorlatilag új, karcmentes, keveset futott példány.",
-    reszletek:[
-      { cs:"Váz & futómű", t:[["Váz","Orbea Alma, Carbon OMR monocoque, 29″"],["Teleszkóp","RockShox Judy Silver TK Remote Solo Air, 100 mm"],["Fejcsapágy","Acros, kormánykorlátozóval"],["Nyeregcső","OC2 dropper, 80 mm"]] },
-      { cs:"Hajtás", t:[["Váltó","SRAM NX Eagle, 12 sebesség"],["Hajtómű","SRAM Stylo 6K Eagle DUB Boost, 32T"],["Kazetta","SRAM PG-1230 Eagle, 11–50T"],["Lánc","SRAM NX Eagle"]] },
-      { cs:"Fék & kerék", t:[["Fék","Shimano MT201 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ alu, tubeless ready"],["Gumi","Maxxis Ikon 2,2"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","OC1 lapos, 740 mm"],["Nyereg","Selle Italia Model X"],["Súly","11,5 kg"],["Vázgarancia","Orbea élettartam-garancia a vázra"]] }
-    ] },
-  { id:"cannondale-habit-4", mappa:"CannondaleHabit4", marka:"Cannondale", model:"Cannondale Habit 4", magassag:[168,180], felveve:"2026-09-20", eladva:"2026-09-26",
-    kategoria:"Trail · Fully", szegmens:"trail", allapot:"Kiváló", ev:2019, meret:"M", kerekmeret:"29″", suly:"15,3 kg", ar:440000,
-    vaz:"SmartForm C1 alumínium · 15,3 kg", villa:"Fox Float Rhythm 34, 130 mm",
-    hajtas:"SRAM NX Eagle 1×12", fek:"SRAM Guide T hidraulikus, 180/180",
-    kerek:"29″ WTB ST i25 TCS · Maxxis Minion DHF / High Roller II",
-    spec:"29″ alumínium trail fully · Fox 34 és Fox DPS, 130 mm · SRAM NX Eagle 1×12, dropperrel.",
-    leiras:"Az a fajta kerékpár, amelyik nem kényszerít választásra. Elöl is, hátul is 130 milliméter Fox futómű dolgozik, ami elég ahhoz, hogy a gyökeres, köves szakaszokon nyugodtan hagyd futni, viszont nem annyi, hogy hosszabb emelkedőn kilóra menne a dolog. A Cannondale ezt a geometriát arra szabta, hogy egész napos túrán is jól viselje magát, és ez pontosan érződik rajta. A dropper nyeregcsővel egy mozdulat a váltás a tekerés és az ereszkedés között. Szinte karcmentes, csak nagyon minimális nyommal, keveset futott, teljesen gyári példány.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","Cannondale Habit, SmartForm C1 alumínium, 29″"],["Teleszkóp","Fox Float Rhythm 34, 130 mm"],["Rugóstag","Fox Float Performance DPS EVOL, 130 mm"],["Nyeregcső","TranzX dropper, 125 mm"]] },
-      { cs:"Hajtás", t:[["Váltó","SRAM NX Eagle, 12 sebesség"],["Hajtómű","Truvativ Stylo 6K, 32T"],["Kazetta","SRAM NX Eagle, 10–50T"],["Lánc","SRAM NX Eagle"]] },
-      { cs:"Fék & kerék", t:[["Fék","SRAM Guide T hidraulikus tárcsa"],["Tárcsák","180 / 180 mm"],["Felni","WTB ST i25 TCS 2.0, tubeless ready"],["Gumi","Maxxis Minion DHF 2,5 elöl · High Roller II 2,30 hátul"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Cannondale C3 Riser, 780 mm"],["Kormányszár","Cannondale C3"],["Nyereg","Cannondale Stage 3"],["Súly","15,3 kg"]] }
-    ] },
   { id:"radon-swoop-cf-9", mappa:"RadonSwoop9.0", marka:"Radon", model:"Radon Swoop CF 9.0", magassag:[184,196], felveve:"2026-09-20", eladva:"2026-10-01",
     kategoria:"Enduro · Fully", szegmens:"trail", allapot:"Újszerű", ev:2021, meret:"XL", kerekmeret:"29″", suly:"15,3 kg", ar:650000,
     vaz:"Swoop Carbon szénszál · 15,3 kg", villa:"RockShox ZEB Select, Charger RC, 170 mm",
@@ -219,20 +193,6 @@ const KESZLET = [
       { cs:"Váz & felfüggesztés", t:[["Váz","Aluminium Lite váz"],["Teleszkóp","RockShox Judy TK Air, 100 mm, zárható"]] },
       { cs:"Hajtás", t:[["Hajtómű","Acid, 32T"],["Hátsó váltó","Shimano Deore XT, 12 sebesség"],["Fogaskoszorú","Shimano Deore CS-M6100, 10–51T"],["Lánc","Shimano CN-M6100"]] },
       { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 hidraulikus, 180/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Schwalbe Smart Sam Active 2.25"]] },
-      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
-    ] },
-
-  { id:"cube-attention-2", mappa:"CubeAttention2", marka:"Cube", model:"Cube Attention", magassag:[182,195], felveve:"2026-08-20", eladva:"2026-09-26",
-    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2021, meret:"XL (21″)", kerekmeret:"29″", suly:"13,7 kg", ar:240000,
-    vaz:"Aluminium Lite · 13,7 kg", villa:"RockShox Judy Silver TK, 100 mm, PopLoc",
-    hajtas:"Shimano Deore 2×10", fek:"Shimano MT200 hidraulikus, 180/160",
-    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2.25",
-    spec:"29″ alu XC hardtail · RockShox Judy 100 mm · Shimano Deore 2×10.",
-    leiras:"Annak, aki stílusos, megbízható MTB-t szeretne, ami nem csak kiszolgálja a hétvégi túrát, hanem kedvet is csinál a következőhöz. A Cube Attention sportos, jól felszerelt terepbringa: a kiegyensúlyozott geometria, a tiszta Shimano 2×10 váltás és a finoman dolgozó, levegős RockShox Judy villa együtt meglepően összeszedett, könnyen megszerethető karaktert adnak. Kényelmes, mégis van benne sportosság, a megjelenése modern, de nem hivalkodó. Igazi mindenre kész társ, amivel könnyű beleszeretni a terepbringázásba, akár most kezded, akár egy megbízható hétköznapi bringát keresel.",
-    reszletek:[
-      { cs:"Váz & felfüggesztés", t:[["Váz","Aluminium Lite váz"],["Teleszkóp","RockShox Judy Silver TK, 100 mm, PopLoc"]] },
-      { cs:"Hajtás", t:[["Hajtómű","Shimano Deore FC-M4100, 36×26T"],["Első váltó","Shimano Deore FD-M6025, 2 sebesség"],["Hátsó váltó","Shimano Deore RD-M4120, 10 sebesség"],["Fogaskoszorú","Shimano Deore CS-M4100, 11–42T"],["Lánc","KMC X10"]] },
-      { cs:"Fék & kerék", t:[["Fékek","Shimano MT200 hidraulikus, 180/160"],["Kerékszett","29″ Cube ZX20"],["Gumik","Schwalbe Smart Sam 2.25"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"]] }
     ] },
 
