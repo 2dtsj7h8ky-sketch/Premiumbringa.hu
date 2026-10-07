@@ -18,7 +18,7 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
-  { id:"bergamont-grandurance-5-0", mappa:"BergamontGrandurance5.0", marka:"Bergamont", model:"Bergamont Grandurance 5.0", magassag:[170,183], felveve:"2026-10-05",
+  { id:"bergamont-grandurance-5-0", mappa:"BergamontGrandurance5.0", marka:"Bergamont", model:"Bergamont Grandurance 5.0", magassag:[170,183], felveve:"2026-10-05", eladva:"2026-10-07",
     kategoria:"Gravel · All-road", szegmens:"gravel", allapot:"Jó", ev:2018, meret:"M (55 cm)", kerekmeret:"28″", suly:"10,5 kg", ar:250000,
     vaz:"Grandurance 6061 alumínium · 10,5 kg", villa:"Grandurance alumínium, tárcsafékes",
     hajtas:"Shimano Sora 2×9", fek:"TRP Spyre mechanikus tárcsafék, 160/160",
@@ -73,7 +73,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 hidraulikus tárcsa"],["Tárcsák","160 / 160 mm"],["Felni","28″ Cube ZX20"],["Gumi","Schwalbe Land Cruiser Active"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Comfort Trail Bar, 660 mm"],["Nyereg","Natural Fit Sequence"],["Kerékméret","28″"],["Fényezés","Bronz"]] }
     ] },
-  { id:"cube-attention-sl-3", mappa:"CubeAttentionSL3", marka:"Cube", model:"Cube Attention SL", magassag:[182,196], felveve:"2026-10-01",
+  { id:"cube-attention-sl-3", mappa:"CubeAttentionSL3", marka:"Cube", model:"Cube Attention SL", magassag:[182,196], felveve:"2026-10-01", eladva:"2026-10-07",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2022, meret:"XL (21″)", kerekmeret:"29″", suly:"13,6 kg", ar:280000,
     vaz:"Cube Aluminium Lite · 13,6 kg", villa:"RockShox Judy TK Air, 100 mm, kormányról zárható",
     hajtas:"Shimano Deore XT 1×12", fek:"Shimano BR-MT200 hidraulikus, 180/160",
