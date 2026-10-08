@@ -113,7 +113,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano XT BR-M8120 négydugattyús elöl, BR-M8100 hátul"],["Tárcsák","203 / 180 mm"],["Felni","29″ Fulcrum Red Metal, tubeless ready"],["Gumi","Maxxis Ardent 2,4, EXO, tubeless ready"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Evolution SL, 760 mm"],["Súly","13,5 kg"],["Kerékméret","29″"],["Fényezés","Flashgrey és olíva"]] }
     ] },
-  { id:"cube-attention-sl-2", mappa:"CubeAttentionSL2", marka:"Cube", model:"Cube Attention SL", magassag:[168,180], felveve:"2026-09-22",
+  { id:"cube-attention-sl-2", mappa:"CubeAttentionSL2", marka:"Cube", model:"Cube Attention SL", magassag:[168,180], felveve:"2026-09-22", eladva:"2026-10-08",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2021, meret:"M (18″)", kerekmeret:"29″", suly:"13,5 kg", ar:260000,
     vaz:"Cube Aluminium Lite · 13,5 kg", villa:"RockShox Judy Silver levegős, 100 mm, PopLoc kormányról zárható",
     hajtas:"Shimano XT M8100 1×12", fek:"Shimano BR-MT200 hidraulikus, 180/160",
@@ -126,7 +126,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube ZX20"],["Gumi","Schwalbe Smart Sam 2,25"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"],["Kerékméret","29″"],["Fényezés","Petrol, piros részletekkel"]] }
     ] },
-  { id:"cube-attention-3", mappa:"CubeAttention3", marka:"Cube", model:"Cube Attention", magassag:[176,186], felveve:"2026-09-22",
+  { id:"cube-attention-3", mappa:"CubeAttention3", marka:"Cube", model:"Cube Attention", magassag:[176,186], felveve:"2026-09-22", eladva:"2026-10-08",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2023, meret:"L", kerekmeret:"29″", suly:"13,8 kg", ar:260000, regiAr:280000,
     vaz:"Cube Aluminium Lite · 13,8 kg", villa:"RockShox Judy Silver levegős, 100 mm",
     hajtas:"Shimano Deore / SLX 2×11", fek:"Shimano BR-MT200/UR300 hidraulikus, 180/160",
@@ -140,7 +140,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 / UR300 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube ZX20"],["Gumi","Schwalbe Smart Sam 2,25, új"]] },
       { cs:"Egyéb", t:[["Sebességek","2×11"],["Kerékméret","29″"],["Fényezés","Tűznarancs gyöngyházas"],["Szerviz","Átvizsgálva és leszervizelve, menetkészen"]] }
     ] },
-  { id:"cube-nuroad", mappa:"CubeNuroad", marka:"Cube", model:"Cube Nuroad", magassag:[172,182], felveve:"2026-09-22",
+  { id:"cube-nuroad", mappa:"CubeNuroad", marka:"Cube", model:"Cube Nuroad", magassag:[172,182], felveve:"2026-09-22", eladva:"2026-10-08",
     kategoria:"Gravel · Karbon villa", szegmens:"gravel", allapot:"Kiváló", ev:2022, meret:"M", kerekmeret:"28″", suly:"10,8 kg", ar:340000,
     vaz:"Cube T6 Superlite alumínium · 10,8 kg", villa:"Cube Nuroad teljes karbon, Flat Mount Disc",
     hajtas:"Shimano Claris 2×8", fek:"Tektro MD-C510 tárcsa, 160/160",
