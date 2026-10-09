@@ -39,6 +39,8 @@
   /* Hiánytűrő mezők (amíg a hirdetésből nem töltjük az adatot) */
   /* Akció: ha van `regiAr` és nagyobb a jelenlegi árnál → áthúzott régi ár + jelvény */
   const isAkcio = b => b.ar && b.regiAr && Number(b.regiAr) > Number(b.ar);
+  /* Mérés (Vercel Web Analytics, süti nélkül): egyedi események a tényleges érdeklődéshez */
+  const track = (nev, adat) => { try{ if(typeof window.va === "function") window.va("event", { name: nev, data: adat || {} }); }catch(_){} };
   const arSzoveg = b => (b.ar && Number(b.ar) > 0)
     ? `${isAkcio(b) ? `<s class="ar-old">${huFt(b.regiAr)}</s> ` : ""}${huFt(b.ar)} <small>Ft</small>`
     : `<small class="ar-soon">Ár: érdeklődj</small>`;
@@ -239,17 +241,18 @@
     if(segBox) segBox.addEventListener("click", e => {
       const c = e.target.closest(".chip"); if(!c) return;
       if(c.dataset.akcio) csakAkcio = !csakAkcio; else aktivSzeg = c.dataset.v;
+      track("szuro", { tipus: c.dataset.akcio ? "akcio" : "kategoria", ertek: c.dataset.akcio ? (csakAkcio ? "be" : "ki") : aktivSzeg });
       renderSeg(); render();
     });
     if(condBox) condBox.addEventListener("click", e => {
       const c = e.target.closest(".chip"); if(!c) return;
-      aktivAllapot = c.dataset.v; renderCond(); render();
+      aktivAllapot = c.dataset.v; track("szuro", { tipus: "allapot", ertek: aktivAllapot }); renderCond(); render();
     });
     if(meretBox) meretBox.addEventListener("click", e => {
       const c = e.target.closest(".chip"); if(!c) return;
-      aktivMeret = c.dataset.v; renderMeret(); render();
+      aktivMeret = c.dataset.v; track("szuro", { tipus: "meret", ertek: aktivMeret }); renderMeret(); render();
     });
-    if(sortSel) sortSel.addEventListener("change", render);
+    if(sortSel) sortSel.addEventListener("change", () => { track("rendezes", { ertek: sortSel.value }); render(); });
     const updEl = document.getElementById("updated");
     if(updEl && maxFelve > 0){
       updEl.textContent = "Készlet frissítve: " + new Date(maxFelve).toLocaleDateString("hu-HU");
@@ -267,6 +270,13 @@
       return;
     }
     document.title = `${b.model} · Premium Bringa`;
+    track("bringa_megnyitva", { bringa: b.id, kategoria: b.szegmens || "", ar: Number(b.ar) || 0, eladva: isEladva(b) ? 1 : 0 });
+    host.addEventListener("click", e => {
+      const a = e.target.closest("a"); if(!a) return;
+      const h = a.getAttribute("href") || "";
+      if(h.startsWith("tel:")) track("hivas_gomb", { bringa: b.id, hely: "termekoldal" });
+      else if(h.includes("kapcsolat.html")) track("idopont_gomb", { bringa: b.id });
+    });
     const mainImg = `<img id="pmain-img" src="${esc(bikeKep(b))}" alt="${esc(b.model)}" decoding="async" onerror="${coverOnerr(b)}">`;
     const galMain = `<span class="bk-wheel"></span><span class="bk-wheel two"></span><span class="ghost">${esc(b.marka||b.model)}</span>` + mainImg;
     const thumbs = bikeGaleria(b).map((src,i) =>
@@ -528,6 +538,7 @@
 
     function openAt(i, from){
       if(!el) build();
+      if(!open) track("foto_nagyitas", { bringa: param("id") || "", kep: i + 1 });
       idx = i; open = true;
       reset();
       cnt.innerHTML = `<b>${idx+1}</b> / ${srcs.length}`;
@@ -582,6 +593,7 @@
     if(!btn || !link) return;
     btn.addEventListener("click", async () => {
       const addr = link.textContent.trim();
+      track("email_masolas", {});
       try{ await navigator.clipboard.writeText(addr); }
       catch(_){
         const r = document.createRange(); r.selectNode(link);
@@ -665,7 +677,22 @@
   }
 
   /* ---- indítás ---- */
+  /* Kapcsolatfelvételi linkek bárhol az oldalon (nav, Kapcsolat, lábléc) */
+  function initTrackLinks(){
+    document.addEventListener("click", e => {
+      const a = e.target.closest("a"); if(!a) return;
+      const h = a.getAttribute("href") || "";
+      const hely = a.closest("#product") ? "termekoldal" : a.closest("nav") ? "nav" : a.closest("footer") ? "lablec" : location.pathname.replace(/^\//, "") || "index";
+      if(a.closest("#product") && (h.startsWith("tel:") || h.includes("kapcsolat.html"))) return; /* a termékoldalon külön mérjük, bringa-azonosítóval */
+      if(h.startsWith("tel:")) track("hivas_gomb", { hely });
+      else if(h.startsWith("mailto:")) track("email_gomb", { hely });
+      else if(/facebook\.com\/(profile\.php|p\/)/.test(h) || /m\.me\//.test(h)) track("messenger_gomb", { hely });
+      else if(/tiktok\.com|instagram\.com/.test(h)) track("social_gomb", { hely, platform: /tiktok/.test(h) ? "tiktok" : "instagram" });
+    }, { capture: true });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
+    initTrackLinks();
     initNav();
     initMotion();
     initBadge();
