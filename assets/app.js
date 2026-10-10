@@ -517,6 +517,17 @@
     }
     function reset(){ sc = 1; tx = 0; ty = 0; el.classList.remove("zoomed"); apply(false); }
 
+    /* Nagy felbontás: a lightbox a gyors 1280-as képet mutatja azonnal, majd a hd/ mappából
+       betölti a 2400 px-es változatot és csendben lecseréli (ha nincs hd, marad a normál). */
+    const hdOf = s => s.replace(/\/(\d+)\.jpg$/, "/hd/$1.jpg");
+    let hdReq = 0;
+    function loadHd(){
+      const my = ++hdReq, s = srcs[idx], hsrc = hdOf(s);
+      if(!s || hsrc === s) return;
+      const p = new Image();
+      p.onload = () => { if(my === hdReq && open) img.src = hsrc; };
+      p.src = hsrc;
+    }
     function preload(){
       [idx-1, idx+1].forEach(i => {
         const s = srcs[(i + srcs.length) % srcs.length];
@@ -528,7 +539,7 @@
       reset();
       cnt.innerHTML = `<b>${idx+1}</b> / ${srcs.length}`;
       const pre = new Image();
-      const swap = () => { img.src = srcs[idx]; img.style.opacity = "1"; };
+      const swap = () => { img.src = srcs[idx]; img.style.opacity = "1"; loadHd(); };
       img.style.transition = RM ? "none" : "opacity .18s ease";
       img.style.opacity = "0";
       pre.src = srcs[idx];
@@ -544,6 +555,7 @@
       cnt.innerHTML = `<b>${idx+1}</b> / ${srcs.length}`;
       img.src = srcs[idx];
       img.style.opacity = "1";
+      loadHd();
       el.classList.add("on");
       document.documentElement.classList.add("lbx-lock");
       preload();
