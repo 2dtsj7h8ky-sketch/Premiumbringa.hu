@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"focus-jam-c-sl", mappa:"FocusJamCSL", kepDb:15, marka:"Focus", model:"Focus Jam C SL", magassag:[178,188], felveve:"2026-10-10",
+    kategoria:"Trail · Fully · Karbon", szegmens:"trail", allapot:"Kiváló", ev:2017, meret:"L", kerekmeret:"27,5″", suly:"kb. 12 kg", ar:550000,
+    vaz:"Jam C teljes karbon, F.O.L.D. felfüggesztés · kb. 12 kg", villa:"RockShox Pike RCT3, 140 mm",
+    hajtas:"SRAM X01 Eagle 1×12", fek:"SRAM Guide Ultimate négydugattyús, 180/180",
+    kerek:"27,5″ DT Swiss XM 1501 Spline One · Continental Mountain King 2,4",
+    spec:"27,5″ teljes karbon trail fully · RockShox Pike RCT3 és Monarch RT, 140 mm · SRAM X01 Eagle, Guide Ultimate.",
+    leiras:"A Jam család csúcsmodellje, amivel a Focus 2017-ben új korszakot nyitott: a Design & Innovation Award a kategória akkori új mércéjeként írta le. A teljes karbon vázban a hátsó háromszög is egyetlen darabból készült, a szabadalmaztatott F.O.L.D. felfüggesztés pedig a hátsó rugózás mozgó elemeit a vázba rejti, ettől alacsony a súlypont és érzékenyebb a rugózás. A jellegzetes, kobrafejszerűen kiszélesedő felsőcső nem csak látvány, a kormányzás pontosságát szolgálja. Elöl Pike RCT3, a Pike legtöbbet tudó csillapításával, hátul Monarch RT, a fék körben négydugattyús Guide Ultimate, a hajtás X01 Eagle, a kerék svájci DT Swiss, a nyereg olasz fi'zi:k, az egész nagyjából tizenkét kiló. Annak való, aki régóta egy igazi csúcsmodellre vágyik, amelynek a története, a technológiája és a felszereltsége is ugyanazon a szinten van. A 6 999 eurós gyári ár helyett most 550 ezer forintért. Rendkívül keveset futott, megvigyázott, eredeti példány.",
+    megjegyzes:"Egyetlen tudatos eltérés a gyári állapottól: a hidraulikus RockShox Reverb helyett mechanikus dropper nyeregcső került rá, a hosszú távú megbízhatóság érdekében. Szállításból adódó apró felületi karcok előfordulhatnak, a fotókon látható mértékben. A teleszkóp, a rugóstag és a csapágyak feszesen, csendesen dolgoznak, a kopóalkatrészek bőséges tartalékkal rendelkeznek.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Focus Jam C, MAX technology teljes karbon, 27,5″"],["Felfüggesztés","F.O.L.D., szabadalmaztatott, vázba rejtett"],["Teleszkóp","RockShox Pike RCT3, 140 mm"],["Rugóstag","RockShox Monarch RT, 140 mm"],["Nyeregcső","Mechanikus dropper"]] },
+      { cs:"Hajtás", t:[["Váltó","SRAM X01 Eagle, 12 sebesség"],["Hajtómű","SRAM X01 Carbon, 32T"],["Kazetta","SRAM XG-1295 Eagle, 10–50T"],["Lánc","SRAM X01 Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fék","SRAM Guide Ultimate négydugattyús"],["Tárcsák","180 / 180 mm"],["Kerékszett","DT Swiss XM 1501 Spline One, 27,5″"],["Gumi","Continental Mountain King 2, 2,4"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Concept CPX karbon riser"],["Nyereg","fi'zi:k Tundra M3 karbon"],["Súly","kb. 12 kg"],["Gyári ár","6 999 €"]] }
+    ] },
   { id:"bergamont-grandurance-5-0", mappa:"BergamontGrandurance5.0", marka:"Bergamont", model:"Bergamont Grandurance 5.0", magassag:[170,183], felveve:"2026-10-05", eladva:"2026-10-07",
     kategoria:"Gravel · All-road", szegmens:"gravel", allapot:"Jó", ev:2018, meret:"M (55 cm)", kerekmeret:"28″", suly:"10,5 kg", ar:250000,
     vaz:"Grandurance 6061 alumínium · 10,5 kg", villa:"Grandurance alumínium, tárcsafékes",

@@ -26,7 +26,7 @@
   }
   function bikeGaleria(b){
     if(Array.isArray(b.kepek) && b.kepek.length) return b.kepek.slice();
-    if(b.mappa){ const a=[]; for(let n=1;n<=GAL_MAX;n++) a.push(`${KEPDIR}/${b.mappa}/${n}.jpg`); return a; }
+    if(b.mappa){ const max = Number(b.kepDb) || GAL_MAX; const a=[]; for(let n=1;n<=max;n++) a.push(`${KEPDIR}/${b.mappa}/${n}.jpg`); return a; }
     return [bikeKep(b)];
   }
   /* borító onerror: 1.jpg → 2.jpg → eltűnik (amíg nincs feltöltve az 1.jpg) */
