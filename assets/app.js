@@ -525,7 +525,7 @@
       const my = ++hdReq, s = srcs[idx], hsrc = hdOf(s);
       if(!s || hsrc === s) return;
       const p = new Image();
-      p.onload = () => { if(my === hdReq && open) img.src = hsrc; };
+      p.onload = () => { if(my !== hdReq || !open) return; img.onload = null; img.src = hsrc; };
       p.src = hsrc;
     }
     function preload(){
@@ -539,7 +539,7 @@
       reset();
       cnt.innerHTML = `<b>${idx+1}</b> / ${srcs.length}`;
       const pre = new Image();
-      const swap = () => { img.src = srcs[idx]; img.style.opacity = "1"; loadHd(); };
+      const swap = () => { img.onload = null; img.src = srcs[idx]; img.style.opacity = "1"; loadHd(); };
       img.style.transition = RM ? "none" : "opacity .18s ease";
       img.style.opacity = "0";
       pre.src = srcs[idx];
@@ -573,7 +573,7 @@
             img.style.transform = "translate3d(0,0,0) scale(1)";
           });
         };
-        img.complete ? requestAnimationFrame(run) : (img.onload = () => requestAnimationFrame(run));
+        img.complete ? requestAnimationFrame(run) : (img.onload = () => { img.onload = null; requestAnimationFrame(run); });
       }
     }
     function go(d){ show(idx + d); }
