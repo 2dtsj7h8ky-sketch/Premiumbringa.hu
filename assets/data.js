@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"trek-marlin-8-gen3", mappa:"TrekMarlin8", marka:"Trek", model:"Trek Marlin 8 Gen 3", magassag:[172,182], felveve:"2026-10-30",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"M/L (18,5″)", kerekmeret:"29″", suly:"14,3 kg", ar:300000,
+    vaz:"Trek Alpha Silver alumínium · 14,3 kg", villa:"RockShox Judy Silver levegős, 100 mm, zárható",
+    hajtas:"SRAM SX Eagle 1×12", fek:"Shimano BR-MT200 hidraulikus, 180/160",
+    kerek:"29″ Bontrager Kovee · Maxxis Ardent, tubeless",
+    spec:"29″ alumínium merevvázas · levegős RockShox Judy 100 mm · SRAM SX Eagle 1×12, 150 mm-es dropperrel.",
+    leiras:"A Marlin az a kerékpár, amivel tízezrek kezdték a terepezést, és nem véletlenül a Trek legkelendőbb hegyi modellje. A 8-as Gen 3 ennek a legjobban felszerelt kiadása: levegős RockShox villa, és a Marlin történetében először gyári dropper nyeregcső, vagyis a széria itt már a komolyabb kerékpárok eszköztárával érkezik. A Gen 3 geometriája alacsony súlypontú és játékos, a széles kormány és a tapadós Maxxis Ardent gumik pontosan ehhez a karakterhez illenek: a kanyargós terepen van igazán elemében. Annak való, aki az első perctől komolyan veszi a terepet, és olyan bringát akar, ami a fejlődésével együtt nő, utólagos fejlesztgetés nélkül. Népszerű modell, csúcskiadás és újszerű állapot, ez a három ritkán jön össze egyszerre. Keveset futott, feszes, gyári példány.",
+    megjegyzes:"Néhány nagyon minimális, szállításból adódó felületi nyom látható rajta, a fotókon szereplő mértékben. Ez kizárólag esztétikai jellegű, a műszaki állapot hibátlan, a kopóalkatrészek bőséges tartalékkal rendelkeznek.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Trek Marlin Gen 3, Alpha Silver alumínium, 29″"],["Teleszkóp","RockShox Judy Silver levegős, 100 mm, zárható"],["Nyeregcső","TranzX JD-YSP18 dropper, 150 mm"],["Súly","14,3 kg"]] },
+      { cs:"Hajtás", t:[["Váltó","SRAM SX Eagle, 12 sebesség"],["Hajtómű","SRAM SX Eagle, 30T"],["Kazetta","SRAM PG-1210 Eagle, 11–50T"],["Lánc","SRAM SX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Bontrager Kovee"],["Gumi","Maxxis Ardent, tubeless"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager alumínium, 750 mm"],["Nyereg","Bontrager Arvada"],["Kerékméret","29″"],["Fényezés","Piros, fehér részletekkel"]] }
+    ] },
   { id:"cube-analog-2", mappa:"CubeAnalog", marka:"Cube", model:"Cube Analog", magassag:[174,186], felveve:"2026-10-30",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"L (19″)", kerekmeret:"29″", suly:"13,8 kg", ar:240000,
     vaz:"Cube könnyű alumínium · 13,8 kg", villa:"RockShox Judy TK Coil, 100 mm, zárható",
