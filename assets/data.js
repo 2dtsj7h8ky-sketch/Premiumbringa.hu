@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-analog-2", mappa:"CubeAnalog", marka:"Cube", model:"Cube Analog", magassag:[174,186], felveve:"2026-10-30",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"L (19″)", kerekmeret:"29″", suly:"13,8 kg", ar:240000,
+    vaz:"Cube könnyű alumínium · 13,8 kg", villa:"RockShox Judy TK Coil, 100 mm, zárható",
+    hajtas:"SRAM SX Eagle 1×12", fek:"Shimano BR-MT200 hidraulikus, 180/160",
+    kerek:"29″ Cube ZX20 · Schwalbe Smart Sam 2,25",
+    spec:"29″ alumínium merevvázas · zárható RockShox Judy 100 mm · SRAM SX Eagle 1×12, hidraulikus fékkel.",
+    leiras:"A kezdő és haladó közötti kategória jól eltalált receptje, és nem véletlenül a Cube egyik legnépszerűbb merevvázasa: pontosan annyit tud, amennyi a terepezés megszerettetéséhez és a fejlődéshez kell. Az egykaros, széles áttételű hajtással a meredek emelkedőre és a gyors sík szakaszra is van fokozat, a zárható RockShox villa terepen kényelmes, aszfalton feszes, a hidraulikus tárcsafékkel pedig minden időben magabiztosan állsz meg. Annak való, aki most ismerkedik a tereppel és olyan kerékpárt szeretne, ami a fejlődésével is lépést tart, de annak is, aki egy megbízható, jó nevű darabot keres a mindennapokra és a hétvégi túrákra. Ez a példány a ritkább, flash lime színből való, a fekete részletekkel kifejezetten mutatós. Karcmentes, alig gurult, bolti állapotú, teljesen gyári.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Cube Analog, könnyű alumínium, 29″"],["Teleszkóp","RockShox Judy TK Coil, 100 mm"],["Zárás","Kormányról zárható"],["Súly","13,8 kg"]] },
+      { cs:"Hajtás", t:[["Váltó","SRAM SX Eagle, 12 sebesség"],["Hajtómű","SRAM SX Eagle Powerspline, 32T"],["Kazetta","SRAM PG-1210 Eagle, 11–50T"],["Lánc","SRAM SX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube ZX20"],["Gumi","Schwalbe Smart Sam 2,25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec"],["Kerékméret","29″"],["Fényezés","Flash lime, fekete részletekkel"]] }
+    ] },
   { id:"focus-jam-c-sl", mappa:"FocusJamCSL", kepDb:15, marka:"Focus", model:"Focus Jam C SL", magassag:[178,188], felveve:"2026-10-10",
     kategoria:"Trail · Fully · Karbon", szegmens:"trail", allapot:"Kiváló", ev:2017, meret:"L", kerekmeret:"27,5″", suly:"kb. 12 kg", ar:550000,
     vaz:"Jam C teljes karbon, F.O.L.D. felfüggesztés · kb. 12 kg", villa:"RockShox Pike RCT3, 140 mm",
