@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"canyon-grand-canyon-8", mappa:"CanyonGrandCanyon8", kepDb:12, marka:"Canyon", model:"Canyon Grand Canyon 8", magassag:[180,192], felveve:"2026-10-31",
+    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Újszerű", ev:2021, meret:"L", kerekmeret:"29″", suly:"13,6 kg", ar:380000,
+    vaz:"Canyon Grand Canyon AL SL alumínium · 13,6 kg", villa:"Fox 34 Rhythm, 120 mm, zárható",
+    hajtas:"Shimano Deore XT 1×12", fek:"Shimano SLX hidraulikus, 180/160",
+    kerek:"29″ Alexrims MD25 · Schwalbe Nobby Nic Performance 2,35",
+    spec:"29″ alumínium trail merevvázas · Fox 34 Rhythm 120 mm · Shimano XT 1×12, 150 mm-es dropperrel.",
+    leiras:"A Canyon az a márka, amiről mindenki hallott, de élőben kevesen láttak: a gyártó csak online árul, mégis a legelismertebb kerékpárgyártók közé tartozik. A Grand Canyon a kínálatuk sokoldalú, mindenre kész merevvázasa, a 8-as pedig a sorozat jól felszerelt kiadása, és pontosan látszik rajta, hol számít a minőség. A villa Fox 34, amit általában trail fullykon látni. A hátsó váltó Shimano XT, vagyis azon nem spóroltak, amit egy tekerésen a legtöbbször használsz. Gyárilag jár hozzá a 150 milliméteres dropper. Annak való, aki egy merevvázastól is igazi terepes tudást vár, és szeretné, ha a kerékpár már gyárilag mindent tudna, amit a terep kér. Ennél a példánynál a gyári fék helyére jobb teljesítményű Shimano SLX került, tehát többet tud, mint amikor a gyárból kigördült. Rendkívül igényes, megvigyázott, friss és feszes példány.",
+    megjegyzes:"Egyetlen tudatos fejlesztés a gyári állapothoz képest: a gyári fék helyett jobb teljesítményű Shimano SLX fék dolgozik rajta. Minden más eredeti.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Canyon Grand Canyon AL SL, alumínium, 29″"],["Teleszkóp","Fox 34 Rhythm, 120 mm, zárható"],["Nyeregcső","Iridium dropper, 150 mm"],["Súly","13,6 kg"]] },
+      { cs:"Hajtás", t:[["Váltó","Shimano Deore XT, 12 sebesség"],["Hajtómű","Shimano MT611, 30T"],["Kazetta","Shimano Deore, 11–50T"],["Lánc","Shimano CN-M7100"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano SLX hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Alexrims MD25"],["Gumi","Schwalbe Nobby Nic Performance 2,35, Addix"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Newmen, Iridium kormányszárral"],["Nyereg","Iridium Trail"],["Kerékméret","29″"],["Fényezés","Világosszürke, piros részletekkel"]] }
+    ] },
   { id:"trek-marlin-8-gen3", mappa:"TrekMarlin8", marka:"Trek", model:"Trek Marlin 8 Gen 3", magassag:[172,182], felveve:"2026-10-30",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"M/L (18,5″)", kerekmeret:"29″", suly:"14,3 kg", ar:300000,
     vaz:"Trek Alpha Silver alumínium · 14,3 kg", villa:"RockShox Judy Silver levegős, 100 mm, zárható",
