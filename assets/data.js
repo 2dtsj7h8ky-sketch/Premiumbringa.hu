@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"specialized-rockhopper-expert", mappa:"SpecializedRockhopperExpert", kepDb:12, marka:"Specialized", model:"Specialized Rockhopper Expert", magassag:[182,195], felveve:"2026-11-01",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2021, meret:"XL", kerekmeret:"29″", suly:"14,5 kg", ar:300000,
+    vaz:"Specialized A1 Premium alumínium · 14,5 kg", villa:"RockShox Judy Solo Air levegős, 100 mm, zárható",
+    hajtas:"SRAM SX Eagle 1×12", fek:"Shimano BR-MT200 hidraulikus, 180/180",
+    kerek:"29″ Specialized Alloy · Specialized Ground Control 2,3",
+    spec:"29″ alumínium merevvázas · levegős RockShox Judy 100 mm · SRAM SX Eagle 1×12, rugózott nyeregcsővel.",
+    leiras:"Kevés név jelent annyit a hegyikerékpározásban, mint a Rockhopper: a Specialized 1986 óta építi, és generációk első igazi terepes kerékpárja lett. Az Expert ennek a legendának a csúcskiépítése, a 2021-es, alaposan megújított generációból: könnyebb váz, belső kábelvezetés, levegős RockShox Judy villa, SRAM Eagle 12 sebességes hajtás és Shimano hidraulikus fékek, vagyis olyan felszereltség, ami messze túlnő a belépő szinten. Annak való, aki nem csak egy bringát, hanem egy nevet akar, olyat, amit minden terepező ismer és tisztel, és aki a 29-es kerekek nyugodt gurulását szereti hosszabb erdei és dombvidéki köröknél. A szatén ezüst fényezés az egyik legszebb Rockhopper szín: visszafogott és elegáns, de ahogy a fény ráesik, a holografikus Specialized felirat szivárványszínekben játszik. Ennél a példánynál a gyári felszereltséget rugózott SR Suntour NCX nyeregcsővel és kényelmi nyereggel egészítették ki, így hosszú túrán is többet ad, mint gyárilag. Keveset futott, megkímélt, gyári példány, nálunk átvizsgálva, alapszerviz után, azonnal menetkész.",
+    megjegyzes:"Apróbb használati, tárolási és szállítási nyomok előfordulnak rajta, a fotókon látható mértékben. Ez kizárólag esztétikai jellegű, a műszaki állapot hibátlan.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Specialized A1 Premium alumínium, 29″, belső kábelvezetés"],["Teleszkóp","RockShox Judy Solo Air levegős, 100 mm, zárható"],["Nyeregcső","SR Suntour NCX rugózott"],["Súly","14,5 kg"]] },
+      { cs:"Hajtás", t:[["Váltó","SRAM SX Eagle, 12 sebesség"],["Hajtómű","SRAM SX Eagle, Powerspline"],["Kazetta","SRAM PG-1210 Eagle, 11–50T"],["Lánc","SRAM SX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 hidraulikus tárcsa"],["Tárcsák","180 / 180 mm"],["Felni","29″ Specialized Alloy, Shimano FH-RM35 agy"],["Gumi","Specialized Ground Control 2,3"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Specialized Stout alumínium"],["Nyereg","Kényelmi nyereg"],["Kerékméret","29″"],["Fényezés","Szatén ezüst, holografikus felirattal"]] }
+    ] },
   { id:"canyon-grand-canyon-8", mappa:"CanyonGrandCanyon8", kepDb:12, marka:"Canyon", model:"Canyon Grand Canyon 8", magassag:[180,192], felveve:"2026-10-31",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Újszerű", ev:2021, meret:"L", kerekmeret:"29″", suly:"13,6 kg", ar:380000,
     vaz:"Canyon Grand Canyon AL SL alumínium · 13,6 kg", villa:"Fox 34 Rhythm, 120 mm, zárható",
