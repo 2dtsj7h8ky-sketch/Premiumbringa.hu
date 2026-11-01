@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"canyon-pathlite-5", mappa:"CanyonPathlite5", kepDb:12, marka:"Canyon", model:"Canyon Pathlite 5", magassag:[184,195], felveve:"2026-11-01",
+    kategoria:"Cross · Trekking", szegmens:"cross", allapot:"Kiváló", ev:2021, meret:"XL", kerekmeret:"28″", suly:"13 kg", ar:240000,
+    vaz:"Canyon Pathlite AL alumínium · 13 kg", villa:"SR Suntour NRX-D, 75 mm, zárható",
+    hajtas:"Shimano Deore M5100 1×11", fek:"Shimano MT200 hidraulikus, 160/160",
+    kerek:"28″ alumínium · Schwalbe G-One Bite",
+    spec:"28″ könnyű cross-trekking · SR Suntour NRX-D 75 mm, zárható · Shimano Deore 1×11, 11–51.",
+    leiras:"Ahol véget ér az aszfalt, a legtöbb városi kerékpárral vissza kell fordulni. A Pathlite-tal ott kezdődik a java. Annak való, aki nem akar választani a városi és a hegyi bringa között: hétköznap munkába, hétvégén a Tisza-gátra. Aszfalton lezárod a teleszkópot, a kátyús dűlőúton kinyitod. A váltás egyetlen karral megy, és szembeszélben vagy emelkedőn is mindig van hova visszaváltani, a 11–51-es kazettával a leghosszabb kaptató sem gond. A súlya olyan barátságos, hogy a negyedik emeletre is gond nélkül felviszed. Új Canyont itthon boltban nem találsz, mert a gyártó közvetlenül, a saját webáruházában árul, és használt is ritkán akad. Egy kerékpár, ami minden útra igent mond, jóval az új ár alatt. Keveset futott, megkímélt, gyári példány, nálunk átvizsgálva, alapszerviz után, azonnal menetkész.",
+    reszletek:[
+      { cs:"Váz & futómű", t:[["Váz","Canyon Pathlite AL, alumínium, 28″"],["Teleszkóp","SR Suntour NRX-D, 75 mm, zárható"],["Súly","13 kg"]] },
+      { cs:"Hajtás", t:[["Váltó","Shimano Deore M5100, 11 sebesség"],["Hajtómű","Shimano Deore M5100, 32T"],["Kazetta","Shimano Deore M5100, 11–51T"],["Lánc","KMC X11-93"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano MT200 hidraulikus tárcsa"],["Tárcsák","160 / 160 mm"],["Felni","28″ alumínium"],["Gumi","Schwalbe G-One Bite, gravel"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Iridium Flatbar"],["Nyereg","Canyon Sport Saddle EP1249"],["Kerékméret","28″"],["Fényezés","Világos kékesszürke, fekete részletekkel"]] }
+    ] },
   { id:"specialized-rockhopper-expert", mappa:"SpecializedRockhopperExpert", kepDb:12, marka:"Specialized", model:"Specialized Rockhopper Expert", magassag:[182,195], felveve:"2026-11-01",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2021, meret:"XL", kerekmeret:"29″", suly:"14,5 kg", ar:300000,
     vaz:"Specialized A1 Premium alumínium · 14,5 kg", villa:"RockShox Judy Solo Air levegős, 100 mm, zárható",
