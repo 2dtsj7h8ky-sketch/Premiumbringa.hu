@@ -58,7 +58,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 hidraulikus tárcsa"],["Tárcsák","180 / 180 mm"],["Felni","29″ Specialized Alloy, Shimano FH-RM35 agy"],["Gumi","Specialized Ground Control 2,3"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Specialized Stout alumínium"],["Nyereg","Kényelmi nyereg"],["Kerékméret","29″"],["Fényezés","Szatén ezüst, holografikus felirattal"]] }
     ] },
-  { id:"canyon-grand-canyon-8", mappa:"CanyonGrandCanyon8", kepDb:12, marka:"Canyon", model:"Canyon Grand Canyon 8", magassag:[180,192], felveve:"2026-10-31",
+  { id:"canyon-grand-canyon-8", mappa:"CanyonGrandCanyon8", kepDb:12, marka:"Canyon", model:"Canyon Grand Canyon 8", magassag:[180,192], felveve:"2026-10-31", eladva:"2026-11-02",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Újszerű", ev:2021, meret:"L", kerekmeret:"29″", suly:"13,6 kg", ar:380000,
     vaz:"Canyon Grand Canyon AL SL alumínium · 13,6 kg", villa:"Fox 34 Rhythm, 120 mm, zárható",
     hajtas:"Shimano Deore XT 1×12", fek:"Shimano SLX hidraulikus, 180/160",
@@ -123,7 +123,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano BR-R317 tárcsafék"],["Tárcsák","160 / 160 mm"],["Felni","28″ BGM Allroad"],["Gumi","Continental Grand Sport Race"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Syncros Creston 2.0, kifelé hajló"],["Nyereg","Syncros FL2.5"],["Kerékméret","28″"]] }
     ] },
-  { id:"cube-acid-2", mappa:"CubeAcid2", marka:"Cube", model:"Cube Acid", magassag:[182,196], felveve:"2026-10-05",
+  { id:"cube-acid-2", mappa:"CubeAcid2", marka:"Cube", model:"Cube Acid", magassag:[182,196], felveve:"2026-10-05", eladva:"2026-11-02",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Jó", ev:2020, meret:"XL (21″)", kerekmeret:"29″", suly:"13,3 kg", ar:230000,
     vaz:"Cube Aluminium Lite, dupla falazott · 13,3 kg", villa:"RockShox Recon Silver levegős, 100 mm, PopLoc kormányról zárható",
     hajtas:"SRAM NX Eagle 1×12", fek:"Shimano BR-MT400 hidraulikus, 180/160",
