@@ -18,6 +18,20 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"trek-remedy-7", mappa:"TrekRemedy7", kepDb:12, marka:"Trek", model:"Trek Remedy 7", magassag:[170,180], felveve:"2026-11-02",
+    kategoria:"All Mountain · Fully", szegmens:"trail", allapot:"Kiváló", ev:2019, meret:"M/L (18,5″)", kerekmeret:"27,5″", suly:"kb. 14,5 kg", ar:430000,
+    vaz:"Trek Alpha Platinum alumínium, ABP felfüggesztés · kb. 14,5 kg", villa:"RockShox Yari RC DebonAir, 160 mm",
+    hajtas:"SRAM NX Eagle 1×12", fek:"SRAM Level T hidraulikus, 200/180",
+    kerek:"27,5″ Bontrager Line Comp 30, Tubeless Ready · Maxxis High Roller II 2,4",
+    spec:"27,5″ all mountain fully, 160/150 mm · RockShox Yari és Deluxe RL · SRAM NX Eagle 1×12, 125 mm-es dropperrel.",
+    leiras:"A Remedy a Trek lejtőkre épített hegyi kerékpárja, de úgy, hogy felfelé se kelljen tolni. Azoknak szól, akik a Bükkben vagy a Mátrában már nem kerülgetni akarják a köveket, hanem átmenni rajtuk. Elöl 160, hátul 150 milliméter rugóút dolgozik, RockShox Yari villával és Deluxe rugóstaggal. Az egyik forgáspontot a Trek a hátsó kerék tengelyébe tette, így fékezés közben is dolgozik a rugózás, és a kerék akkor is a talajon marad, amikor a legnagyobb szükség van rá. A kormányütköző gondoskodik róla, hogy egy esésnél se csapódjon a kormány a vázba. A geometria pedig egy kis forgatható betéttel két állásba hangolható: laposabbra a gyors lejtőkhöz, magasabbra a technikás szakaszokhoz. A Trek itthon is erős márka, a RockShox és a SRAM alkatrészekhez bárhol hozzáférsz, így a szerviz sem lesz fejtörés. Az antracit váz az élénkpiros felirattal a sáros hétvégéket is jól viseli, a garázsban pedig akkor is jó ránézni, amikor épp nem tekersz. A gyári gumik helyére minőségi Maxxis High Roller II került, ami lejtőn többet tud, mint az eredeti. Hosszú rugóút, okos megoldások, Trek név: komoly hegyi kerékpár, baráti áron. Igényes, megkímélt példány, nálunk alaposan átvizsgálva, átfogó alapszerviz után, azonnal menetkész.",
+    megjegyzes:"A hátsó felnin egy felütés található. A kerék nyolcasmentes, a használatot nem befolyásolja, egy esetleges belső nélküli, tubeless átalakításnál viszont ronthatja a tömítést.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Trek Alpha Platinum alumínium, 27,5″, ABP, Knock Block, Mino Link"],["Teleszkóp","RockShox Yari RC, DebonAir, Motion Control, 160 mm"],["Rugóstag","RockShox Deluxe RL, 150 mm"],["Nyeregcső","Dropper, 125 mm"],["Súly","kb. 14,5 kg"]] },
+      { cs:"Hajtás", t:[["Váltó","SRAM NX Eagle, 12 sebesség"],["Hajtómű","SRAM NX Eagle DUB, 32T"],["Kazetta","SRAM PG-1230 Eagle, 11–50T"],["Lánc","SRAM NX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fék","SRAM Level T hidraulikus tárcsa"],["Tárcsák","200 / 180 mm"],["Felni","27,5″ Bontrager Line Comp 30, Tubeless Ready"],["Gumi","Maxxis High Roller II, 2,4"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Bontrager Rhythm Comp, 780 mm"],["Nyereg","Bontrager Arvada"],["Kerékméret","27,5″"],["Fényezés","Antracit, élénkpiros felirattal"]] }
+    ] },
   { id:"canyon-pathlite-5", mappa:"CanyonPathlite5", kepDb:12, marka:"Canyon", model:"Canyon Pathlite 5", magassag:[184,195], felveve:"2026-11-01",
     kategoria:"Cross · Trekking", szegmens:"cross", allapot:"Kiváló", ev:2021, meret:"XL", kerekmeret:"28″", suly:"13 kg", ar:240000,
     vaz:"Canyon Pathlite AL alumínium · 13 kg", villa:"SR Suntour NRX-D, 75 mm, zárható",
