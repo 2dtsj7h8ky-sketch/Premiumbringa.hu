@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-nuroad-pro", mappa:"CubeNuroadPro", kepDb:13, marka:"Cube", model:"Cube Nuroad Pro", magassag:[175,182], felveve:"2026-11-03",
+    kategoria:"Gravel · All-road", szegmens:"gravel", allapot:"Újszerű", ev:2023, meret:"M (56 cm)", kerekmeret:"28″", suly:"10,4 kg", ar:380000,
+    vaz:"Cube Aluminium 6061 T6 Superlite · 10,4 kg", villa:"Cube Nuroad Flat Mount Disc, full carbon",
+    hajtas:"Shimano GRX 2×10", fek:"TRP Spyre mechanikus tárcsafék, 160/160",
+    kerek:"28″ Cube GR 2.3 · Schwalbe G-One Allround 40",
+    spec:"28″ alumínium gravel karbon villával · Shimano GRX 2×10 · kétdugattyús TRP Spyre tárcsafék, 10,4 kg.",
+    leiras:"A Nuroad a Cube válasza arra, hogy a bringa ne szabjon határt: aszfalt, murva, földút, hétvégén akár csomagokkal megpakolva, mindez ugyanazzal a kerékpárral. Azoknak szól, akik egy bringával akarnak edzeni, ingázni és felfedezni, és nem akarnak minden új útnál azon gondolkodni, hogy elbírja-e. Elöl két lánckerék dolgozik: a nagyobbikkal aszfalton is tartod a tempót, a kisebbikkel a meredek, murvás emelkedőn is marad tartalék. A kétdugattyús TRP fékek mindkét oldalról zárják a tárcsát, mégis bowdenesek, így egy túra közepén is egyszerűen beállíthatók, légtelenítés nélkül. A vázon és a karbon villán is ott vannak a sárvédő és a csomagtartó rögzítési pontjai, a vázban pedig 45 milliméteres gumiknak is jut hely, vagyis a bringa veled együtt nő, ahogy a túráid hosszabbodnak. A kényelmes, hosszú napokra hangolt geometriát a rezgéseket szűrő karbon villa egészíti ki. A legtöbb gravel bringa fekete vagy szürke, ez nem. Külön kedvencünk a bronzos arany fényezése: ritkán látott, meleg árnyalat, ami napfényben aranyosan villan, a murva porában pedig még jobban mutat. Minden adott hozzá, már csak a kalandvágyad hiányzik. Rendkívül igényes, újszerű példány, aminek a java még rád marad, nálunk alaposan átvizsgálva, átfogó alapszerviz után, azonnal menetkész.",
+    reszletek:[
+      { cs:"Váz & villa", t:[["Váz","Cube Aluminium 6061 T6 Superlite, 28″"],["Villa","Cube Nuroad Flat Mount Disc, full carbon"],["Gumihely","45 mm-ig"],["Felszerelhetőség","Sárvédő és csomagtartó rögzítés a vázon és a villán"],["Súly","10,4 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano GRX RD-RX400, 10 sebesség"],["Első váltó","Shimano GRX FD-RX400, 2 sebesség"],["Hajtómű","Shimano GRX FC-RX600, 46/30T"],["Kazetta","Shimano CS-HG50, 11–36T"],["Lánc","KMC X10"]] },
+      { cs:"Fék & kerék", t:[["Fék","TRP Spyre MD-C610C mechanikus tárcsa, kétdugattyús"],["Tárcsák","160 / 160 mm"],["Felni","28″ Cube GR 2.3"],["Gumi","Schwalbe G-One Allround, Kevlar, 40-622"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Gravel Race Bar"],["Nyereg","Natural Fit Venec Lite"],["Kerékméret","28″"],["Fényezés","Bronzos arany"]] }
+    ] },
   { id:"cube-cross-race-sl", mappa:"CubeCrossRaceSL", kepDb:11, marka:"Cube", model:"Cube Cross Race SL", magassag:[175,182], felveve:"2026-11-03",
     kategoria:"Cyclocross · Gravel", szegmens:"gravel", allapot:"Újszerű", ev:2021, meret:"M (56 cm)", kerekmeret:"28″", suly:"9,5 kg", ar:400000,
     vaz:"Cube Aluminium Superlite · 9,5 kg", villa:"Cube Cross Race Disc, full carbon",
