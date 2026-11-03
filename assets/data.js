@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-cross-race-sl", mappa:"CubeCrossRaceSL", kepDb:11, marka:"Cube", model:"Cube Cross Race SL", magassag:[175,182], felveve:"2026-11-03",
+    kategoria:"Cyclocross · Gravel", szegmens:"gravel", allapot:"Újszerű", ev:2021, meret:"M (56 cm)", kerekmeret:"28″", suly:"9,5 kg", ar:400000,
+    vaz:"Cube Aluminium Superlite · 9,5 kg", villa:"Cube Cross Race Disc, full carbon",
+    hajtas:"Shimano GRX 1×11", fek:"Shimano GRX BR-RX400 hidraulikus, 160/160",
+    kerek:"28″ Fulcrum Racing 77 DB · Schwalbe X-One Allround 33",
+    spec:"28″ alumínium cyclocross karbon villával · Shimano GRX 1×11 · hidraulikus GRX tárcsafék, 9,5 kg.",
+    leiras:"Versenyre tervezték, és pont ettől lesz egy lelkes bringás büszkesége. A Cross Race SL a 2021-ben megújult Cube cyclocross széria legjobban felszerelt alumínium tagja, fölötte már csak a karbon vázas modellek jönnek. Azoknak szól, akik versenyminőséget akarnak a hétköznapokra: aszfaltra, földútra, téli edzésre, és ha kedvük támad, egy cyclocross futamra is. Az egytányéros, földútra fejlesztett Shimano GRX hajtásnál nincs első váltó, amit állítgatni kellene, a kuplungos hátsó váltó pedig rázós terepen is a helyén tartja a láncot. A hidraulikus GRX tárcsafék sárban és esőben ugyanolyan biztosan lassít, mint szárazon. A kábelek a vázban futnak, így a sár sem fér hozzájuk, a karbon villa pedig elveszi a rezgések élét. Az egész kerékpár mindössze 9,5 kiló, bármikor vállra kapod. Ilyen szintű cyclocross itthon ritkán kerül használtan piacra. Külön kedvencünk a piros a pirosban fényezése: visszafogott, mégis mindenki megnézi. Báránybőrbe bújt farkas, jóval új ár alatt. Szinte új, megkímélt példány, nálunk alaposan átvizsgálva, átfogó alapszerviz után, azonnal menetkész.",
+    reszletek:[
+      { cs:"Váz & villa", t:[["Váz","Cube Aluminium Superlite, 28″, belső kábelvezetés"],["Villa","Cube Cross Race Disc, full carbon"],["Súly","9,5 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano GRX RD-RX812, 11 sebesség, kuplungos"],["Hajtómű","Shimano GRX FC-RX600, 40T, egytányéros"],["Kazetta","Shimano SLX CS-M7000, 11–42T"],["Lánc","Shimano CN-HG601, 11 sebesség"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano GRX BR-RX400 hidraulikus tárcsa"],["Tárcsák","160 / 160 mm"],["Felni","28″ Fulcrum Racing 77 DB"],["Gumi","Schwalbe X-One Allround Performance, 33-622"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Evolution Wing Bar"],["Nyereg","Natural Fit Nuance Lite"],["Kerékméret","28″"],["Fényezés","Piros a pirosban"]] }
+    ] },
   { id:"trek-remedy-7", mappa:"TrekRemedy7", kepDb:12, marka:"Trek", model:"Trek Remedy 7", magassag:[170,180], felveve:"2026-11-02",
     kategoria:"All Mountain · Fully", szegmens:"trail", allapot:"Kiváló", ev:2019, meret:"M/L (18,5″)", kerekmeret:"27,5″", suly:"kb. 14,5 kg", ar:430000,
     vaz:"Trek Alpha Platinum alumínium, ABP felfüggesztés · kb. 14,5 kg", villa:"RockShox Yari RC DebonAir, 160 mm",
