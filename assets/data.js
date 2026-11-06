@@ -18,7 +18,7 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
-  { id:"cube-nuroad-pro", mappa:"CubeNuroadPro", kepDb:13, marka:"Cube", model:"Cube Nuroad Pro", magassag:[175,182], felveve:"2026-11-03",
+  { id:"cube-nuroad-pro", mappa:"CubeNuroadPro", kepDb:13, marka:"Cube", model:"Cube Nuroad Pro", magassag:[175,182], felveve:"2026-11-03", eladva:"2026-11-06",
     kategoria:"Gravel · All-road", szegmens:"gravel", allapot:"Újszerű", ev:2023, meret:"M (56 cm)", kerekmeret:"28″", suly:"10,4 kg", ar:380000,
     vaz:"Cube Aluminium 6061 T6 Superlite · 10,4 kg", villa:"Cube Nuroad Flat Mount Disc, full carbon",
     hajtas:"Shimano GRX 2×10", fek:"TRP Spyre mechanikus tárcsafék, 160/160",
@@ -176,7 +176,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano XT BR-M8120 négydugattyús elöl, BR-M8100 hátul"],["Tárcsák","203 / 180 mm"],["Felni","29″ Fulcrum Red Metal, tubeless ready"],["Gumi","Maxxis Ardent 2,4, EXO, tubeless ready"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Evolution SL, 760 mm"],["Súly","13,5 kg"],["Kerékméret","29″"],["Fényezés","Flashgrey és olíva"]] }
     ] },
-  { id:"cube-reaction-tm", mappa:"CubeReactionTM", marka:"Cube", model:"Cube Reaction TM", magassag:[176,188], felveve:"2026-09-18",
+  { id:"cube-reaction-tm", mappa:"CubeReactionTM", marka:"Cube", model:"Cube Reaction TM", magassag:[176,188], felveve:"2026-09-18", eladva:"2026-11-06",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Jó", ev:2020, meret:"L (20″)", kerekmeret:"27,5″", suly:"13,9 kg", ar:280000,
     vaz:"High Performance Aluminium · 13,9 kg", villa:"X-Fusion RC32, 130 mm, állítható keménység",
     hajtas:"SRAM SX Eagle 1×12", fek:"Magura MT Thirty hidraulikus, 180/180",
