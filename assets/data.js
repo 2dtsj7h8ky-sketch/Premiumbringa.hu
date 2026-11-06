@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-nuroad-c62-pro", mappa:"CubeNuroadC62Pro", kepDb:12, marka:"Cube", model:"Cube Nuroad C:62 Pro", magassag:[172,182], felveve:"2026-11-06",
+    kategoria:"Gravel · Karbon", szegmens:"gravel", allapot:"Kiváló", ev:2023, meret:"M (56 cm)", kerekmeret:"28″", suly:"9 kg", ar:650000,
+    vaz:"Cube C:62 Advanced Twin Mold karbon · 9 kg", villa:"Cube C:62 Technology, karbon",
+    hajtas:"Shimano GRX 1×11", fek:"Shimano GRX BR-RX400 hidraulikus, 160/160",
+    kerek:"28″ Newmen Performance X.R. 25 · Schwalbe G-One Allround 40",
+    spec:"28″ karbon gravel, karbon villával és nyeregcsővel · Shimano GRX 1×11 · hidraulikus GRX tárcsafék, 9 kg.",
+    leiras:"Karbon gravel bringáról sokan álmodnak, de kevesen adnak ki érte új árat. A Nuroad C:62 Pro a Cube legelérhetőbb karbon gravel kerékpárja, ezért azoknak szól, akik most váltanának karbonra. A váz, a villa és a nyeregcső is karbon, így az egész bringa 9 kiló, és a murva rezgéseiből is kevesebb jut el hozzád. Az egytányéros Shimano GRX hajtás és a hidraulikus fékek egyszerű, hálás páros: első váltó nélkül is minden emelkedőre jut áttétel, a karbantartásuk pedig minimális. Ha hosszabb útra indulnál, csomagtartó, sárvédő és kitámasztó is felszerelhető, a vázban pedig 45 milliméteres gumiknak is jut hely. Használt karbon Nuroadot itthon ritkán látni. Külön kedvencünk a mocsárszürke fényezés: már a neve elárulja, hogy nem fél a sártól. Kevesebb kiló, több kilométer, józan áron. Igényes, esztétikailag szinte újszerű, teljesen gyári példány, egyedül a hátsó gumi új, a gyári specifikációval azonos. Nálunk alaposan átvizsgálva, átfogó alapszerviz után, azonnal menetkész.",
+    reszletek:[
+      { cs:"Váz & villa", t:[["Váz","Cube C:62 Advanced Twin Mold karbon, 28″"],["Villa","Cube C:62 Technology, karbon"],["Nyeregcső","Newmen Advanced, karbon"],["Gumihely","45 mm-ig"],["Felszerelhetőség","Csomagtartó, sárvédő és kitámasztó"],["Súly","9 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano GRX RD-RX812, 11 sebesség"],["Hajtómű","Shimano GRX FC-RX600, 40T, egytányéros"],["Kazetta","Shimano XT CS-M8000, 11–42T"],["Lánc","Shimano CN-HG601, 11 sebesség"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano GRX BR-RX400 hidraulikus tárcsa"],["Tárcsák","160 / 160 mm"],["Felni","28″ Newmen Performance X.R. 25"],["Gumi","Schwalbe G-One Allround, Kevlar, 40-622"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Gravel Race Bar"],["Kerékméret","28″"],["Fényezés","Mocsárszürke"]] }
+    ] },
   { id:"cube-nuroad-pro", mappa:"CubeNuroadPro", kepDb:13, marka:"Cube", model:"Cube Nuroad Pro", magassag:[175,182], felveve:"2026-11-03", eladva:"2026-11-06",
     kategoria:"Gravel · All-road", szegmens:"gravel", allapot:"Újszerű", ev:2023, meret:"M (56 cm)", kerekmeret:"28″", suly:"10,4 kg", ar:380000,
     vaz:"Cube Aluminium 6061 T6 Superlite · 10,4 kg", villa:"Cube Nuroad Flat Mount Disc, full carbon",
