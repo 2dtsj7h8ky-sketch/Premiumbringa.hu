@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-reaction-tm-one", mappa:"CubeReactionTMONE", kepDb:12, marka:"Cube", model:"Cube Reaction TM One", magassag:[170,182], felveve:"2026-11-08",
+    kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Kiváló", ev:2025, meret:"M (18″)", kerekmeret:"29″", suly:"kb. 15,5 kg", ar:360000,
+    vaz:"Cube Aluminium Lite, 2025-ös generáció · kb. 15,5 kg", villa:"SR Suntour XCR34 Air, 140 mm",
+    hajtas:"Shimano CUES 1×10", fek:"Magura MT Thirty hidraulikus, négydugattyús, 203/180",
+    kerek:"29″ Cube EX30 · Schwalbe Magic Mary / Big Betty 2,4",
+    spec:"29″ trail hardtail, 140 mm · SR Suntour XCR34 Air · Shimano CUES 1×10, dropperrel és négydugattyús Magura fékkel.",
+    leiras:"Elöl 140 mm, a kormányszög 65 fok: a Reaction TM a Cube népszerű hardtail szériájának lejtőkre hangolt változata, 2025-re teljesen új, robusztusabb vázzal. Azoknak szól, akik a hétvégi körön a köves, gyökeres lejtőt nem kikerülik, hanem megkeresik. A rövid láncvilla a pontos irányításért és a tapadásért közelebb hozza a hátsó kereket a súlypontodhoz, a dropperes nyeregcső pedig a kormányról leengedhető a lejtő előtt. A levegős teleszkóp nyomása és csillapítása is állítható, így pontosan a terephez és hozzád hangolhatod. Elöl négydugattyús Magura fék dolgozik 203 mm-es tárcsával, ami hosszú lejtőkön is bőven ad tartalékot. A hajtás a Shimano strapabíró CUES családjából jön, a láncot pedig gyári láncvezető és láncvédő tartja a helyén. Gyárilag a Schwalbe lejtős terepre szánt gumipárosa fut rajta, a vázba pedig akár 2,5 colos gumik is beférnek. A 2025-ös generációból használt példány még alig van a piacon. Az arany-lime és fekete fényezésével a fák között sem lehet szem elől téveszteni. Új generációs váz, dropper és négydugattyús fék: modern trail hardtail, használt áron. Gyári, igényes, műszakilag megbízható példány, hosszú távra elegendő kopóalkatrészekkel, nálunk alaposan átvizsgálva, átfogó alapszerviz után, azonnal menetkész.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Cube Aluminium Lite, 29″, 2025-ös generáció, 65°-os kormányszög"],["Teleszkóp","SR Suntour XCR34 Air, 140 mm"],["Nyeregcső","Cube Dropper Post, 31,6 mm"],["Gumihely","2,5″-ig"],["Súly","kb. 15,5 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano CUES, 10 sebesség"],["Hajtómű","Shimano CUES, 32T, láncvezetővel"],["Kazetta","Shimano CUES, 11–48T"],["Lánc","KMC xGlide"]] },
+      { cs:"Fék & kerék", t:[["Fék","Magura MT Thirty hidraulikus tárcsa, négydugattyús"],["Tárcsák","203 / 180 mm"],["Felni","29″ Cube EX30"],["Gumi","Schwalbe Magic Mary elöl, Big Betty hátul, 2,4"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 760 mm"],["Nyereg","Acid Venec Lite"],["Kerékméret","29″"],["Fényezés","Arany-lime és fekete"]] }
+    ] },
   { id:"cube-reaction-c62-pro", mappa:"CubeReactionC62Pro", kepDb:12, marka:"Cube", model:"Cube Reaction C:62 Pro", magassag:[178,190], felveve:"2026-11-08",
     kategoria:"XC · Hardtail · Karbon", szegmens:"xc", allapot:"Újszerű", ev:2022, meret:"L (19″)", kerekmeret:"29″", suly:"kb. 11,5 kg", ar:420000,
     vaz:"Cube C:62 karbon · kb. 11,5 kg", villa:"RockShox Judy Gold RL Air, 100 mm, kormányról zárható",
