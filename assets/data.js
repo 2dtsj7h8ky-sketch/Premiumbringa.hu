@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"specialized-rockhopper-pro", mappa:"SpecializedRockhopperPro", kepDb:10, marka:"Specialized", model:"Specialized Rockhopper Pro", magassag:[182,192], felveve:"2026-11-08",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2018, meret:"XL", kerekmeret:"29″", ar:240000,
+    vaz:"Specialized A1 SL alumínium", villa:"Manitou Markhor TS Air, 100 mm",
+    hajtas:"Shimano SLX / Deore 2×10", fek:"Shimano M365 hidraulikus, 180/160",
+    kerek:"29″ Stout XC SL 25, Tubeless Ready · Specialized Ground Control Sport 2,3 / 2,1",
+    spec:"29″ alu XC hardtail · levegős Manitou Markhor 100 mm · Shimano SLX / Deore 2×10, hidraulikus tárcsafékkel.",
+    leiras:"A Rockhopper 1986 óta fut, ezzel a világ egyik legrégebbi, ma is gyártott hegyikerékpárja, a Pro pedig a 2018-as széria csúcsa volt. Azoknak szól, akik lelkes hobbibringásként komolyan veszik a hétvégi köröket, de nem akarnak egy versenybringa árát kiadni. Elöl levegős Manitou teleszkóp dolgozik, az egyik legrégebbi amerikai teleszkópgyártótól, a rugóútját pedig a Specialized méretenként hangolta, hogy minden vázméret arányos maradjon. A két első lánckerékkel a síkon is tartod a tempót, a kisebbiken pedig a meredek emelkedők is barátságosabbak. A gumik defektvédő réteget kaptak, a felnik pedig belső nélküli szerelésre is alkalmasak. A Specialized itthon is az egyik legkeresettebb márka, a Rockhopper pedig a használt piacon is jól tartja az értékét. A fényes fekete vázon a neonzöld és a mentazöld részletek frissen és sportosan hatnak. Gyakorlatilag új, rendkívül megkímélt, karcmentes példány, bolti szintű, feszes menetélménnyel, nálunk alaposan átvizsgálva, átfogó alapszerviz után, azonnal menetkész.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Specialized A1 SL alumínium, 29″"],["Teleszkóp","Manitou Markhor TS Air, 100 mm"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano SLX, 10 sebesség"],["Első váltó","Shimano Deore, 2 sebesség"],["Hajtómű","Specialized Stout 2×10, 36×22T"],["Kazetta","SunRace, 11–36T"],["Lánc","KMC X10"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano M365 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Stout XC SL 25, Tubeless Ready"],["Gumi","Specialized Ground Control Sport, 2,3 elöl / 2,1 hátul, defektvédelemmel"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Specialized Stout Pro, 720 mm"],["Nyereg","Specialized Henge Sport"],["Kerékméret","29″"],["Fényezés","Fényes fekete, neonzöld és mentazöld részletekkel"]] }
+    ] },
   { id:"mondraker-chrono-2", mappa:"MondrakerChrono2", kepDb:11, marka:"Mondraker", model:"Mondraker Chrono", magassag:[168,180], felveve:"2026-11-08",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Jó", ev:2021, meret:"M (43 cm)", kerekmeret:"29″", suly:"kb. 13 kg", ar:280000,
     vaz:"Mondraker Xtralite alumínium · kb. 13 kg", villa:"RockShox Judy Silver TK Air, 100 mm, zárható",
