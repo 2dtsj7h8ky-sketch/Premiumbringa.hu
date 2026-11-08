@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"mondraker-chrono-2", mappa:"MondrakerChrono2", kepDb:11, marka:"Mondraker", model:"Mondraker Chrono", magassag:[168,180], felveve:"2026-11-08",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Kiváló", ev:2019, meret:"M (43 cm)", kerekmeret:"29″", suly:"kb. 13 kg", ar:280000,
+    vaz:"Mondraker Xtralite alumínium · kb. 13 kg", villa:"RockShox Judy Silver TK Air, 100 mm, zárható",
+    hajtas:"SRAM SX Eagle 1×12", fek:"Avid Elixir 1 hidraulikus, 160/160",
+    kerek:"29″ MDK XP1 · Kenda Slant Six 2,35",
+    spec:"29″ alu XC hardtail · RockShox Judy Silver TK Air 100 mm · SRAM SX Eagle 1×12, új Avid hidraulikus fékkel, kb. 13 kg.",
+    leiras:"A spanyol Mondraker egyszer már átírta a hegyikerékpárok geometriáját: a hosszú váz és a rövid stucni ötlete tőlük indult, ma pedig szinte minden gyártó ezt követi. A Chrono ennek a gondolkodásnak a terepversenyekre szánt hardtailje, a márka kapuja a sportos hegyikerékpározás felé. Azoknak szól, akik lelkes hobbibringásként hétvégén a hegyekben, hétköznap edzésen tekernek, és szeretik, ha a bringájuk kilóg a sorból. A hosszú elejű geometriát nyugodt, kiszámítható irányításra tervezték, a levegős RockShox teleszkóp aszfaltra zárható, a 12 sebességes Eagle hajtás pedig a meredek emelkedőkön is ad még egy könnyebb fokozatot. A széles gumik és a rugós nyeregcső a hosszabb túrákat is kényelmesebbé teszik. Spanyol hardtailből itthon kevés gurul, Mondrakerből még kevesebb. A matt fekete vázat lángvörös és égkék csíkok törik meg: versenyes, de nem hivalkodó. Spanyol tervezés, versenyes karakter, ritka név: hardtail azoknak, akik nem a tömeggel tekernek. Igényes, műszakilag hibátlan példány, hosszú távra elegendő kopóalkatrészekkel, új Avid hidraulikus fékrendszerrel és a gyári merev nyeregcső helyett kényelmesebb rugós nyeregcsővel, nálunk alaposan átvizsgálva, átfogó alapszerviz után, azonnal menetkész.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Mondraker Xtralite alumínium, 29″, Forward Geometry"],["Teleszkóp","RockShox Judy Silver TK Air, 100 mm, zárható"],["Nyeregcső","Rugós nyeregcső, a gyári merev helyett"],["Súly","kb. 13 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","SRAM SX Eagle, 12 sebesség"],["Hajtómű","SRAM SX Eagle, DUB"],["Kazetta","SRAM SX Eagle, 11–50T"],["Lánc","SRAM SX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fék","Avid Elixir 1 hidraulikus tárcsa, új fékrendszer"],["Tárcsák","160 / 160 mm"],["Felni","29″ MDK XP1"],["Gumi","Kenda Slant Six 29×2,35"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Onoff Sulfur"],["Kerékméret","29″"],["Fényezés","Matt fekete, lángvörös és égkék csíkokkal"]] }
+    ] },
   { id:"cube-reaction-tm-one", mappa:"CubeReactionTMONE", kepDb:12, marka:"Cube", model:"Cube Reaction TM One", magassag:[170,182], felveve:"2026-11-08",
     kategoria:"Trail · Hardtail", szegmens:"trail", allapot:"Kiváló", ev:2025, meret:"M (18″)", kerekmeret:"29″", suly:"kb. 15,5 kg", ar:360000,
     vaz:"Cube Aluminium Lite, 2025-ös generáció · kb. 15,5 kg", villa:"SR Suntour XCR34 Air, 140 mm",
@@ -311,7 +324,7 @@ const KESZLET = [
       { cs:"Hajtás", t:[["Hajtómű","Shimano XT FC-M8000, 36×26T"],["Első váltó","Shimano SLX, 2 sebesség"],["Hátsó váltó","Shimano Deore XT, 11 sebesség"],["Fogaskoszorú","Shimano SLX CS-M7000, 11–42T"],["Lánc","Shimano CN-HG600"]] },
       { cs:"Fék & kerék", t:[["Fékek","Shimano Deore BR-M615 hidraulikus, 180/160"],["Kerékszett","27,5″ Cube ZX20"],["Gumik","Schwalbe Tough Tom / Rapid Rob"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Cube Active"]] }
-    ] },,
+    ] },
 
 
 ];
