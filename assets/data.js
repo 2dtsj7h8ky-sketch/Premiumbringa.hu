@@ -18,6 +18,19 @@
         ÚJ bringánál mindig állítsd az aznapi dátumra.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-reaction-c62-pro", mappa:"CubeReactionC62Pro", kepDb:12, marka:"Cube", model:"Cube Reaction C:62 Pro", magassag:[178,190], felveve:"2026-11-08",
+    kategoria:"XC · Hardtail · Karbon", szegmens:"xc", allapot:"Újszerű", ev:2022, meret:"L (19″)", kerekmeret:"29″", suly:"kb. 11,5 kg", ar:420000,
+    vaz:"Cube C:62 karbon · kb. 11,5 kg", villa:"RockShox Judy Gold RL Air, 100 mm, kormányról zárható",
+    hajtas:"Shimano XT 1×12", fek:"Shimano XT hidraulikus, 180/160",
+    kerek:"29″ Answer Atac AM, Tubeless Ready · Schwalbe Racing Ray / Racing Ralph 2,25",
+    spec:"29″ karbon XC hardtail · RockShox Judy Gold RL Air 100 mm · Shimano XT 1×12 és XT fék, kb. 11,5 kg.",
+    leiras:"Aki alumínium Cube-on kezdte, előbb-utóbb egy karbon Reactionről kezd álmodni. A C:62 Pro ennek az álomnak a legokosabb változata: a karbon Reactionök közül ez az első, amelyiken a fék és a hátsó váltó már XT, a teleszkóp pedig levegős RockShox. Azoknak szól, akik a következő szintre lépnének, legyen szó gyorsabb hétvégi körökről a Bükkben és a Mátrában, vagy egy rajtszámról a hazai maratonokon. Az XT ott van, ahol a legtöbbet számít, a fékeken és a váltón, a kopóalkatrészek pedig Deore szintűek, így a lánc és a kazetta cseréje sem kerül vagyonokba. A teleszkóp a kormányról zárható, így az aszfaltos összekötőkön és a hosszú emelkedőkön minden watt a kerékbe megy. A kerekeken a Schwalbe versenypárosa fut: elöl a tapadósabb Racing Ray, hátul a gyorsabban gördülő Racing Ralph, a felnik pedig tubeless szerelésre is alkalmasak, ami kevesebb defektet jelent. A váz dropperes nyeregcsőre is elő van készítve, így ha a lejtők felé is nyitnál, a bringa veled tart. Karbon, XT, RockShox: a következő szint, használt áron. Rendkívül keveset futott, teljesen gyári, karcmentes példány, nálunk alaposan átvizsgálva, átfogó alapszerviz után, azonnal menetkész.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Cube C:62 karbon, 29″, dropperes nyeregcsőre előkészítve"],["Teleszkóp","RockShox Judy Gold RL Air, 100 mm, kormányról zárható"],["Nyeregcső","Cube Performance, 27,2 mm"],["Súly","kb. 11,5 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano XT, 12 sebesség"],["Hajtómű","Shimano FC-MT611, 32T"],["Kazetta","Shimano Deore, 10–51T"],["Lánc","Shimano Deore CN-M6100"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano XT hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Answer Atac AM, Tubeless Ready"],["Gumi","Schwalbe Racing Ray elöl, Racing Ralph hátul, 29×2,25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Flat Race Bar, 720 mm"],["Nyereg","Natural Fit Venec"],["Kerékméret","29″"]] }
+    ] },
   { id:"cube-nuroad-c62-pro", mappa:"CubeNuroadC62Pro", kepDb:12, marka:"Cube", model:"Cube Nuroad C:62 Pro", magassag:[172,182], felveve:"2026-11-06",
     kategoria:"Gravel · Karbon", szegmens:"gravel", allapot:"Kiváló", ev:2023, meret:"M (56 cm)", kerekmeret:"28″", suly:"9 kg", ar:650000,
     vaz:"Cube C:62 Advanced Twin Mold karbon · 9 kg", villa:"Cube C:62 Technology, karbon",
