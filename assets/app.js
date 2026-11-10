@@ -62,6 +62,9 @@
   const maxFelve = data.filter(b => !isEladva(b)).reduce((m, b) => Math.max(m, felveTime(b)), 0);
   const FRESH_MS = 14 * 864e5;
   const isFriss = b => !isEladva(b) && !!b.felveve && maxFelve > 0 && (maxFelve - felveTime(b)) <= FRESH_MS;
+  /* Sorrend-kulcs a "Legfrissebb" rendezéshez: a felvétel napja, vagy ha van, az `elore` dátum
+     (előre sorolás, pl. árcsökkentés után). "Friss" jelvényt és "Frissítve" dátumot nem ad. */
+  const rendTime = b => Math.max(felveTime(b), (b.elore ? new Date(b.elore).getTime() : 0) || 0);
 
   /* ---- termékkártya (showroom + készlet) ---- */
   function bikeCard(b){
@@ -220,7 +223,7 @@
         if(band && band.h) list = list.filter(b => Array.isArray(b.magassag) && b.magassag[0] <= band.h[1] && b.magassag[1] >= band.h[0]);
       }
       const sort = sortSel ? sortSel.value : "friss";
-      if(sort === "friss") list.sort((a,b)=>felveTime(b)-felveTime(a));
+      if(sort === "friss") list.sort((a,b)=>rendTime(b)-rendTime(a));
       else if(sort === "ar-asc") list.sort((a,b)=>a.ar-b.ar);
       else if(sort === "ar-desc") list.sort((a,b)=>b.ar-a.ar);
       else if(sort === "ev-desc") list.sort((a,b)=>b.ev-a.ev);
