@@ -21,6 +21,19 @@
         Ilyenkor a bejegyzést a tömb elejére is tedd: a főoldali előnézet a tömb sorrendjét követi.
    ========================================================================= */
 const KESZLET = [
+  { id:"cube-acid-3", mappa:"CubeAcid3", kepDb:12, marka:"Cube", model:"Cube Acid", magassag:[176,188], felveve:"2026-11-11",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"L (20″)", kerekmeret:"29″", suly:"kb. 13,3 kg", ar:280000,
+    vaz:"Cube Aluminium Lite · kb. 13,3 kg", villa:"RockShox Judy Silver TK Air, 100 mm, kormányról zárható",
+    hajtas:"SRAM NX Eagle 1×12", fek:"Shimano MT200 / UR300 hidraulikus, 180/160",
+    kerek:"29″ Cube ZX20 · Continental Ruban 2,1",
+    spec:"29″ alu XC hardtail · levegős RockShox Judy Silver TK 100 mm · SRAM NX Eagle 1×12, hidraulikus tárcsafékkel.",
+    leiras:"Az Acid a Cube hardtailjeinek aranyközépútja: az Attention fölött, a versenyes Reaction alatt áll, a Cube neve pedig önmagában is a minőség záloga. Neked szól, ha lelkes hobbibringásként egyetlen, sokoldalú bringát keresel a hétvégi terepkörökre és a hétköznapokra is. Hatékony XC bringa: a 12 sebességes SRAM Eagle hajtás egyetlen váltókarral ad könnyű áttételt a meredek emelkedőkre is, a levegős RockShox teleszkópot pedig a kormányról zárod le, amikor aszfaltra érsz. Terepen a kúpos fejcső és az emelt kormány a stabil, pontos irányításért felelnek. A váz dropperes nyeregcsőre is elő van készítve, a hétköznapokra pedig sárvédő, csomagtartó és kitámasztó is kerülhet rá, így a terepkörtől a munkába járásig mindenhol otthon van. A szürke vázat finom ezüst részletek egészítik ki, az összkép letisztult és elegáns. Egytányéros Eagle, levegős RockShox, fejleszthető váz: a Cube aranyközépútja, kedvező áron. Újszerű, karcmentes, bolti összképű példány, nálunk alaposan átvizsgálva, átfogó alapszerviz után, azonnal menetkész.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","Cube Aluminium Lite, 29″, kúpos fejcső, dropperes nyeregcsőre előkészítve"],["Teleszkóp","RockShox Judy Silver TK Air, 100 mm, kormányról zárható"],["Felszerelhetőség","Sárvédő, csomagtartó és kitámasztó"],["Súly","kb. 13,3 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","SRAM NX Eagle, 12 sebesség"],["Hajtómű","SRAM Stylo Eagle DUB, 32T"],["Kazetta","SRAM PG-1210 Eagle, 11–50T"],["Lánc","SRAM SX Eagle"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano MT200 / UR300 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube ZX20"],["Gumi","Continental Ruban 29×2,1"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec"],["Kerékméret","29″"],["Fényezés","Szürke, finom ezüst részletekkel"]] }
+    ] },
   { id:"ktm-l-mountain", mappa:"KTMLMountain", kepDb:11, marka:"KTM", model:"KTM L. Mountain", magassag:[183,196], felveve:"2026-11-11",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2023, meret:"XL (53 cm)", kerekmeret:"29″", suly:"kb. 13,7 kg", ar:280000,
     vaz:"6061 alumínium · kb. 13,7 kg", villa:"RockShox Judy Silver TK Air, 100 mm, zárható",
