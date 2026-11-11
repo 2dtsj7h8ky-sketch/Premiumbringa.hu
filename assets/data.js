@@ -21,6 +21,19 @@
         Ilyenkor a bejegyzést a tömb elejére is tedd: a főoldali előnézet a tömb sorrendjét követi.
    ========================================================================= */
 const KESZLET = [
+  { id:"orbea-terra-m30", mappa:"OrbeaTerra", kepDb:12, marka:"Orbea", model:"Orbea Terra M30 1X", magassag:[182,190], felveve:"2026-11-11",
+    kategoria:"Gravel · Karbon", szegmens:"gravel", allapot:"Kiváló", ev:2020, meret:"L (59 cm)", kerekmeret:"28″", suly:"kb. 9,7 kg", ar:630000,
+    vaz:"Orbea Terra OMP karbon · kb. 9,7 kg", villa:"Orbea Terra OMP karbon, 12 mm átütőtengely",
+    hajtas:"Shimano GRX 1×11", fek:"Shimano GRX BR-RX400 hidraulikus",
+    kerek:"28″ Orbea alumínium, Shimano RS470 agyakkal · Schwalbe G-One Allround / G-One Bite 40",
+    spec:"28″ karbon gravel, karbon villával és nyeregcsővel · Shimano GRX 1×11 · hidraulikus GRX tárcsafék, kb. 9,7 kg.",
+    leiras:"Fehér és fekete Orbea Terrát hiába keresel a gyári katalógusban: ebben a színben csak egyedi rendelésre, az Orbea MyO programjában készült. A Terra az Orbea gravel szériája, az M30 pedig ennek legelérhetőbb karbon változata. Neked szól, ha lelkes hobbibringásként az aszfalt végén sem fordulsz vissza, hanem murván és földúton tekersz tovább. A karbon váz rétegezését az Orbea a rezgések elnyelésére hangolta, a 12 mm-es átütőtengelyek pedig merev, pontos irányítást adnak. Az egytányéros Shimano GRX hajtáson a láncvezető és a kuplungos hátsó váltó a rázós szakaszokon is a helyén tartja a láncot. Elöl a gyorsan guruló Schwalbe G-One Allround, hátul a laza talajon is kapaszkodó G-One Bite fut, így aszfalton tempót, földúton tapadást kapsz. A fényes fehér vázat fekete feliratok és fekete villa keretezik, az összhatás letisztult és elegáns. Karbon váz, GRX hajtás, ritka szín: különleges Terra, használt áron. Nagyon szép, igényes összképű példány, a gyári gumik helyett Schwalbe G-One párossal, nálunk alaposan átvizsgálva, átfogó alapszerviz után, azonnal menetkész.",
+    reszletek:[
+      { cs:"Váz & villa", t:[["Váz","Orbea Terra OMP karbon, 28″"],["Villa","Orbea Terra OMP karbon, 12 mm átütőtengely"],["Nyeregcső","Orbea OC2 karbon, 27,2 mm"],["Súly","kb. 9,7 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano GRX RD-RX812, 11 sebesség, kuplungos"],["Hajtómű","Shimano GRX FC-RX600, 40T, egytányéros, láncvezetővel"],["Kazetta","Shimano SLX CS-M7000, 11–40T"],["Lánc","Shimano CN-HG601, 11 sebesség"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano GRX hidraulikus tárcsa, ST-RX600 / BR-RX400"],["Felni","28″ Orbea alumínium, Shimano RS470 agyakkal"],["Gumi","Schwalbe G-One Allround elöl, G-One Bite hátul, 40-622"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","Orbea OC1 All Road, 44 cm"],["Nyereg","Prologo Akero"],["Kerékméret","28″"],["Fényezés","Fényes fehér, fekete feliratokkal és villával, egyedi MyO szín"]] }
+    ] },
   { id:"cube-acid-3", mappa:"CubeAcid3", kepDb:12, marka:"Cube", model:"Cube Acid", magassag:[176,188], felveve:"2026-11-11",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2024, meret:"L (20″)", kerekmeret:"29″", suly:"kb. 13,3 kg", ar:280000,
     vaz:"Cube Aluminium Lite · kb. 13,3 kg", villa:"RockShox Judy Silver TK Air, 100 mm, kormányról zárható",
