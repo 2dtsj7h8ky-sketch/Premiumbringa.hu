@@ -21,6 +21,19 @@
         Ilyenkor a bejegyzést a tömb elejére is tedd: a főoldali előnézet a tömb sorrendjét követi.
    ========================================================================= */
 const KESZLET = [
+  { id:"ktm-l-mountain", mappa:"KTMLMountain", kepDb:11, marka:"KTM", model:"KTM L. Mountain", magassag:[183,196], felveve:"2026-11-11",
+    kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2023, meret:"XL (53 cm)", kerekmeret:"29″", suly:"kb. 13,7 kg", ar:280000,
+    vaz:"6061 alumínium · kb. 13,7 kg", villa:"RockShox Judy Silver TK Air, 100 mm, zárható",
+    hajtas:"Shimano XT / Deore 1×12", fek:"Shimano MT200 hidraulikus, 180/160",
+    kerek:"29″ KTM Sport, Shimano agyakkal · Maxxis Rekon Race 2,25",
+    spec:"29″ alu XC hardtail · levegős RockShox Judy Silver TK 100 mm · Shimano XT / Deore 1×12, hidraulikus tárcsafékkel.",
+    leiras:"Az L. Mountain a KTM kínálatában két hardtail közé esik, és mindkettőből a lényeget kapta: az Ultra Sport 2021-ben megújult vázát, meg a drágább Ultra 1964 Comp XT hátsó váltóját és levegős RockShox Judy teleszkópját. Neked szól, ha lelkes, haladó hobbibringásként a tempót keresed, és olyan KTM-re vágysz, amilyet nem látni minden sarkon. Emelkedőn és aszfalton egy mozdulattal lezárod a teleszkópot, így az erőd a kerékbe megy, nem a rugózásba, a rázós szakaszokon pedig az XT váltó a helyén és csendben tartja a láncot. A gyorsan guruló Maxxis versenygumikkal a bringa ott van igazán elemében, ahol a tempó számít: földutakon, murván és hosszú, dombos, hegyes köröken. L. Mountainből itthon kevés fut, használtan pedig még kevesebb akad. A matt fekete vázat szürke és piros grafika élezi ki, az összhatás sötét, sportos és jellegzetesen KTM-es. Megújult váz, XT váltó, levegős RockShox: korszerű, dinamikus KTM, használt áron. Gyönyörű, igényes összképű, újszerű példány, friss, feszes és gyári, nálunk alaposan átvizsgálva, átfogó alapszerviz után, azonnal menetkész.",
+    reszletek:[
+      { cs:"Váz & felfüggesztés", t:[["Váz","6061 alumínium, 29″"],["Teleszkóp","RockShox Judy Silver TK, levegős, zárható, 100 mm"],["Súly","kb. 13,7 kg"]] },
+      { cs:"Hajtás", t:[["Hátsó váltó","Shimano Deore XT M8100, 12 sebesség"],["Hajtómű","Shimano MT510, 34T"],["Kazetta","Shimano Deore M6100, 10–51T"],["Lánc","Shimano Deore M6100"]] },
+      { cs:"Fék & kerék", t:[["Fék","Shimano MT200 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ KTM Sport, Shimano agyakkal"],["Gumi","Maxxis Rekon Race 29×2,25"]] },
+      { cs:"Vezérlés & komfort", t:[["Kormány","KTM Comp, 720 mm"],["Nyereg","KTM Comp MTB"],["Kerékméret","29″"],["Fényezés","Matt fekete, szürke és piros grafikával"]] }
+    ] },
   { id:"cube-race-one", mappa:"CubeRaceOne", marka:"Cube", model:"Cube Race One", magassag:[168,180], felveve:"2026-06-08", elore:"2026-11-10",
     kategoria:"XC · Hardtail", szegmens:"xc", allapot:"Újszerű", ev:2017, meret:"M (18″)", kerekmeret:"27,5″", suly:"12,7 kg", ar:290000, regiAr:320000,
     vaz:"Aluminium Lite · 12,7 kg", villa:"Fox 32 Float Performance, 100 mm, állítható",
