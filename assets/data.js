@@ -256,7 +256,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT200 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube ZX20"],["Gumi","Schwalbe Smart Sam 2,25"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec"],["Kerékméret","29″"],["Fényezés","Flash lime, fekete részletekkel"]] }
     ] },
-  { id:"focus-jam-c-sl", mappa:"FocusJamCSL", kepDb:15, marka:"Focus", model:"Focus Jam C SL", magassag:[178,188], felveve:"2026-10-10",
+  { id:"focus-jam-c-sl", mappa:"FocusJamCSL", kepDb:15, marka:"Focus", model:"Focus Jam C SL", magassag:[178,188], felveve:"2026-10-10", eladva:"2026-11-18",
     kategoria:"Trail · Fully · Karbon", szegmens:"trail", allapot:"Kiváló", ev:2017, meret:"L", kerekmeret:"27,5″", suly:"kb. 12 kg", ar:550000,
     vaz:"Jam C teljes karbon, F.O.L.D. felfüggesztés · kb. 12 kg", villa:"RockShox Pike RCT3, 140 mm",
     hajtas:"SRAM X01 Eagle 1×12", fek:"SRAM Guide Ultimate négydugattyús, 180/180",
