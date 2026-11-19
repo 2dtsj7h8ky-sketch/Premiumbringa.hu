@@ -177,7 +177,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano GRX BR-RX400 hidraulikus tárcsa"],["Tárcsák","160 / 160 mm"],["Felni","28″ Fulcrum Racing 77 DB"],["Gumi","Schwalbe X-One Allround Performance, 33-622"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Newmen Evolution Wing Bar"],["Nyereg","Natural Fit Nuance Lite"],["Kerékméret","28″"],["Fényezés","Piros a pirosban"]] }
     ] },
-  { id:"trek-remedy-7", mappa:"TrekRemedy7", kepDb:12, marka:"Trek", model:"Trek Remedy 7", magassag:[170,180], felveve:"2026-11-02",
+  { id:"trek-remedy-7", mappa:"TrekRemedy7", kepDb:12, marka:"Trek", model:"Trek Remedy 7", magassag:[170,180], felveve:"2026-11-02", eladva:"2026-11-19",
     kategoria:"All Mountain · Fully", szegmens:"trail", allapot:"Kiváló", ev:2019, meret:"M/L (18,5″)", kerekmeret:"27,5″", suly:"kb. 14,5 kg", ar:430000,
     vaz:"Trek Alpha Platinum alumínium, ABP felfüggesztés · kb. 14,5 kg", villa:"RockShox Yari RC DebonAir, 160 mm",
     hajtas:"SRAM NX Eagle 1×12", fek:"SRAM Level T hidraulikus, 200/180",
