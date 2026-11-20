@@ -125,7 +125,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Magura MT Thirty hidraulikus tárcsa, négydugattyús"],["Tárcsák","203 / 180 mm"],["Felni","29″ Cube EX30"],["Gumi","Schwalbe Magic Mary elöl, Big Betty hátul, 2,4"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 760 mm"],["Nyereg","Acid Venec Lite"],["Kerékméret","29″"],["Fényezés","Arany-lime és fekete"]] }
     ] },
-  { id:"cube-reaction-c62-pro", mappa:"CubeReactionC62Pro", kepDb:12, marka:"Cube", model:"Cube Reaction C:62 Pro", magassag:[178,190], felveve:"2026-11-08",
+  { id:"cube-reaction-c62-pro", mappa:"CubeReactionC62Pro", kepDb:12, marka:"Cube", model:"Cube Reaction C:62 Pro", magassag:[178,190], felveve:"2026-11-08", kiemelt:true,
     kategoria:"XC · Hardtail · Karbon", szegmens:"xc", allapot:"Újszerű", ev:2022, meret:"L (19″)", kerekmeret:"29″", suly:"kb. 11,5 kg", ar:420000,
     vaz:"Cube C:62 karbon · kb. 11,5 kg", villa:"RockShox Judy Gold RL Air, 100 mm, kormányról zárható",
     hajtas:"Shimano XT 1×12", fek:"Shimano XT hidraulikus, 180/160",
@@ -296,7 +296,7 @@ const KESZLET = [
       { cs:"Fék & kerék", t:[["Fék","Shimano BR-MT400 hidraulikus tárcsa"],["Tárcsák","180 / 160 mm"],["Felni","29″ Cube SD20"],["Gumi","Schwalbe Smart Sam Active 2,25"]] },
       { cs:"Vezérlés & komfort", t:[["Kormány","Cube Rise Trail Bar, 680 mm"],["Nyereg","Natural Fit Venec Lite"],["Felszerelhetőség","Rejtett csomagtartó-fülek"],["Kerékméret","29″"]] }
     ] },
-  { id:"cube-stereo-one22", mappa:"CubeStereoONE22", marka:"Cube", model:"Cube Stereo ONE22 HPC TM", magassag:[175,188], felveve:"2026-09-26", eladva:"2026-11-20", kiemelt:true,
+  { id:"cube-stereo-one22", mappa:"CubeStereoONE22", marka:"Cube", model:"Cube Stereo ONE22 HPC TM", magassag:[175,188], felveve:"2026-09-26", eladva:"2026-11-20",
     kategoria:"Trail · Fully", szegmens:"trail", allapot:"Újszerű", ev:2024, meret:"L", kerekmeret:"29″", suly:"13,5 kg", ar:700000,
     vaz:"HPC karbon monocoque első vázháromszög · 13,5 kg", villa:"Fox 34 Float Rhythm, 130 mm",
     hajtas:"SRAM GX Eagle 1×12", fek:"Shimano XT BR-M8120 négydugattyús, 203/180",
